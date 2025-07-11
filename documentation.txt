@@ -1,0 +1,52 @@
+"model.config" => isi model
+"outputs.logits.shape" => ([1, sequence_length, num_lengths]) 
+"input_ids" => dict_keys(['input_ids', 'token_type_ids', 'attention_mask'])
+
+
+Named Entity Recognition => https://huggingface.co/docs/transformers/en/main_classes/pipelines
+aggregation_strategy no use
+
+byte pair encoding (greedy algorithm) =>  tokenizer for segmentation
+
+PER_1 PER_2, PER_3??
+
+pad_token_id= tokenizer.eos_token_id => suppress warning
+
+
+=================================
+
+Experiment Synthetic Data Generation:
+Pakai model "Llama-3.2-3B" dengan data nama yang sudah digunakan NER dengan model NER "cahya/NusaBert-ner-v1.3" untuk mengubah NER menjadi <|PER|>,
+
+
+# experiment-1:
+Generate "AAC Cards" + "Stories" dalam 1 prompt: => GAGAL -> Lihat documentation_files untuk lebih detail
+- setup:
+    '''
+    MODEL_CONFIG = {
+        "generation": {
+            "max_new_tokens": 512,
+            "do_sample": True,
+            "temperature": 0.9,
+            "top_p": 0.9,
+        },
+    }
+    '''
+    dataset => ner_dataset
+
+
+- alasan:
+    - terdapat "AAC Cards" atau "Stories" tidak sesuai
+        Contoh:
+            - <|PER|> tidak terdapat di "AAC Cards" tetapi terdapat di "Stories" atau vice versa
+
+# experiment-2
+Generate story only dalam 1 prompt
+    - menggunakan temp 0.3, 0.6, 0.9
+    - makin tinggi temp, makin unik kata katanya
+    - masih terdapat beberapa teks yang typo, seperti "<|PER|>n", "<|PER|>en_ <|PER|>ho"
+    - akan lanjut ke dalam generate AAC keywords menggunakan synthetic data generation lagi dengan generated data
+
+Note: akan dilanjutkan dengan tuning hyperparameter top_p + evaluation
+
+

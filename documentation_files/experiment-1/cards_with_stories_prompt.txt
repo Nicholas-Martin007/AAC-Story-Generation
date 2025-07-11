@@ -1,0 +1,76 @@
+PROMPT: r"""
+Kamu adalah generator data untuk pelatihan NLP dengan format AAC Cards → Stories. Tugasmu adalah membuat pasangan *AAC Cards* (kata-kata penting) dan *Stories* (paragraf pendek) dari satu paragraf Bahasa Indonesia.
+
+Langkah-langkah:
+
+1. Ambil 2–15 kata penting dari paragraf, seperti subjek, predikat, objek, atau keterangan.
+2. AAC Cards harus berupa kata baku Bahasa Indonesia. Jangan gunakan kata tidak baku, dialek, atau bahasa daerah.
+3. Jika paragraf punya nama orang atau sapaan (seperti Pak, Bu, Mbak, dll), ubah menjadi token:
+   - <|PER|>, <|PER_1|>, <|PER_2|>, <|PER_3|>, <|PER_4|>
+   - Jangan biarkan sapaan seperti “Pak” atau “Bu” tertulis di AAC Cards atau Stories. Ganti dengan token <|PER|> jika mengacu pada orang.
+4. Jumlah dan jenis token <|PER|> dalam AAC Cards dan Stories HARUS **sama persis** (contoh: jika ada <|PER|>, <|PER_1|>, <|PER_2|>, <|PER_3|>, atau <|PER_4|> di Cards, maka Stories juga harus punya <|PER|>, <|PER_1|, <|PER_2|>, <|PER_3|>, dan <|PER_4|>).
+5. Buat *Stories* dari daftar kata dalam AAC Cards. Tulis dengan bahasa Indonesia baku dan kalimat natural.
+6. Semua kata di AAC Cards **WAJIB muncul di Stories**, dan **semua kata dalam Stories (kecuali kata hubung dan bantu) harus berasal dari AAC Cards**.
+7. Jangan gunakan kata atau tema terlarang, seperti:
+   - pembunuhan, senjata, kekerasan, pelecehan, ujaran kebencian, diskriminasi, atau hal vulgar.
+   - Jika ada kata terlarang, ubah menjadi kata yang lebih aman atau netral (contoh: "pembunuhan" → "perkelahian kecil", "senjata" → "benda").
+8. Jika tidak bisa membuat sesuai aturan, **lewati saja**. Jangan beri penjelasan, jangan kosong.
+9. Di dalam **Stories** terdapat minimal 3 kalimat.
+
+CATATAN:
+- Maksimal 5 tokoh: <|PER|> sampai <|PER_4|>
+- Jangan hasilkan kalimat seperti “Maaf, saya tidak bisa menjawab.”
+- Hanya berikan hasil jika **semua aturan dipenuhi sepenuhnya**.
+
+Format Output:
+AAC Cards: [...]
+Stories: ...
+
+Contoh Output:
+"""
+
+=============================================================================
+
+N_SHOT PROMPT:
+[
+    {
+        "input": ["<|PER|>", "<|PER_1|>", "mulai", "marah"],
+        "output": "<|PER|> dan <|PER_1|> mulai marah setelah mendengar kabar itu. Suasana menjadi tegang di ruangan itu, dan keduanya sulit menahan amarah yang membara di dalam dada."
+    },
+    {
+        "input": ["<|PER|>", "ada", "suara", "terbata", "ucap"],
+        "output": "“Ada…,” suara <|PER|> terdengar terbata. Ia tampak ragu melanjutkan ucapannya, seolah ada sesuatu yang sulit untuk diungkapkan. Tatapannya menunduk, menahan kegelisahan yang memuncak."
+    },
+    {
+        "input": ["<|PER|>", "<|PER_1|>", "<|PER_2|>", "baik", "ucap", "kualat", "mulut"],
+        "output": "“Baiiiiiik....” sahut <|PER|> dengan nada dibuat-buat. Padahal, kenyataannya tidak begitu. “<|PER_1> baik? <|PER_2> baik?” lanjutnya, lalu menertawakan diri sendiri. “Aih! Bisa kualat mulutku ngucapinnya,” ucapnya sambil geleng-geleng."
+    },
+    {
+        "input": ["<|PER|>", "<|PER_1|>", "<|PER_2|>", "<|PER_3|>", "adik", "istri", "cerita", "panas", "kamar", "tendang", "buka", "umpat", "tampar", "tendang", "jatuh"],
+        "output": "Adik <|PER|>, <|PER_1>, pulang dan mendengar cerita tak mengenakkan dari istrinya. Ia langsung menuju kamar <|PER_2> dan menendang pintunya. <|PER_3> kaget, lalu membuka kunci. “Asu,” umpat <|PER_1>, tapi langsung dibalas tamparan dan tendangan dari <|PER_2>, membuatnya terjengkang ke belakang."
+    },
+    {
+        "input": ["mana", "jauh", "rumah", "pergi", "ucap"],
+        "output": "“Aku mau pergi,” ucapnya tegas. “Ke mana saja, sejauh-jauhnya dari rumah ini.” Ia melangkah tanpa menoleh, meninggalkan keheningan yang menggantung di udara."
+    },
+    {
+        "input": ["iya", "bos", "ban", "tadi", "ucap"],
+        "output": "“Iya, Bos. Tadi ban saya...” ucapnya sambil menggaruk kepala. Ia tampak canggung menjelaskan keterlambatannya pagi itu. Bosnya hanya menatap tajam tanpa berkata apa-apa."
+    },
+    {
+        "input": ["<|PER|>", "<|PER_1|>", "<|PER_2|>", "<|PER_3|>", "<|PER_4|>", "rahasia", "keponakan", "mati", "desa", "jendela", "gelut", "napas", "pembantaian", "penyerbuan"],
+        "output": "<|PER|> menyimpan rahasia besar yang hanya diketahui <|PER_1>. Ternyata keponakan menantunya, <|PER_2>, tidak mati hanyut, tapi kembali ke desa untuk membalas dendam. Ia menyelinap ke rumah <|PER_3> dan menyerangnya, namun gagal. Saat nyawanya hampir hilang, <|PER_2> menyebut <|PER_3> tak bersalah. Justru <|PER_4> adalah otak dari penyerbuan malam itu."
+    },
+    {
+        "input": ["<|PER|>", "<|PER_1|>", "<|PER_2|>", "<|PER_3|>", "rencana", "mendaki", "gunung", "lihat", "kekasih", "gadis", "kota", "rambut", "hitam", "rayakan", "bulan", "tatap", "perkenal"],
+        "output": "<|PER|> berencana mendaki gunung demi bertemu kembali dengan kekasihnya, <|PER_1|>, seorang gadis berambut hitam dari kota sebelah. Mereka pertama kali bertemu saat perayaan bulan purnama, di mana <|PER_2|> dan <|PER_3|> saling bertukar tatapan. Tanpa banyak kata, <|PER_2|> menghampiri dan memperkenalkan diri sebagai, “<|PER_3|>era dari Kota Cipondoh.”"
+    },
+    {
+        "input": ["odong-odong", "rusak", "miring", "selokan", "teronggok"],
+        "output": "Odong-odong itu teronggok miring di pinggir selokan. Meski tidak terlalu rusak, bentuknya tampak menyedihkan. Beberapa bagian sudah berkarat dan catnya mulai pudar."
+    },
+    {
+        "input": ["<|PER|>", "<|PER_1|>", "lahir", "lawang", "tahun", "kuliah", "doktor", "mengajar", "surabaya", "tulis", "seni", "juri", "kompetisi", "penghargaan", "komik"],
+        "output": "<|PER|> alias <|PER_1|> lahir di Lawang pada tahun 1981. Kini ia menempuh studi doktoral dan mengajar di sebuah institut di Surabaya. Aktif di dunia seni dan sering menjadi juri berbagai kompetisi, <|PER|> juga pernah meraih penghargaan dalam lomba komik nasional."
+    }
+]
