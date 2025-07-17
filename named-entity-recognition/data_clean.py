@@ -28,14 +28,3 @@ def clean_dataset(dataset: list[str]) -> list[str]:
 
 
     return result
-
-
-with open(APPLIED_NER_DATA_PATH, "r", encoding="utf-8") as f:
-    dataset = json.load(f)
-
-cleaned_dataset = clean_dataset(dataset)
-
-with open("cleaned-applied-ner-dataset.json", "w", encoding="utf-8") as f:
-    json.dump(cleaned_dataset, f, ensure_ascii=False, indent=2)
-
-print()

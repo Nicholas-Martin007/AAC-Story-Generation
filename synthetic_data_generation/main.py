@@ -1,28 +1,39 @@
+import sys
+import os
+sys.path.append(os.path.abspath("./"))
+from config import *
 
-from config import DEVICE, MODEL_CONFIG
-from get_data import get_data
-from message_formatter import get_message
-from setup import tokenizer, model
+from format_message import get_message
+from setup import tokenizer
 from model import generate_text
 import json
 import time
 
-def read_file(filepath="documentation_files/experiment-2/story-generation/story-temp0.9.json"):
+torch.manual_seed(SEED)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(SEED)
+
+
+def read_file(filepath=CLEANED_APPLIED_NER_DATA_PATH) -> list[str]:
     with open(filepath, "r", encoding="utf-8") as f:
-        dataset = json.load(f)
+        dataset  = json.load(f)
 
     return dataset
 
-if __name__ == "__main__":
-    # get_data() # RUN FIRST TIME
-    dataset = read_file()
+def save_file(dataset, filepath="result") -> None:
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(dataset, f, ensure_ascii=False, indent=2)
 
-    tes_100 = dataset[:100]
-    generated_data = []
-    for data in tes_100:
+
+def generate_story(dataset: list[str]) -> list[str]:
+    results = []
+    for data in dataset:
         start = time.time()
 
-        messages = get_message(data)
+        messages = get_message(
+            data,
+            use_story_prompt=True
+        )
 
         input_ids = tokenizer.apply_chat_template(
             messages,
@@ -30,19 +41,68 @@ if __name__ == "__main__":
             return_tensors="pt"
         ).to(DEVICE)
         
-        output = generate_text(input_ids=input_ids)
+        output = generate_text(
+            input_ids=input_ids,
+            use_story_format=True
+        )
         
         end = time.time()
+        results.append(output)
+
+        print(output)
         print(f"Generated in {end - start:.2f} seconds")
-        generated_data.append(output)
+        print("\n\n")
+
+    print("SAVING STORY...")
+    with open(f"aac_story_dataset.json", "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+
+    return results
+
+
+def generate_card(dataset: list[str]) -> list[str]:
+    results = []
+    for data in dataset:
+        start = time.time()
+
+        messages = get_message(
+            data,
+            use_card_prompt=True
+        )
+
+        input_ids = tokenizer.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            return_tensors="pt"
+        ).to(DEVICE)
         
+        output = generate_text(
+            input_ids=input_ids,
+            use_card_format=True
+        )
         
-        print(f"AAC Cards: {output}")
+        end = time.time()
+        results.append(output)
+
+        print(output)
+        print(f"Generated in {end - start:.2f} seconds")
         print("\n\n")
 
 
-    temp=f"{MODEL_CONFIG['generation']['temperature']}"
-    top_p=f"{MODEL_CONFIG['generation']['top_p']}"
+    print("SAVING CARD...")
+    with open(f"aac_card_dataset.json", "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
 
-    with open(f"train_data-temp{temp}-top_p{top_p}.json", "w", encoding="utf-8") as f:
-        json.dump(generated_data, f, ensure_ascii=False, indent=2)
+
+    return results
+
+
+if __name__ == "__main__":
+
+    dataset = read_file()
+
+    story_dataset = generate_story(dataset)
+    card_dataset = generate_card(story_dataset)
+
+    print("DONE")

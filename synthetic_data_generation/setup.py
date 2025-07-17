@@ -1,11 +1,17 @@
+import sys
+import os
+sys.path.append(os.path.abspath("./"))
+from config import *
+
 import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-from peft import LoraConfig, get_peft_model
-from config import MODEL_PATH, DEVICE
-
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+tokenizer = AutoTokenizer.from_pretrained(
+    SDG_MODEL_PATH,
+)
+tokenizer.pad_token = "<PAD>"
+tokenizer.padding_side = "left"
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -14,39 +20,24 @@ quantization_config = BitsAndBytesConfig(
     bnb_4bit_quant_type="nf4",
 )
 
-
-# NOT USED FOR GENERATE
-# LORA_CONFIG = LoraConfig(
-#     lora_alpha=32,
-#     lora_dropout=0.1,
-#     r=64,
-#     bias="none",
-#     task_type="CAUSAL_LM",
-#     target_modules=[
-#         "q_proj",
-#         "k_proj",
-#         "v_proj",
-#         "o_proj",
-#         "gate_proj",
-#         "up_proj",
-#         "down_proj",
-#     ]
-# )
-
-
 model = AutoModelForCausalLM.from_pretrained(
-    MODEL_PATH,
+    SDG_MODEL_PATH,
     torch_dtype=torch.bfloat16,
     device_map=DEVICE,
     quantization_config=quantization_config
 )
 
-# model = get_peft_model(
-#     model, 
-#     LORA_CONFIG
-# )
-
 terminators = [
     tokenizer.eos_token_id,
     tokenizer.convert_tokens_to_ids("<|eot_id|>")
 ]
+
+generation_config = GenerationConfig(
+    max_new_tokens=512,
+    do_sample=True,
+    temperature=0.9,
+    top_p=0.9,
+    # bos_token_id=tokenizer.convert_tokens_to_ids("Story:"),
+    eos_token_id=terminators,
+    pad_token_id=tokenizer.eos_token_id
+)
