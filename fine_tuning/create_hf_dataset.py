@@ -43,59 +43,66 @@ def format_message(df: pd.DataFrame) -> list[object]:
             },
             {
                 "role": "user",
-                "content": card  # list of strings
+                "content": ", ".join(card)  # list of strings
             },
             {
                 "role": "assistant",
-                "content": story.strip()
+                "content": story
             }
         ])
     return messages
 
+def save_hf_dataset(messages: list[object]) -> None:
+    # features = Features({
+    #     "prompt": Sequence(Value("string")),
+    #     "prompt_id": Value("string"),
+    #     "messages": Sequence(
+    #         {
+    #             "role": Value("string"),
+    #             "content": Value("string")
+    #         }
+    #     )
+    # })
+
+    data = []
+    for pair in messages:
+        prompt = pair[1]["content"]  # list[str]
+        prompt_id = str(uuid.uuid4())
+
+        data.append({
+            "prompt": prompt,
+            "prompt_id": prompt_id,
+            "messages": pair
+        })
+
+    hf_dataset = Dataset.from_list(
+        data, 
+        # features=features,    
+    )
+
+    hf_dataset.save_to_disk("./hf_aac_dataset")
+
+
 # def save_hf_dataset(messages: list[object]) -> None:
-#     features = Features({
-#         "prompt": Sequence(Value("string")),
-#         "prompt_id": Value("string"),
-#         "messages": Sequence({
-#             "role": Value("string"),
-#             "content": Value("string")
-#         })
-#     })
+#     # features = Features({
+#     #     "input": Sequence(Value("string")),
+#     #     "output": Value("string"),
+#     #     "id": Value("string")
+#     # })
 
 #     hf_dataset = Dataset.from_list(
 #         [
 #             {
-#                 "prompt": pair[1]["content"],
-#                 "prompt_id": str(uuid.uuid4()),
-#                 "messages": pair
+#                 "input": pair[1]["content"],
+#                 "output": pair[2]["content"],
+#                 "id": str(uuid.uuid4())
 #             }
 #             for pair in messages
 #         ],
-#         features=features
+#         # features=features
 #     )
 
 #     hf_dataset.save_to_disk("./hf_aac_dataset")
-
-def save_hf_dataset(messages: list[object]) -> None:
-    features = Features({
-        "input": Sequence(Value("string")),
-        "output": Value("string"),
-        "id": Value("string")
-    })
-
-    hf_dataset = Dataset.from_list(
-        [
-            {
-                "input": pair[1]["content"],
-                "output": pair[2]["content"],
-                "id": str(uuid.uuid4())
-            }
-            for pair in messages
-        ],
-        features=features
-    )
-
-    hf_dataset.save_to_disk("./hf_aac_dataset")
 
 
 if __name__ == "__main__":
