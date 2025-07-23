@@ -13,6 +13,7 @@ DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 SDG_MODEL_PATH = "/home/dev/Downloads/Meta-Llama-3.1-8B-Instruct/"
 
 MODEL_PATH = "/home/dev/Downloads/Llama-3.2-3B-Instruct/"
+# MODEL_PATH = "/home/dev/Downloads/Mistral-7B-Instruct-v0.3/"
 
 FINE_TUNE_OUTPUT_DIR = "./training_output"
 

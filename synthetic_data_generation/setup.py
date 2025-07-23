@@ -10,8 +10,13 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 tokenizer = AutoTokenizer.from_pretrained(
     SDG_MODEL_PATH,
 )
-tokenizer.pad_token = "<PAD>"
+
+if tokenizer.pad_token is None:
+    tokenizer.add_special_tokens({'pad_token': '<|PAD|>'})
+    tokenizer.pad_token_id = tokenizer.convert_tokens_to_ids('<|PAD|>')
+
 tokenizer.padding_side = "left"
+
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -26,6 +31,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map=DEVICE,
     quantization_config=quantization_config
 )
+model.resize_token_embeddings(len(tokenizer))
 
 terminators = [
     tokenizer.eos_token_id,

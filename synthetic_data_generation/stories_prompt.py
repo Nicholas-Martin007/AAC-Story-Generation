@@ -1,19 +1,19 @@
 STORY_PROMPT = r"""
-Kamu adalah generator data untuk pelatihan NLP dengan format *Story* (paragraf panjang) dari satu paragraf Bahasa Indonesia.
+Kamu adalah AI yang membuat *Kisah Sosial* (cerita pendek satu paragraf) yang ditujukan untuk anak-anak.
 
-Tugasmu:
-1. Buat satu paragraf *Story* yang panjang, mengalir, dan padu, terdiri dari minimal 3 kalimat dan maksimal 10 kalimat. **Jangan pisah menjadi beberapa paragraf.** Tulis dengan gaya bahasa natural, baku, dan bernada sabar.
-2. Semua nama orang dan sapaan (seperti Pak, Bu, Mbak, dll) harus diubah menjadi:
-   - <|PER|>, <|PER_1|>, <|PER_2|>, dst sesuai urutan kemunculan, atau cukup gunakan "dia".
-   - Tidak boleh menampilkan nama .
-3. Jika tidak ada nama dalam paragraf, cukup gunakan "dia" bila perlu merujuk ke subjek manusia.
-4. Token <|PER|> harus konsisten jika digunakan, dan tidak boleh campur dengan nama asli.
-5. Semua kata dalam Story (kecuali kata hubung dan bantu) harus berasal dari paragraf input (tidak boleh menambah dari luar).
-6. Hindari tema negatif seperti: kekerasan, kejahatan, pelecehan, ujaran kebencian, diskriminasi, atau hal vulgar. Cerita harus positif dan aman.
-7. Gunakan struktur kalimat SPOK dengan diksi yang kuat dan nada yang tenang.
-8. Jangan gunakan kata "kamu" atau bentuk sapaan langsung.
-9. Jika tidak bisa membuat sesuai aturan, lewati saja. Jangan beri penjelasan atau pesan kesalahan.
-10. Tampilkan hanya *Story*, tanpa format lain.
+Petunjuk:
+1. Tulis satu paragraf berupa kisah sosial yang **positif**, **mendidik**, dan **aman untuk anak-anak**.
+2. Paragraf harus terdiri dari **5 sampai 10 kalimat sederhana**.
+3. Gunakan **kata-kata yang mudah dimengerti oleh anak-anak**. Hindari kata sulit, bahasa gaul, atau ajakan langsung seperti "ayo", "yuk", atau "kamu harus".
+4. Gunakan gaya bahasa yang **tenang, ramah, dan menyenangkan**.
+5. Semua nama orang diganti menjadi:
+   - <|PER|>, <|PER_1|>, dst sesuai urutan kemunculan, atau gunakan “dia”.
+6. Jika tersedia, gunakan **beberapa kata dari daftar `context`** sebagai bagian dari cerita. Tidak harus semua digunakan.
+7. Jika `context` kosong, tetap buat kisah sesuai dengan aturan.
+8. Jangan gunakan dialog atau tanda kutip.
+9. Hanya tampilkan satu baris dengan format:
+   Story: ...
+10. Gunakan kreativitasmu selama tetap sesuai aturan dan aman untuk anak-anak.
 
 Format Output:
 Story: ...
@@ -21,37 +21,35 @@ Story: ...
 Contoh:
 """
 
-
-
 LIST_STORIES_PROMPT = [
     {
-        "content": "<|PER|> dikenal sebagai aktor monolog yang berpengaruh. Sejak duduk di bangku Sekolah Menengah Seni Rupa pada akhir 1970-an, ia telah aktif berteater. Kini, ia menjadi penggerak Teater Gandrik, program “Indonesia Kita”, dan turut membina Yayasan Padepokan Seni Bagong Kussudiardja."
+        "content": "<|PER|> bangun pagi dan langsung merapikan tempat tidurnya. Setelah itu, dia mencuci tangan sebelum sarapan bersama keluarganya. Ia merasa senang karena bisa membantu di rumah. Keluarganya tersenyum melihat sikapnya. Kegiatan pagi hari jadi lebih menyenangkan saat semuanya rapi dan bersih. <|PER|> belajar bahwa memulai hari dengan baik membuat semuanya terasa lebih mudah."
     },
     {
-        "content": "<|PER|> berdiri sendirian di tengah ruangan yang sepi. Ia menatap ke luar jendela, seolah mencari sesuatu yang hilang. Angin sore menyapu wajahnya pelan, membawa kenangan yang sulit dilupakan."
+        "content": "Setiap hari, <|PER|> berjalan kaki ke sekolah. Di jalan, dia selalu menyapa teman-temannya dengan senyum. Ia juga melambaikan tangan dan memberi salam. Teman-temannya senang mendapat sapaan darinya. Guru di sekolah bilang, <|PER|> anak yang ramah. Saling menyapa membuat hari terasa lebih ceria dan hangat."
     },
     {
-        "content": "Aku pulang ke kota ini bukan untuk menebus dosa <|PER|>, melainkan untuk merayakan kematiannya. Sepanjang percakapan, aku sengaja mengingatkan dosa-dosa lamanya, dan <|PER|> hanya bisa mengucapkan maaf berulang-ulang. Namun, segalanya berubah ketika ia berkata sesuatu yang membuatku terdiam."
+        "content": "Saat istirahat, <|PER|> melihat temannya kesulitan membuka kotak makan. Tanpa diminta, dia langsung membantu. Temannya tersenyum dan berterima kasih. Mereka lalu makan bersama sambil bercerita. <|PER|> merasa senang bisa membantu. Ia belajar bahwa menolong orang lain membuat hati jadi hangat."
     },
     {
-        "content": "<|PER_1|> dan <|PER_2|> duduk di bangku taman sambil menikmati senja. Mereka membicarakan rencana perjalanan yang sudah lama tertunda. Tiba-tiba, <|PER_3|> datang menghampiri dengan membawa kabar yang mengubah semuanya."
+        "content": "<|PER_1|>, <|PER|>, dan <|PER_2|> bermain bersama di taman. Mereka bergiliran naik ayunan dan tidak saling berebut. Mereka tertawa dan saling menyemangati. Semua anak merasa senang karena bisa bermain bersama dengan adil. Mereka belajar bahwa sabar dan saling menghargai membuat bermain jadi lebih menyenangkan."
     },
     {
-        "content": "<|PER_1|> memandangi lukisan tua di dinding rumah itu. <|PER_2|> menghampiri dan berdiri di sampingnya, mencoba memahami isi pikirannya. Tanpa banyak bicara, <|PER_3|> masuk dan meletakkan secangkir teh di meja, memecah keheningan."
+        "content": "<|PER|> sedang sedih karena mainannya rusak. Ibunya memeluknya dan berkata bahwa tidak apa-apa merasa sedih. Setelah itu, mereka mencoba memperbaikinya bersama-sama. Meskipun tidak berhasil, <|PER|> merasa lebih baik. Ia belajar bahwa perasaan sedih itu wajar dan bisa dihadapi bersama orang yang sayang padanya."
     },
     {
-        "content": "Suatu malam, bayangan itu muncul di depan pintu rumahku. Aku terdiam, mencoba memastikan apa yang kulihat. Angin malam berhembus pelan, membuat suasana semakin mencekam."
+        "content": "<|PER|> melihat sampah di lantai kelas. Tanpa disuruh, dia memungut dan membuangnya ke tempat sampah. Teman-temannya melihat dan ikut melakukan hal yang sama. Kelas menjadi bersih dan nyaman. Guru memuji sikap mereka. <|PER|> merasa bangga bisa memberi contoh yang baik."
     },
     {
-        "content": "Ia melangkah cepat ke dalam ruangan dan berhenti sejenak. \"Aku mencium wewangian di sana! Iya, aku menciumnya!\" serunya dengan penuh keyakinan. Semua orang menoleh, mencoba memastikan aroma yang dimaksud."
+        "content": "Ketika bermain bola, <|PER|> tanpa sengaja membuat temannya jatuh. Dia langsung menghampiri dan meminta maaf. Temannya menerima permintaan maaf itu dan tersenyum. <|PER|> membantu temannya berdiri, lalu mereka bermain lagi bersama. Ia belajar bahwa bertanggung jawab atas kesalahan adalah hal yang penting."
     },
     {
-        "content": "<|PER|> menunduk tanpa menjawab pertanyaan itu. Suasana di ruangan menjadi sunyi sejenak. Tatapan <|PER_1|> penuh rasa khawatir, menunggu penjelasan yang tak kunjung datang."
+        "content": "<|PER|> membawa bekal lebih dan membaginya dengan temannya yang lupa membawa makan siang. Mereka makan bersama sambil tersenyum. Temannya merasa senang dan berterima kasih. <|PER|> merasa bahagia bisa berbagi. Ia belajar bahwa berbagi membuat orang lain dan dirinya sama-sama senang."
     },
     {
-        "content": "Tengah malam ia terbangun dengan perut lapar dan tenggorokan kering. Lidahnya penuh liur yang ia telan kembali, berharap bisa meredakan rasa haus. <|PER|>, istrinya, masih mendengkur di sampingnya. Ia melirik perutnya yang buncit, merasa perih yang tak kunjung reda."
+        "content": "Saat guru bertanya, <|PER|> mengangkat tangan dengan sopan. Ia menjawab dengan suara pelan tapi jelas. Guru tersenyum dan memuji usahanya. Teman-temannya ikut memperhatikan. <|PER|> merasa percaya diri karena telah berani mencoba. Ia belajar bahwa mengikuti aturan membuat suasana kelas jadi menyenangkan."
     },
     {
-        "content": "“Kau tak melaga ikanmu, <|PER|>?” tegurku sambil melirik ke kolam kecil di samping rumah. <|PER|> hanya tersenyum, lalu duduk di tepi sambil menggulung celananya. Kami terdiam sejenak, menikmati suasana sore yang tenang."
+        "content": "<|PER_1|> melihat <|PER_2|> sendirian di sudut kelas. Dia menghampiri dan mengajak bermain bersama. <|PER_2|> tersenyum dan bergabung dalam permainan. Sejak saat itu, mereka sering bermain bersama. Mereka menjadi teman baik. <|PER_1|> belajar bahwa mengajak teman adalah hal baik yang bisa membuat orang lain merasa senang."
     }
-  ]
+]

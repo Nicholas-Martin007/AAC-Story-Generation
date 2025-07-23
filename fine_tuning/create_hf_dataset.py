@@ -22,6 +22,8 @@ def read_file(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         return json.load(f)
 
+
+
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df["card"] = df["card"].apply(lambda x: x if not x.startswith("[ERROR-MESSAGE]") else None)
     df["story"] = df["story"].apply(lambda x: x if not x.startswith("[ERROR-MESSAGE]") else None)
@@ -39,11 +41,11 @@ def format_message(df: pd.DataFrame) -> list[object]:
         messages.append([
             {
                 "role": "system",
-                "content": "Kamu adalah model AI yang bertugas membuat satu paragraf singkat berdasarkan kumpulan kartu AAC (Augmentative and Alternative Communication) yang diberikan dalam bentuk array."
+                "content": "Kamu adalah model AI yang bertugas membuat satu paragraf dengan tema **Kisah Sosial** singkat berdasarkan kumpulan kartu AAC (Augmentative and Alternative Communication) yang diberikan dalam bentuk array."
             },
             {
                 "role": "user",
-                "content": ", ".join(card)  # list of strings
+                "content": json.dumps(card) # list of strings
             },
             {
                 "role": "assistant",
@@ -66,7 +68,7 @@ def save_hf_dataset(messages: list[object]) -> None:
 
     data = []
     for pair in messages:
-        prompt = pair[1]["content"]  # list[str]
+        prompt = pair[1]["content"] # list[str]
         prompt_id = str(uuid.uuid4())
 
         data.append({
@@ -82,29 +84,6 @@ def save_hf_dataset(messages: list[object]) -> None:
 
     hf_dataset.save_to_disk("./hf_aac_dataset")
 
-
-# def save_hf_dataset(messages: list[object]) -> None:
-#     # features = Features({
-#     #     "input": Sequence(Value("string")),
-#     #     "output": Value("string"),
-#     #     "id": Value("string")
-#     # })
-
-#     hf_dataset = Dataset.from_list(
-#         [
-#             {
-#                 "input": pair[1]["content"],
-#                 "output": pair[2]["content"],
-#                 "id": str(uuid.uuid4())
-#             }
-#             for pair in messages
-#         ],
-#         # features=features
-#     )
-
-#     hf_dataset.save_to_disk("./hf_aac_dataset")
-
-
 if __name__ == "__main__":
     card = read_file(filepath=AAC_CARD_PATH)
     story = read_file(filepath=AAC_STORY_PATH)
@@ -114,6 +93,3 @@ if __name__ == "__main__":
 
     messages = format_message(df)
     save_hf_dataset(messages)
-
-
-# masalaha kemarin sih karena
