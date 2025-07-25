@@ -1,10 +1,16 @@
 import sys
 import os
+
 sys.path.append(os.path.abspath("./"))
 from config import *
 
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig
+from transformers import (
+    AutoTokenizer,
+    AutoModelForCausalLM,
+    BitsAndBytesConfig,
+    GenerationConfig,
+)
 
 
 tokenizer = AutoTokenizer.from_pretrained(
@@ -12,8 +18,8 @@ tokenizer = AutoTokenizer.from_pretrained(
 )
 
 if tokenizer.pad_token is None:
-    tokenizer.add_special_tokens({'pad_token': '<|PAD|>'})
-    tokenizer.pad_token_id = tokenizer.convert_tokens_to_ids('<|PAD|>')
+    tokenizer.add_special_tokens({"pad_token": "<|PAD|>"})
+    tokenizer.pad_token_id = tokenizer.convert_tokens_to_ids("<|PAD|>")
 
 tokenizer.padding_side = "left"
 
@@ -29,14 +35,11 @@ model = AutoModelForCausalLM.from_pretrained(
     SDG_MODEL_PATH,
     torch_dtype=torch.bfloat16,
     device_map=DEVICE,
-    quantization_config=quantization_config
+    quantization_config=quantization_config,
 )
 model.resize_token_embeddings(len(tokenizer))
 
-terminators = [
-    tokenizer.eos_token_id,
-    tokenizer.convert_tokens_to_ids("<|eot_id|>")
-]
+terminators = [tokenizer.eos_token_id, tokenizer.convert_tokens_to_ids("<|eot_id|>")]
 
 generation_config = GenerationConfig(
     max_new_tokens=512,
@@ -45,5 +48,5 @@ generation_config = GenerationConfig(
     top_p=0.9,
     # bos_token_id=tokenizer.convert_tokens_to_ids("Story:"),
     eos_token_id=terminators,
-    pad_token_id=tokenizer.eos_token_id
+    pad_token_id=tokenizer.eos_token_id,
 )

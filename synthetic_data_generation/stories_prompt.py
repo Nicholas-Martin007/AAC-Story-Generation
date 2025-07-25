@@ -51,5 +51,5 @@ LIST_STORIES_PROMPT = [
     },
     {
         "content": "<|PER_1|> melihat <|PER_2|> sendirian di sudut kelas. Dia menghampiri dan mengajak bermain bersama. <|PER_2|> tersenyum dan bergabung dalam permainan. Sejak saat itu, mereka sering bermain bersama. Mereka menjadi teman baik. <|PER_1|> belajar bahwa mengajak teman adalah hal baik yang bisa membuat orang lain merasa senang."
-    }
+    },
 ]

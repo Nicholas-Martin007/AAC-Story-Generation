@@ -1,5 +1,6 @@
 import sys
 import os
+
 sys.path.append(os.path.abspath("./"))
 from config import *
 
@@ -13,13 +14,9 @@ if __name__ == "__main__":
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         dataset = json.load(f)
 
-    tokenizer = AutoTokenizer.from_pretrained(
-        NER_MODEL_PATH
-    )
-    model = AutoModelForTokenClassification.from_pretrained(
-        NER_MODEL_PATH
-    )
-    
+    tokenizer = AutoTokenizer.from_pretrained(NER_MODEL_PATH)
+    model = AutoModelForTokenClassification.from_pretrained(NER_MODEL_PATH)
+
     pipe = pipeline(
         task="ner",
         tokenizer=tokenizer,
@@ -31,7 +28,6 @@ if __name__ == "__main__":
 
     with open("applied-ner-dataset.json", "w", encoding="utf-8") as f:
         json.dump(applied_ner_dataset, f, ensure_ascii=False, indent=2)
-
 
     # =============================================
     # CLEAN NER TYPO

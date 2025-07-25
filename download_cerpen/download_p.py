@@ -8,7 +8,7 @@ with open("download_cerpen/link_cerpen.txt", "r") as f:
 
 target_classes = [
     "w-full max-w-[624px] px-4 md:px-0 md:mx-auto paragraph break-words mb-4 text-body font-lora rendered-component",
-    "ksm-GMg ksm-2BC"
+    "ksm-GMg ksm-2BC",
 ]
 
 output = {}
@@ -28,9 +28,7 @@ for url in urls:
         print(f"❌ No paragraphs for: {slug} || {cls}")
         continue
 
-    output[slug] = {
-        "text": [p.get_text(strip=True) for p in paragraphs]
-    }
+    output[slug] = {"text": [p.get_text(strip=True) for p in paragraphs]}
 
 with open("raw-text-cerpen.json", "w", encoding="utf-8") as f:
     json.dump(output, f, ensure_ascii=False, indent=2)

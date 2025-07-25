@@ -29,5 +29,5 @@ LIST_CARDS_PROMPT = [
     {"content": '["ruangan", "wewangian", "aroma", "keyakinan", "orang"]'},
     {"content": '["<|PER|>", "<|PER_1|>", "<|PER_2|>", "taman", "senja", "kabar"]'},
     {"content": '["<|PER|>", "kota", "kematian", "percakapan"]'},
-    {"content": '["<|PER|>", "aktor", "Teater"]'}
+    {"content": '["<|PER|>", "aktor", "Teater"]'},
 ]

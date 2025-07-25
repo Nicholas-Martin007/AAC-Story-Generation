@@ -21,7 +21,7 @@
 #     try:
 #         button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "font-sans")))
 #         ActionChains(driver).move_to_element(button).click().perform()
-#         time.sleep(1.5) 
+#         time.sleep(1.5)
 #     except:
 #         print("No more button or failed to click.")
 #         break
@@ -46,7 +46,9 @@
 from bs4 import BeautifulSoup
 
 # Baca file HTML
-with open("download_cerpen/cerpen digital _ Harian Kompas.html", "r", encoding="utf-8") as file:
+with open(
+    "download_cerpen/cerpen digital _ Harian Kompas.html", "r", encoding="utf-8"
+) as file:
     soup = BeautifulSoup(file, "html.parser")
 
 # Cari semua div dengan class target
@@ -61,7 +63,8 @@ for div in divs:
 
 
 import json
-with open (f"link_cerpen.txt", "w", encoding="utf-8") as f:
-   json.dump(hrefs, f, indent=2)
+
+with open(f"link_cerpen.txt", "w", encoding="utf-8") as f:
+    json.dump(hrefs, f, indent=2)
 
 print(hrefs)

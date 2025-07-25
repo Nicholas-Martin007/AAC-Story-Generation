@@ -1,0 +1,9 @@
+[tool.ruff]
+line-length = 70
+target-version = "py311"
+ignore = ["F403", "F405"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "lf"
