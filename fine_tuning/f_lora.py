@@ -2,13 +2,18 @@ from peft import LoraConfig, TaskType
 
 
 class FinetuneLora:
-    def __init__(self):
+    def __init__(
+        self,
+        r,
+        lora_alpha,
+        lora_dropout,
+    ):
         self.lora_config = LoraConfig(
             task_type=TaskType.CAUSAL_LM,
             inference_mode=False,
-            r=64,
-            lora_alpha=32,
-            lora_dropout=0.1,
+            r=r,
+            lora_alpha=lora_alpha,
+            lora_dropout=lora_dropout,
             bias='none',
             target_modules=[
                 'q_proj',
@@ -19,7 +24,10 @@ class FinetuneLora:
                 'up_proj',
                 'down_proj',
             ],
-            modules_to_save=['lm_head', 'embed_tokens'],
+            modules_to_save=[
+                'lm_head',
+                'embed_tokens',
+            ],
         )
 
     def get_lora(self):

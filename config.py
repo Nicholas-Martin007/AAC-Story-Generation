@@ -1,4 +1,5 @@
 import torch
+from itertools import product
 
 DATA_PATH = 'dataset/text-cerpen.json'
 APPLIED_NER_DATA_PATH = 'dataset/applied-ner-dataset.json'
@@ -14,10 +15,17 @@ DEVICE = torch.device(
     'cuda:0' if torch.cuda.is_available() else 'cpu'
 )
 
-SDG_MODEL_PATH = '/home/dev/Downloads/Meta-Llama-3.1-8B-Instruct/'
+SDG_MODEL_PATH = (
+    '/home/dev/Downloads/Meta-Llama-3.1-8B-Instruct/'
+)
 
-MODEL_PATH = '/home/dev/Downloads/Llama-3.2-3B-Instruct/'
-# MODEL_PATH = '/home/dev/Downloads/Mistral-7B-Instruct-v0.3/'
+MODEL_PATH = {
+    'llama3.2-1b': 'meta-llama/Llama-3.2-1B-Instruct',  # 1.24B parameters
+    'llama3.2-3b': 'meta-llama/Llama-3.2-3B-Instruct',  # 3.21B parameters
+    'mistral7b': 'mistralai/Mistral-7B-Instruct-v0.3',  # 7.25B parameters
+    'flan-large': 'google/flan-t5-large',  # 783M parameters
+    'flan-xl': 'google/flan-t5-xl',  # 2.85B parameters
+}
 
 FINE_TUNE_OUTPUT_DIR = './training_output'
 

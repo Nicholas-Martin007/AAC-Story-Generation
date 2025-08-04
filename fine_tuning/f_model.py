@@ -1,12 +1,27 @@
-from peft import get_peft_model, prepare_model_for_kbit_training
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+import torch
+
+from peft import (
+    get_peft_model,
+    prepare_model_for_kbit_training,
+)
+from transformers import (
+    AutoModelForCausalLM,
+    BitsAndBytesConfig,
+)
 
 
 class FinetuneModel:
-    def __init__(self, tokenizer, lora_config, model_path, device):
+    def __init__(
+        self,
+        tokenizer,
+        lora_config,
+        model_path,
+        device,
+    ):
+        # DQ + NF4
         self.quantization_config = BitsAndBytesConfig(
             load_in_4bit=True,
-            bnb_4bit_compute_dtype='float16',
+            bnb_4bit_compute_dtype=torch.float16,  # ganti jika bisa
             bnb_4bit_use_double_quant=True,
             bnb_4bit_quant_type='nf4',
         )
@@ -18,11 +33,13 @@ class FinetuneModel:
         )
 
         self.model.resize_token_embeddings(len(tokenizer))
-        self.model = prepare_model_for_kbit_training(self.model)
+        self.model = prepare_model_for_kbit_training(
+            self.model,
+        )  # for preprocess the quantized model
         self.model = get_peft_model(
             self.model,
             lora_config,
-        )
+        )  # create QLoRA model
 
     def get_model(self):
         return self.model

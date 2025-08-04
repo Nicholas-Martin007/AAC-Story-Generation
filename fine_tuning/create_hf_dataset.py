@@ -24,23 +24,34 @@ def read_file(filepath):
         return json.load(f)
 
 
-def clean_data(df: pd.DataFrame) -> pd.DataFrame:
+def clean_data(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
     df['card'] = df['card'].apply(
-        lambda x: x if not x.startswith('[ERROR-MESSAGE]') else None
+        lambda x: x
+        if not x.startswith('[ERROR-MESSAGE]')
+        else None
     )
     df['story'] = df['story'].apply(
-        lambda x: x if not x.startswith('[ERROR-MESSAGE]') else None
+        lambda x: x
+        if not x.startswith('[ERROR-MESSAGE]')
+        else None
     )
     df = df.dropna()
 
     def fix_card_string(s):
-        return re.findall(r'<\|.*?\|>|\b[a-zA-Z]+\b', s)
+        return re.findall(
+            r'<\|.*?\|>|\b[a-zA-Z]+\b',
+            s,
+        )
 
     df['card'] = df['card'].apply(fix_card_string)
     return df
 
 
-def format_message(df: pd.DataFrame) -> list[object]:
+def format_message(
+    df: pd.DataFrame,
+) -> list[object]:
     messages = []
     for card, story in zip(df['card'], df['story']):
         messages.append(
@@ -51,15 +62,22 @@ def format_message(df: pd.DataFrame) -> list[object]:
                 },
                 {
                     'role': 'user',
-                    'content': json.dumps(card),  # list of strings
+                    'content': json.dumps(
+                        card
+                    ),  # list of strings
                 },
-                {'role': 'assistant', 'content': story},
+                {
+                    'role': 'assistant',
+                    'content': story,
+                },
             ]
         )
     return messages
 
 
-def save_hf_dataset(messages: list[object]) -> None:
+def save_hf_dataset(
+    messages: list[object],
+) -> None:
     # features = Features({
     #     "prompt": Sequence(Value("string")),
     #     "prompt_id": Value("string"),

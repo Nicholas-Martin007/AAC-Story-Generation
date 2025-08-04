@@ -1,6 +1,8 @@
 [tool.ruff]
-line-length = 70
+line-length = 65
 target-version = "py311"
+
+[tool.ruff.lint]
 ignore = ["F403", "F405"]
 
 [tool.ruff.format]

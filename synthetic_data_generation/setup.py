@@ -1,7 +1,7 @@
 import sys
 import os
 
-sys.path.append(os.path.abspath("./"))
+sys.path.append(os.path.abspath('./'))
 from config import *
 
 import torch
@@ -18,17 +18,19 @@ tokenizer = AutoTokenizer.from_pretrained(
 )
 
 if tokenizer.pad_token is None:
-    tokenizer.add_special_tokens({"pad_token": "<|PAD|>"})
-    tokenizer.pad_token_id = tokenizer.convert_tokens_to_ids("<|PAD|>")
+    tokenizer.add_special_tokens({'pad_token': '<|PAD|>'})
+    tokenizer.pad_token_id = tokenizer.convert_tokens_to_ids(
+        '<|PAD|>'
+    )
 
-tokenizer.padding_side = "left"
+tokenizer.padding_side = 'left'
 
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
-    bnb_4bit_compute_dtype="float16",
+    bnb_4bit_compute_dtype='float16',
     bnb_4bit_use_double_quant=True,
-    bnb_4bit_quant_type="nf4",
+    bnb_4bit_quant_type='nf4',
 )
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -39,7 +41,10 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 model.resize_token_embeddings(len(tokenizer))
 
-terminators = [tokenizer.eos_token_id, tokenizer.convert_tokens_to_ids("<|eot_id|>")]
+terminators = [
+    tokenizer.eos_token_id,
+    tokenizer.convert_tokens_to_ids('<|eot_id|>'),
+]
 
 generation_config = GenerationConfig(
     max_new_tokens=512,

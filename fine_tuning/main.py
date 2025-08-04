@@ -4,14 +4,17 @@ import sys
 
 from peft import PeftModelForCausalLM
 from transformers import AutoModelForCausalLM
+import optuna
 
 sys.path.append(os.path.abspath('./'))
 from datasets import load_from_disk
 
 from config import *
 from fine_tuning.f_lora import FinetuneLora
+
 from fine_tuning.f_model import FinetuneModel
 from fine_tuning.f_tokenizer import FinetuneTokenizer
+
 from fine_tuning.f_trainer import FinetuneTrainer
 
 
@@ -31,7 +34,9 @@ def apply_template(example, tokenizer):
         },
     ]
 
-    prompt = tokenizer.apply_chat_template(messages, tokenize=False)
+    prompt = tokenizer.apply_chat_template(
+        messages, tokenize=False
+    )
 
     return {'text': prompt}
 
@@ -43,100 +48,91 @@ def prepare_data(tokenizer):
     return dataset['train'], dataset['test']
 
 
-def train_model():
-    train_data, test_data = prepare_data(tokenizer)
+def train_model(
+    model_path,
+    r,
+    lora_alpha,
+    lora_dropout,
+    learning_rate,
+    weight_decay,
+    batch_size,
+):
+    tokenizer = FinetuneTokenizer(model_path).get_tokenizer()
 
-    lora = FinetuneLora().get_lora()
+    lora_config = FinetuneLora(
+        r=r,
+        lora_alpha=lora_alpha,
+        lora_dropout=lora_dropout,
+    ).get_lora()
+
     model = FinetuneModel(
-        device=DEVICE,
-        lora_config=lora,
-        model_path=MODEL_PATH,
         tokenizer=tokenizer,
+        lora_config=lora_config,
+        model_path=model_path,
+        device=DEVICE,
     ).get_model()
+
+    train_data, test_data = prepare_data(tokenizer)
 
     trainer = FinetuneTrainer(
         train_data=train_data,
         test_data=test_data,
         model=model,
         tokenizer=tokenizer,
-        lora_config=lora,
+        lora_config=lora_config,
         output_dir=FINE_TUNE_OUTPUT_DIR,
+        learning_rate=learning_rate,
+        weight_decay=weight_decay,
+        batch_size=batch_size,
     ).get_trainer()
 
     trainer.train()
-    trainer.model.save_pretrained(f'{MODEL_PATH}-qlora')
 
-
-def merge_adapter():
-    model = AutoModelForCausalLM.from_pretrained(f'{MODEL_PATH}')
-    model.resize_token_embeddings(len(tokenizer))
-
-    model = PeftModelForCausalLM.from_pretrained(
-        model,
-        f'{MODEL_PATH}-qlora',
-        low_cpu_mem_usage=True,
-        device_map=DEVICE,
+    trainer.model.save_pretrained(
+        f'{model_path}_QLoRA_r{r}_a{lora_alpha}_d{lora_dropout}'
     )
-    merged_model = model.merge_and_unload()
-    merged_model = merged_model.to(DEVICE)
 
-    return merged_model
+    eval_result = trainer.evaluate()
+    return eval_result['eval_rougeL']
+
+
+def optuna_objective(trial):
+    r = trial.suggest_int('r', 16, 64, step=16)  # 4
+
+    a_ratio = trial.suggest_categorical('a_ratio', [0.5, 2])  # 2
+    lora_alpha = r * a_ratio
+
+    lora_dropout = trial.suggest_categorical(  # 2
+        'lora_dropout', [0.5, 0.01]
+    )
+    learning_rate = trial.suggest_float(  # infinite
+        'learning_rate', 1e-5, 5e-4, log=True
+    )
+    weight_decay = trial.suggest_float(  # 11
+        'weight_decay', 0.0, 0.1, step=0.01
+    )
+    batch_size = trial.suggest_categorical(  # 3
+        'batch_size', [1, 2, 4]
+    )
+
+    score = train_model(
+        model_path=MODEL_PATH['llama3.2-3b'],
+        r=r,
+        lora_alpha=lora_alpha,
+        lora_dropout=lora_dropout,
+        learning_rate=learning_rate,
+        weight_decay=weight_decay,
+        batch_size=batch_size,
+    )
+
+    return score
 
 
 if __name__ == '__main__':
-    tokenizer = FinetuneTokenizer(MODEL_PATH).get_tokenizer()
-
-    train_model()  # Train
-    merged_model = merge_adapter()  # Merge Model
-
-    # inference
-    prompt = tokenizer.apply_chat_template(
-        [
-            # {
-            #     'role': 'system',
-            #     'content': r'Tulis sebuah kisah sosial dari kartu-kartu yang diberikan',
-            # },
-            {
-                'role': 'user',
-                # 'content': [
-                #     '<|PER|>',
-                #     'dilarang',
-                #     'bertengkar',
-                #     'dengan',
-                #     '<|PER_1|>',
-                # ],
-                'content': json.dumps(
-                    [
-                        '<|PER|>',
-                        '<|PER_1|>',
-                        'dilarang',
-                        'bertengkar',
-                        'dengan',
-                        'toko',
-                        'curi',
-                        'makanan',
-                    ]
-                ),
-            },
-        ],
-        tokenize=False,
-        add_generation_prompt=True,
+    study = optuna.create_study(
+        direction='maximize',
+        study_name='QLoRA_search',
+        storage='sqlite:///optuna_qlora.db',
+        load_if_exists=True,
     )
-
-    input_ids = tokenizer(
-        prompt, return_tensors='pt', padding=True
-    ).input_ids.to(DEVICE)
-
-    output = merged_model.generate(
-        input_ids=input_ids,
-        max_new_tokens=1024,
-        temperature=0.9,
-        # repetition_penalty=1.2,
-        do_sample=True,
-        top_p=0.9,
-        eos_token_id=tokenizer.eos_token_id,
-        pad_token_id=tokenizer.pad_token_id,
-    )
-
-    story = tokenizer.decode(output[0])
-    print(story)
+    study.optimize(optuna_objective, n_trials=20)

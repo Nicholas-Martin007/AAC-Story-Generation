@@ -3,7 +3,9 @@ from transformers import AutoTokenizer
 
 class FinetuneTokenizer:
     def __init__(self, model_path):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            model_path
+        )
 
         self.tokenizer.add_special_tokens(
             {

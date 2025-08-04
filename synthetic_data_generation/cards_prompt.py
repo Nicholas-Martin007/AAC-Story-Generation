@@ -20,14 +20,22 @@ Contoh:
 """
 
 LIST_CARDS_PROMPT = [
-    {"content": '["<|PER|>", "<|PER_1|>", "ruang", "lihat", "jelas"]'},
-    {"content": '["<|PER|>", "jendela", "sejarah"]'},
-    {"content": '["bayangan", "malam"]'},
-    {"content": '["<|PER|>", "<|PER_1|>", "<|PER_2|>", "rumah", "sunyi"]'},
-    {"content": '["<|PER|>", "malam", "istri"]'},
-    {"content": '["<|PER|>", "rumah", "ikan", "sore"]'},
-    {"content": '["ruangan", "wewangian", "aroma", "keyakinan", "orang"]'},
-    {"content": '["<|PER|>", "<|PER_1|>", "<|PER_2|>", "taman", "senja", "kabar"]'},
-    {"content": '["<|PER|>", "kota", "kematian", "percakapan"]'},
-    {"content": '["<|PER|>", "aktor", "Teater"]'},
+    {
+        'content': '["<|PER|>", "<|PER_1|>", "ruang", "lihat", "jelas"]'
+    },
+    {'content': '["<|PER|>", "jendela", "sejarah"]'},
+    {'content': '["bayangan", "malam"]'},
+    {
+        'content': '["<|PER|>", "<|PER_1|>", "<|PER_2|>", "rumah", "sunyi"]'
+    },
+    {'content': '["<|PER|>", "malam", "istri"]'},
+    {'content': '["<|PER|>", "rumah", "ikan", "sore"]'},
+    {
+        'content': '["ruangan", "wewangian", "aroma", "keyakinan", "orang"]'
+    },
+    {
+        'content': '["<|PER|>", "<|PER_1|>", "<|PER_2|>", "taman", "senja", "kabar"]'
+    },
+    {'content': '["<|PER|>", "kota", "kematian", "percakapan"]'},
+    {'content': '["<|PER|>", "aktor", "Teater"]'},
 ]
