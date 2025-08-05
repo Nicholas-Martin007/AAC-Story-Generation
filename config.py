@@ -1,5 +1,12 @@
 import torch
-from itertools import product
+
+N_PERSON = [
+    'one_person',
+    'two_person',
+    'three_person',
+    'four_person',
+    'five_person',
+]
 
 DATA_PATH = 'dataset/text-cerpen.json'
 APPLIED_NER_DATA_PATH = 'dataset/applied-ner-dataset.json'
@@ -15,9 +22,7 @@ DEVICE = torch.device(
     'cuda:0' if torch.cuda.is_available() else 'cpu'
 )
 
-SDG_MODEL_PATH = (
-    '/home/dev/Downloads/Meta-Llama-3.1-8B-Instruct/'
-)
+SDG_MODEL_PATH = '/home/dev/Downloads/Llama-3.2-3B-Instruct/'
 
 MODEL_PATH = {
     'llama3.2-1b': 'meta-llama/Llama-3.2-1B-Instruct',  # 1.24B parameters

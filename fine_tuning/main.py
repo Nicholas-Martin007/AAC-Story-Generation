@@ -1,9 +1,6 @@
-import json
 import os
 import sys
 
-from peft import PeftModelForCausalLM
-from transformers import AutoModelForCausalLM
 import optuna
 
 sys.path.append(os.path.abspath('./'))
@@ -11,10 +8,8 @@ from datasets import load_from_disk
 
 from config import *
 from fine_tuning.f_lora import FinetuneLora
-
 from fine_tuning.f_model import FinetuneModel
 from fine_tuning.f_tokenizer import FinetuneTokenizer
-
 from fine_tuning.f_trainer import FinetuneTrainer
 
 
@@ -42,7 +37,9 @@ def apply_template(example, tokenizer):
 
 
 def prepare_data(tokenizer):
-    dataset = load_from_disk('hf_aac_dataset').shuffle(seed=SEED)
+    dataset = load_from_disk('hf_aac_dataset').shuffle(
+        seed=SEED
+    )[:20]
     dataset = dataset.train_test_split(test_size=0.2)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
     return dataset['train'], dataset['test']

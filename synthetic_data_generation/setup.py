@@ -1,17 +1,16 @@
-import sys
 import os
+import sys
 
 sys.path.append(os.path.abspath('./'))
-from config import *
-
 import torch
 from transformers import (
-    AutoTokenizer,
     AutoModelForCausalLM,
+    AutoTokenizer,
     BitsAndBytesConfig,
     GenerationConfig,
 )
 
+from config import *
 
 tokenizer = AutoTokenizer.from_pretrained(
     SDG_MODEL_PATH,
