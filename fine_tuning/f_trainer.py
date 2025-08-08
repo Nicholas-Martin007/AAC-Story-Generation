@@ -99,7 +99,7 @@ class FinetuneTrainer:
             references=decoded_labels,
             use_stemmer=True,
         )
-        # result = {k: v for k, v in result.items()}
+        result = {k: v for k, v in result.items()}
         print('RESULT:', result)
         return result
 

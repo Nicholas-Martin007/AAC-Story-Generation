@@ -26,7 +26,7 @@ SDG_MODEL_PATH = '/home/dev/Downloads/Llama-3.2-3B-Instruct/'
 
 MODEL_PATH = {
     'llama3.2-1b': 'meta-llama/Llama-3.2-1B-Instruct',  # 1.24B parameters
-    'llama3.2-3b': 'meta-llama/Llama-3.2-3B-Instruct',  # 3.21B parameters
+    'llama3.2-3b': '/home/dev/Downloads/Llama-3.2-3B-Instruct/',  # 3.21B parameters
     'mistral7b': 'mistralai/Mistral-7B-Instruct-v0.3',  # 7.25B parameters
     'flan-large': 'google/flan-t5-large',  # 783M parameters
     'flan-xl': 'google/flan-t5-xl',  # 2.85B parameters

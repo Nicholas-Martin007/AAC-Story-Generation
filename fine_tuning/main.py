@@ -12,6 +12,16 @@ from fine_tuning.f_model import FinetuneModel
 from fine_tuning.f_tokenizer import FinetuneTokenizer
 from fine_tuning.f_trainer import FinetuneTrainer
 
+# tokenizer = FinetuneTokenizer(
+#     model_path=MODEL_PATH['llama3.2-3b']
+# ).get_tokenizer()
+
+# model_class = FinetuneModel(
+#     tokenizer=tokenizer,
+#     model_path=MODEL_PATH,
+#     device=DEVICE,
+# )
+
 
 def apply_template(example, tokenizer):
     messages = [
@@ -37,12 +47,68 @@ def apply_template(example, tokenizer):
 
 
 def prepare_data(tokenizer):
-    dataset = load_from_disk('hf_aac_dataset').shuffle(
-        seed=SEED
-    )[:20]
+    dataset = load_from_disk('hf_aac_dataset').shuffle(seed=SEED)
+    dataset = dataset.select(range(10))
     dataset = dataset.train_test_split(test_size=0.2)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
     return dataset['train'], dataset['test']
+
+
+def run_single_training(args):
+    """Run training in isolated process"""
+    (
+        model_path,
+        r,
+        lora_alpha,
+        lora_dropout,
+        learning_rate,
+        weight_decay,
+        batch_size,
+    ) = args
+
+    # Set CUDA device in the subprocess
+    os.environ['CUDA_VISIBLE_DEVICES'] = (
+        '0'  # or whatever GPU you're using
+    )
+
+    # Your original training code here
+    tokenizer = FinetuneTokenizer(
+        model_path=model_path
+    ).get_tokenizer()
+    model_class = FinetuneModel(
+        tokenizer=tokenizer,
+        model_path=model_path,
+        device=DEVICE,
+    )
+
+    lora_config = FinetuneLora(
+        r=r,
+        lora_alpha=lora_alpha,
+        lora_dropout=lora_dropout,
+    ).get_lora()
+
+    model_class.insert_lora(lora_config=lora_config)
+    train_data, test_data = prepare_data(tokenizer)
+
+    trainer = FinetuneTrainer(
+        train_data=train_data,
+        test_data=test_data,
+        model=model_class.get_model(),
+        tokenizer=tokenizer,
+        lora_config=lora_config,
+        output_dir=FINE_TUNE_OUTPUT_DIR,
+        learning_rate=learning_rate,
+        weight_decay=weight_decay,
+        batch_size=batch_size,
+    ).get_trainer()
+
+    trainer.train()
+    # trainer.model.save_pretrained(
+    #     f'{model_path}_QLoRA_r{r}_a{lora_alpha}_d{lora_dropout}'
+    # )
+    eval_result = trainer.evaluate()
+
+    return eval_result.get('eval_rougeL', 0)
 
 
 def train_model(
@@ -54,43 +120,30 @@ def train_model(
     weight_decay,
     batch_size,
 ):
-    tokenizer = FinetuneTokenizer(model_path).get_tokenizer()
-
-    lora_config = FinetuneLora(
-        r=r,
-        lora_alpha=lora_alpha,
-        lora_dropout=lora_dropout,
-    ).get_lora()
-
-    model = FinetuneModel(
-        tokenizer=tokenizer,
-        lora_config=lora_config,
-        model_path=model_path,
-        device=DEVICE,
-    ).get_model()
-
-    train_data, test_data = prepare_data(tokenizer)
-
-    trainer = FinetuneTrainer(
-        train_data=train_data,
-        test_data=test_data,
-        model=model,
-        tokenizer=tokenizer,
-        lora_config=lora_config,
-        output_dir=FINE_TUNE_OUTPUT_DIR,
-        learning_rate=learning_rate,
-        weight_decay=weight_decay,
-        batch_size=batch_size,
-    ).get_trainer()
-
-    trainer.train()
-
-    trainer.model.save_pretrained(
-        f'{model_path}_QLoRA_r{r}_a{lora_alpha}_d{lora_dropout}'
+    args = (
+        model_path,
+        r,
+        lora_alpha,
+        lora_dropout,
+        learning_rate,
+        weight_decay,
+        batch_size,
     )
 
-    eval_result = trainer.evaluate()
-    return eval_result['eval_rougeL']
+    context = torch.multiprocessing.get_context(
+        'spawn'
+    )  # multiprocessing, for gpu cleaning
+    pool = context.Pool(processes=1)
+
+    with pool:
+        result = pool.apply(
+            run_single_training,
+            (args,),
+        )
+
+    torch.cuda.empty_cache()
+
+    return result
 
 
 def optuna_objective(trial):

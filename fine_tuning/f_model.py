@@ -1,5 +1,4 @@
 import torch
-
 from peft import (
     get_peft_model,
     prepare_model_for_kbit_training,
@@ -14,9 +13,9 @@ class FinetuneModel:
     def __init__(
         self,
         tokenizer,
-        lora_config,
         model_path,
         device,
+        lora_config=None,
     ):
         # DQ + NF4
         self.quantization_config = BitsAndBytesConfig(
@@ -33,13 +32,15 @@ class FinetuneModel:
         )
 
         self.model.resize_token_embeddings(len(tokenizer))
+
+    def insert_lora(self, lora_config):
         self.model = prepare_model_for_kbit_training(
             self.model,
-        )  # for preprocess the quantized model
+        )  # preprocess, required for quantized model
         self.model = get_peft_model(
             self.model,
             lora_config,
-        )  # create QLoRA model
+        )  # insert qlora
 
     def get_model(self):
         return self.model
