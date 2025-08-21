@@ -69,46 +69,45 @@ def generate_story(
     for data in dataset:
         start = time.time()
 
-        for n in N_PERSON:
-            print(f'KEYS: {n}')
+        # for n in N_PERSON:
+        messages = get_message(
+            data,
+            N_PERSON[0],
+            use_story_prompt=True,
+        )
 
-            messages = get_message(
-                data,
-                n,
-                use_story_prompt=True,
-            )
+        input_ids = tokenizer.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            return_tensors='pt',
+        ).to(DEVICE)
 
-            input_ids = tokenizer.apply_chat_template(
-                messages,
-                add_generation_prompt=True,
-                return_tensors='pt',
-            ).to(DEVICE)
+        output = generate_text(
+            input_ids=input_ids,
+            use_story_format=True,
+        )
 
-            output = generate_text(
-                input_ids=input_ids,
-                use_story_format=True,
-            )
+        results.append(output)
 
-            end = time.time()
-            results.append(output)
+        print(output)
 
-            print(output)
-            print(f'Generated in {end - start:.2f} seconds')
-            print('\n\n')
+        end = time.time()
+        print(f'Generated in {end - start:.2f} seconds')
+        print('\n\n')
 
     results = [normalize_per_entities(r) for r in results]
     print('SAVING STORY...')
-    # with open(
-    #     'aac_story_dataset.json',
-    #     'w',
-    #     encoding='utf-8',
-    # ) as f:
-    #     json.dump(
-    #         results,
-    #         f,
-    #         ensure_ascii=False,
-    #         indent=2,
-    #     )
+    with open(
+        'aac_story_dataset.json',
+        'w',
+        encoding='utf-8',
+    ) as f:
+        json.dump(
+            results,
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
 
     return results
 
@@ -119,40 +118,38 @@ def generate_card(
     results = []
     for data in dataset:
         start = time.time()
+        messages = get_message(data, use_card_prompt=True)
 
-        for n in N_PERSON:
-            messages = get_message(data, n, use_card_prompt=True)
+        input_ids = tokenizer.apply_chat_template(
+            messages,
+            add_generation_prompt=True,
+            return_tensors='pt',
+        ).to(DEVICE)
 
-            input_ids = tokenizer.apply_chat_template(
-                messages,
-                add_generation_prompt=True,
-                return_tensors='pt',
-            ).to(DEVICE)
+        output = generate_text(
+            input_ids=input_ids,
+            use_card_format=True,
+        )
 
-            output = generate_text(
-                input_ids=input_ids,
-                use_card_format=True,
-            )
+        results.append(output)
+        print(output)
 
-            end = time.time()
-            results.append(output)
-
-            print(output)
-            print(f'Generated in {end - start:.2f} seconds')
-            print('\n\n')
+        end = time.time()
+        print(f'Generated in {end - start:.2f} seconds')
+        print('\n\n')
 
     print('SAVING CARD...')
-    # with open(
-    #     'aac_card_dataset.json',
-    #     'w',
-    #     encoding='utf-8',
-    # ) as f:
-    #     json.dump(
-    #         results,
-    #         f,
-    #         ensure_ascii=False,
-    #         indent=2,
-    #     )
+    with open(
+        f'aac_card_dataset{N_PERSON[0]}.json',
+        'w',
+        encoding='utf-8',
+    ) as f:
+        json.dump(
+            results,
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
 
     return results
 
@@ -160,9 +157,19 @@ def generate_card(
 if __name__ == '__main__':
     dataset = read_file()
 
-    dataset = dataset[:1]
-
     story_dataset = generate_story(dataset)
+    # with open(
+    #     'aac_story_datasetno_person.json', 'r', encoding='utf-8'
+    # ) as f:
+    #     story_dataset = json.load(f)
+
+    # story_dataset = [
+    #     s
+    #     for s in story_dataset
+    #     if '[ERROR-MESSAGE]' not in s
+    #     and '<|PER|>' not in s
+    #     and s.count('.') >= 2
+    # ]
     card_dataset = generate_card(story_dataset)
 
     print('DONE')

@@ -38,7 +38,7 @@ def build_prompt_card():
 
 def get_message(
     user_prompt: str,
-    n: str,
+    n: str = None,
     use_story_prompt: bool = False,
     use_card_prompt: bool = False,
 ):
