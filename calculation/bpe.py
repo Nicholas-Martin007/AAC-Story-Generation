@@ -60,32 +60,37 @@ def merge(pair):
 
 if __name__ == '__main__':
     vocab_size = 50  # our vocab size
+    print('MERGE')
     for i in range(vocab_size):
         get_bpe_pairs()
         if not pairs:
             break
         best_pair = max(pairs, key=pairs.get)
-        print(
-            f'Merge {i + 1}: {best_pair} -> {pairs[best_pair]}'
-        )
         merge(best_pair)
 
+        print(
+            f'Merge {i + 1} || Pair {best_pair}, frequency: {pairs[best_pair]}'
+        )
+
     for word, chars in word_char_list.items():
-        print(word, '||', chars)
+        print(f'{word}: {chars}')
 
     tokenized_corpus = []
 
-    for sentence in ['saya mau kopi', 'makan itu kenyang']:
-        tokenized_sentence = []
-        for word in sentence.split():
-            word_lower = word.lower()
-            tokenized_sentence.extend(
-                word_char_list.get(word_lower, list(word_lower))
-            )
-        tokenized_corpus.append(tokenized_sentence)
+    sentence = (
+        'Saya mau menciptakan sebuah kisah sosial yang baru'
+    )
+
+    tokenized_sentence = []
+    for word in sentence.split():
+        word_lower = word.lower()
+        tokenized_sentence.extend(
+            word_char_list.get(word_lower, list(word_lower))
+        )
+    tokenized_corpus.append(tokenized_sentence)
 
     for i, tokens in enumerate(tokenized_corpus):
-        print(f'Sentence {i}: {tokens}')
+        print(f'Sentence {i + 1}: {tokens}')
 
     # Step 1: Build vocabulary from all subwords
     vocab = {}
@@ -111,6 +116,8 @@ if __name__ == '__main__':
         numerical_corpus.append(token_ids)
 
     # Print results
+    print('==================')
+    print('BASED ON VOCAB ONLY, 3 sentences')
     print('Vocabulary:', vocab)
     for i, seq in enumerate(numerical_corpus, 1):
         print(f'Sentence {i} IDs: {seq}')
