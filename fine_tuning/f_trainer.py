@@ -28,7 +28,7 @@ class FinetuneTrainer:
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
             gradient_accumulation_steps=8,
-            num_train_epochs=1,
+            num_train_epochs=4,
             weight_decay=weight_decay,  # regularization
             optim='paged_adamw_32bit',
             logging_steps=100,

@@ -4,6 +4,7 @@ from peft import (
     prepare_model_for_kbit_training,
 )
 from transformers import (
+    # AutoModelForSeq2SeqLM,
     AutoModelForCausalLM,
     BitsAndBytesConfig,
 )

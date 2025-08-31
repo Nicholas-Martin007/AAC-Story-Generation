@@ -23,10 +23,15 @@ class FinetuneLora:
                 'gate_proj',
                 'up_proj',
                 'down_proj',
+                # 'q',  # khusus t5
+                # 'v',  # khusus t5
+                # 'wi',  # khusus t5
+                # 'wo',  # khusus t5
             ],
             modules_to_save=[
                 'lm_head',
                 'embed_tokens',
+                # 'shared',  # khusus t5
             ],
         )
 
