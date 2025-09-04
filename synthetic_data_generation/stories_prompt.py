@@ -23,15 +23,12 @@ Aturan umum:
 - 'anda' → ganti jadi 'dia' atau 'mereka'  
 - 'istrimu' → ganti jadi 'orang lain' atau hilangkan  
 - 'murung' → ganti jadi 'diam' atau 'tenang'  
-- 'kepedihan' → ganti jadi 'perasaan tidak nyaman' atau 'kecewa'  
-- 'menangis' → ganti jadi 'air mata' atau 'diam'  
-- 'sedih' → ganti jadi 'tidak senang' atau 'kecewa'  
-- 'kematian' → ganti jadi 'perpisahan' atau hindari topik ini  
-- 'bunuh', 'mati' → ganti jadi 'berpisah' atau hindari kata ini  
-- 'tawuran' → ganti jadi 'berkelahi' atau hindari kata ini  
 - 'parang', 'senjata' → ganti jadi 'alat' atau hindari kata ini  
-- '<|PER|>', nama gelar, nama tempat spesifik → ganti jadi kata umum seperti 'orang', 'tempat', 'bangunan'  
-Pastikan semua kata yang diganti tetap mudah dimengerti anak usia dini dan sesuai konteks.
+- '<|PER|>' (Person) → "orang", "teman", "guru", "ayah", "ibu"  
+- '<|ORG|>' (Organization) → "sekolah", "toko", "kelompok"  
+- '<|LOC|>' (Location) → "tempat", "taman", "lapangan"  
+- '<|FAC|>' (Facility) → "bangunan", "rumah", "jembatan"  
+- '<|GPE|>' (Geo-political entity) → "kota", "desa", "negara"Pastikan semua kata yang diganti tetap mudah dimengerti anak usia dini dan sesuai konteks.
 12. Ejaan dan tata bahasa benar, tanpa typo.
 13. Paragraf satu baris penuh, mulai dengan `Story:` lalu spasi.
 14. Output hanya paragraf akhir.

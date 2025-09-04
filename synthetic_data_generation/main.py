@@ -3,7 +3,6 @@ import sys
 
 sys.path.append(os.path.abspath('./'))
 import json
-import re
 import time
 
 from format_message import get_message
@@ -26,40 +25,14 @@ def read_file(
     return dataset
 
 
-def save_file(dataset, filepath='result') -> None:
-    with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(
-            dataset,
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
-
-
-def normalize_per_entities(text):
-    seen = {}
-    count = 0
-
-    def replacer(match):
-        nonlocal count
-        tag = match.group(0)
-
-        if tag == '<|PER|>' and tag not in seen:
-            seen[tag] = tag
-            count += 1
-            return tag
-
-        if tag in seen:
-            return seen[tag]
-
-        new_tag = f'<|PER_{count}|>' if count > 0 else '<|PER|>'
-        seen[tag] = new_tag
-        count += 1
-        return new_tag
-
-    pattern = r'(<[^<>]*?PER[^<>]*>?|<[^<>]{1,50}?>)'
-
-    return re.sub(pattern, replacer, text)
+# def save_file(dataset, filepath='result') -> None:
+#     with open(filepath, 'w', encoding='utf-8') as f:
+#         json.dump(
+#             dataset,
+#             f,
+#             ensure_ascii=False,
+#             indent=2,
+#         )
 
 
 def generate_story(
@@ -95,7 +68,7 @@ def generate_story(
         print(f'Generated in {end - start:.2f} seconds')
         print('\n\n')
 
-    results = [normalize_per_entities(r) for r in results]
+    # results = [normalize_per_entities(r) for r in results]
     print('SAVING STORY...')
     with open(
         'aac_story_dataset.json',
@@ -140,7 +113,7 @@ def generate_card(
 
     print('SAVING CARD...')
     with open(
-        f'aac_card_dataset{N_PERSON[0]}.json',
+        'aac_card_dataset.json',
         'w',
         encoding='utf-8',
     ) as f:
@@ -156,20 +129,7 @@ def generate_card(
 
 if __name__ == '__main__':
     dataset = read_file()
-
     story_dataset = generate_story(dataset)
-    # with open(
-    #     'aac_story_datasetno_person.json', 'r', encoding='utf-8'
-    # ) as f:
-    #     story_dataset = json.load(f)
-
-    # story_dataset = [
-    #     s
-    #     for s in story_dataset
-    #     if '[ERROR-MESSAGE]' not in s
-    #     and '<|PER|>' not in s
-    #     and s.count('.') >= 2
-    # ]
     card_dataset = generate_card(story_dataset)
 
     print('DONE')

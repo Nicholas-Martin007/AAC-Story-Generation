@@ -10,6 +10,7 @@ N_PERSON = [
 ]
 
 DATA_PATH = 'dataset/text-cerpen.json'
+PRE_PROCESSED_DATA_PATH = 'dataset/pre-processed-dataset.json'
 APPLIED_NER_DATA_PATH = 'dataset/applied-ner-dataset.json'
 CLEANED_APPLIED_NER_DATA_PATH = (
     'dataset/cleaned-applied-ner-dataset.json'
