@@ -71,7 +71,7 @@ def generate_story(
     # results = [normalize_per_entities(r) for r in results]
     print('SAVING STORY...')
     with open(
-        'aac_story_dataset.json',
+        'aac_story_dataset_2.json',
         'w',
         encoding='utf-8',
     ) as f:
@@ -113,7 +113,7 @@ def generate_card(
 
     print('SAVING CARD...')
     with open(
-        'aac_card_dataset.json',
+        'aac_card_dataset_2.json',
         'w',
         encoding='utf-8',
     ) as f:
@@ -128,8 +128,36 @@ def generate_card(
 
 
 if __name__ == '__main__':
-    dataset = read_file()
-    story_dataset = generate_story(dataset)
-    card_dataset = generate_card(story_dataset)
+    # dataset = read_file()
+    # story_dataset = generate_story(dataset)
+    # card_dataset = generate_card(story_dataset)
 
+    # card_files = [
+    #     'dataset/aac_card_dataset.json',
+    #     'dataset/aac_card_dataset_2.json',
+    # ]
+    # story_files = [
+    #     'dataset/aac_story_dataset.json',
+    #     'dataset/aac_story_dataset_2.json',
+    # ]
+
+    # def merge_json(file_list):
+    #     merged = []
+    #     for f in file_list:
+    #         with open(f, 'r', encoding='utf-8') as infile:
+    #             data = json.load(infile)
+    #             if isinstance(data, list):
+    #                 merged.extend(data)
+    #             else:
+    #                 merged.append(data)
+    #     return merged
+
+    # cards = merge_json(card_files)
+    # stories = merge_json(story_files)
+
+    # with open('cards.json', 'w', encoding='utf-8') as f:
+    #     json.dump(cards, f, ensure_ascii=False, indent=2)
+
+    # with open('stories.json', 'w', encoding='utf-8') as f:
+    #     json.dump(stories, f, ensure_ascii=False, indent=2)
     print('DONE')

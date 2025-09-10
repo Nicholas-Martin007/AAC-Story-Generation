@@ -11,7 +11,9 @@ from transformers import AutoTokenizer
 sys.path.append(os.path.abspath('./'))
 from config import *
 
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_PATH['llama3.2-3b']
+)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.pad_token_id = tokenizer.eos_token_id

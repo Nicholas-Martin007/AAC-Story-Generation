@@ -18,15 +18,15 @@ from fine_tuning.f_model import FinetuneModel
 from fine_tuning.f_tokenizer import FinetuneTokenizer
 from fine_tuning.f_trainer import FinetuneTrainer
 
-# tokenizer = FinetuneTokenizer(
-#     model_path=MODEL_PATH['llama3.2-3b']
-# ).get_tokenizer()
+tokenizer = FinetuneTokenizer(
+    model_path=MODEL_PATH['llama3.2-3b']
+).get_tokenizer()
 
-# model_class = FinetuneModel(
-#     tokenizer=tokenizer,
-#     model_path=MODEL_PATH,
-#     device=DEVICE,
-# )
+model_class = FinetuneModel(
+    tokenizer=tokenizer,
+    model_path=MODEL_PATH['llama3.2-3b'],
+    device=DEVICE,
+)
 
 
 def apply_template(example, tokenizer):
@@ -211,6 +211,8 @@ def inference():
     )
     model.resize_token_embeddings(len(tokenizer))
 
+    for name, param in model.named_parameters():
+        print(name, param.norm().item())
     # harus debug dari sini, jangan langsung dari model-> qlora_model, karena model bakal tetap keganti
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
@@ -293,6 +295,9 @@ def inference():
         print(f'{tokenizer.convert_ids_to_tokens(input_ids[0])}')
 
         story = tokenizer.decode(output[0].detach()[0])
+        print(
+            f'{tokenizer.convert_ids_to_tokens(output[0].detach()[0])}'
+        )
         print(story)
 
         print()
@@ -300,60 +305,60 @@ def inference():
 
 if __name__ == '__main__':
     # training()
-    # inference()
+    inference()
 
-    reference = 'Saya masuk ke ruang kelas dan melihat meja serta buku yang rapi. Guru memberi tugas menggambar. Saya ambil pensil dan menggambar dengan hati-hati. Setelah selesai saya rapikan pensil dan kertas. Kebiasaan ini membuat ruang kelas jadi bersih dan nyaman. Saya juga belajar pentingnya menjaga kebersihan dan mengatur alat tulis.'
+    # reference = 'Saya masuk ke ruang kelas dan melihat meja serta buku yang rapi. Guru memberi tugas menggambar. Saya ambil pensil dan menggambar dengan hati-hati. Setelah selesai saya rapikan pensil dan kertas. Kebiasaan ini membuat ruang kelas jadi bersih dan nyaman. Saya juga belajar pentingnya menjaga kebersihan dan mengatur alat tulis.'
 
-    prediction = 'Kelas di ruangan yang sederhana ini terlihat menarik perhatian. Di meja belajar, beberapa siswa sedang berlatih menulis dengan sangat teliti, sementara teman-teman lainnya bermain dengan kartu AAC yang terlihat sangat kreatif dan menyenangkan. Siswa-siswa di kelas ini sangat bersemangat dan tertarik dalam belajar.'
+    # prediction = 'Kelas di ruangan yang sederhana ini terlihat menarik perhatian. Di meja belajar, beberapa siswa sedang berlatih menulis dengan sangat teliti, sementara teman-teman lainnya bermain dengan kartu AAC yang terlihat sangat kreatif dan menyenangkan. Siswa-siswa di kelas ini sangat bersemangat dan tertarik dalam belajar.'
 
-    import torch
-    from bert_score import score
-    from rouge_score import rouge_scorer
+    # import torch
+    # from bert_score import score
+    # from rouge_score import rouge_scorer
 
-    # ----------------------
-    # ROUGE
-    # ----------------------
-    scorer = rouge_scorer.RougeScorer(
-        ['rouge1', 'rouge2', 'rougeL'], use_stemmer=True
-    )
-    rouge_scores = scorer.score(reference, prediction)
-    print('ROUGE Scores:', rouge_scores)
+    # # ----------------------
+    # # ROUGE
+    # # ----------------------
+    # scorer = rouge_scorer.RougeScorer(
+    #     ['rouge1', 'rouge2', 'rougeL'], use_stemmer=True
+    # )
+    # rouge_scores = scorer.score(reference, prediction)
+    # print('ROUGE Scores:', rouge_scores)
 
-    # ----------------------
-    # BERTScore
-    # ----------------------
-    P, R, F1 = score(
-        [prediction],
-        [reference],
-        lang='id',
-        rescale_with_baseline=True,
-    )
+    # # ----------------------
+    # # BERTScore
+    # # ----------------------
+    # P, R, F1 = score(
+    #     [prediction],
+    #     [reference],
+    #     lang='id',
+    #     rescale_with_baseline=True,
+    # )
 
-    print('BERTScore Precision:', P.mean().item())
-    print('BERTScore Recall:', R.mean().item())
-    print('BERTScore F1:', F1.mean().item())
+    # print('BERTScore Precision:', P.mean().item())
+    # print('BERTScore Recall:', R.mean().item())
+    # print('BERTScore F1:', F1.mean().item())
 
-    # ----------------------
-    # Perplexity (approx, contoh distribusi probabilitas)
-    # ----------------------
-    # Token target (misal hasil tokenization sederhana)
-    tokens = reference.split()
-    m = len(tokens)
+    # # ----------------------
+    # # Perplexity (approx, contoh distribusi probabilitas)
+    # # ----------------------
+    # # Token target (misal hasil tokenization sederhana)
+    # tokens = reference.split()
+    # m = len(tokens)
 
-    # Probabilitas tiap token sebagai contoh (harusnya dari model)
-    # di sini kita buat dummy probabilitas acak untuk ilustrasi
-    torch.manual_seed(0)
-    P_i = torch.rand(m)
-    P_i = P_i / P_i.sum()  # normalize agar menjadi distribusi
+    # # Probabilitas tiap token sebagai contoh (harusnya dari model)
+    # # di sini kita buat dummy probabilitas acak untuk ilustrasi
+    # torch.manual_seed(0)
+    # P_i = torch.rand(m)
+    # P_i = P_i / P_i.sum()  # normalize agar menjadi distribusi
 
-    # Ambil token target index sebagai posisi dummy (hanya untuk ilustrasi)
-    t_i = torch.arange(m) % m
+    # # Ambil token target index sebagai posisi dummy (hanya untuk ilustrasi)
+    # t_i = torch.arange(m) % m
 
-    # Hitung cross-entropy tiap token: -log(P_i[t_i])
-    # Di sini P_i satu dimensi, jadi gunakan log(P_i) langsung
-    ce = -torch.log(
-        P_i + 1e-12
-    )  # tambahkan epsilon agar tidak log(0)
-    mean_ce = ce.mean()
-    ppl = torch.exp(mean_ce)
-    print('Perplexity (approx):', ppl.item())
+    # # Hitung cross-entropy tiap token: -log(P_i[t_i])
+    # # Di sini P_i satu dimensi, jadi gunakan log(P_i) langsung
+    # ce = -torch.log(
+    #     P_i + 1e-12
+    # )  # tambahkan epsilon agar tidak log(0)
+    # mean_ce = ce.mean()
+    # ppl = torch.exp(mean_ce)
+    # print('Perplexity (approx):', ppl.item())
