@@ -17,53 +17,30 @@ from fine_tuning.f_tokenizer import FinetuneTokenizer
 from fine_tuning.f_trainer import FinetuneTrainer
 
 
-# def apply_template(example, tokenizer):
-#     messages = [
-#         {
-#             'role': 'system',
-#             'content': example['messages'][0]['content'],
-#         },
-#         {
-#             'role': 'user',
-#             'content': example['messages'][1]['content'],
-#         },
-#         {
-#             'role': 'assistant',
-#             'content': example['messages'][2]['content'],
-#         },
-#     ]
-
-#     prompt = tokenizer.apply_chat_template(
-#         messages, tokenize=False
-#     )
-
-#     return {'text': prompt}
-
-#     prompt = (  # khusus t5
-#         'System: ' + example['messages'][0]['content'] + '\n'
-#         'User: ' + example['messages'][1]['content'] + '\n'
-#         'Assistant: ' + example['messages'][2]['content']
-#     )
-#     return {'text': prompt}
-
-
 def apply_template(example, tokenizer):
-    # For Flan-T5 (no chat template)
-    prompt = (
-        'Generate a short social story based on these AAC cards: '
-        + example['input_text']
+    messages = [
+        {
+            'role': 'system',
+            'content': example['messages'][0]['content'],
+        },
+        {
+            'role': 'user',
+            'content': example['messages'][1]['content'],
+        },
+        {
+            'role': 'assistant',
+            'content': example['messages'][2]['content'],
+        },
+    ]
+
+    prompt = tokenizer.apply_chat_template(
+        messages, tokenize=False
     )
 
-    model_inputs = tokenizer(
-        prompt,
-        text_target=example['output_text'],
-        truncation=True,
-    )
-
-    return model_inputs
+    return {'text': prompt}
 
 
-def prepare_data(tokenizer, dataset):
+def prepare_data(tokenizer, dataset, model_type='seq2seq'):
     if dataset is None:
         dataset = load_from_disk('hf_aac_dataset').shuffle(
             seed=SEED
@@ -73,23 +50,27 @@ def prepare_data(tokenizer, dataset):
     dataset = dataset.train_test_split(test_size=0.2)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
 
-    # def preprocess(example):
-    #     model_inputs = tokenizer(
-    #         example['input_text'],
-    #         max_length=512,
-    #         # truncation=True,
-    #     )
-    #     labels = tokenizer(
-    #         example['output_text'],
-    #         max_length=512,
-    #         # truncation=True,
-    #     )
-    #     model_inputs['labels'] = labels['input_ids']
-    #     return model_inputs
+    # ✅ Tokenize text so Trainer sees input_ids, attention_mask, labels
+    def tokenize_function(examples):
+        return tokenizer(
+            examples['text'],
+            truncation=True,
+            padding='max_length',
+            max_length=512,
+        )
 
-    # dataset = dataset.map(preprocess)
+    tokenized_dataset = dataset.map(
+        tokenize_function, batched=True
+    )
 
-    return dataset['train'], dataset['test']
+    # For seq2seq models like T5
+    if model_type == 'seq2seq':
+        tokenized_dataset = tokenized_dataset.map(
+            lambda x: {'labels': x['input_ids']},
+            batched=True,
+        )
+
+    return tokenized_dataset['train'], tokenized_dataset['test']
 
 
 def run_single_training(args):
@@ -105,6 +86,13 @@ def run_single_training(args):
     ) = args
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
+    # Determine model type
+    model_type = (
+        'seq2seq'
+        if 'flan' in model_name or 't5' in model_name
+        else 'causal'
+    )
 
     # INIT MODEL
     tokenizer = FinetuneTokenizer(
@@ -125,10 +113,12 @@ def run_single_training(args):
     model.insert_lora(lora_config=lora_config)
 
     train_data, test_data = prepare_data(
-        tokenizer=tokenizer, dataset=dataset
+        tokenizer=tokenizer,
+        dataset=dataset,
+        model_type=model_type,
     )
 
-    trainer = FinetuneTrainer(
+    finetune_trainer = FinetuneTrainer(
         train_data=train_data,
         test_data=test_data,
         model=model.get_model(),
@@ -138,19 +128,24 @@ def run_single_training(args):
         learning_rate=learning_rate,
         weight_decay=weight_decay,
         batch_size=batch_size,
-    ).get_trainer()
+        model_type=model_type,  # Pass model type
+    )
 
+    trainer = finetune_trainer.get_trainer()
     trainer.train()
-    # trainer.model.save_pretrained(
-    #     f'QLoRA_{model_name}_r{r}_a{lora_alpha}_d{lora_dropout}'
-    # ) # temporary
 
-    eval_results = trainer.evaluate()
-    print(f'Evaluation results: {eval_results}')
+    # Evaluate based on model type
+    if model_type == 'seq2seq':
+        eval_results = trainer.evaluate()
+    else:  # causal
+        eval_results = finetune_trainer.evaluate_causal(
+            test_data
+        )
 
-    # Or use trainer.predict() for more control
-    predictions = trainer.predict(test_data)
-    print(f'Metrics: {predictions.metrics}')
+    print(f'\nFinal Evaluation Results:')
+    print(f'ROUGE-L: {eval_results.get("eval_rougeL", 0):.4f}')
+
+    return eval_results.get('eval_rougeL', 0)
 
 
 def train_model(
@@ -249,9 +244,9 @@ if __name__ == '__main__':
     )
 
     model_names = [
-        # 'llama3.2-1b',
+        'llama3.2-1b',
         # 'mistral7b',
-        'flan-large',
+        # 'flan-large',
     ]
 
     for model_name in model_names:

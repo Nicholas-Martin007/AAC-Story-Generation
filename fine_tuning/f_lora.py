@@ -16,22 +16,22 @@ class FinetuneLora:
             lora_dropout=lora_dropout,
             bias='none',
             target_modules=[
-                # 'q_proj',
-                # 'k_proj',
-                # 'v_proj',
-                # 'o_proj',
-                # 'gate_proj',
-                # 'up_proj',
-                # 'down_proj',
-                'q',  # khusus t5
-                'v',  # khusus t5
-                'wi',  # khusus t5
-                'wo',  # khusus t5
+                'q_proj',
+                'k_proj',
+                'v_proj',
+                'o_proj',
+                'gate_proj',
+                'up_proj',
+                'down_proj',
+                # 'q',  # khusus t5
+                # 'v',  # khusus t5
+                # 'wi',  # khusus t5
+                # 'wo',  # khusus t5
             ],
             modules_to_save=[
                 'lm_head',
                 'embed_tokens',
-                'shared',  # khusus t5
+                # 'shared',  # khusus t5
             ],
         )
 
