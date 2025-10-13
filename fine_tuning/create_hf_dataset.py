@@ -41,65 +41,35 @@ def clean_data(
     return df
 
 
-def format_message(
-    df: pd.DataFrame,
-) -> list[object]:
-    messages = []
+def format_message(df: pd.DataFrame):
+    formatted = []
     for card, story in zip(df['card'], df['story']):
-        messages.append(
-            [
-                {
-                    'role': 'system',
-                    'content': 'Kamu adalah model AI yang bertugas membuat satu paragraf dengan tema **Kisah Sosial** singkat berdasarkan kumpulan kartu AAC (Augmentative and Alternative Communication) yang diberikan dalam bentuk array.',
-                },
-                {
-                    'role': 'user',
-                    'content': json.dumps(
-                        card
-                    ),  # list of strings
-                },
-                {
-                    'role': 'assistant',
-                    'content': story,
-                },
-            ]
+        input_text = (
+            'AI yang bertugas membuat satu paragraf dengan tema **Kisah Sosial** berdasarkan kartu tersebut: '
+            + json.dumps(card)
         )
-    return messages
-
-
-def save_hf_dataset(
-    messages: list[object],
-) -> None:
-    # features = Features({
-    #     "prompt": Sequence(Value("string")),
-    #     "prompt_id": Value("string"),
-    #     "messages": Sequence(
-    #         {
-    #             "role": Value("string"),
-    #             "content": Value("string")
-    #         }
-    #     )
-    # })
-
-    data = []
-    for pair in messages:
-        prompt = pair[1]['content']  # list[str]
-        prompt_id = str(uuid.uuid4())
-
-        data.append(
+        output_text = story
+        formatted.append(
             {
-                'prompt': prompt,
-                'prompt_id': prompt_id,
-                'messages': pair,
+                'input_text': input_text,
+                'output_text': output_text,
             }
         )
+    return formatted
 
-    hf_dataset = Dataset.from_list(
-        data,
-        # features=features,
-    )
-    hf_dataset.save_to_disk('./hf_dataset_oktober_13')
 
+def save_hf_dataset(messages):
+    data = []
+    for item in messages:
+        data.append(
+            {
+                'prompt_id': str(uuid.uuid4()),
+                'input_text': item['input_text'],
+                'output_text': item['output_text'],
+            }
+        )
+    hf_dataset = Dataset.from_list(data)
+    hf_dataset.save_to_disk('./hf_dataset_oktober_13-flan-t5')
     return hf_dataset
 
 

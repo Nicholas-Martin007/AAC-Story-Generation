@@ -36,8 +36,8 @@ class FinetuneTrainer:
             learning_rate=learning_rate,
             per_device_train_batch_size=batch_size,
             per_device_eval_batch_size=batch_size,
-            gradient_accumulation_steps=8,  # untuk gpu efficiency
-            num_train_epochs=5,
+            gradient_accumulation_steps=2,  # untuk gpu efficiency
+            num_train_epochs=1,
             weight_decay=weight_decay,  # regularization
             optim='paged_adamw_32bit',
             logging_steps=100,
@@ -51,14 +51,25 @@ class FinetuneTrainer:
             gradient_checkpointing=True,
             dataloader_drop_last=True,
             report_to=None,
-            predict_with_generate=True,
-            generation_max_length=512,
+            # predict_with_generate=True,
+            # generation_max_length=512,
         )
 
-        self.data_collator = DataCollatorForLanguageModeling(
+        # self.data_collator = DataCollatorForLanguageModeling(
+        #     tokenizer=tokenizer,
+        #     mlm=False,
+        #     pad_to_multiple_of=8,
+        # )
+
+        # khusus t5
+        from transformers import DataCollatorForSeq2Seq
+
+        self.data_collator = DataCollatorForSeq2Seq(
             tokenizer=tokenizer,
-            mlm=False,
-            pad_to_multiple_of=8,
+            model=model,
+            padding=True,
+            # truncation=True,
+            max_length=512,
         )
 
         self.trainer = SFTTrainer(
@@ -68,9 +79,9 @@ class FinetuneTrainer:
             train_dataset=train_data,
             eval_dataset=test_data,
             data_collator=self.data_collator,
-            compute_metrics=partial(
-                self.compute_metrics, tokenizer=tokenizer
-            ),
+            # compute_metrics=partial(
+            #     self.compute_metrics, tokenizer=tokenizer
+            # ),
             max_seq_length=512,
             packing=False,
             peft_config=lora_config,
@@ -87,7 +98,7 @@ class FinetuneTrainer:
                 inputs = self.tokenizer(
                     pred,
                     return_tensors='pt',
-                    truncation=True,
+                    # truncation=True,
                     max_length=512,
                 ).to(self.model.device)
 
@@ -120,24 +131,38 @@ class FinetuneTrainer:
         print('Computing evaluation metrics...')
         print('=' * 80)
 
-        decoded_preds = tokenizer.batch_decode(
-            predictions, skip_special_tokens=True
-        )
+        # Manually generate text from predictions
+        decoded_preds = []
+        self.model.eval()
+        with torch.no_grad():
+            for pred_ids in predictions:
+                input_ids = (
+                    torch.tensor(pred_ids, dtype=torch.long)
+                    .unsqueeze(0)
+                    .to(self.model.device)
+                )
+                generated_ids = self.model.generate(
+                    input_ids, max_length=512
+                )
+                decoded_pred = tokenizer.decode(
+                    generated_ids[0], skip_special_tokens=True
+                )
+                decoded_preds.append(decoded_pred.strip())
 
+        # Decode labels
         labels = np.where(
             labels != -100, labels, tokenizer.pad_token_id
         )
-        decoded_labels = tokenizer.batch_decode(
-            labels, skip_special_tokens=True
-        )
-
-        decoded_preds = [pred.strip() for pred in decoded_preds]
         decoded_labels = [
-            label.strip() for label in decoded_labels
+            l.strip()
+            for l in tokenizer.batch_decode(
+                labels, skip_special_tokens=True
+            )
         ]
 
         print(f'Total samples: {len(decoded_preds)}')
 
+        # Compute ROUGE
         print('Computing ROUGE scores...')
         rouge_result = rouge.compute(
             predictions=decoded_preds,
@@ -145,6 +170,7 @@ class FinetuneTrainer:
             use_stemmer=True,
         )
 
+        # Compute BERTScore
         print('Computing BERTScore...')
         bertscore_result = bertscore.compute(
             predictions=decoded_preds,
@@ -153,12 +179,13 @@ class FinetuneTrainer:
             model_type='bert-base-multilingual-cased',
         )
 
+        # Compute Perplexity
         print('Computing Perplexity...')
         avg_perplexity, perplexities = self.compute_perplexity(
             decoded_preds
         )
 
-        # Prepare data for JSON
+        # Save JSON results
         results = {
             'metadata': {
                 'timestamp': datetime.now().strftime(
@@ -191,7 +218,6 @@ class FinetuneTrainer:
             'samples': [],
         }
 
-        # Add individual samples
         for i in range(len(decoded_preds)):
             sample = {
                 'sample_id': i + 1,
@@ -212,13 +238,11 @@ class FinetuneTrainer:
             }
             results['samples'].append(sample)
 
-        # Save to JSON file
         os.makedirs(self.output_dir, exist_ok=True)
         json_filename = os.path.join(
             self.output_dir,
             f'evaluation_results_step_{self.eval_counter}.json',
         )
-
         with open(json_filename, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
 
@@ -233,7 +257,7 @@ class FinetuneTrainer:
 
         self.eval_counter += 1
 
-        # Return metrics for trainer
+        # Return metrics
         metrics = {
             'rouge1': rouge_result['rouge1'],
             'rouge2': rouge_result['rouge2'],
@@ -248,7 +272,6 @@ class FinetuneTrainer:
                 np.mean(bertscore_result['f1'])
             ),
         }
-
         if avg_perplexity is not None:
             metrics['perplexity'] = avg_perplexity
 

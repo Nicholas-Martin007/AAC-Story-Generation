@@ -4,7 +4,7 @@ from peft import (
     prepare_model_for_kbit_training,
 )
 from transformers import (
-    # AutoModelForSeq2SeqLM,
+    AutoModelForSeq2SeqLM,
     AutoModelForCausalLM,
     BitsAndBytesConfig,
 )
@@ -26,7 +26,8 @@ class FinetuneModel:
             bnb_4bit_quant_type='nf4',
         )
 
-        self.model = AutoModelForCausalLM.from_pretrained(
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(  # khusus t5
+            # self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
             device_map=device,
             quantization_config=self.quantization_config,

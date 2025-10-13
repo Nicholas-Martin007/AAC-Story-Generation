@@ -17,34 +17,50 @@ from fine_tuning.f_tokenizer import FinetuneTokenizer
 from fine_tuning.f_trainer import FinetuneTrainer
 
 
-def apply_template(example, tokenizer):
-    messages = [
-        {
-            'role': 'system',
-            'content': example['messages'][0]['content'],
-        },
-        {
-            'role': 'user',
-            'content': example['messages'][1]['content'],
-        },
-        {
-            'role': 'assistant',
-            'content': example['messages'][2]['content'],
-        },
-    ]
+# def apply_template(example, tokenizer):
+#     messages = [
+#         {
+#             'role': 'system',
+#             'content': example['messages'][0]['content'],
+#         },
+#         {
+#             'role': 'user',
+#             'content': example['messages'][1]['content'],
+#         },
+#         {
+#             'role': 'assistant',
+#             'content': example['messages'][2]['content'],
+#         },
+#     ]
 
-    prompt = tokenizer.apply_chat_template(
-        messages, tokenize=False
+#     prompt = tokenizer.apply_chat_template(
+#         messages, tokenize=False
+#     )
+
+#     return {'text': prompt}
+
+#     prompt = (  # khusus t5
+#         'System: ' + example['messages'][0]['content'] + '\n'
+#         'User: ' + example['messages'][1]['content'] + '\n'
+#         'Assistant: ' + example['messages'][2]['content']
+#     )
+#     return {'text': prompt}
+
+
+def apply_template(example, tokenizer):
+    # For Flan-T5 (no chat template)
+    prompt = (
+        'Generate a short social story based on these AAC cards: '
+        + example['input_text']
     )
 
-    return {'text': prompt}
+    model_inputs = tokenizer(
+        prompt,
+        text_target=example['output_text'],
+        truncation=True,
+    )
 
-    # prompt = (  # khusus t5
-    #     'System: ' + example['messages'][0]['content'] + '\n'
-    #     'User: ' + example['messages'][1]['content'] + '\n'
-    #     'Assistant: ' + example['messages'][2]['content']
-    # )
-    # return {'text': prompt}
+    return model_inputs
 
 
 def prepare_data(tokenizer, dataset):
@@ -52,8 +68,27 @@ def prepare_data(tokenizer, dataset):
         dataset = load_from_disk('hf_aac_dataset').shuffle(
             seed=SEED
         )
+
+    dataset = dataset.select(range(10))
     dataset = dataset.train_test_split(test_size=0.2)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
+
+    # def preprocess(example):
+    #     model_inputs = tokenizer(
+    #         example['input_text'],
+    #         max_length=512,
+    #         # truncation=True,
+    #     )
+    #     labels = tokenizer(
+    #         example['output_text'],
+    #         max_length=512,
+    #         # truncation=True,
+    #     )
+    #     model_inputs['labels'] = labels['input_ids']
+    #     return model_inputs
+
+    # dataset = dataset.map(preprocess)
+
     return dataset['train'], dataset['test']
 
 
@@ -198,7 +233,7 @@ def training(model_name, dataset):
             model_name=model_name,
             dataset=dataset,
         ),
-        n_trials=5,
+        n_trials=1,
     )
 
 
@@ -210,8 +245,8 @@ if __name__ == '__main__':
     )
 
     model_names = [
-        'llama3.2-3b',
-        'mistral7b',
+        # 'llama3.2-1b',
+        # 'mistral7b',
         'flan-large',
     ]
 
