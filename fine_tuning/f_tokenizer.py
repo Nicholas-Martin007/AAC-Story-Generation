@@ -7,18 +7,6 @@ class FinetuneTokenizer:
             model_path
         )
 
-        self.tokenizer.add_special_tokens(
-            {
-                'additional_special_tokens': [
-                    '<|PER|>',
-                    '<|PER_1|>',
-                    '<|PER_2|>',
-                    '<|PER_3|>',
-                    '<|PER_4|>',
-                ]
-            }
-        )
-
         if self.tokenizer.pad_token is None:
             self.tokenizer.add_special_tokens(
                 {'pad_token': '<|PAD|>'}

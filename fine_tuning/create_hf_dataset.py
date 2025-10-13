@@ -6,19 +6,9 @@ import uuid
 
 import pandas as pd
 from datasets import Dataset
-from transformers import AutoTokenizer
 
 sys.path.append(os.path.abspath('./'))
 from config import *
-
-tokenizer = AutoTokenizer.from_pretrained(
-    MODEL_PATH['llama3.2-3b']
-)
-if tokenizer.pad_token is None:
-    tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.pad_token_id = tokenizer.eos_token_id
-
-tokenizer.padding_side = 'left'
 
 
 def read_file(filepath):
@@ -108,16 +98,17 @@ def save_hf_dataset(
         data,
         # features=features,
     )
+    hf_dataset.save_to_disk('./hf_dataset_oktober_13')
 
-    hf_dataset.save_to_disk('./hf_aac_dataset')
+    return hf_dataset
 
 
-if __name__ == '__main__':
-    card = read_file(filepath=AAC_CARD_PATH)
-    story = read_file(filepath=AAC_STORY_PATH)
-
+def prepare_hf_dataset(card_path, story_path):
+    card = read_file(filepath=card_path)
+    story = read_file(filepath=story_path)
     df = pd.DataFrame({'card': card, 'story': story})
     df = clean_data(df)
-
     messages = format_message(df)
-    save_hf_dataset(messages)
+    result = save_hf_dataset(messages)
+
+    return result
