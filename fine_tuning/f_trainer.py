@@ -11,6 +11,7 @@ from transformers import (
     TrainingArguments,
 )
 from trl import SFTTrainer
+from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments
 
 
 class FinetuneTrainer:
@@ -29,163 +30,104 @@ class FinetuneTrainer:
         self.tokenizer = tokenizer
         self.model = model
         self.output_dir = output_dir
-        self.eval_counter = 0  # Track evaluation calls
+        self.eval_counter = 0
 
-        self.training_args = TrainingArguments(
-            output_dir=output_dir,
-            learning_rate=learning_rate,
-            per_device_train_batch_size=batch_size,
-            per_device_eval_batch_size=batch_size,
-            gradient_accumulation_steps=2,  # untuk gpu efficiency
-            num_train_epochs=1,
-            weight_decay=weight_decay,  # regularization
-            optim='paged_adamw_32bit',
-            logging_steps=100,
-            warmup_ratio=0.01,  # 5%
-            eval_steps=500,
-            eval_strategy='steps',
-            save_strategy='steps',
-            save_steps=500,
-            fp16=True,
-            lr_scheduler_type='cosine',
-            gradient_checkpointing=True,
-            dataloader_drop_last=True,
-            report_to=None,
-            # predict_with_generate=True,
-            # generation_max_length=512,
+        self.training_args = (
+            Seq2SeqTrainingArguments(  # Changed!
+                output_dir=output_dir,
+                learning_rate=learning_rate,
+                per_device_train_batch_size=batch_size,
+                per_device_eval_batch_size=batch_size,
+                gradient_accumulation_steps=2,
+                num_train_epochs=1,
+                weight_decay=weight_decay,
+                optim='paged_adamw_32bit',
+                logging_steps=100,
+                warmup_ratio=0.01,
+                eval_steps=500,
+                eval_strategy='epoch',
+                save_strategy='epoch',
+                save_steps=500,
+                fp16=True,
+                lr_scheduler_type='cosine',
+                gradient_checkpointing=True,
+                dataloader_drop_last=True,
+                report_to=None,
+                predict_with_generate=True,  # Important for T5!
+                generation_max_length=512,
+            )
         )
 
-        # self.data_collator = DataCollatorForLanguageModeling(
-        #     tokenizer=tokenizer,
-        #     mlm=False,
-        #     pad_to_multiple_of=8,
-        # )
-
-        # khusus t5
         from transformers import DataCollatorForSeq2Seq
 
         self.data_collator = DataCollatorForSeq2Seq(
             tokenizer=tokenizer,
             model=model,
             padding=True,
-            # truncation=True,
             max_length=512,
         )
 
-        self.trainer = SFTTrainer(
+        self.trainer = Seq2SeqTrainer(  # Changed!
             model=model,
             tokenizer=tokenizer,
             args=self.training_args,
             train_dataset=train_data,
             eval_dataset=test_data,
             data_collator=self.data_collator,
-            # compute_metrics=partial(
-            #     self.compute_metrics, tokenizer=tokenizer
-            # ),
-            max_seq_length=512,
-            packing=False,
-            peft_config=lora_config,
+            compute_metrics=self.compute_metrics,  # No partial needed
         )
 
-    def compute_perplexity(self, decoded_preds):
-        try:
-            perplexities = []
-            for pred in decoded_preds:
-                if len(pred.strip()) == 0:
-                    continue
-
-                # Tokenize prediction
-                inputs = self.tokenizer(
-                    pred,
-                    return_tensors='pt',
-                    # truncation=True,
-                    max_length=512,
-                ).to(self.model.device)
-
-                # Get loss
-                with torch.no_grad():
-                    outputs = self.model(
-                        **inputs, labels=inputs['input_ids']
-                    )
-                    loss = outputs.loss
-
-                perplexity = torch.exp(loss).item()
-                perplexities.append(perplexity)
-
-            avg_perplexity = (
-                np.mean(perplexities) if perplexities else None
-            )
-            return avg_perplexity, perplexities
-
-        except Exception as e:
-            print(f'Error computing perplexity: {e}')
-            return None, []
-
-    def compute_metrics(self, eval_preds, tokenizer):
+    def compute_metrics(self, eval_preds):
         rouge = load('rouge')
         bertscore = load('bertscore')
 
         predictions, labels = eval_preds
 
-        print('\n' + '=' * 80)
-        print('Computing evaluation metrics...')
-        print('=' * 80)
+        # When predict_with_generate=True, predictions are already decoded token ids
+        if isinstance(predictions, tuple):
+            predictions = predictions[0]
 
-        # Manually generate text from predictions
-        decoded_preds = []
-        self.model.eval()
-        with torch.no_grad():
-            for pred_ids in predictions:
-                input_ids = (
-                    torch.tensor(pred_ids, dtype=torch.long)
-                    .unsqueeze(0)
-                    .to(self.model.device)
-                )
-                generated_ids = self.model.generate(
-                    input_ids, max_length=512
-                )
-                decoded_pred = tokenizer.decode(
-                    generated_ids[0], skip_special_tokens=True
-                )
-                decoded_preds.append(decoded_pred.strip())
-
-        # Decode labels
+        # Replace -100 in labels
         labels = np.where(
-            labels != -100, labels, tokenizer.pad_token_id
+            labels != -100, labels, self.tokenizer.pad_token_id
         )
+
+        # Decode
+        decoded_preds = self.tokenizer.batch_decode(
+            predictions, skip_special_tokens=True
+        )
+        decoded_labels = self.tokenizer.batch_decode(
+            labels, skip_special_tokens=True
+        )
+
+        decoded_preds = [pred.strip() for pred in decoded_preds]
         decoded_labels = [
-            l.strip()
-            for l in tokenizer.batch_decode(
-                labels, skip_special_tokens=True
-            )
+            label.strip() for label in decoded_labels
         ]
 
-        print(f'Total samples: {len(decoded_preds)}')
+        print(f'\n{"=" * 80}')
+        print(
+            f'Computing metrics for {len(decoded_preds)} samples...'
+        )
+        print(f'Sample prediction: {decoded_preds[0][:100]}...')
+        print(f'Sample reference: {decoded_labels[0][:100]}...')
 
         # Compute ROUGE
-        print('Computing ROUGE scores...')
         rouge_result = rouge.compute(
             predictions=decoded_preds,
             references=decoded_labels,
             use_stemmer=True,
         )
 
-        # Compute BERTScore
-        print('Computing BERTScore...')
-        bertscore_result = bertscore.compute(
-            predictions=decoded_preds,
-            references=decoded_labels,
-            lang='id',
-            model_type='bert-base-multilingual-cased',
-        )
+        # # Compute BERTScore
+        # bertscore_result = bertscore.compute(
+        #     predictions=decoded_preds,
+        #     references=decoded_labels,
+        #     lang='id',
+        #     model_type='bert-base-multilingual-cased',
+        # )
 
-        # Compute Perplexity
-        print('Computing Perplexity...')
-        avg_perplexity, perplexities = self.compute_perplexity(
-            decoded_preds
-        )
-
-        # Save JSON results
+        # Save results
         results = {
             'metadata': {
                 'timestamp': datetime.now().strftime(
@@ -200,41 +142,25 @@ class FinetuneTrainer:
                     'rouge2': float(rouge_result['rouge2']),
                     'rougeL': float(rouge_result['rougeL']),
                 },
-                'BERTSCORE': {
-                    'precision': float(
-                        np.mean(bertscore_result['precision'])
-                    ),
-                    'recall': float(
-                        np.mean(bertscore_result['recall'])
-                    ),
-                    'f1': float(np.mean(bertscore_result['f1'])),
-                },
-                'PERPLEXITY': {
-                    'average': float(avg_perplexity)
-                    if avg_perplexity is not None
-                    else None
-                },
+                # 'BERTSCORE': {
+                #     'precision': float(
+                #         np.mean(bertscore_result['precision'])
+                #     ),
+                #     'recall': float(
+                #         np.mean(bertscore_result['recall'])
+                #     ),
+                #     'f1': float(np.mean(bertscore_result['f1'])),
+                # },
             },
             'samples': [],
         }
 
-        for i in range(len(decoded_preds)):
+        for i in range(min(10, len(decoded_preds))):
             sample = {
                 'sample_id': i + 1,
-                'Reference': decoded_labels[i],
-                'Prediction': decoded_preds[i],
-                'BERTSCORE': {
-                    'precision': float(
-                        bertscore_result['precision'][i]
-                    ),
-                    'recall': float(
-                        bertscore_result['recall'][i]
-                    ),
-                    'f1': float(bertscore_result['f1'][i]),
-                },
-                'PERPLEXITY': float(perplexities[i])
-                if i < len(perplexities)
-                else None,
+                'reference': decoded_labels[i],
+                'prediction': decoded_preds[i],
+                # 'bertscore_f1': float(bertscore_result['f1'][i]),
             }
             results['samples'].append(sample)
 
@@ -248,34 +174,21 @@ class FinetuneTrainer:
 
         print(f'\nResults saved to: {json_filename}')
         print(f'ROUGE-L: {rouge_result["rougeL"]:.4f}')
-        print(
-            f'BERTScore F1: {np.mean(bertscore_result["f1"]):.4f}'
-        )
-        if avg_perplexity is not None:
-            print(f'Perplexity: {avg_perplexity:.4f}')
-        print('=' * 80 + '\n')
+        # print(
+        #     f'BERTScore F1: {np.mean(bertscore_result["f1"]):.4f}'
+        # )
+        print(f'{"=" * 80}\n')
 
         self.eval_counter += 1
 
-        # Return metrics
-        metrics = {
+        return {
             'rouge1': rouge_result['rouge1'],
             'rouge2': rouge_result['rouge2'],
             'rougeL': rouge_result['rougeL'],
-            'bertscore_precision': float(
-                np.mean(bertscore_result['precision'])
-            ),
-            'bertscore_recall': float(
-                np.mean(bertscore_result['recall'])
-            ),
-            'bertscore_f1': float(
-                np.mean(bertscore_result['f1'])
-            ),
+            # 'bertscore_f1': float(
+            #     np.mean(bertscore_result['f1'])
+            # ),
         }
-        if avg_perplexity is not None:
-            metrics['perplexity'] = avg_perplexity
-
-        return metrics
 
     def get_trainer(self):
         return self.trainer

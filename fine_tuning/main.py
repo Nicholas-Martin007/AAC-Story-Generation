@@ -144,9 +144,13 @@ def run_single_training(args):
     # trainer.model.save_pretrained(
     #     f'QLoRA_{model_name}_r{r}_a{lora_alpha}_d{lora_dropout}'
     # ) # temporary
-    eval_result = trainer.evaluate()
 
-    return eval_result.get('eval_rougeL', 0)
+    eval_results = trainer.evaluate()
+    print(f'Evaluation results: {eval_results}')
+
+    # Or use trainer.predict() for more control
+    predictions = trainer.predict(test_data)
+    print(f'Metrics: {predictions.metrics}')
 
 
 def train_model(
