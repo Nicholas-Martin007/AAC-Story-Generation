@@ -22,12 +22,12 @@ Contoh:
 """
 LIST_CARDS_PROMPT = (
     {'content': '["taman", "main", "senang"]'},
+    {'content': '["dia", "makan", "meja", "kursi"]'},
     {
-        'content': '["dia", "makan", "nasi", "air", "meja", "kursi"]'
+        'content': '["mereka", "bola", "lari", "air", "teman", "senang", "taman"]'
     },
-    {'content': '["kami", "sekolah", "baca", "buku"]'},
     {
-        'content': '["mereka", "bola", "lapangan", "lari", "tawa", "rumput", "minum"]'
+        'content': '["kami", "sekolah", "kelas", "baca", "buku", "tas"]'
     },
     {'content': '["saya", "tenang", "tas"]'},
 )

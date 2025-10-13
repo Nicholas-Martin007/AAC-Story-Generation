@@ -25,16 +25,6 @@ def read_file(
     return dataset
 
 
-# def save_file(dataset, filepath='result') -> None:
-#     with open(filepath, 'w', encoding='utf-8') as f:
-#         json.dump(
-#             dataset,
-#             f,
-#             ensure_ascii=False,
-#             indent=2,
-#         )
-
-
 def generate_story(
     dataset: list[str],
 ) -> list[str]:
@@ -71,7 +61,7 @@ def generate_story(
     # results = [normalize_per_entities(r) for r in results]
     print('SAVING STORY...')
     with open(
-        'aac_story_dataset_2.json',
+        'aac_story_dataset_SDG_1.json',
         'w',
         encoding='utf-8',
     ) as f:
@@ -113,7 +103,7 @@ def generate_card(
 
     print('SAVING CARD...')
     with open(
-        'aac_card_dataset_2.json',
+        'aac_card_dataset_SDG_1.json',
         'w',
         encoding='utf-8',
     ) as f:
@@ -128,9 +118,9 @@ def generate_card(
 
 
 if __name__ == '__main__':
-    # dataset = read_file()
-    # story_dataset = generate_story(dataset)
-    # card_dataset = generate_card(story_dataset)
+    dataset = read_file()
+    story_dataset = generate_story(dataset)
+    card_dataset = generate_card(story_dataset)
 
     # card_files = [
     #     'dataset/aac_card_dataset.json',

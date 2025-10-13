@@ -213,7 +213,6 @@ def inference():
 
     for name, param in model.named_parameters():
         print(name, param.norm().item())
-    # harus debug dari sini, jangan langsung dari model-> qlora_model, karena model bakal tetap keganti
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         model,
@@ -304,8 +303,8 @@ def inference():
 
 
 if __name__ == '__main__':
-    # training()
-    inference()
+    training()
+    # inference()
 
     # reference = 'Saya masuk ke ruang kelas dan melihat meja serta buku yang rapi. Guru memberi tugas menggambar. Saya ambil pensil dan menggambar dengan hati-hati. Setelah selesai saya rapikan pensil dan kertas. Kebiasaan ini membuat ruang kelas jadi bersih dan nyaman. Saya juga belajar pentingnya menjaga kebersihan dan mengatur alat tulis.'
 
