@@ -1,6 +1,10 @@
 import torch
-from peft import get_peft_model, prepare_model_for_kbit_training
+from peft import (
+    get_peft_model,
+    prepare_model_for_kbit_training,
+)
 from transformers import (
+    AutoModelForCausalLM,
     AutoModelForSeq2SeqLM,
     BitsAndBytesConfig,
 )
@@ -15,7 +19,7 @@ class FinetuneModel:
         lora_config=None,
         model_type='seq2seq',
     ):
-        # Konfigurasi kuantisasi untuk FLAN-T5
+        # DQ + NF4
         self.quantization_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.float16,
@@ -23,26 +27,29 @@ class FinetuneModel:
             bnb_4bit_quant_type='nf4',
         )
 
-        # Load model FLAN-T5
-        self.model = AutoModelForSeq2SeqLM.from_pretrained(
-            model_path,
-            quantization_config=self.quantization_config,
-            device_map='auto',
-            trust_remote_code=True,
-        )
+        if model_type == 'seq2seq':
+            self.model = AutoModelForSeq2SeqLM.from_pretrained(  # khusus t5
+                model_path,
+                device_map=device,
+                quantization_config=self.quantization_config,
+            )
+        else:
+            self.model = AutoModelForCausalLM.from_pretrained(
+                model_path,
+                device_map=device,
+                quantization_config=self.quantization_config,
+            )
 
-        # Resize token embeddings jika diperlukan
         self.model.resize_token_embeddings(len(tokenizer))
 
     def insert_lora(self, lora_config):
-        # Prepare model untuk training
-        self.model = prepare_model_for_kbit_training(self.model)
-
-        # Apply LoRA
-        self.model = get_peft_model(self.model, lora_config)
-
-        # Print trainable parameters
-        self.model.print_trainable_parameters()
+        self.model = prepare_model_for_kbit_training(
+            self.model,
+        )  # preprocess, required for quantized model
+        self.model = get_peft_model(
+            self.model,
+            lora_config,
+        )  # insert qlora
 
     def get_model(self):
         return self.model

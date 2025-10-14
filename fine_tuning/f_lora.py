@@ -9,11 +9,20 @@ class FinetuneLora:
         lora_dropout,
         model_type,
     ):
-        # Konfigurasi LoRA khusus untuk FLAN-T5
-        task_type = TaskType.SEQ_2_SEQ_LM
-
-        # Target modules untuk T5
-        target_modules = ['q', 'v', 'k', 'o', 'wi', 'wo']
+        if model_type == 'seq2seq':
+            task_type = TaskType.SEQ_2_SEQ_LM
+            target_modules = ['q', 'v', 'wi', 'wo', 'shared']
+        else:
+            task_type = TaskType.CAUSAL_LM
+            target_modules = [
+                'q_proj',
+                'k_proj',
+                'v_proj',
+                'o_proj',
+                'gate_proj',
+                'up_proj',
+                'down_proj',
+            ]
 
         self.lora_config = LoraConfig(
             task_type=task_type,

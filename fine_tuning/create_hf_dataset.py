@@ -70,17 +70,6 @@ def format_message(
 def save_hf_dataset(
     messages: list[object],
 ) -> None:
-    # features = Features({
-    #     "prompt": Sequence(Value("string")),
-    #     "prompt_id": Value("string"),
-    #     "messages": Sequence(
-    #         {
-    #             "role": Value("string"),
-    #             "content": Value("string")
-    #         }
-    #     )
-    # })
-
     data = []
     for pair in messages:
         prompt = pair[1]['content']  # list[str]
@@ -96,7 +85,6 @@ def save_hf_dataset(
 
     hf_dataset = Dataset.from_list(
         data,
-        # features=features,
     )
     hf_dataset.save_to_disk('./hf_dataset_oktober_13')
 

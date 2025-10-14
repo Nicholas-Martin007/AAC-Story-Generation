@@ -2,7 +2,6 @@ import os
 import sys
 
 import optuna
-import torch
 
 sys.path.append(os.path.abspath('./'))
 
@@ -19,37 +18,12 @@ from fine_tuning.f_trainer import FinetuneTrainer
 
 
 def apply_template(example, tokenizer):
-    # Pastikan format input konsisten
-    try:
-        # Handle jika content adalah string representation of list
-        user_content = example['messages'][1]['content']
-        if isinstance(
-            user_content, str
-        ) and user_content.startswith('['):
-            cards = eval(user_content)
-            if isinstance(cards, list):
-                input_text = (
-                    'Buat cerita sosial menggunakan kata-kata: '
-                    + ', '.join(cards)
-                )
-            else:
-                input_text = (
-                    'Buat cerita sosial menggunakan kata-kata: '
-                    + str(user_content)
-                )
-        else:
-            input_text = (
-                'Buat cerita sosial menggunakan kata-kata: '
-                + str(user_content)
-            )
-    except:
-        # Fallback
-        input_text = 'Buat cerita sosial: ' + str(
-            example['messages'][1]['content']
-        )
-
-    target_text = example['messages'][2]['content']
-    return {'input_text': input_text, 'target_text': target_text}
+    prompt = (
+        'System: ' + example['messages'][0]['content'] + '\n'
+        'User: ' + example['messages'][1]['content'] + '\n'
+        'Assistant: ' + example['messages'][2]['content']
+    )
+    return {'text': prompt}
 
 
 def prepare_data(tokenizer, dataset, model_type='seq2seq'):
@@ -58,76 +32,33 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
             seed=SEED
         )
 
+    # dataset = dataset.select(range(100))
     dataset = dataset.train_test_split(test_size=0.1)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
 
     def tokenize_function(examples):
-        # Tokenize inputs dengan padding dan truncation
-        model_inputs = tokenizer(
-            examples['input_text'],
+        return tokenizer(
+            examples['text'],
             truncation=True,
-            padding='max_length',  # Kembali ke max_length untuk stability
-            max_length=128,
+            padding='max_length',
+            max_length=512,
         )
 
-        # Tokenize targets dengan padding dan truncation
-        with tokenizer.as_target_tokenizer():
-            labels = tokenizer(
-                examples['target_text'],
-                truncation=True,
-                padding='max_length',
-                max_length=128,
-            )['input_ids']
-
-        # Ganti pad_token_id dengan -100
-        labels = [
-            [
-                (l if l != tokenizer.pad_token_id else -100)
-                for l in label
-            ]
-            for label in labels
-        ]
-
-        model_inputs['labels'] = labels
-        return model_inputs
-
     tokenized_dataset = dataset.map(
-        tokenize_function,
-        batched=True,
-        batch_size=1000,  # Tambahkan batch_size untuk stability
+        tokenize_function, batched=True
     )
-
-    # Pastikan format benar
-    tokenized_dataset = tokenized_dataset.remove_columns(
-        [
-            col
-            for col in tokenized_dataset['train'].column_names
-            if col
-            not in ['input_ids', 'attention_mask', 'labels']
-        ]
-    )
-
-    tokenized_dataset.set_format('torch')
-
-    # Debug sample
-    example = tokenized_dataset['train'][0]
-    print('=== DEBUG SAMPLE ===')
-    print(
-        'Input text:',
-        tokenizer.decode(
-            example['input_ids'], skip_special_tokens=True
-        ),
-    )
-    print(
-        'Target text:',
-        tokenizer.decode(
-            [x for x in example['labels'] if x != -100],
-            skip_special_tokens=True,
-        ),
-    )
-    print('Input IDs shape:', example['input_ids'].shape)
-    print('Labels shape:', example['labels'].shape)
-    print('====================')
+    if model_type == 'seq2seq':
+        tokenized_dataset = tokenized_dataset.map(
+            lambda x: {
+                'labels': x['input_ids']
+            },  # agar bisa ikut berubah kiri dan kanan
+            batched=True,
+        )
+    else:
+        tokenized_dataset = tokenized_dataset.map(
+            lambda x: {'labels': x['input_ids'].copy()},
+            batched=True,
+        )
 
     return tokenized_dataset['train'], tokenized_dataset['test']
 
@@ -147,8 +78,12 @@ def run_single_training(args):
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-    # FLAN-T5 selalu seq2seq
-    model_type = 'seq2seq'
+    # Determine model type
+    model_type = (
+        'seq2seq'
+        if 'flan' in model_name or 't5' in model_name
+        else 'causal'
+    )
 
     # INIT MODEL
     tokenizer = FinetuneTokenizer(
@@ -176,18 +111,6 @@ def run_single_training(args):
         model_type=model_type,
     )
 
-    # =================================
-
-    print(f'Train size: {len(train_data)}')
-    print(f'Test size: {len(test_data)}')
-    print(f'Learning rate: {learning_rate}')
-    print(f'Batch size: {batch_size}')
-    print(
-        f'Total steps: {len(train_data) // batch_size * n_epochs}'
-    )
-
-    # =================================
-
     finetune_trainer = FinetuneTrainer(
         train_data=train_data,
         test_data=test_data,
@@ -204,8 +127,6 @@ def run_single_training(args):
     )
 
     trainer = finetune_trainer.get_trainer()
-
-    print('Starting training...')
     trainer.train()
 
     save_name = f'{model_name}_lr{learning_rate}_wd{weight_decay}_r{r}_a{int(lora_alpha)}_ep{n_epochs}_bs{batch_size}'
@@ -215,8 +136,13 @@ def run_single_training(args):
     trainer.save_model(save_path)
     tokenizer.save_pretrained(save_path)
 
-    eval_results = trainer.evaluate()
+    if model_type == 'seq2seq':
+        eval_results = trainer.evaluate()
+    else:
+        eval_results = trainer.evaluate()
+
     print('\nFinal Evaluation Results:')
+    print(f'Perplexity: {eval_results.get("eval_loss", 0):.4f}')
     print(f'Eval Loss: {eval_results.get("eval_loss", 0):.4f}')
 
     return -eval_results.get('eval_loss', float('inf'))
@@ -245,14 +171,19 @@ def train_model(
         n_epochs,
     )
 
-    # Gunakan multiprocessing untuk cleanup GPU
-    context = torch.multiprocessing.get_context('spawn')
+    context = torch.multiprocessing.get_context(
+        'spawn'
+    )  # multiprocessing, for gpu cleaning
     pool = context.Pool(processes=1)
 
     with pool:
-        result = pool.apply(run_single_training, (args,))
+        result = pool.apply(
+            run_single_training,
+            (args,),
+        )
 
     torch.cuda.empty_cache()
+
     return result
 
 
@@ -274,6 +205,7 @@ def optuna_objective(trial, model_name, dataset):
     batch_size = trial.suggest_categorical(
         'batch_size', [1, 2, 4]
     )
+
     n_epochs = trial.suggest_categorical('n_epochs', [1, 2])
 
     score = train_model(
@@ -305,7 +237,7 @@ def training(model_name, dataset):
             model_name=model_name,
             dataset=dataset,
         ),
-        n_trials=3,  # Kurangi trial untuk testing
+        n_trials=5,
     )
 
 
@@ -316,7 +248,11 @@ if __name__ == '__main__':
         story_path=AAC_STORY_PATH,
     )
 
-    model_names = ['flan-small']
+    model_names = [
+        # 'llama3.2-3b',
+        # 'mistral7b',
+        'flan-small',
+    ]
 
     for model_name in model_names:
         training(model_name=model_name, dataset=dataset)
