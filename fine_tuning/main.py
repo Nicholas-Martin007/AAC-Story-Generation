@@ -40,28 +40,7 @@ from fine_tuning.f_trainer import FinetuneTrainer
 
 
 def apply_template(example, tokenizer):
-    messages = [
-        {
-            'role': 'system',
-            'content': example['messages'][0]['content'],
-        },
-        {
-            'role': 'user',
-            'content': example['messages'][1]['content'],
-        },
-        {
-            'role': 'assistant',
-            'content': example['messages'][2]['content'],
-        },
-    ]
-
-    # prompt = tokenizer.apply_chat_template(
-    #     messages, tokenize=False
-    # )
-
-    # return {'text': prompt}
-
-    prompt = (  # khusus t5
+    prompt = (
         'System: ' + example['messages'][0]['content'] + '\n'
         'User: ' + example['messages'][1]['content'] + '\n'
         'Assistant: ' + example['messages'][2]['content']
@@ -79,7 +58,6 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
     dataset = dataset.train_test_split(test_size=0.1)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
 
-    # ✅ Tokenize text so Trainer sees input_ids, attention_mask, labels
     def tokenize_function(examples):
         return tokenizer(
             examples['text'],
