@@ -34,6 +34,7 @@ MODEL_PATH = {
     'mistral7b': '/home/dev/Downloads/Mistral-7B-Instruct-v0.3/',  # 7.25B parameters
     'flan-large': 'google/flan-t5-large',  # 783M parameters
     'flan-xl': 'google/flan-t5-xl',  # 2.85B parameters
+    'flan-small': 'google/flan-t5-small',
 }
 
 FINE_TUNE_OUTPUT_DIR = './training_output'

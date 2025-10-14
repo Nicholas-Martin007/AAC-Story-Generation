@@ -7,15 +7,9 @@ class FinetuneTokenizer:
             model_path
         )
 
+        # Untuk FLAN-T5, pastikan tokenizer memiliki pad_token
         if self.tokenizer.pad_token is None:
-            self.tokenizer.add_special_tokens(
-                {'pad_token': '<|PAD|>'}
-            )
-            self.tokenizer.pad_token_id = (
-                self.tokenizer.convert_tokens_to_ids('<|PAD|>')
-            )
-
-        self.tokenizer.padding_left = 'left'
+            self.tokenizer.pad_token = self.tokenizer.eos_token
 
     def get_tokenizer(self):
         return self.tokenizer
