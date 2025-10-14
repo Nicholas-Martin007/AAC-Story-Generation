@@ -1,9 +1,9 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": [],
-    "python.linting.enabled": true,
-    "python.linting.ruffEnabled": true,
-    "python.formatting.provider": "ruff",
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true
+	"python-envs.defaultEnvManager": "ms-python.python:venv",
+	"python-envs.pythonProjects": [],
+	"python.linting.enabled": true,
+	"python.linting.ruffEnabled": true,
+	"python.formatting.provider": "ruff",
+	"editor.defaultFormatter": "charliermarsh.ruff",
+	"editor.formatOnSave": true
 }

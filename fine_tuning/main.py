@@ -46,7 +46,7 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
             seed=SEED
         )
 
-    dataset = dataset.select(range(10))
+    # dataset = dataset.select(range(100))
     dataset = dataset.train_test_split(test_size=0.2)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
 
@@ -69,6 +69,11 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
             lambda x: {'labels': x['input_ids']},
             batched=True,
         )
+    else:
+        tokenized_dataset = tokenized_dataset.map(
+            lambda x: {'labels': x['input_ids'].copy()},
+            batched=True,
+        )
 
     return tokenized_dataset['train'], tokenized_dataset['test']
 
@@ -83,6 +88,7 @@ def run_single_training(args):
         learning_rate,
         weight_decay,
         batch_size,
+        n_epochs,
     ) = args
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -128,7 +134,9 @@ def run_single_training(args):
         learning_rate=learning_rate,
         weight_decay=weight_decay,
         batch_size=batch_size,
-        model_type=model_type,  # Pass model type
+        model_type=model_type,
+        n_epochs=n_epochs,
+        model_name=model_name,
     )
 
     trainer = finetune_trainer.get_trainer()
@@ -142,8 +150,15 @@ def run_single_training(args):
             test_data
         )
 
-    print(f'\nFinal Evaluation Results:')
+    print('\nFinal Evaluation Results:')
     print(f'ROUGE-L: {eval_results.get("eval_rougeL", 0):.4f}')
+
+    save_name = f'{model_name}_lr{learning_rate}_wd{weight_decay}_r{r}_a{int(lora_alpha)}_ep{n_epochs}_bs{batch_size}'
+    save_name = save_name.replace('.', '_')
+
+    save_path = os.path.join(FINE_TUNE_OUTPUT_DIR, save_name)
+    trainer.save_model(save_path)
+    tokenizer.save_pretrained(save_path)
 
     return eval_results.get('eval_rougeL', 0)
 
@@ -157,6 +172,7 @@ def train_model(
     learning_rate,
     weight_decay,
     batch_size,
+    n_epochs,
 ):
     args = (
         model_name,
@@ -167,6 +183,7 @@ def train_model(
         learning_rate,
         weight_decay,
         batch_size,
+        n_epochs,
     )
 
     context = torch.multiprocessing.get_context(
@@ -204,6 +221,8 @@ def optuna_objective(trial, model_name, dataset):
         'batch_size', [1, 2, 4]
     )
 
+    n_epochs = trial.suggest_categorical('n_epochs', [1, 2, 3])
+
     score = train_model(
         model_name=model_name,
         dataset=dataset,
@@ -213,6 +232,7 @@ def optuna_objective(trial, model_name, dataset):
         learning_rate=learning_rate,
         weight_decay=weight_decay,
         batch_size=batch_size,
+        n_epochs=n_epochs,
     )
 
     return score
@@ -232,7 +252,7 @@ def training(model_name, dataset):
             model_name=model_name,
             dataset=dataset,
         ),
-        n_trials=1,
+        n_trials=5,
     )
 
 
@@ -244,7 +264,7 @@ if __name__ == '__main__':
     )
 
     model_names = [
-        'llama3.2-1b',
+        'llama3.2-3b',
         # 'mistral7b',
         # 'flan-large',
     ]

@@ -1,1 +1,9 @@
+# Ignore training outputs
 training_output/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+nic_env/
