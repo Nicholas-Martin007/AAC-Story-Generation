@@ -16,6 +16,28 @@ from fine_tuning.f_model import FinetuneModel
 from fine_tuning.f_tokenizer import FinetuneTokenizer
 from fine_tuning.f_trainer import FinetuneTrainer
 
+# def apply_template(example, tokenizer):
+#     messages = [
+#         {
+#             'role': 'system',
+#             'content': example['messages'][0]['content'],
+#         },
+#         {
+#             'role': 'user',
+#             'content': example['messages'][1]['content'],
+#         },
+#         {
+#             'role': 'assistant',
+#             'content': example['messages'][2]['content'],
+#         },
+#     ]
+
+#     prompt = tokenizer.apply_chat_template(
+#         messages, tokenize=False
+#     )
+
+#     return {'text': prompt}
+
 
 def apply_template(example, tokenizer):
     messages = [
@@ -33,10 +55,17 @@ def apply_template(example, tokenizer):
         },
     ]
 
-    prompt = tokenizer.apply_chat_template(
-        messages, tokenize=False
-    )
+    # prompt = tokenizer.apply_chat_template(
+    #     messages, tokenize=False
+    # )
 
+    # return {'text': prompt}
+
+    prompt = (  # khusus t5
+        'System: ' + example['messages'][0]['content'] + '\n'
+        'User: ' + example['messages'][1]['content'] + '\n'
+        'Assistant: ' + example['messages'][2]['content']
+    )
     return {'text': prompt}
 
 
@@ -47,7 +76,7 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
         )
 
     # dataset = dataset.select(range(100))
-    dataset = dataset.train_test_split(test_size=0.2)
+    dataset = dataset.train_test_split(test_size=0.1)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
 
     # ✅ Tokenize text so Trainer sees input_ids, attention_mask, labels
@@ -109,12 +138,14 @@ def run_single_training(args):
         tokenizer=tokenizer,
         model_path=MODEL_PATH[model_name],
         device=DEVICE,
+        model_type=model_type,
     )
 
     lora_config = FinetuneLora(
         r=r,
         lora_alpha=lora_alpha,
         lora_dropout=lora_dropout,
+        model_type=model_type,
     ).get_lora()
     model.insert_lora(lora_config=lora_config)
 
@@ -142,17 +173,6 @@ def run_single_training(args):
     trainer = finetune_trainer.get_trainer()
     trainer.train()
 
-    # Evaluate based on model type
-    if model_type == 'seq2seq':
-        eval_results = trainer.evaluate()
-    else:  # causal
-        eval_results = finetune_trainer.evaluate_causal(
-            test_data
-        )
-
-    print('\nFinal Evaluation Results:')
-    print(f'ROUGE-L: {eval_results.get("eval_rougeL", 0):.4f}')
-
     save_name = f'{model_name}_lr{learning_rate}_wd{weight_decay}_r{r}_a{int(lora_alpha)}_ep{n_epochs}_bs{batch_size}'
     save_name = save_name.replace('.', '_')
 
@@ -160,7 +180,16 @@ def run_single_training(args):
     trainer.save_model(save_path)
     tokenizer.save_pretrained(save_path)
 
-    return eval_results.get('eval_rougeL', 0)
+    if model_type == 'seq2seq':
+        eval_results = trainer.evaluate()
+    else:
+        eval_results = trainer.evaluate()
+
+    print('\nFinal Evaluation Results:')
+    print(f'Perplexity: {eval_results.get("eval_loss", 0):.4f}')
+    print(f'Eval Loss: {eval_results.get("eval_loss", 0):.4f}')
+
+    return -eval_results.get('eval_loss', float('inf'))
 
 
 def train_model(
@@ -221,7 +250,7 @@ def optuna_objective(trial, model_name, dataset):
         'batch_size', [1, 2, 4]
     )
 
-    n_epochs = trial.suggest_categorical('n_epochs', [1, 2, 3])
+    n_epochs = trial.suggest_categorical('n_epochs', [1, 2])
 
     score = train_model(
         model_name=model_name,
@@ -264,8 +293,8 @@ if __name__ == '__main__':
     )
 
     model_names = [
-        'llama3.2-3b',
-        # 'mistral7b',
+        # 'llama3.2-3b',
+        'mistral7b',
         # 'flan-large',
     ]
 

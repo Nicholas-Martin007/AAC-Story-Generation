@@ -4,8 +4,8 @@ from peft import (
     prepare_model_for_kbit_training,
 )
 from transformers import (
-    AutoModelForSeq2SeqLM,
     AutoModelForCausalLM,
+    AutoModelForSeq2SeqLM,
     BitsAndBytesConfig,
 )
 
@@ -17,6 +17,7 @@ class FinetuneModel:
         model_path,
         device,
         lora_config=None,
+        model_type='seq2seq',
     ):
         # DQ + NF4
         self.quantization_config = BitsAndBytesConfig(
@@ -26,12 +27,18 @@ class FinetuneModel:
             bnb_4bit_quant_type='nf4',
         )
 
-        # self.model = AutoModelForSeq2SeqLM.from_pretrained(  # khusus t5
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_path,
-            device_map=device,
-            quantization_config=self.quantization_config,
-        )
+        if model_type == 'seq2seq':
+            self.model = AutoModelForSeq2SeqLM.from_pretrained(  # khusus t5
+                model_path,
+                device_map=device,
+                quantization_config=self.quantization_config,
+            )
+        else:
+            self.model = AutoModelForCausalLM.from_pretrained(
+                model_path,
+                device_map=device,
+                quantization_config=self.quantization_config,
+            )
 
         self.model.resize_token_embeddings(len(tokenizer))
 

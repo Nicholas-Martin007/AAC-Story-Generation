@@ -21,6 +21,7 @@ model_class = FinetuneModel(
     tokenizer=tokenizer,
     model_path=MODEL_PATH['llama3.2-3b'],
     device=DEVICE,
+    model_type='causal',
 )
 
 
@@ -34,13 +35,13 @@ def inference():
     )
     model.resize_token_embeddings(len(tokenizer))
 
-    for name, param in model.named_parameters():
-        print(name, param.norm().item())
+    # for name, param in model.named_parameters():
+    #     print(name, param.norm().item())
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         model,
         # '/home/dev/Downloads/Llama-3.2-3B-Instruct/_QLoRA/',
-        '/home/dev/Downloads/Llama-3.2-3B-Instruct/_QLoRA_r48_a24.0_d0.01',
+        '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr1_4421754150410843e-05_wd0_02_r48_a96_ep1_bs1',
         # '/home/dev/Downloads/Mistral-7B-Instruct-v0.3/_QLoRA_r48_a24.0_d0.01',
         device_map=DEVICE,
         inference_mode=False,
@@ -51,14 +52,9 @@ def inference():
 
     list_input = [
         [
-            'ruang',
-            'kelas',
-            'meja',
-            'buku',
             'pensil',
             'kertas',
             'belajar',
-            'kebersihan',
         ]
     ]
     for input in list_input:
@@ -123,3 +119,7 @@ def inference():
         print(story)
 
         print()
+
+
+if __name__ == '__main__':
+    inference()
