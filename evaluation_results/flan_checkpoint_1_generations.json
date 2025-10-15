@@ -1,0 +1,15 @@
+[
+  {
+    "index": 0,
+    "input": [
+      "kelas",
+      "teman",
+      "bicara",
+      "sibuk",
+      "kursi"
+    ],
+    "reference": "Orang lain masuk kelas. Orang lain duduk di kursi dan mengajak teman bicara. Karena bicara, kelas jadi sibuk.",
+    "generated": "[\"kelas\", \"teman\", \"bicara\", \"sibuk\", \"kursi\")",
+    "perplexity": 1.1944000720977783
+  }
+]

@@ -40,9 +40,8 @@ def inference():
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         model,
-        # '/home/dev/Downloads/Llama-3.2-3B-Instruct/_QLoRA/',
-        '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr1_4421754150410843e-05_wd0_02_r48_a96_ep1_bs1',
-        # '/home/dev/Downloads/Mistral-7B-Instruct-v0.3/_QLoRA_r48_a24.0_d0.01',
+        '/Users/Nicmar/Documents/coding/LLM QLORA/llama_downloads/llama3_2-3b_lr1_4421754150410843e-05_wd0_02_r48_a96_ep1_bs1',
+        # '/Users/Nicmar/Documents/coding/LLM QLORA/llama_downloads/llama3_2-3b_lr0_0001135780665671859_wd0_06_r16_a32_ep1_bs2',
         device_map=DEVICE,
         inference_mode=False,
     )  # jangan dimerge and unload terlebih dahulu untuk mengecek lora
@@ -88,16 +87,12 @@ def inference():
 
         input_len = input_ids.shape[1]
 
-        # Ambil token hasil generate
-        generated_tokens = output.sequences[
-            :, input_len:
-        ]  # shape [1, max_new_tokens]
+        generated_tokens = output.sequences[:, input_len:]
 
-        # Hitung softmax per token menggunakan scores
         import torch.nn.functional as F
 
         for i, tok in enumerate(generated_tokens[0]):
-            logits = output.scores[i][0]  # ambil batch=0
+            logits = output.scores[i][0]
             probs = F.softmax(logits, dim=-1)
             print(
                 f"Token {i + 1}: id={tok.item()}, text='{tokenizer.decode(tok)}', prob={probs[tok].item():.4f}"
