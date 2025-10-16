@@ -31,13 +31,13 @@ def apply_template(example, tokenizer):
 
 
 def prepare_data(tokenizer, dataset, model_type='seq2seq'):
-    if dataset is None:
-        dataset = load_from_disk('hf_aac_dataset').shuffle(
-            seed=SEED
-        )
+    # if dataset is None:
+    #     dataset = load_from_disk('hf_aac_dataset').shuffle(
+    #         seed=SEED
+    #     )
 
     # dataset = dataset.select(range(100))
-    dataset = dataset.train_test_split(test_size=0.1)
+    dataset = dataset.train_test_split(test_size=0.1, SEED=SEED)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
 
     def tokenize_function(examples):
