@@ -1,24 +1,17 @@
+import json
 import os
 import sys
-import json
+from typing import Any, Dict, List
+
 import torch
-import torch.nn.functional as F
-from tqdm import tqdm
-from typing import List, Dict, Any
 from datasets import load_from_disk
 from evaluate import load
 from peft import PeftModelForCausalLM, PeftModelForSeq2SeqLM
-from transformers import (
-    AutoModelForCausalLM,
-    AutoModelForSeq2SeqLM,
-)
-
+from tqdm import tqdm
 
 sys.path.append(os.path.abspath('./'))
 from config import *
 from fine_tuning.f_tokenizer import FinetuneTokenizer
-from fine_tuning.f_model import FinetuneModel
-from fine_tuning.f_lora import FinetuneLora
 
 
 class Evaluate:
@@ -66,6 +59,9 @@ class Evaluate:
                 self.base_model_path,
                 device_map=self.device,
             )
+            base_model.resize_token_embeddings(
+                len(self.tokenizer)
+            )
             qlora_model = PeftModelForCausalLM.from_pretrained(
                 base_model,
                 checkpoint_path,
@@ -79,6 +75,31 @@ class Evaluate:
         merged_model.eval()
 
         return merged_model
+
+    def clean_generated_text(self, generated_text: str) -> str:
+        if self.model_type == 'causal':
+            patterns_to_remove = [
+                r'User:.*?(?=Assistant:|$)',
+                r'Assistant:\s*',
+                r'\[.*?\]',
+                r'<\|.*?\|>',
+                r'###.*?(?=\n|$)',
+            ]
+
+            import re
+
+            cleaned = generated_text
+            for pattern in patterns_to_remove:
+                cleaned = re.sub(
+                    pattern, '', cleaned, flags=re.DOTALL
+                )
+
+            cleaned = re.sub(r'\n+', '\n', cleaned)
+            cleaned = cleaned.strip()
+
+            return cleaned
+
+        return generated_text
 
     def generate_text(
         self,
@@ -107,6 +128,7 @@ class Evaluate:
             truncation=True,
             max_length=512,
         ).input_ids.to(self.device)
+
         with torch.no_grad():
             output = model.generate(
                 input_ids=input_ids,
@@ -130,6 +152,10 @@ class Evaluate:
             generated_tokens[0], skip_special_tokens=True
         )
 
+        generated_text = self.clean_generated_text(
+            generated_text
+        )
+
         return {'generated_text': generated_text}
 
     def calculate_perplexity(self, model, text: str) -> float:
@@ -151,21 +177,21 @@ class Evaluate:
             references=refs,
             use_aggregator=True,
         )
-        # bert = self.bertscore.compute(
-        #     predictions=preds,
-        #     references=refs,
-        #     lang='id',
-        #     model_type='bert-base-multilingual-cased',
-        # )
+        bert = self.bertscore.compute(
+            predictions=preds,
+            references=refs,
+            lang='id',
+            model_type='bert-base-multilingual-cased',
+        )
         return {
             'rouge': rouge,
-            # 'bertscore': {
-            #     'precision': sum(bert['precision'])
-            #     / len(bert['precision']),
-            #     'recall': sum(bert['recall'])
-            #     / len(bert['recall']),
-            #     'f1': sum(bert['f1']) / len(bert['f1']),
-            # },
+            'bertscore': {
+                'precision': sum(bert['precision'])
+                / len(bert['precision']),
+                'recall': sum(bert['recall'])
+                / len(bert['recall']),
+                'f1': sum(bert['f1']) / len(bert['f1']),
+            },
         }
 
     def evaluate_model(
@@ -181,7 +207,7 @@ class Evaluate:
         preds, refs, perplexities, results = [], [], [], []
 
         for idx, row in enumerate(
-            tqdm(test_data.select(range(1)))
+            tqdm(test_data.select(range(5)))
         ):
             input_data = json.loads(
                 row['messages'][1]['content']
@@ -245,25 +271,25 @@ def main():
     test_data = dataset_split['test']
 
     MODELS = {
-        # 'llama': {
-        #     'path': MODEL_PATH['llama3.2-3b'],
-        #     'model_type': 'causal',
-        #     'qlora_model': [
-        #         '/Users/Nicmar/Documents/coding/LLM QLORA/llama_downloads/llama3_2-3b_lr1_4421754150410843e-05_wd0_02_r48_a96_ep1_bs1',
-        #     ],
-        # },
-        # 'mistral': {
-        #     'path': MODEL_PATH['mistral7b'],
-        #     'model_type': 'causal',
-        #     'qlora_model': [
-        #         '/Users/Nicmar/Documents/coding/LLM QLORA/mistral_downloads/mistral7b_lr0_0003159894127911858_wd0_03_r48_a96_ep2_bs4',
-        #     ],
-        # },
+        'llama': {
+            'path': MODEL_PATH['llama3.2-3b'],
+            'model_type': 'causal',
+            'qlora_model': [
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr0_0001135780665671859_wd0_06_r16_a32_ep1_bs2',
+            ],
+        },
+        'mistral': {
+            'path': MODEL_PATH['mistral7b'],
+            'model_type': 'causal',
+            'qlora_model': [
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/mistral7b_lr0_0003159894127911858_wd0_03_r48_a96_ep2_bs4',
+            ],
+        },
         'flan': {
             'path': MODEL_PATH['flan-large'],
             'model_type': 'seq2seq',
             'qlora_model': [
-                '/Users/Nicmar/Documents/coding/LLM QLORA/flan-t5_downloads/flan-large_lr0_0001482178201997769_wd0_09_r32_a16_ep1_bs4',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/flan-large_lr0_0001482178201997769_wd0_09_r32_a16_ep1_bs4',
             ],
         },
     }
@@ -273,19 +299,14 @@ def main():
         evaluator = Evaluate(
             data['path'], data['model_type'], DEVICE
         )
-        for idx, ckpt in enumerate(data['qlora_model'], 1):
-            ckpt_name = f'{name}_checkpoint_{idx}'
-            print(
-                f'\nEvaluating {ckpt_name} ({idx}/{len(data["qlora_model"])})'
-            )
+        for ckpt in data['qlora_model']:
+            ckpt_name = os.path.basename(ckpt.rstrip('/'))
+
+            print(f'\nEvaluating {ckpt_name}')
             scores = evaluator.evaluate_model(
                 ckpt, ckpt_name, test_data, OUTPUT_DIR
             )
-            print(f'ROUGE-1: {scores["rouge"]["rouge1"]:.4f}')
-
-            print(
-                f'Perplexity: {scores["perplexity"]["mean"]:.4f}'
-            )
+            print(f'scores: {scores}')
 
 
 if __name__ == '__main__':
