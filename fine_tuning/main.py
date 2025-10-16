@@ -3,6 +3,10 @@ import sys
 
 import optuna
 
+os.environ['NETWORKX_BACKEND'] = 'basic'
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+
+
 sys.path.append(os.path.abspath('./'))
 
 from functools import partial
@@ -51,7 +55,7 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
         tokenized_dataset = tokenized_dataset.map(
             lambda x: {
                 'labels': x['input_ids']
-            },  # agar bisa ikut berubah kiri dan kanan
+            },  # agar bisa ikut berubah kiri dan kanan kalau tidak ada copy
             batched=True,
         )
     else:
@@ -203,7 +207,7 @@ def optuna_objective(trial, model_name, dataset):
         'weight_decay', 0.0, 0.1, step=0.01
     )
     batch_size = trial.suggest_categorical(
-        'batch_size', [1, 2, 4]
+        'batch_size', [2, 4, 8]
     )
 
     n_epochs = trial.suggest_categorical('n_epochs', [1, 2])
@@ -251,7 +255,7 @@ if __name__ == '__main__':
     model_names = [
         # 'llama3.2-3b',
         # 'mistral7b',
-        'flan-small',
+        'flan-large',
     ]
 
     for model_name in model_names:
