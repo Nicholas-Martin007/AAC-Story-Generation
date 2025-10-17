@@ -12,7 +12,6 @@ sys.path.append(os.path.abspath('./'))
 from functools import partial
 
 from create_hf_dataset import prepare_hf_dataset
-from datasets import load_from_disk
 
 from config import *
 from fine_tuning.f_lora import FinetuneLora
@@ -37,7 +36,7 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
     #     )
 
     # dataset = dataset.select(range(100))
-    dataset = dataset.train_test_split(test_size=0.1, SEED=SEED)
+    dataset = dataset.train_test_split(test_size=0.1, seed=SEED)
     dataset = dataset.map(lambda x: apply_template(x, tokenizer))
 
     def tokenize_function(examples):
@@ -193,10 +192,8 @@ def train_model(
 
 def optuna_objective(trial, model_name, dataset):
     r = trial.suggest_int('r', 16, 64, step=16)
-
     a_ratio = trial.suggest_categorical('a_ratio', [0.5, 2])
     lora_alpha = r * a_ratio
-
     lora_dropout = trial.suggest_categorical(
         'lora_dropout', [0.5, 0.01]
     )
@@ -206,11 +203,11 @@ def optuna_objective(trial, model_name, dataset):
     weight_decay = trial.suggest_float(
         'weight_decay', 0.0, 0.1, step=0.01
     )
+
     batch_size = trial.suggest_categorical(
         'batch_size', [2, 4, 8]
     )
-
-    n_epochs = trial.suggest_categorical('n_epochs', [1, 2])
+    n_epochs = trial.suggest_categorical('n_epochs', [3, 4])
 
     score = train_model(
         model_name=model_name,
@@ -230,7 +227,7 @@ def optuna_objective(trial, model_name, dataset):
 def training(model_name, dataset):
     study = optuna.create_study(
         direction='maximize',
-        study_name=f'QLoRA {model_name}',
+        study_name=f'QLoRA {model_name} v2',
         storage=f'sqlite:///optuna_qlora_{model_name}.db',
         load_if_exists=True,
     )
@@ -253,9 +250,9 @@ if __name__ == '__main__':
     )
 
     model_names = [
-        # 'llama3.2-3b',
+        'llama3.2-3b',
         # 'mistral7b',
-        'flan-large',
+        # 'flan-large',
     ]
 
     for model_name in model_names:

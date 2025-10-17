@@ -206,9 +206,7 @@ class Evaluate:
 
         preds, refs, perplexities, results = [], [], [], []
 
-        for idx, row in enumerate(
-            tqdm(test_data.select(range(5)))
-        ):
+        for idx, row in enumerate(tqdm(test_data)):
             input_data = json.loads(
                 row['messages'][1]['content']
             )
@@ -276,6 +274,12 @@ def main():
             'model_type': 'causal',
             'qlora_model': [
                 '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr0_0001135780665671859_wd0_06_r16_a32_ep1_bs2',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr0_00025461989761985766_wd0_01_r48_a24_ep2_bs4',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr1_4421754150410843e-05_wd0_02_r48_a96_ep1_bs1',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr1_4731842491352058e-05_wd0_01_r64_a32_ep3_bs8',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr3_093713826482805e-05_wd0_09_r64_a128_ep2_bs4',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr3_450484311915849e-05_wd0_0_r48_a96_ep2_bs1',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr4_8124593091828134e-05_wd0_07_r48_a96_ep3_bs8',
             ],
         },
         'mistral': {
@@ -283,6 +287,10 @@ def main():
             'model_type': 'causal',
             'qlora_model': [
                 '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/mistral7b_lr0_0003159894127911858_wd0_03_r48_a96_ep2_bs4',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/mistral7b_lr0_00015079044135156433_wd0_1_r64_a128_ep1_bs2',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/mistral7b_lr0_00015249001841056552_wd0_05_r64_a128_ep1_bs1',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/mistral7b_lr1_1074139343117776e-05_wd0_05_r64_a32_ep2_bs4',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/mistral7b_lr2_303555912500907e-05_wd0_0_r48_a24_ep1_bs1',
             ],
         },
         'flan': {
@@ -290,6 +298,10 @@ def main():
             'model_type': 'seq2seq',
             'qlora_model': [
                 '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/flan-large_lr0_0001482178201997769_wd0_09_r32_a16_ep1_bs4',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/flan-large_lr0_00042965736678486025_wd0_03_r16_a8_ep2_bs8',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/flan-large_lr1_1161741857853943e-05_wd0_04_r16_a8_ep1_bs2',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/flan-large_lr1_5200303235995328e-05_wd0_01_r16_a32_ep1_bs4',
+                '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/flan-large_lr1_6937795180734888e-05_wd0_01_r48_a24_ep1_bs8',
             ],
         },
     }
