@@ -250,9 +250,9 @@ if __name__ == '__main__':
     )
 
     model_names = [
-        'llama3.2-3b',
-        # 'mistral7b',
-        # 'flan-large',
+        # 'llama3.2-3b',
+        'mistral7b',
+        'flan-large',
     ]
 
     for model_name in model_names:

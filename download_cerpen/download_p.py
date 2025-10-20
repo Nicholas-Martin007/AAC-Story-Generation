@@ -1,7 +1,8 @@
-import requests
-from bs4 import BeautifulSoup
 import json
 from urllib.parse import urlparse
+
+import requests
+from bs4 import BeautifulSoup
 
 with open(
     'download_cerpen/link_cerpen.txt',
@@ -9,33 +10,33 @@ with open(
 ) as f:
     urls = json.load(f)
 
-target_classes = [
+html_class = [
     'w-full max-w-[624px] px-4 md:px-0 md:mx-auto paragraph break-words mb-4 text-body font-lora rendered-component',
     'ksm-GMg ksm-2BC',
 ]
 
-output = {}
+result = {}
 
 for url in urls:
-    print(f'Fetching: {url}')
+    # ambil text html
     response = requests.get(
         url,
         headers={'User-Agent': 'Mozilla/5.0'},
     )
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    slug = urlparse(url).path.split('/')[-1].split('?')[0]
+    cerpen_name = urlparse(url).path.split('/')[-1].split('?')[0]
 
-    paragraphs = []
-    for cls in target_classes:
-        paragraphs += soup.find_all('p', class_=cls)
+    p = []
+    for c in html_class:
+        p += soup.find_all('p', class_=c)
 
-    if not paragraphs:
-        print(f'❌ No paragraphs for: {slug} || {cls}')
+    if not p:
         continue
 
-    output[slug] = {
-        'text': [p.get_text(strip=True) for p in paragraphs]
+    # save
+    result[cerpen_name] = {
+        'text': [p.get_text(strip=True) for p in p]
     }
 
 with open(
@@ -44,7 +45,7 @@ with open(
     encoding='utf-8',
 ) as f:
     json.dump(
-        output,
+        result,
         f,
         ensure_ascii=False,
         indent=2,
