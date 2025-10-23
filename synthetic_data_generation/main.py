@@ -61,7 +61,7 @@ def generate_story(
     # results = [normalize_per_entities(r) for r in results]
     print('SAVING STORY...')
     with open(
-        'aac_story_dataset_SDG_1.json',
+        'aac_story_dataset_SDG_versi_2.json',
         'w',
         encoding='utf-8',
     ) as f:
@@ -103,7 +103,7 @@ def generate_card(
 
     print('SAVING CARD...')
     with open(
-        'aac_card_dataset_SDG_1.json',
+        'aac_card_dataset_SDG_versi_2.json',
         'w',
         encoding='utf-8',
     ) as f:

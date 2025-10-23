@@ -51,3 +51,6 @@ if __name__ == '__main__':
         )
 
     print()
+
+
+# refer ke 3.2

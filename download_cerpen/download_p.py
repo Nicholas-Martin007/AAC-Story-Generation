@@ -16,6 +16,7 @@ target_classes = [
 
 output = {}
 
+# web scrapping
 for url in urls:
     print(f'Fetching: {url}')
     response = requests.get(
@@ -49,3 +50,6 @@ with open(
         ensure_ascii=False,
         indent=2,
     )
+
+
+# kasih deskripsi
