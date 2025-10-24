@@ -207,7 +207,7 @@ def optuna_objective(trial, model_name, dataset):
     batch_size = trial.suggest_categorical(
         'batch_size', [2, 4, 8]
     )
-    n_epochs = trial.suggest_categorical('n_epochs', [3, 4])
+    n_epochs = trial.suggest_categorical('n_epochs', [1, 2])
 
     score = train_model(
         model_name=model_name,
@@ -227,7 +227,7 @@ def optuna_objective(trial, model_name, dataset):
 def training(model_name, dataset):
     study = optuna.create_study(
         direction='maximize',
-        study_name=f'QLoRA {model_name} v2',
+        study_name=f'QLoRA {model_name} v3',
         storage=f'sqlite:///optuna_qlora_{model_name}.db',
         load_if_exists=True,
     )
