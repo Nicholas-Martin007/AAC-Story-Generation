@@ -17,6 +17,7 @@ html_class = [
 
 result = {}
 
+# web scrapping
 for url in urls:
     # ambil text html
     response = requests.get(
@@ -50,3 +51,6 @@ with open(
         ensure_ascii=False,
         indent=2,
     )
+
+
+# kasih deskripsi

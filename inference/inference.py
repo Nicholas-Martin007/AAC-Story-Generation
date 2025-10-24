@@ -118,3 +118,7 @@ def inference():
 
 if __name__ == '__main__':
     inference()
+
+
+
+#  ROUGE, evaluasi lainnya, masuk
