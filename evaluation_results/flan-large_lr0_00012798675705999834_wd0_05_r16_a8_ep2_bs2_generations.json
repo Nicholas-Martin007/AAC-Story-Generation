@@ -1,0 +1,6247 @@
+[
+  {
+    "index": 0,
+    "input": [
+      "teman",
+      "meja",
+      "duduk",
+      "senang",
+      "duduk"
+    ],
+    "reference": "Teman duduk. Teman duduk di meja. Teman senang.",
+    "generated": "[\"teman\", \"meja\", \"duduk\", \"senang\", \"duduk\"]",
+    "perplexity": 1.0005677938461304
+  },
+  {
+    "index": 1,
+    "input": [
+      "Orang",
+      "baik",
+      "bantu",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang membantu. Orang senang.",
+    "generated": "[\"Orang\", \"baik\", \"bantu\", \"senang\"]",
+    "perplexity": 1.0007092952728271
+  },
+  {
+    "index": 2,
+    "input": [
+      "Orang",
+      "baik",
+      "tersenyum",
+      "semua",
+      "baahia",
+      "Cards",
+      "Teman",
+      "datang",
+      "bermain",
+      "saya",
+      "senang",
+      "Cards",
+      "Guru",
+      "bantu",
+      "berbicara",
+      "saya",
+      "mendengar",
+      "Cards",
+      "Bangunan",
+      "tinggi",
+      "kuat",
+      "aman",
+      "Cards",
+      "Keluarga",
+      "bahagia",
+      "bersama",
+      "nyaman"
+    ],
+    "reference": "Orang baik. Orang tersenyum. Semua bahagia.\n\n2.\nStory: Teman datang. Teman bermain. Saya senang.\n\n3.\nStory: Guru membantu. Guru berbicara. Saya mendengar.\n\n4.\nStory: Bangunan tinggi. Bangunan kuat. Semua aman.\n\n5.\nStory: Keluarga bahagia. Keluarga bersama. Saya nyaman.",
+    "generated": "[\"Orang\", \"baik\", \"tersenyum\", \"semua\", \"baahia\", \"Cards\", \"Teman\", \"datang\", \"bermain\", \"saya\", \"senang\", \"Cards\", \"Guru\", \"bantu\", \"berbicara\", \"saya\", \"mendengar\", \"Cards\", \"Bangunan\", \"tinggi\", \"kuat\", \"aman\", \"Cards\", \"Keluarga\", \"bahagia\", \"bersama\", \"nyaman\"]",
+    "perplexity": 1.002118468284607
+  },
+  {
+    "index": 3,
+    "input": [
+      "patung",
+      "baik",
+      "orang"
+    ],
+    "reference": "Orang buat patung. Patung terlihat baik. Saya senang.",
+    "generated": "[\"patung\", \"baik\", \"orang\"]",
+    "perplexity": 1.0006400346755981
+  },
+  {
+    "index": 4,
+    "input": [
+      "lelah",
+      "duduk",
+      "istirahat"
+    ],
+    "reference": "Ia lelah. Ia duduk. Ia istirahat.",
+    "generated": "[\"lelah\", \"duduk\", \"istirahat\"]",
+    "perplexity": 1.0020205974578857
+  },
+  {
+    "index": 5,
+    "input": [
+      "orang",
+      "membantu",
+      "senang"
+    ],
+    "reference": "Orang datang. Orang sedia membantu. Semua senang.",
+    "generated": "[\"orang\", \"membantu\", \"senang\"]",
+    "perplexity": 1.009043574333191
+  },
+  {
+    "index": 6,
+    "input": [
+      "orang",
+      "latihan",
+      "sayang"
+    ],
+    "reference": "Orang menenangkan. Orang sayang. Orang latihan.",
+    "generated": "[\"orang\", \"latihan\", \"sayang\"]",
+    "perplexity": 1.0019406080245972
+  },
+  {
+    "index": 7,
+    "input": [
+      "ayah",
+      "baik",
+      "senang"
+    ],
+    "reference": "Ayah sini. Ayah baik. Saya senang.",
+    "generated": "[\"ayah\", \"baik\", \"senang\"]",
+    "perplexity": 1.0001792907714844
+  },
+  {
+    "index": 8,
+    "input": [
+      "orang",
+      "teman",
+      "bola",
+      "gembira"
+    ],
+    "reference": "Orang main. Teman main bola. Semua gembira.",
+    "generated": "[\"orang\", \"teman\", \"bola\", \"gembira\"]",
+    "perplexity": 1.0017980337142944
+  },
+  {
+    "index": 9,
+    "input": [
+      "bangun",
+      "duduk",
+      "senyum"
+    ],
+    "reference": "Orang bangun. Orang duduk. Orang tersenyum.",
+    "generated": "bangun, duduk, senyum",
+    "perplexity": 1.0456541776657104
+  },
+  {
+    "index": 10,
+    "input": [
+      "teman",
+      "mainan",
+      "senang",
+      "bermain"
+    ],
+    "reference": "Teman mainan. Teman bermain. Teman senang.",
+    "generated": "[\"teman\", \"mainan\", \"senang\", \"bermain\"]",
+    "perplexity": 1.000747561454773
+  },
+  {
+    "index": 11,
+    "input": [
+      "santai",
+      "tidur",
+      "nyaman"
+    ],
+    "reference": "Saya nyaman. Saya tidur. Saya santai.",
+    "generated": "[\"santai\", \"tidur\", \"nyaman\"]",
+    "perplexity": 1.1684880256652832
+  },
+  {
+    "index": 12,
+    "input": [
+      "orang",
+      "senang",
+      "bergembira",
+      "bahagia"
+    ],
+    "reference": "Orang senang. Orang bergembira. Orang bahagia.",
+    "generated": "[\"orang\", \"senang\", \"bergembira\", \"bahagia\"]",
+    "perplexity": 1.0015969276428223
+  },
+  {
+    "index": 13,
+    "input": [
+      "teman",
+      "sekolah",
+      "baik"
+    ],
+    "reference": "Teman di toko. Teman di sekolah. Teman baik.\n\natau\nStory: Guru di sekolah. Guru di rumah. Guru baik.\n\natau\nStory: Teman di tempat. Teman di taman. Teman senang.",
+    "generated": "[\"teman\", \"sekolah\", \"baik\"]",
+    "perplexity": 1.0011712312698364
+  },
+  {
+    "index": 14,
+    "input": [
+      "Orang",
+      "jalan",
+      "bunga",
+      "senang"
+    ],
+    "reference": "Orang jalan. Orang lihat bunga. Orang senang.",
+    "generated": "[\"Orang\", \"jalan\", \"bunga\", \"senang\"]",
+    "perplexity": 1.0024210214614868
+  },
+  {
+    "index": 15,
+    "input": [
+      "teman",
+      "masak",
+      "nasi",
+      "senang",
+      "Cards",
+      "guru",
+      "masak",
+      "sayuran",
+      "gembira",
+      "Cards",
+      "kamu",
+      "masak",
+      "mie",
+      "puas",
+      "Cards",
+      "toko",
+      "jual",
+      "makanan",
+      "puas",
+      "Cards",
+      "kelompok",
+      "bantu",
+      "masak",
+      "gembira"
+    ],
+    "reference": "Teman masak. Teman masak nasi. Teman senang.\n\n2.\nStory: Guru memasak. Guru memasak sayuran. Guru gembira.\n\n3.\nStory: Kamu masak. Kamu masak mie. Kamu puas.\n\n4.\nStory: Toko menjual. Toko menjual makanan. Semua puas.\n\n5.\nStory: Kelompok membantu. Kelompok membantu masak. Semua gembira.",
+    "generated": "[\"teman\", \"masak\", \"nasi\", \"senang\", \"Cards\", \"guru\", \"masak\", \"sayuran\", \"gembira\", \"Cards\", \"kamu\", \"masak\", \"mie\", \"puas\", \"Cards\", \"toko\", \"jual\", \"makanan\", \"puas\", \"Cards\", \"kelompok\", \"bantu\", \"masak\", \"gembira\"]",
+    "perplexity": 1.0041753053665161
+  },
+  {
+    "index": 16,
+    "input": [
+      "lelaki",
+      "duduk",
+      "tersenyum"
+    ],
+    "reference": "Lelaki datang. Lelaki duduk. Lelaki tersenyum.",
+    "generated": "[\"lelaki\", \"duduk\", \"tersenyum\"]",
+    "perplexity": 1.0025097131729126
+  },
+  {
+    "index": 17,
+    "input": [
+      "teman",
+      "nasi",
+      "senang"
+    ],
+    "reference": "Teman makan. Teman makan nasi. Teman senang.\n\nAtau:\n\nStory: Guru baik. Guru pandai. Saya bahagia.\n\nAtau:\n\nStory: Saya lihat. Saya lihat bunga. Saya senang.",
+    "generated": "[\"teman\", \"nasi\", \"senang\"]",
+    "perplexity": 1.0011887550354004
+  },
+  {
+    "index": 18,
+    "input": [
+      "adik",
+      "roti",
+      "makan",
+      "lapar",
+      "senang"
+    ],
+    "reference": "Adik lapar. Adik makan roti. Adik senang.",
+    "generated": "[\" adik\", \"roti\", \"makan\", \"lapar\", \"senang\"]",
+    "perplexity": 1.021475076675415
+  },
+  {
+    "index": 19,
+    "input": [
+      "teman",
+      "duduk",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman duduk. Teman senang.",
+    "generated": "[\"teman\", \"duduk\", \"senang\"]",
+    "perplexity": 1.0010485649108887
+  },
+  {
+    "index": 20,
+    "input": [
+      "teman",
+      "biskuit",
+      "enak",
+      "Cards",
+      "guru",
+      "banyak",
+      "barang",
+      "cantik",
+      "Cards",
+      "ibu",
+      "makanan",
+      "lezzat",
+      "Cards",
+      "saya",
+      "buat",
+      "mainan",
+      "bagus",
+      "Cards",
+      "teman",
+      "membantu",
+      "nyaman"
+    ],
+    "reference": "Teman buat. Teman buat biskuit. Biskuit enak.\n\n2.\nStory: Guru kreatif. Guru buat barang. Barang cantik.\n\n3.\nStory: Ibu baik. Ibu buat makanan. Makanan lezat.\n\n4.\nStory: Saya senang. Saya buat mainan. Mainan bagus.\n\n5.\nStory: Teman baik. Teman membantu. Semua nyaman.",
+    "generated": "[\"teman\", \"biskuit\", \"enak\", \"Cards\", \"guru\", \"banyak\", \"barang\", \"cantik\", \"Cards\", \"ibu\", \"makanan\", \"lezzat\", \"Cards\", \"saya\", \"buat\", \"mainan\", \"bagus\", \"Cards\", \"teman\", \"membantu\", \"nyaman\"]",
+    "perplexity": 1.0013206005096436
+  },
+  {
+    "index": 21,
+    "input": [
+      "guru",
+      "baik",
+      "orang",
+      "Cards",
+      "guru",
+      "kuat",
+      "lingkungan",
+      "peduli",
+      "Cards",
+      "guru",
+      "pintar",
+      "anak",
+      "baik",
+      "Cards",
+      "guru",
+      "hebat",
+      "organisasi",
+      "luar",
+      "biasa"
+    ],
+    "reference": "Guru baik. Guru baik orang. Guru senang.\n\n2.\nStory: Guru kuat. Guru kuat lingkungan. Guru peduli.\n\n3.\nStory: Guru pintar. Guru pintar anak. Guru baik.\n\n4.\nStory: Guru hebat. Guru hebat organisasi. Guru luar biasa.",
+    "generated": "[\"guru\", \"baik\", \"orang\", \"Cards\", \"guru\", \"kuat\", \"lingkungan\", \"peduli\", \"Cards\", \"guru\", \"pintar\", \"anak\", \"baik\", \"Cards\", \"guru\", \"hebat\", \"organisasi\", \"luar\", \"biasa\"]",
+    "perplexity": 1.0003015995025635
+  },
+  {
+    "index": 22,
+    "input": [
+      "teman",
+      "pergi",
+      "lapangan",
+      "berlari",
+      "Cards",
+      "buku",
+      "guru",
+      "baik",
+      "gambar",
+      "Cards",
+      "bunga",
+      "warna",
+      "jalan",
+      "melihat",
+      "Cards",
+      "air",
+      "minum",
+      "segar",
+      "saya",
+      "Cards",
+      "anak",
+      "duduk",
+      "buku",
+      "senang"
+    ],
+    "reference": "Teman pergi. Teman pergi ke lapangan. Teman berlari.\n\n2.\nStory: Guru baik. Guru memberikan buku. Buku bergambar.\n\n3.\nStory: Orang jalan. Orang melihat bunga. Bunga warna-warni.\n\n4.\nStory: Saya minum. Saya minum air. Air segar.\n\n5.\nStory: Anak duduk. Anak membaca buku. Anak senang.",
+    "generated": "[\"teman\", \"pergi\", \"lapangan\", \"berlari\", \"Cards\", \"buku\", \"guru\", \"baik\", \"gambar\", \"Cards\", \"bunga\", \"warna\", \"jalan\", \"melihat\", \"Cards\", \"air\", \"minum\", \"segar\", \"saya\", \"Cards\", \"anak\", \"duduk\", \"buku\", \"senang\"]",
+    "perplexity": 1.0045092105865479
+  },
+  {
+    "index": 23,
+    "input": [
+      "Orang",
+      "sibuk",
+      "nyaman",
+      "datang"
+    ],
+    "reference": "Orang datang. Orang sibuk. Orang nyaman.",
+    "generated": "Orang\", \"sibuk\", \"nyaman\", \"datang\"",
+    "perplexity": 1.0551493167877197
+  },
+  {
+    "index": 24,
+    "input": [
+      "tangan",
+      "kuda",
+      "tinggi",
+      "lari"
+    ],
+    "reference": "Saya melambaikan tangan. Kuda tinggi. Kuda berlari.\n\nDalam kalimat di atas, saya menggunakan tema \"taman\" dan mengganti label NER dengan kata sederhana. Kalimat tersebut menunjukkan bahwa Anda melambaikan tangan kepada kuda yang tinggi dan berlari.",
+    "generated": "[\"tangan\", \"kuda\", \"tinggi\", \"lari\"]",
+    "perplexity": 1.0013201236724854
+  },
+  {
+    "index": 25,
+    "input": [
+      "teman",
+      "kucing",
+      "lucu"
+    ],
+    "reference": "Teman rumah. Teman punya kucing. Kucingnya lucu.",
+    "generated": "[\"teman\", \"kucing\", \"lucu\"]",
+    "perplexity": 1.0012257099151611
+  },
+  {
+    "index": 26,
+    "input": [
+      "orang",
+      "jatuh",
+      "rumah",
+      "pergi"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat 1–2 kata saja. \n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga (ayah, ibu, adik, kakak, kakek, nenek), tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nGanti Label NER dengan kata sederhana:\n- <|PER|> → orang / teman / guru\n- <|ORG|> → sekolah / toko / kelompok\n- <|LOC|> → tempat / taman / lapangan\n- <|FAC|> → bangunan / rumah / jalan\n- <|GPE|> → kota / desa / negara\n- <|PRD|> → barang / mainan / makanan\n\nContoh Output:\n\n1.\nStory: Adik lapar. Adik makan roti. Adik senang.\n\n2.\nStory: Ayah minum. Ayah minum alpukat.\n\n3.\nStory: Kamu baik. Hari bagus. Aku senang. Semua nyaman.\n\n4.\nStory: AC nyala. Udara dingin. Saya nyaman.\n\n5.\nStory: Pesawat naik. Pesawat akan naik.\n\nTugas Anda: Story: Orang jatuh. Orang terluka. Orang pergi rumah.",
+    "generated": "[\"orang\", \"jatuh\", \"rumah\", \"pergi\"]",
+    "perplexity": 1.0023794174194336
+  },
+  {
+    "index": 27,
+    "input": [
+      "teman",
+      "main",
+      "gembira",
+      "Cards",
+      "guru",
+      "tahu",
+      "ajari",
+      "senang",
+      "Cards",
+      "orang",
+      "nyaman",
+      "bahagia",
+      "suka",
+      "Cards",
+      "anak",
+      "main",
+      "senang",
+      "gembira",
+      "Cards",
+      "bajuku",
+      "nyaman",
+      "cerah"
+    ],
+    "reference": "Teman baik. Teman main. Teman gembira.\n\n2.\nStory: Guru tahu. Guru ajari. Guru senang.\n\n3.\nStory: Orang nyaman. Orang bahagia. Orang suka.\n\n4.\nStory: Anak main. Anak senang. Anak gembira.\n\n5.\nStory: Bajuku nyaman. Bajuku cerah. Saya senang.",
+    "generated": "[\"teman\", \"main\", \"gembira\", \"Cards\", \"guru\", \"tahu\", \"ajari\", \"senang\", \"Cards\", \"orang\", \"nyaman\", \"bahagia\", \"suka\", \"Cards\", \"anak\", \"main\", \"senang\", \"gembira\", \"Cards\", \"bajuku\", \"nyaman\", \"cerah\"]",
+    "perplexity": 1.0011239051818848
+  },
+  {
+    "index": 28,
+    "input": [
+      "teman",
+      "cerdas",
+      "baca"
+    ],
+    "reference": "Teman belajar. Teman cerdas. Teman suka membaca.",
+    "generated": "[\"teman\", \"cerdas\", \"baca\"]",
+    "perplexity": 1.001294493675232
+  },
+  {
+    "index": 29,
+    "input": [
+      "rumah",
+      "bata",
+      "udara",
+      "musim",
+      "hujan",
+      "tetap"
+    ],
+    "reference": "Rumah tua. Potongan bata. Udara musim hujan. Semua tetap.",
+    "generated": "[\"rumah\", \"bata\", \"udara\", \"musim\", \"hujan\", \"tetap\"]",
+    "perplexity": 1.0004688501358032
+  },
+  {
+    "index": 30,
+    "input": [
+      "orang",
+      "lelah",
+      "selam",
+      "beranting"
+    ],
+    "reference": "Orang beranting. Orang menyelam. Orang lelah.",
+    "generated": "[\"orang\", \"lelah\", \"selam\", \"beranting\"]",
+    "perplexity": 1.0195168256759644
+  },
+  {
+    "index": 31,
+    "input": [
+      "rumah",
+      "nyaman",
+      "orang",
+      "tua",
+      "sangat"
+    ],
+    "reference": "Rumah orang tua. Rumah nyaman. Orang tua senang.",
+    "generated": "[\"rumah\", \"nyaman\", \"orang\", \"tua\", \"sangat\"]",
+    "perplexity": 1.0007520914077759
+  },
+  {
+    "index": 32,
+    "input": [
+      "siswa",
+      "guru",
+      "malam",
+      "ceria",
+      "baik",
+      "sekarang"
+    ],
+    "reference": "Siswa baik. Guru senang. Siswa ceria.",
+    "generated": "[\"iswa\", \"guru\", \"malam\", \"ceria\", \"baik\", \"sekarang\"]",
+    "perplexity": 1.0352593660354614
+  },
+  {
+    "index": 33,
+    "input": [
+      "tidur",
+      "pagi",
+      "orang",
+      "bantu"
+    ],
+    "reference": "Orang tidur. Orang bantu. Bangun pagi.",
+    "generated": "[\"tidur\", \"pagi\", \"orang\", \"bantu\"]",
+    "perplexity": 1.001852035522461
+  },
+  {
+    "index": 34,
+    "input": [
+      "makan"
+    ],
+    "reference": "Makan. Makan enak. Makan puas.",
+    "generated": "[\"makan\"]",
+    "perplexity": 1.0116552114486694
+  },
+  {
+    "index": 35,
+    "input": [
+      "lembut",
+      "kuat",
+      "senang"
+    ],
+    "reference": "Tubuhku lembut. Tubuhku kuat. Tubuhku senang.",
+    "generated": "verbs that mean \"lembut\", \"kuat\", \"senang\"",
+    "perplexity": 1.0920912027359009
+  },
+  {
+    "index": 36,
+    "input": [
+      "orang",
+      "bekerja",
+      "sekolah",
+      "bahagia"
+    ],
+    "reference": "Orang bekerja. Orang sekolah. Orang bahagia.",
+    "generated": "[\"orang\", \"bekerja\", \"sekolah\", \"bahagia\"]",
+    "perplexity": 1.0024083852767944
+  },
+  {
+    "index": 37,
+    "input": [
+      "adik",
+      "hari",
+      "bagus",
+      "pagi",
+      "mata",
+      "malam",
+      "Namun",
+      "karena",
+      "instruksi",
+      "yang",
+      "Anda",
+      "berikan",
+      "saya",
+      "akan",
+      "memilih",
+      "kata",
+      "yang",
+      "paling",
+      "relevan",
+      "dan",
+      "menghilangkan",
+      "kata",
+      "kata",
+      "yang",
+      "tidak",
+      "perlu",
+      "Cards",
+      "adik",
+      "hari",
+      "bagus",
+      "pagi"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat 1–2 kata saja.\n\nBerikut adalah jawaban saya:\n\nStory: Adik terbangun pagi. Adik buka mata. Adik melihat hari bagus.",
+    "generated": "\"adik\", \"hari\", \"bagus\", \"pagi\", \"mata\", \"malam\", \"Namun\", \"karena\", \"instruksi\", \"yang\", \"Anda\", \"berikan\", \"saya\", \"akan\", \"memilih\", \"kata\", \"yang\", \"paling\", \"relevan\", \"dan\", \"menghilangkan\", \"kata\", \"kata\", \"yang\", \"tidak\", \"perlu\", \"Cards\", \"adik\", \"hari\", \"bagus\", \"pagi\"",
+    "perplexity": 1.0004020929336548
+  },
+  {
+    "index": 38,
+    "input": [
+      "orang",
+      "rumah",
+      "berbicara",
+      "pemilik",
+      "pulang"
+    ],
+    "reference": "Orang datang rumah. Orang berbicara dengan pemilik rumah. Orang pulang.",
+    "generated": "[\"orang\", \"rumah\", \"berbicara\", \"pemilik\", \"pulang\"]",
+    "perplexity": 1.0063114166259766
+  },
+  {
+    "index": 39,
+    "input": [
+      "anak",
+      "basah",
+      "cerita",
+      "gembira"
+    ],
+    "reference": "Anak basah. Anak cerita. Anak gembira.",
+    "generated": "[\"anak\", \"basah\", \"cerita\", \"gembira\"]",
+    "perplexity": 1.0022039413452148
+  },
+  {
+    "index": 40,
+    "input": [
+      "Orang",
+      "baik",
+      "senang",
+      "bahagia"
+    ],
+    "reference": "Orang baik. Orang senang. Orang bahagia.",
+    "generated": "[\"Orang\", \"baik\", \"senang\", \"bahagia\"]",
+    "perplexity": 1.0346890687942505
+  },
+  {
+    "index": 41,
+    "input": [
+      "or",
+      "baik",
+      "tempat",
+      "orang",
+      "senang"
+    ],
+    "reference": "Orang membantu. Tempat menjadi baik. Semua senang.",
+    "generated": "[\"or\", \"baik\", \"tempat\", \"orang\", \"senang\"]",
+    "perplexity": 1.0005031824111938
+  },
+  {
+    "index": 42,
+    "input": [
+      "teman",
+      "barang",
+      "saya",
+      "senang"
+    ],
+    "reference": "Teman memberi. Teman berikan barang. Saya senang.",
+    "generated": "[\"teman\", \"barang\", \"saya\", \"senang\"]",
+    "perplexity": 1.0007209777832031
+  },
+  {
+    "index": 43,
+    "input": [
+      "teman",
+      "buku",
+      "baik"
+    ],
+    "reference": "Teman berbicara. Teman membaca buku. Teman baik.",
+    "generated": "[\"teman\", \"buku\", \"baik\"]",
+    "perplexity": 1.0015006065368652
+  },
+  {
+    "index": 44,
+    "input": [
+      "baju",
+      "jarum",
+      "kain"
+    ],
+    "reference": "Teman mengganti baju. Teman menggigit jarum. Teman membuka kain.",
+    "generated": "[\"baju\", \"jarum\", \"kain\"]",
+    "perplexity": 1.0042818784713745
+  },
+  {
+    "index": 45,
+    "input": [
+      "baik",
+      "senang"
+    ],
+    "reference": "Saya baik. Saya rajin. Saya senang.",
+    "generated": "Baik is a slang term for fishing.",
+    "perplexity": 1.4994930028915405
+  },
+  {
+    "index": 46,
+    "input": [
+      "rumah",
+      "bantu",
+      "baik",
+      "senang"
+    ],
+    "reference": "Orang rumah baik. Orang rumah membantu. Orang rumah senang.",
+    "generated": "[\"rumah\", \"bantu\", \"baik\", \"senang\"]",
+    "perplexity": 1.0199905633926392
+  },
+  {
+    "index": 47,
+    "input": [
+      "orang",
+      "baik",
+      "hari",
+      "nyaman",
+      "bagus"
+    ],
+    "reference": "orang baik. hari bagus. orang nyaman.",
+    "generated": "[\"orang\", \"baik\", \"hari\", \"nyaman\", \"bagus\"]",
+    "perplexity": 1.001118540763855
+  },
+  {
+    "index": 48,
+    "input": [
+      "teman",
+      "mainan",
+      "mahal",
+      "kek"
+    ],
+    "reference": "Teman mau saya belikan apa? Teman dan teman seperti biasa. Mainan tidak Kek, mahal.",
+    "generated": "[\"teman\", \"mainan\", \"mahal\", \"kek\"]",
+    "perplexity": 1.0008383989334106
+  },
+  {
+    "index": 49,
+    "input": [
+      "adik",
+      "duduk",
+      "sibuk",
+      "bahagia"
+    ],
+    "reference": "Adik duduk. Adik sibuk. Adik bahagia.",
+    "generated": "[\"adik\", \"duduk\", \"sibuk\", \"bahagia\"]",
+    "perplexity": 1.0013110637664795
+  },
+  {
+    "index": 50,
+    "input": [
+      "teman",
+      "meja",
+      "duduk",
+      "senang",
+      "duduk",
+      "meja",
+      "Saya",
+      "akan",
+      "mengambil",
+      "kata",
+      "kata",
+      "yang",
+      "muncul",
+      "di",
+      "paragraf",
+      "dan",
+      "cocok",
+      "untuk",
+      "AAC",
+      "Saya",
+      "akan",
+      "mengambil",
+      "kata",
+      "paling",
+      "relevan",
+      "Cards",
+      "teman",
+      "meja"
+    ],
+    "reference": "Teman duduk. Teman duduk di meja. Teman senang.",
+    "generated": "[\"teman\", \"meja\", \"duduk\", \"senang\", \"duduk\", \"meja\", \"Saya\", \"akan\", \"mengambil\", \"kata\", \"kata\", \"yang\", \"muncul\", \"di\", \"paragraf\", \"dan\", \"cocok\", \"untuk\", \"AAC\", \"Saya\", \"akan\", \"mengambil\", \"kata\", \"paling\", \"relevan\", \"Cards\", \"teman\", \"meja\"]",
+    "perplexity": 1.0013049840927124
+  },
+  {
+    "index": 51,
+    "input": [
+      "rumah",
+      "api",
+      "besar",
+      "sederhana",
+      "saya",
+      "orang"
+    ],
+    "reference": "Api meluas. Api membakar rumah. Api menghitamkan.\n\nSaya mengganti label NER seperti berikut:\n- <|PER|> → orang\n- <|ORG|> → toko\n- <|LOC|> → tempat\n- <|FAC|> → bangunan\n- <|GPE|> → kota\n- <|PRD|> → barang\n\nDengan demikian, kalimat Anda diubah menjadi kalimat yang lebih sederhana dan sesuai dengan aturan yang ditetapkan.",
+    "generated": "[\"rumah\", \"api\", \"besar\", \"sederhana\", \"saya\", \"orang\"]",
+    "perplexity": 1.0385973453521729
+  },
+  {
+    "index": 52,
+    "input": [
+      "orang",
+      "merantau",
+      "sukses",
+      "senang"
+    ],
+    "reference": "Orang merantau. Orang sukses. Orang senang.\n\nPerlu diingat, kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?.",
+    "generated": "[\"orang\", \"merantau\", \"sukses\", \"senang\"]",
+    "perplexity": 1.002723217010498
+  },
+  {
+    "index": 53,
+    "input": [
+      "adik",
+      "roti",
+      "lapar",
+      "makan",
+      "senang",
+      "Cards",
+      "alpukat",
+      "minum",
+      "orang",
+      "Cards",
+      "kamu",
+      "baik",
+      "hari",
+      "bagus",
+      "aku",
+      "senang",
+      "nyaman",
+      "Cards",
+      "AC",
+      "nyala",
+      "udara",
+      "dingin",
+      "saya",
+      "nyaman",
+      "Cards",
+      "pesawat",
+      "naik",
+      "akan"
+    ],
+    "reference": "Adik lapar. Adik makan roti. Adik senang.\n\n2.\nStory: Orang minum. Orang minum alpukat.\n\n3.\nStory: Kamu baik. Hari bagus. Aku senang. Semua nyaman.\n\n4.\nStory: AC nyala. Udara dingin. Saya nyaman.\n\n5.\nStory: Pesawat naik. Pesawat akan naik.\n\nJika Anda ingin membuat kalimat tentang tema lain, silakan memberikan input yang Anda inginkan.",
+    "generated": "\"adik\", \"roti\", \"lapar\", \"makan\", \"senang\", \"Cards\", \"alpukat\", \"minum\", \"orang\", \"Cards\", \"kamu\", \"baik\", \"hari\", \"bagus\", \"aku\", \"senang\", \"nyaman\", \"Cards\", \"AC\", \"nyala\", \"udara\", \"dingin\", \"saya\", \"nyaman\", \"Cards\", \"pesawat\", \"naik\", \"akan\"]",
+    "perplexity": 1.0016313791275024
+  },
+  {
+    "index": 54,
+    "input": [
+      "rumah",
+      "nyaman",
+      "baju",
+      "hangat",
+      "saya",
+      "bahagia",
+      "Cards",
+      "guru",
+      "baik",
+      "teman",
+      "sekolah",
+      "nyaman",
+      "Cards",
+      "air",
+      "tawar",
+      "bersih",
+      "lapangan",
+      "luas",
+      "Cards",
+      "meja",
+      "rapi",
+      "buku",
+      "sederhana",
+      "kursi",
+      "nyaman",
+      "Cards",
+      "udara",
+      "segar",
+      "hutan",
+      "hijau",
+      "saya",
+      "senang"
+    ],
+    "reference": "Rumah nyaman. Baju hangat. Saya bahagia.\n\n2.\nStory: Guru baik. Teman baik. Sekolah nyaman.\n\n3.\nStory: Air tawar. Air bersih. Lapangan luas.\n\n4.\nStory: Meja rapi. Buku sederhana. Kursi nyaman.\n\n5.\nStory: Udara segar. Hutan hijau. Saya senang.",
+    "generated": "\"rumah\", \"nyaman\", \"baju\", \"hangat\", \"saya\", \"bahagia\", \"Cards\", \"guru\", \"baik\", \"teman\", \"sekolah\", \"nyaman\", \"Cards\", \"air\", \"tawar\", \"bersih\", \"lapangan\", \"luas\", \"Cards\", \"meja\", \"rapi\", \"buku\", \"sederhana\", \"kursi\", \"nyaman\", \"Cards\", \"udara\", \"segar\", \"hutan\", \"hijau\", \"saya\", \"senang\"]",
+    "perplexity": 1.0108976364135742
+  },
+  {
+    "index": 55,
+    "input": [
+      "teman",
+      "baik",
+      "hari",
+      "cerah",
+      "senang",
+      "hari"
+    ],
+    "reference": "teman baik. hari cerah. aku senang.",
+    "generated": "[\"teman\", \"baik\", \"hari\", \"cerah\", \"senang\", \"hari\"]",
+    "perplexity": 1.000815987586975
+  },
+  {
+    "index": 56,
+    "input": [
+      "babi",
+      "orang"
+    ],
+    "reference": "Orang jijik. Babi mati. Orang lari. Orang lelah. Orang aman.",
+    "generated": "[\"babi\", \"orang\"]",
+    "perplexity": 1.0033388137817383
+  },
+  {
+    "index": 57,
+    "input": [
+      "lahir",
+      "kota",
+      "buku",
+      "Cards",
+      "lahir",
+      "bulan",
+      "menulis",
+      "buku",
+      "senang",
+      "Cards",
+      "lahir",
+      "bulan",
+      "menulis",
+      "senang",
+      "kota",
+      "Cards",
+      "lahir",
+      "menulis",
+      "kota",
+      "buku",
+      "Cards",
+      "menulis",
+      "senang",
+      "kota",
+      "buku",
+      "Cards",
+      "lahir",
+      "menulis",
+      "senang",
+      "kota",
+      "buku",
+      "Cards",
+      "menulis",
+      "senang",
+      "lahir",
+      "kota",
+      "buku",
+      "Kata",
+      "yang",
+      "dipilih",
+      "adalah",
+      "umum",
+      "dan",
+      "relevan",
+      "dengan",
+      "konteks",
+      "kalimat"
+    ],
+    "reference": "Teman lahir 27 Mei 1971 di kota. Teman menulis buku. Teman senang.\n\nNamun, perlu diingat bahwa kalimat yang dihasilkan masih sederhana dan tidak memiliki hubungan dengan konteks asli.",
+    "generated": "[\"lahir\", \"kota\", \"buku\", \"Cards\", \"lahir\", \"bulan\", \"menulis\", \"buku\", \"senang\", \"Cards\", \"lahir\", \"bulan\", \"menulis\", \"buku\", \"senang\", \"Cards\", \"lahir\", \"bulan\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"lahir\", \"bulan\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"lahir\", \"bulan\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"menulis\", \"senang\", \"kota\", \"buku\", \"Cards\", \"menulis\", \"senang\", \"lahir\", \"kota\", \"buku\", \"Kata\", \"yang\", \"dipilih\", \"adalah\", \"umum\", \"dan\", \"relevan\", \"dengan\", \"konteks\", \"kalimat\"]",
+    "perplexity": 1.3585851192474365
+  },
+  {
+    "index": 58,
+    "input": [
+      "jalan",
+      "lurus",
+      "senang"
+    ],
+    "reference": "Saya lihat jalan. Jalan lurus. Saya senang.",
+    "generated": "jalan\", \"lurus\", \"senang\"",
+    "perplexity": 1.165605068206787
+  },
+  {
+    "index": 59,
+    "input": [
+      "orang",
+      "taman",
+      "duduk",
+      "senang"
+    ],
+    "reference": "Orang taman. Orang duduk. Orang senang.",
+    "generated": "[\"orang\", \"taman\", \"duduk\", \"senang\"]",
+    "perplexity": 1.004282832145691
+  },
+  {
+    "index": 60,
+    "input": [
+      "penulis",
+      "buku",
+      "senang"
+    ],
+    "reference": "Penulis tulis. Penulis menulis buku. Penulis senang.",
+    "generated": "[\"penulis\", \"buku\", \"senang\"]",
+    "perplexity": 1.0515127182006836
+  },
+  {
+    "index": 61,
+    "input": [
+      "orang",
+      "teman",
+      "baik",
+      "senang",
+      "Cards",
+      "guru",
+      "siswa",
+      "mengajar",
+      "baik",
+      "senang",
+      "Cards",
+      "orang",
+      "bermain",
+      "anak",
+      "gembira",
+      "menyenangkan"
+    ],
+    "reference": "Orang membantu teman. Orang baik. Teman senang.\n\n2.\nStory: Guru baik. Guru mengajar. Siswa senang.\n\n3.\nStory: Orang menyenangkan. Orang bermain. Anak gembira.",
+    "generated": "[\"orang\", \"teman\", \"baik\", \"senang\", \"Cards\", \"guru\", \"siswa\", \"mengajar\", \"baik\", \"senang\", \"Cards\", \"orang\", \"bermain\", \"anak\", \"gembira\", \"menyenangkan\"]",
+    "perplexity": 1.000169038772583
+  },
+  {
+    "index": 62,
+    "input": [
+      "rumah",
+      "tidur",
+      "aman",
+      "senang"
+    ],
+    "reference": "Rumah nyaman. Saya aman. Senang tidur.",
+    "generated": "[\"rumah\", \"tidur\", \"aman\", \"senang\"]",
+    "perplexity": 1.0011709928512573
+  },
+  {
+    "index": 63,
+    "input": [
+      "adik",
+      "meja",
+      "buku",
+      "adik",
+      "senang"
+    ],
+    "reference": "Adik duduk meja. Buku sederhana. Adik senang.",
+    "generated": "[\"adik\", \"meja\", \"buku\", \"adik\", \"senang\"]",
+    "perplexity": 1.0003957748413086
+  },
+  {
+    "index": 64,
+    "input": [
+      "toko",
+      "mainan",
+      "tempat"
+    ],
+    "reference": "Orang tiba di tempat. Orang lihat toko. Orang lihat mainan.\n\nCatatan: Saya mengganti label NER untuk memudahkan penggunaan.",
+    "generated": "[\"toko\", \"mainan\", \"tempat\"]",
+    "perplexity": 1.0010260343551636
+  },
+  {
+    "index": 65,
+    "input": [
+      "Orang",
+      "jalan",
+      "di",
+      "jalan",
+      "lihat",
+      "bungan",
+      "bahagia",
+      "Saya",
+      "akan",
+      "pilih",
+      "kata",
+      "yang",
+      "sesuai",
+      "dengan",
+      "AAC",
+      "Orang",
+      "bungan",
+      "bahagia",
+      "Cards",
+      "Teman",
+      "duduk",
+      "di",
+      "meja",
+      "makan",
+      "air",
+      "baik",
+      "Saya",
+      "akan",
+      "pilih",
+      "kata",
+      "yang",
+      "sesuai",
+      "dengan",
+      "AAC",
+      "Teman",
+      "meja",
+      "air",
+      "Cards",
+      "Guru",
+      "menulis",
+      "di",
+      "papan",
+      "buh",
+      "senang",
+      "Saya",
+      "akan",
+      "pilih",
+      "kata",
+      "yang",
+      "sesuai",
+      "dengan",
+      "AAC",
+      "Guru",
+      "papan",
+      "senang"
+    ],
+    "reference": "Orang jalan di jalan. Orang lihat bunga. Orang senang. Semua bahagia.\n\n2.\nStory: Teman duduk di meja. Teman makan air. Teman baik.\n\n3.\nStory: Guru menulis di papan. Guru menulis buah. Guru senang.",
+    "generated": "\"Orang\", \"jalan\", \"di\", \"jalan\", \"lihat\", \"bungan\", \"bahagia\", \"Saya\", \"akan\", \"pilih\", \"kata\", \"yang\", \"sesuai\", \"dengan\", \"AAC\", \"Orang\", \"bungan\", \"bahagia\", \"Cards\", \"Teman\", \"duduk\", \"di\", \"meja\", \"makan\", \"air\", \"baik\", \"Saya\", \"akan\", \"pilih\", \"kata\", \"yang\", \"sesuai\", \"dengan\", \"AAC\", \"Teman\", \"meja\", \"air\", \"Cards\", \"Guru\", \"menulis\", \"di\", \"papan\", \"buh\", \"senang\", \"Saya\", \"akan\", \"pilih\", \"kata\", \"yang\", \"sesuai\", \"dengan\", \"AAC\", \"Teman\", \"meja\", \"air\", \"Cards\", \"Guru\", \"papan\", \"senang\"",
+    "perplexity": 1.000874400138855
+  },
+  {
+    "index": 66,
+    "input": [
+      "teman",
+      "mainan",
+      "baik",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman membawa mainan. Teman senang.",
+    "generated": "[\"teman\", \"mainan\", \"baik\", \"senang\"]",
+    "perplexity": 1.0009641647338867
+  },
+  {
+    "index": 67,
+    "input": [
+      "tidur",
+      "bangun",
+      "senang"
+    ],
+    "reference": "Orang tidur. Orang bangun. Orang senang.",
+    "generated": "[\"tidur\", \"bangun\", \"senang\"]",
+    "perplexity": 1.0003230571746826
+  },
+  {
+    "index": 68,
+    "input": [
+      "hujan",
+      "lapang",
+      "kilat",
+      "terang",
+      "petir",
+      "berbahaya",
+      "Kata",
+      "kata",
+      "tersebut",
+      "dapat",
+      "digolongkan",
+      "ke",
+      "dalam",
+      "kategori",
+      "umum",
+      "seperti",
+      "Benda",
+      "makanan",
+      "lapang",
+      "berbahaya",
+      "Keluarga",
+      "tidak",
+      "ada",
+      "Deskripsi",
+      "terang",
+      "lapang",
+      "Waktu",
+      "tidak",
+      "ada",
+      "Kata",
+      "umum",
+      "hujan",
+      "petir",
+      "Kata",
+      "kilat",
+      "dapat",
+      "digolongkan",
+      "ke",
+      "dalam",
+      "kategori",
+      "benda",
+      "tetapi",
+      "karena",
+      "kata",
+      "terang",
+      "juga",
+      "ada",
+      "maka",
+      "kilat",
+      "juga",
+      "dapat",
+      "digolongkan",
+      "ke",
+      "dalam",
+      "kategori",
+      "deskripsi"
+    ],
+    "reference": "Hujan lapang. Kilat terang. Petir berbahaya.\n\nKalimat ini sudah sesuai dengan aturan yang Anda berikan.",
+    "generated": "[\"hujan\", \"lapang\", \"kilat\", \"terang\", \"petir\", \"berbahaya\", \"Kata\", \"kata\", \"tersebut\", \"dapat\", \"digolongkan\", \"ke\", \"dalam\", \"kategori\", \"umum\", \"seperti\", \"Benda\", \"makanan\", \"lapang\", \"berbahaya\", \"Keluarga\", \"tidak\", \"ada\", \"Deskripsi\", \"terang\", \"lapang\", \"Waktu\", \"tidak\", \"ada\", \"Kata\", \"umum\", \"hujan\", \"petir\", \"Kata\", \"kilat\", \"dapat\", \"digolongkan\", \"ke\", \"dalam\", \"kategori\", \"benda\", \"tetapi\", \"karena\", \"kata\", \"terang\", \"juga\", \"ada\", \"maka\", \"kilat\", \"juga\", \"dapat\", \"digolongkan\", \"ke\", \"dalam\", \"kategori\", \"deskripsi\"]",
+    "perplexity": 1.0038044452667236
+  },
+  {
+    "index": 69,
+    "input": [
+      "adik",
+      "roti",
+      "makan",
+      "senang",
+      "Cards",
+      "ayah",
+      "alpukat",
+      "minum",
+      "Cards",
+      "kamu",
+      "baik",
+      "hari",
+      "bagus",
+      "senang",
+      "Cards",
+      "AC",
+      "nyala",
+      "dingin",
+      "saya",
+      "nyaman",
+      "Cards",
+      "pesawat",
+      "naik",
+      "Saya",
+      "tidak",
+      "menggunakan",
+      "kata",
+      "kata",
+      "semua",
+      "dan",
+      "nyaman",
+      "di",
+      "paragraf",
+      "dan",
+      "AC",
+      "dan",
+      "dingin",
+      "di",
+      "paragraf",
+      "karena",
+      "mereka",
+      "terlalu",
+      "umum",
+      "atau",
+      "tidak",
+      "terlalu",
+      "relevan",
+      "dengan",
+      "konteks",
+      "cerita",
+      "Saya",
+      "juga",
+      "tidak",
+      "menggunakan",
+      "kata",
+      "kata",
+      "akan",
+      "di",
+      "paragraf",
+      "karena",
+      "itu",
+      "adalah",
+      "kata",
+      "yang",
+      "tidak",
+      "terlalu",
+      "relevan",
+      "dengan",
+      "konteks",
+      "cerita"
+    ],
+    "reference": "Adik lapar. Adik makan roti. Adik senang.\n\n2.\nStory: Ayah minum. Ayah minum alpukat.\n\n3.\nStory: Kamu baik. Hari bagus. Aku senang. Semua nyaman.\n\n4.\nStory: AC nyala. Udara dingin. Saya nyaman.\n\n5.\nStory: Pesawat naik. Pesawat akan naik.\n\nSilakan untuk input yang dapat saya gunakan.",
+    "generated": "\"adik\", \"roti\", \"makan\", \"senang\", \"Cards\", \"ayah\", \"alpukat\", \"minum\", \"Cards\", \"kamu\", \"baik\", \"hari\", \"bagus\", \"senang\", \"Cards\", \"AC\", \"nyala\", \"dingin\", \"saya\", \"nyaman\", \"Cards\", \"pesawat\", \"naik\", \"Saya\", \"tidak\", \"menggunakan\", \"kata\", \"kata\", \"semua\", \"dan\", \"nyaman\", \"di\", \"paragraf\", \"karena\", \"mereka\", \"terlalu\", \"umum\", \"atau\", \"tidak\", \"terlalu\", \"relevan\", \"dengan\", \"konteks\", \"cerita\", \"Saya\", \"juga\", \"tidak\", \"menggunakan\", \"kata\", \"kata\", \"akan\", \"di\", \"paragraf\", \"karena\", \"itu\", \"adalah\", \"kata\", \"yang\", \"tidak\", \"terlalu\", \"relevan\", \"dengan\", \"konteks\", \"cerita\"]",
+    "perplexity": 1.0023523569107056
+  },
+  {
+    "index": 70,
+    "input": [
+      "Orang",
+      "melihat"
+    ],
+    "reference": "Orang berdiri. Orang melihat. Orang senang.",
+    "generated": "[\"Orang\", \"melihat\"]",
+    "perplexity": 1.0019378662109375
+  },
+  {
+    "index": 71,
+    "input": [
+      "tempat",
+      "perayaan",
+      "tempat",
+      "senang"
+    ],
+    "reference": "Tempat perayaan tempat. Perayaan belum diadakan. Aku senang.",
+    "generated": "[\"tempat\", \"perayaan\", \"tempat\", \"senang\"]",
+    "perplexity": 1.0560780763626099
+  },
+  {
+    "index": 72,
+    "input": [
+      "adik",
+      "taman",
+      "nyaman"
+    ],
+    "reference": "Adik merawat. Taman indah. Saya nyaman.",
+    "generated": "[\"adik\", \"taman\", \"nyaman\"]",
+    "perplexity": 1.003707766532898
+  },
+  {
+    "index": 73,
+    "input": [
+      "teman",
+      "bunga",
+      "senang",
+      "jalan"
+    ],
+    "reference": "Teman jalan. Teman melihat bunga. Teman senang.",
+    "generated": "[\"teman\", \"bunga\", \"senang\", \"jalan\"]",
+    "perplexity": 1.0007522106170654
+  },
+  {
+    "index": 74,
+    "input": [
+      "lampu",
+      "rumah",
+      "duduk"
+    ],
+    "reference": "Orang duduk. Sinar lampu nyala. Rumah nyaman.",
+    "generated": "[\"lampu\", \"rumah\", \"duduk\"]",
+    "perplexity": 1.0010266304016113
+  },
+  {
+    "index": 75,
+    "input": [
+      "anak",
+      "lari",
+      "gembira"
+    ],
+    "reference": "Anak bermain. Anak lari. Anak gembira.",
+    "generated": "[\"anak\", \"lari\", \"gembira\"]",
+    "perplexity": 1.0017168521881104
+  },
+  {
+    "index": 76,
+    "input": [
+      "tidur",
+      "bangun",
+      "makan",
+      "orang",
+      "sekarang"
+    ],
+    "reference": "Orang tidur. Orang bangun. Orang makan.",
+    "generated": "[\"tidur\", \"bangun\", \"makan\", \"orang\", \"sekarang\"]",
+    "perplexity": 1.0063971281051636
+  },
+  {
+    "index": 77,
+    "input": [
+      "adik",
+      "roti",
+      "lapar",
+      "makan",
+      "senang",
+      "Cards",
+      "ayah",
+      "alpukat",
+      "minum",
+      "Cards",
+      "orang",
+      "baik",
+      "hari",
+      "bagus",
+      "senang",
+      "nyaman",
+      "Cards",
+      "AC",
+      "udara",
+      "dingin",
+      "nyaman",
+      "Cards",
+      "pesawat",
+      "naik",
+      "Cards",
+      "orang",
+      "sibuk",
+      "bekerja",
+      "baik",
+      "Cards",
+      "orang",
+      "mengajar",
+      "terampil",
+      "Cards",
+      "orang",
+      "gembira",
+      "menonton",
+      "sibuk",
+      "Cards",
+      "orang",
+      "bermain",
+      "menikmati",
+      "gembira",
+      "Cards",
+      "orang",
+      "berpakaian",
+      "rapi",
+      "senang",
+      "Cards",
+      "orang",
+      "beristirahat",
+      "nyaman",
+      "gembira",
+      "Cards",
+      "orang",
+      "berbelanja",
+      "senang",
+      "puas"
+    ],
+    "reference": "Adik lapar. Adik makan roti. Adik senang.\n\n2.\nStory: Ayah minum. Ayah minum alpukat.\n\n3.\nStory: Orang baik. Hari bagus. Aku senang. Semua nyaman.\n\n4.\nStory: AC nyala. Udara dingin. Saya nyaman.\n\n5.\nStory: Pesawat naik. Pesawat akan naik.\n\n6.\nStory: Orang sibuk. Orang bekerja keras. Orang baik.\n\n7.\nStory: Orang baik. Orang mengajar. Orang terampil.\n\n8.\nStory: Orang gembira. Orang menonton TV. Orang sibuk.\n\n9.\nStory: Orang bermain. Orang menikmati. Orang gembira.\n\n10.\nStory: Orang berpakaian. Orang rapi. Orang senang.\n\n11.\nStory: Orang beristirahat. Orang nyaman. Orang gembira.\n\n12.\nStory: Orang berbelanja. Orang senang. Orang puas.",
+    "generated": "\"adik\", \"roti\", \"lapar\", \"makan\", \"senang\", \"Cards\", \"ayah\", \"alpukat\", \"minum\", \"Cards\", \"orang\", \"baik\", \"hari\", \"bagus\", \"senang\", \"nyaman\", \"Cards\", \"AC\", \"udara\", \"dingin\", \"nyaman\", \"Cards\", \"pesawat\", \"naik\", \"Cards\", \"orang\", \"sibuk\", \"bekerja\", \"baik\", \"Cards\", \"orang\", \"mengajar\", \"terampil\", \"Cards\", \"orang\", \"bermain\", \"menikmati\", \"gembira\", \"Cards\", \"orang\", \"berpakaian\", \"rapi\", \"senang\", \"Cards\", \"orang\", \"berristirahat\", \"nyaman\", \"gembira\", \"Cards\", \"orang\", \"berpakaian\", \"rapi\", \"senang\", \"Cards\", \"orang\", \"berbelanja\", \"senang\", \"puas\"]",
+    "perplexity": 1.0056544542312622
+  },
+  {
+    "index": 78,
+    "input": [
+      "bapak",
+      "tidur",
+      "lelah",
+      "bangun"
+    ],
+    "reference": "Bapak tidur. Bapak lelah. Bapak bangun.",
+    "generated": "[\"bapak\", \"tidur\", \"lelah\", \"bangun\"]",
+    "perplexity": 1.0010976791381836
+  },
+  {
+    "index": 79,
+    "input": [
+      "saya",
+      "rumah",
+      "nyaman",
+      "teman"
+    ],
+    "reference": "Saya dan teman rumah. Rumah nyaman.",
+    "generated": "[\"saya\", \"rumah\", \"nyaman\", \"teman\"]",
+    "perplexity": 1.0010439157485962
+  },
+  {
+    "index": 80,
+    "input": [
+      "tiang",
+      "kita",
+      "pagar",
+      "lembut"
+    ],
+    "reference": "Ada tiang panjang. Lebih tinggi dari kita. Ada pagar lembut. Pagar melindungi kita.",
+    "generated": "[\"tiang\", \"kita\", \"pagar\", \"lembut\"]",
+    "perplexity": 1.002776861190796
+  },
+  {
+    "index": 81,
+    "input": [
+      "kupu",
+      "kupu"
+    ],
+    "reference": "Orang datang dengan apa yang lebih berharga. Orang menunjuk ke arah barat. Kupu-kupu mendekat.\n\nKalimat di atas mengganti label `<|PER|>` dengan kata \"orang\" dan label `<|PRD|>` dengan kata yang tidak digunakan karena tidak relevan dengan konteks kalimat.",
+    "generated": "[\"kupu\", kupu]",
+    "perplexity": 1.0074468851089478
+  },
+  {
+    "index": 82,
+    "input": [
+      "rumah",
+      "buku",
+      "menulis",
+      "penulis",
+      "gembira"
+    ],
+    "reference": "Penulis rumah. Penulis menulis buku. Penulis gembira.",
+    "generated": "[\"rumah\", \"buku\", \"menulis\", \"penulis\", \"gembira\"]",
+    "perplexity": 1.0008984804153442
+  },
+  {
+    "index": 83,
+    "input": [
+      "masak",
+      "nasi",
+      "orang",
+      "makan",
+      "senang"
+    ],
+    "reference": "Orang masak. Orang makan nasi. Orang senang.",
+    "generated": "[\"masak\", \"nasi\", \"orang\", \"makan\", \"senang\"]",
+    "perplexity": 1.018979549407959
+  },
+  {
+    "index": 84,
+    "input": [
+      "barang",
+      "kendaraan",
+      "jalan",
+      "saya",
+      "bersih"
+    ],
+    "reference": "Bekas-bekas terbuang. Barang rusak dibuang. Semua bersih.\n\nKendaraan rusak dibuang. Jalan bersihlah. Saya senang.",
+    "generated": "[\"barang\", \"kendaraan\", \"jalan\", \"saya\", \"bersih\"]",
+    "perplexity": 1.0045331716537476
+  },
+  {
+    "index": 85,
+    "input": [
+      "baik",
+      "orang",
+      "memberi",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang memberi. Orang senang.",
+    "generated": "[\"baik\", \"orang\", \"memberi\", \"senang\"]",
+    "perplexity": 1.0012507438659668
+  },
+  {
+    "index": 86,
+    "input": [
+      "orang",
+      "buah",
+      "bakar",
+      "punya"
+    ],
+    "reference": "Orang membakar. Orang tidak punya cara. Orang membakar buah.\n\nSilakan minta contoh lain jika Anda ingin.",
+    "generated": "[\"orang\", \"buah\", \"bakar\", \"punya\"]",
+    "perplexity": 1.0066884756088257
+  },
+  {
+    "index": 87,
+    "input": [
+      "ibu",
+      "buah",
+      "semua",
+      "baik"
+    ],
+    "reference": "Ibu tiba. Ibu membantu. Semua baik.",
+    "generated": "[\"ibu\", \"buah\", \"semua\", \"baik\"]",
+    "perplexity": 1.0005404949188232
+  },
+  {
+    "index": 88,
+    "input": [
+      "teman",
+      "bekerja",
+      "senang"
+    ],
+    "reference": "Teman pergi. Teman bekerja. Teman senang.",
+    "generated": "[\"teman\", \"bekerja\", \"senang\"]",
+    "perplexity": 1.000938892364502
+  },
+  {
+    "index": 89,
+    "input": [
+      "baju",
+      "banyak",
+      "udara",
+      "ibu"
+    ],
+    "reference": "Ibu nyaman. Baju hangat. Udara nyaman.",
+    "generated": "[\"baju\", \"banyak\", \"udara\", \"ibu\"]",
+    "perplexity": 1.000462293624878
+  },
+  {
+    "index": 90,
+    "input": [
+      "orang",
+      "barang",
+      "kecil",
+      "besar",
+      "senang"
+    ],
+    "reference": "Orang menenteng barang. Barang kecil dan besar. Orang senang.\n\nPerlu diperhatikan bahwa kalimat di atas tidak sepenuhnya mewakili situasi yang ada, tetapi lebih seperti sebuah gambaran umum yang sederhana.",
+    "generated": "[\"orang\", \"barang\", \"kecil\", \"besar\", \"senang\"]",
+    "perplexity": 1.002447247505188
+  },
+  {
+    "index": 91,
+    "input": [
+      "orang",
+      "lemah",
+      "rasa",
+      "sakit",
+      "jatuh"
+    ],
+    "reference": "Orang jatuh. Orang sakit. Orang rasa lemah.",
+    "generated": "[\"orang\", \"lemah\", \"rasa\", \"sakit\", \"jatuh\"]",
+    "perplexity": 1.0039409399032593
+  },
+  {
+    "index": 92,
+    "input": [
+      "orang",
+      "taman",
+      "lalu",
+      "lintas",
+      "senang"
+    ],
+    "reference": "Orang taman. Orang lalu lintas. Orang senang.",
+    "generated": "[\"orang\", \"taman\", \"lalu\", \"lintas\", \"senang\"]",
+    "perplexity": 1.0033098459243774
+  },
+  {
+    "index": 93,
+    "input": [
+      "orang",
+      "tidur",
+      "mandi",
+      "bangun"
+    ],
+    "reference": "Orang tidur. Orang bangun. Orang mandi.\n\nSemoga cerita ini membuat Anda merasa nyaman!",
+    "generated": "[\"orang\", \"tidur\", \"mandi\", \"bangun\"]",
+    "perplexity": 1.0027406215667725
+  },
+  {
+    "index": 94,
+    "input": [
+      "teman",
+      "pisaunya",
+      "senang"
+    ],
+    "reference": "Teman di rumah. Teman asah pisaunya. Teman senang.",
+    "generated": "[\" teman\", \"pisaunya\", \"senang\"]",
+    "perplexity": 1.000483751296997
+  },
+  {
+    "index": 95,
+    "input": [
+      "sampah",
+      "buang",
+      "tempat",
+      "orang",
+      "senang"
+    ],
+    "reference": "Orang buang sampah. Sampah masuk tempat. Orang senang.",
+    "generated": "[\"sampah\", \"buang\", \"tempat\", \"orang\", \"senang\"]",
+    "perplexity": 1.0571311712265015
+  },
+  {
+    "index": 96,
+    "input": [
+      "perempuan",
+      "duduk",
+      "lelah",
+      "saya",
+      "senang"
+    ],
+    "reference": "Perempuan duduk. Perempuan lelah. Perempuan beristirahat. Saya senang.",
+    "generated": "[\"perempuan\", \"duduk\", \"lelah\", \"saya\", \"senang\"]",
+    "perplexity": 1.0330164432525635
+  },
+  {
+    "index": 97,
+    "input": [
+      "kamis",
+      "banyak",
+      "orang",
+      "hari"
+    ],
+    "reference": "Kamis hari. Banyak orang. Orang berbicara.",
+    "generated": "[\" kamis\", \"banyak\", \"orang\", \"hari\"]",
+    "perplexity": 1.001682996749878
+  },
+  {
+    "index": 98,
+    "input": [
+      "orang",
+      "rumah",
+      "buka",
+      "senang"
+    ],
+    "reference": "Orang rumah. Orang buka. Orang senang.\n\nSilakan memberikan input yang sesuai dengan aturan Anda.",
+    "generated": "[\"orang\", \"rumah\", \"buka\", \"senang\"]",
+    "perplexity": 1.0691019296646118
+  },
+  {
+    "index": 99,
+    "input": [
+      "baca",
+      "tawa",
+      "sedih"
+    ],
+    "reference": "Orang membaca. Orang tertawa. Orang sedih.",
+    "generated": "[\"baca\", \"tawa\", \"sedih\"]",
+    "perplexity": 1.0023329257965088
+  },
+  {
+    "index": 100,
+    "input": [
+      "gambar",
+      "tempat",
+      "sampah",
+      "senang"
+    ],
+    "reference": "Gambar hancur. Gambar di tempat sampah. Saya senang.",
+    "generated": "[\"gambar\", \"tempat\", \"sampah\", \"senang\"]",
+    "perplexity": 1.0227739810943604
+  },
+  {
+    "index": 101,
+    "input": [
+      "guru",
+      "buku",
+      "baik",
+      "senang",
+      "Story",
+      "Sekolah",
+      "besar",
+      "Pemain",
+      "nyaman",
+      "Teman",
+      "ada",
+      "Cards",
+      "sekolah",
+      "besar",
+      "pejam",
+      "nyaman",
+      "teman",
+      "Story",
+      "Guru",
+      "memberi",
+      "Saya",
+      "terima",
+      "Senang",
+      "sekolah",
+      "Cards",
+      "guru",
+      "memberi",
+      "terima",
+      "senang",
+      "Story",
+      "Buku",
+      "ada",
+      "Buku",
+      "bagus",
+      "Saya",
+      "membaca",
+      "Cards",
+      "buku",
+      "ada",
+      "bagus",
+      "membaca",
+      "Story",
+      "Guru",
+      "sabar",
+      "Saya",
+      "menunggu",
+      "Saya",
+      "nyaman",
+      "Cards",
+      "guru",
+      "sabar",
+      "menunggu",
+      "nyaman",
+      "Story",
+      "Sekolah",
+      "luas",
+      "Pemain",
+      "bermain",
+      "Teman",
+      "suka",
+      "Cards",
+      "sekolah",
+      "luas",
+      "bermain",
+      "teman",
+      "suka",
+      "Story",
+      "Guru",
+      "pandai",
+      "Buku",
+      "jadi",
+      "Saya",
+      "gembira",
+      "Cards",
+      "guru",
+      "pandai",
+      "jadi",
+      "gembira",
+      "Story",
+      "Sekolah",
+      "indah",
+      "Pemain",
+      "bahagia",
+      "Teman",
+      "bersama",
+      "Cards",
+      "sekolah",
+      "indah",
+      "bahagia",
+      "bersama",
+      "Story",
+      "Guru",
+      "baik",
+      "hati",
+      "Saya",
+      "senang",
+      "Sekolah",
+      "menyenangkan",
+      "Cards",
+      "guru",
+      "baik",
+      "senang",
+      "menyenangkan",
+      "Story",
+      "Buku",
+      "berwarna",
+      "Pemain",
+      "menyenangkan",
+      "Sekolah",
+      "bagus",
+      "Cards",
+      "buku",
+      "berwarna",
+      "menyenangkan",
+      "bagus",
+      "Story",
+      "Guru",
+      "berbicara",
+      "Saya",
+      "mendengar",
+      "Saya",
+      "belajar",
+      "Cards",
+      "guru",
+      "berbicara",
+      "mendengar",
+      "belajar",
+      "Story",
+      "Sekolah",
+      "kecil",
+      "Pemain",
+      "bermain",
+      "Teman",
+      "akrab",
+      "Cards",
+      "sekolah",
+      "kecil",
+      "bermain",
+      "akrab",
+      "Story",
+      "Guru",
+      "bijak",
+      "Saya",
+      "terima",
+      "Sekolah",
+      "berharga",
+      "Cards",
+      "guru"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat hanya 1–2 kata saja.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga, tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nTema: Sekolah\n\nLabel NER:\n- <|PER|> → guru\n- <|ORG|> → sekolah\n- <|LOC|> → lapangan\n- <|FAC|> → meja\n- <|GPE|> → negara\n- <|PRD|> → buku\n\nFormat:\nStory: <2–3 kalimat, setiap kalimat 1–2 kata, dalam satu baris>\n\nContoh Output:\n\n1.\nStory: Guru baik. Buku bagus. Saya senang.\n\n2.\nStory: Sekolah besar. Pemain nyaman. Teman ada.\n\n3.\nStory: Guru memberi. Saya terima. Senang sekolah.\n\n4.\nStory: Buku ada. Buku bagus. Saya membaca.\n\n5.\nStory: Guru sabar. Saya menunggu. Saya nyaman.",
+    "generated": "\"story\", \"guru\", \"buku\", \"baik\", \"senang\", \"Story\", \"Sekolah\", \"besar\", \"Pemain\", \"nyaman\", \"teman\", \"ada\", \"Cards\", \"sekolah\", \"besar\", \"pejam\", \"nyaman\", \"teman\", \"story\", \"Guru\", \"memberi\", \"Saya\", \"terima\", \"Senang\", \"sekolah\", \"Cards\", \"guru\", \"memberi\", \"terima\", \"senang\", \"Sekolah\", \"Cards\", \"guru\", \"memberi\", \"terima\", \"senang\", \"Story\", \"Sekolah\", \"besar\", \"besar\", \"besar\", \"pejam\", \"nyaman\", \"teman\", \"story\", \"Guru\", \"story\", \"story\", \"Sekolah\", \"besar\", \"besar\", \"besar\", \"story\", \"Sekolah\", \"besar\", \"besar\", \"besar\", \"pejam\", \"nyaman\", \"teman\", \"story\", \"Guru\", \"story\", \"Sekolah\", \"besar\", \"besar\", \"besar\", \"pejam\", \"nyaman\", \"teman\", \"story\", \"Guru\", \"story\", \"story\", \"Sekolah\", \"besar\", \"besar\", \"besar\", \"Pemain\", \"nyaman\", \"teman\", \"story\", \"Guru\", \"memberi\", \"Saya\", \"terima\", \"Senang\", \"sekolah\", \"Cards\", \"guru\", \"memberi\", \"terima\", \"senang\", \"Sekolah\", \"Cards\", \"guru\", \"memberi\", \"terima\", \"senang\", \"Story\", \"Sekolah\", \"Sekolah\", \"menyenangkan\", \"Cards\", \"guru\", \"memberi\",",
+    "perplexity": 1.4273654222488403
+  },
+  {
+    "index": 102,
+    "input": [
+      "teman",
+      "musik",
+      "suka",
+      "senang"
+    ],
+    "reference": "Teman mendengarkan musik. Teman suka musik. Teman senang.\n\nAtau, kalau Anda ingin membuat konten yang terkait dengan tema rumah, sekolah, atau taman, saya bisa membantu Anda dengan kalimat lain.\n\nSilakan pilih tema yang Anda inginkan, atau memberikan contoh kalimat lain yang Anda inginkan.",
+    "generated": "[\"teman\", \"musik\", \"suka\", \"senang\"]",
+    "perplexity": 1.0028682947158813
+  },
+  {
+    "index": 103,
+    "input": [
+      "teman",
+      "gang",
+      "taman"
+    ],
+    "reference": "Teman jalan. Teman masuk gang. Teman melihat taman.",
+    "generated": "[\"teman\", \"gang\", \"taman\"]",
+    "perplexity": 1.0034246444702148
+  },
+  {
+    "index": 104,
+    "input": [
+      "ruang",
+      "dingin",
+      "udara",
+      "nyaman"
+    ],
+    "reference": "Ruang dingin. Udara dingin. Saya nyaman.",
+    "generated": "[\"ruang\", \"dingin\", \"udara\", \"nyaman\"]",
+    "perplexity": 1.0006624460220337
+  },
+  {
+    "index": 105,
+    "input": [
+      "teman",
+      "mainan",
+      "rumah"
+    ],
+    "reference": "Teman pergi. Teman pergi ke rumah. Teman lihat mainan.\n\nJika Anda menginginkan saya menjelaskan isi kisah Anda dalam format yang Anda sebutkan, berikut adalah jawabannya:\n\nStory: Teman jalan. Teman membawa mainan. Teman senang.",
+    "generated": "[\"teman\", \"mainan\", \"rumah\"]",
+    "perplexity": 1.0007765293121338
+  },
+  {
+    "index": 106,
+    "input": [
+      "teman",
+      "senang",
+      "main",
+      "gembira"
+    ],
+    "reference": "Teman senang. Teman main. Teman gembira.",
+    "generated": "[\"teman\", \"senang\", \"main\", \"gembira\"]",
+    "perplexity": 1.0005431175231934
+  },
+  {
+    "index": 107,
+    "input": [
+      "teman",
+      "orang",
+      "kecil",
+      "saya",
+      "saya"
+    ],
+    "reference": "Saya ingat teman. Teman dan orang tua saya. Saya masih kecil.",
+    "generated": "[\"teman\", \"orang\", \"kecil\", \"saya\", \"saya\"]",
+    "perplexity": 1.0006343126296997
+  },
+  {
+    "index": 108,
+    "input": [
+      "rumah",
+      "panas",
+      "orang",
+      "sibuk",
+      "udara"
+    ],
+    "reference": "Rumah nyaman. Orang sibuk. Udara panas.",
+    "generated": "[\"rumah\", \"panas\", \"orang\", \"sibuk\", \"udara\"]",
+    "perplexity": 1.0022400617599487
+  },
+  {
+    "index": 109,
+    "input": [
+      "Orang",
+      "makan",
+      "bangun",
+      "senang"
+    ],
+    "reference": "Orang bangun. Orang makan. Orang senang.\n\n(Saya tidak menggunakan label NER dalam kalimat ini, karena tidak ada label dalam input.)",
+    "generated": "[\"Orang\", \"makan\", \"bangun\", \"senang\"]",
+    "perplexity": 1.0200016498565674
+  },
+  {
+    "index": 110,
+    "input": [
+      "guru",
+      "baik",
+      "saya"
+    ],
+    "reference": "Saya guru. Guru baik. Saya senang.",
+    "generated": "[\"guru\", \"baik\", \"saya\"]",
+    "perplexity": 1.0015325546264648
+  },
+  {
+    "index": 111,
+    "input": [
+      "sungai",
+      "jembatan",
+      "teman"
+    ],
+    "reference": "Sungai luas. Jembatan kecil. Teman menyeberang.",
+    "generated": "the tungai, jembatan, and teman",
+    "perplexity": 1.1677592992782593
+  },
+  {
+    "index": 112,
+    "input": [
+      "adik",
+      "teman",
+      "main",
+      "senang",
+      "semua"
+    ],
+    "reference": "Adik main. Teman main. Semua senang.",
+    "generated": "[\"adik\", \"teman\", \"main\", \"senang\", \"semua\"]",
+    "perplexity": 1.0019322633743286
+  },
+  {
+    "index": 113,
+    "input": [
+      "orang",
+      "terkenal",
+      "lahir",
+      "menulis",
+      "hebat"
+    ],
+    "reference": "Orang terkenal lahir. Orang terkenal menulis. Orang terkenal terkenal.\n\natau\n\n Story: Orang hebat lahir. Orang hebat menulis. Orang hebat terkenal.",
+    "generated": "[\"orang\", \"terkenal\", \"lahir\", \"menulis\", \"hebat\"]",
+    "perplexity": 1.0007824897766113
+  },
+  {
+    "index": 114,
+    "input": [
+      "makan",
+      "minum",
+      "air",
+      "senang"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat hanya 1–2 kata saja.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga (ayah, ibu, adik, kakak, kakek, nenek), tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nBerikut paragraf sesuai aturan:\n\nStory: Laki-laki berjubah putih makan. Laki-laki minum air. Laki-laki senang.",
+    "generated": "[\"makan\", \"minum\", \"air\", \"senang\"]",
+    "perplexity": 1.0579677820205688
+  },
+  {
+    "index": 115,
+    "input": [
+      "adik",
+      "duduk",
+      "buku"
+    ],
+    "reference": "Adik rumah. Adik duduk. Adik baca buku.",
+    "generated": "[\"adik\", \"duduk\", \"buku\"]",
+    "perplexity": 1.0044587850570679
+  },
+  {
+    "index": 116,
+    "input": [
+      "teman",
+      "duduk",
+      "senang"
+    ],
+    "reference": "Teman rapi. Teman duduk. Teman senang.",
+    "generated": "[\"teman\", \"duduk\", \"senang\"]",
+    "perplexity": 1.0010485649108887
+  },
+  {
+    "index": 117,
+    "input": [
+      "bapak",
+      "bekerja",
+      "rumah"
+    ],
+    "reference": "Bapak rumah. Bapak bekerja. Bapak senang.",
+    "generated": "[\"bapak\", \"bekerja\", \"rumah\"]",
+    "perplexity": 1.0026341676712036
+  },
+  {
+    "index": 118,
+    "input": [
+      "sampah",
+      "bungan",
+      "kamu",
+      "aman"
+    ],
+    "reference": "Ia membuang sampah. Orang menanam bunga. Kami aman.",
+    "generated": "[\"sampah\", \"bungan\", \"kamu\", \"aman\"]",
+    "perplexity": 1.146238923072815
+  },
+  {
+    "index": 119,
+    "input": [
+      "meja",
+      "air",
+      "makan",
+      "minum",
+      "orang"
+    ],
+    "reference": "Orang makan. Orang minum air. Orang duduk meja.",
+    "generated": "[\"meja\", \"air\", \"makan\", \"minum\", \"orang\"]",
+    "perplexity": 1.001820683479309
+  },
+  {
+    "index": 120,
+    "input": [
+      "baik",
+      "hari",
+      "semua",
+      "senang",
+      "Cards",
+      "panas",
+      "udara",
+      "minum",
+      "air",
+      "nyaman",
+      "orang",
+      "Cards",
+      "buku",
+      "buka",
+      "membaca",
+      "saya",
+      "senang",
+      "Cards",
+      "kucing",
+      "main",
+      "bermain",
+      "gembira",
+      "semua",
+      "Cards",
+      "bajuku",
+      "nyaman",
+      "bersih",
+      "bahagia",
+      "orang"
+    ],
+    "reference": "Orang baik. Hari bagus. Semua senang.\n\n2.\nStory: Udara panas. Air minum. Orang nyaman.\n\n3.\nStory: Buku buka. Buku membaca. Saya senang.\n\n4.\nStory: Kucing main. Kucing bermain. Semua gembira.\n\n5.\nStory: Bajuku nyaman. Bajuku bersih. Orang bahagia.",
+    "generated": "[\"baik\", \"hari\", \"semua\", \"senang\", \"Cards\", \"panas\", \"udara\", \"minum\", \"air\", \"nyaman\", \"orang\", \"Cards\", \"buku\", \"buka\", \"membaca\", \"saya\", \"senang\", \"Cards\", \"kucing\", \"main\", \"bermain\", \"gembira\", \"semua\", \"Cards\", \"bajuku\", \"nyaman\", \"bersih\", \"bahagia\", \"orang\"]",
+    "perplexity": 1.0061299800872803
+  },
+  {
+    "index": 121,
+    "input": [
+      "teman",
+      "main",
+      "gembira",
+      "taman"
+    ],
+    "reference": "Teman ke taman. Teman bermain. Teman gembira.",
+    "generated": "[\"teman\", \"main\", \"gembira\", \"taman\"]",
+    "perplexity": 1.0007668733596802
+  },
+  {
+    "index": 122,
+    "input": [
+      "buku",
+      "besar",
+      "orang",
+      "buku",
+      "orang",
+      "Karena",
+      "ada",
+      "beberapa",
+      "kata",
+      "yang",
+      "sama",
+      "aku",
+      "akan",
+      "membuat",
+      "satu",
+      "list",
+      "dengan",
+      "kata",
+      "kata",
+      "yang",
+      "unik",
+      "saja",
+      "Cards",
+      "buku",
+      "besar",
+      "orang"
+    ],
+    "reference": "Orang membaca. Orang membaca buku. Buku besar.",
+    "generated": "[\"buku\", \"besar\", \"orang\", \"buku\", \"orang\", \"Karena\", \"ada\", \"beberapa\", \"kata\", \"yang\", \"sama\", \"aku\", \"akan\", \"membuat\", \"satu\", \"list\", \"dengan\", \"kata\", \"kata\", \"yang\", \"unik\", \"saja\", \"Cards\", \"buku\", \"besar\", \"orang\"]",
+    "perplexity": 1.0046604871749878
+  },
+  {
+    "index": 123,
+    "input": [
+      "teman",
+      "taman",
+      "bermain",
+      "senang",
+      "Cards",
+      "guru",
+      "mengajar",
+      "baik",
+      "belajar",
+      "Cards",
+      "rumah",
+      "nyaman",
+      "meja",
+      "makan"
+    ],
+    "reference": "Teman bermain. Teman bermain di taman. Teman senang.\n\n2.\nStory: Guru baik. Guru mengajar. Saya belajar.\n\n3.\nStory: Rumah nyaman. Rumah memiliki meja. Saya makan.",
+    "generated": "[\"teman\", \"taman\", \"bermain\", \"senang\", \"Cards\", \"guru\", \"mengajar\", \"baik\", \"belajar\", \"Cards\", \"rumah\", \"nyaman\", \"meja\", \"makan\"]",
+    "perplexity": 1.0001161098480225
+  },
+  {
+    "index": 124,
+    "input": [
+      "boks",
+      "merah",
+      "senang"
+    ],
+    "reference": "Boks kecil. Boks warna merah. Saya senang.",
+    "generated": "[\"boks\", \"merah\", \"senang\"",
+    "perplexity": 1.9655730724334717
+  },
+  {
+    "index": 125,
+    "input": [
+      "Guru",
+      "Guru",
+      "kamu",
+      "Guru",
+      "Semua",
+      "kamu",
+      "nyaman"
+    ],
+    "reference": "Guru baik. Guru menyenangkan. Kamu senang. Semua nyaman.",
+    "generated": "[\"Guru\", \"Guru\", \"kamu\", \"Guru\", \"Semua\", \"kamu\", \"nyaman\"]",
+    "perplexity": 1.0131052732467651
+  },
+  {
+    "index": 126,
+    "input": [
+      "teman",
+      "minum"
+    ],
+    "reference": "Teman sedih. Teman minum kopi. Teman tenang.\n\nCatatan: Saya tidak dapat memasukkan label NER seperti yang Anda inginkan, tetapi saya dapat membuat paragraf sederhana yang sesuai dengan aturan Anda.",
+    "generated": "[\"teman\", \"minum\"]",
+    "perplexity": 1.0104210376739502
+  },
+  {
+    "index": 127,
+    "input": [
+      "orang",
+      "baik"
+    ],
+    "reference": "Orang memilih. Orang seniman. Orang baik.",
+    "generated": "[\"orang\", \"baik\"]",
+    "perplexity": 1.0012098550796509
+  },
+  {
+    "index": 128,
+    "input": [
+      "buah",
+      "teman",
+      "makan",
+      "senang"
+    ],
+    "reference": "Teman buah. Teman makan buah. Teman senang.",
+    "generated": "[\"buah\", \"teman\", \"makan\", \"senang\"]",
+    "perplexity": 1.0002578496932983
+  },
+  {
+    "index": 129,
+    "input": [
+      "orang",
+      "kamarnya",
+      "barang"
+    ],
+    "reference": "Orang lari. Orang ke kamarnya. Orang ambil barang.",
+    "generated": "[\"orang\", \"kamarnya\", \"barang\"]",
+    "perplexity": 1.0078009366989136
+  },
+  {
+    "index": 130,
+    "input": [
+      "baik",
+      "berpameran",
+      "senang"
+    ],
+    "reference": "\" yang dibutuhkan, saya akan membuat paragraf sederhana untuk anak usia dini dan pengguna AAC. \n\nStory: Orang baik. Orang berpameran. Orang senang.",
+    "generated": "[\"baik\", \"berpameran\", \"senang\"]",
+    "perplexity": 1.006609559059143
+  },
+  {
+    "index": 131,
+    "input": [
+      "orang",
+      "taman",
+      "saya",
+      "biasa",
+      "indah",
+      "senang"
+    ],
+    "reference": "Orang biasa. Taman indah. Saya senang.",
+    "generated": "[\"orang\", \"taman\", \"saya\", \"biasa\", \"indah\", \"senang\"]",
+    "perplexity": 1.0044342279434204
+  },
+  {
+    "index": 132,
+    "input": [
+      "teman",
+      "gembira",
+      "suka",
+      "bermain"
+    ],
+    "reference": "Teman datang. Teman gembira. Teman suka bermain.\n\nHarap saya bisa membantu Anda dengan paragraf ini!",
+    "generated": "[\"teman\", \"gembira\", \"suka\", \"bermain\"]",
+    "perplexity": 1.0011916160583496
+  },
+  {
+    "index": 133,
+    "input": [
+      "air",
+      "dangkal",
+      "laut",
+      "dalam",
+      "Cards",
+      "jalan",
+      "lebar",
+      "sempit",
+      "Cards",
+      "rumah",
+      "kecil",
+      "besar",
+      "Cards",
+      "udara",
+      "panas",
+      "dingin"
+    ],
+    "reference": "Air dangkal. Laut dalam.\n\n2.\nStory: Jalan lebar. Jalan sempit.\n\n3.\nStory: Rumah kecil. Rumah besar.\n\n4.\nStory: Udara panas. Udara dingin.",
+    "generated": "[\"air\", \"dangkal\", \"laut\", \"dalam\", \"Cards\", \"jalan\", \"lebar\", \"sempit\", \"Cards\", \"rumah\", \"kecil\", \"besar\", \"Cards\", \"udara\", \"panas\", \"dingin\"]",
+    "perplexity": 1.0004295110702515
+  },
+  {
+    "index": 134,
+    "input": [
+      "burung",
+      "cepat",
+      "lapangan",
+      "senang"
+    ],
+    "reference": "Burung di lapangan. Burung terbang cepat. Burung senang.",
+    "generated": "[\"burung\", \"cepat\", \"lapangan\", \"senang\"]",
+    "perplexity": 1.0001193284988403
+  },
+  {
+    "index": 135,
+    "input": [
+      "orang",
+      "bermain"
+    ],
+    "reference": "Orang taman. Orang senang. Orang bermain.",
+    "generated": "[\"orang\", \"bermain\"]",
+    "perplexity": 1.0294628143310547
+  },
+  {
+    "index": 136,
+    "input": [
+      "teman",
+      "kecil",
+      "senang"
+    ],
+    "reference": "Teman kecil. Teman kecil menunggu. Teman senang.",
+    "generated": "[\"teman\", \"kecil\", \"senang\"]",
+    "perplexity": 1.0006208419799805
+  },
+  {
+    "index": 137,
+    "input": [
+      "rumah",
+      "tidur",
+      "bahagia",
+      "Cards",
+      "guru",
+      "mengajar",
+      "belajar",
+      "Cards",
+      "udara",
+      "tanaman",
+      "hijau",
+      "Cards",
+      "anak",
+      "sekolah",
+      "belajar",
+      "Cards",
+      "bocah",
+      "baca",
+      "cerdas"
+    ],
+    "reference": "\":\n\n1.\nStory: Rumah nyaman. Orang tidur. Orang bahagia.\n\n2.\nStory: Guru baik. Guru mengajar. Saya belajar.\n\n3.\nStory: Udara sejuk. Tanaman hijau. Saya senang.\n\n4.\nStory: Anak pergi. Anak ke sekolah. Anak belajar.\n\n5.\nStory: Bocah duduk. Bocah baca buku. Bocah cerdas.",
+    "generated": "[\"rumah\", \"tidur\", \"bahagia\", \"Cards\", \"guru\", \"mengajar\", \"belajar\", \"Cards\", \"udara\", \"tanaman\", \"hijau\", \"Cards\", \"anak\", \"sekolah\", \"belajar\", \"Cards\", \"bocah\", \"baca\", \"cerdas\"]",
+    "perplexity": 1.0015625953674316
+  },
+  {
+    "index": 138,
+    "input": [
+      "teman",
+      "wajah",
+      "senang"
+    ],
+    "reference": "Kamu masih ingat wajahku. Wajahku manis. Kamu senang.\n\nKita juga dapat memberikan label NER yang sederhana pada kata-kata yang relevan.\n\n1.\nStory: Kamu (orang) masih ingat wajahku (barang). Wajahku manis. Kamu senang.\n\nNamun, karena tema yang diberikan adalah rumah, sekolah, atau taman, maka kalimat tersebut tidak relevan dengan tema yang diberikan.\n\nJika kita ingin membuat kalimat sederhana dan relevan dengan tema, maka kita dapat membuat kalimat seperti berikut:\n\n1.\nStory: Teman (orang) masih ingat wajahku. Wajahku manis. Teman senang.",
+    "generated": "[\"teman\", \"wajah\", \"senang\"]",
+    "perplexity": 1.000723958015442
+  },
+  {
+    "index": 139,
+    "input": [
+      "teman",
+      "bermain",
+      "senang"
+    ],
+    "reference": "Teman datang. Teman bermain. Teman senang.",
+    "generated": "[\"teman\", \"bermain\", \"senang\"]",
+    "perplexity": 1.0004459619522095
+  },
+  {
+    "index": 140,
+    "input": [
+      "orang",
+      "membantu",
+      "melayani",
+      "menggoreng",
+      "wira",
+      "wiri"
+    ],
+    "reference": "Orang membantu orang. Orang melayani pembeli. Orang menggoreng barang. Orang wira-wiri.",
+    "generated": "[\"orang\", \"membantu\", \"melayani\", \"menggoreng\", \"wira\", \"wiri\"]",
+    "perplexity": 1.0024199485778809
+  },
+  {
+    "index": 141,
+    "input": [
+      "perempuan",
+      "jalan",
+      "bicara",
+      "bahagia"
+    ],
+    "reference": "Perempuan jalan. Perempuan berbicara. Perempuan bahagia.",
+    "generated": "[\"perempuan\", \"jalan\", \"bicara\", \"bahagia\"]",
+    "perplexity": 1.0042850971221924
+  },
+  {
+    "index": 142,
+    "input": [
+      "rumah",
+      "makan",
+      "senang"
+    ],
+    "reference": "Orang rumah. Orang minum. Orang senang.",
+    "generated": "[\"rumah\", \"makan\", \"senang\"]",
+    "perplexity": 1.0029164552688599
+  },
+  {
+    "index": 143,
+    "input": [
+      "ibu",
+      "dokter",
+      "sakit",
+      "periksa"
+    ],
+    "reference": "Ibu sakit. Ibu periksa. Dokter membantu.",
+    "generated": "[\"ibu\", \"dokter\", \"sakit\", \"periksa\"]",
+    "perplexity": 1.001638412475586
+  },
+  {
+    "index": 144,
+    "input": [
+      "gelas",
+      "plastik",
+      "minum",
+      "teman",
+      "sangat"
+    ],
+    "reference": "Teman minum dari gelas. Gelas terbuat dari plastik. Teman senang.",
+    "generated": "[\"gelas\", \"plastik\", \"minum\", \"teman\", \"sangat\"]",
+    "perplexity": 1.0031135082244873
+  },
+  {
+    "index": 145,
+    "input": [
+      "orang",
+      "duduk",
+      "baca",
+      "buku",
+      "tenang"
+    ],
+    "reference": "Orang duduk. Orang baca buku. Orang tenang.",
+    "generated": "[\"orang\", \"duduk\", \"baca\", \"buku\", \"tenang\"]",
+    "perplexity": 1.0030744075775146
+  },
+  {
+    "index": 146,
+    "input": [
+      "orang",
+      "leher",
+      "teman",
+      "tanda",
+      "senang"
+    ],
+    "reference": "Orang tahu tanda di leher teman. Orang tahu tanda. Orang senang.",
+    "generated": "[\"orang\", \"leher\", \"teman\", \"tanda\", \"senang\"]",
+    "perplexity": 1.0008848905563354
+  },
+  {
+    "index": 147,
+    "input": [
+      "baca",
+      "nisan",
+      "orang",
+      "senang"
+    ],
+    "reference": "Orang membaca. Orang membaca nisan. Orang senang membaca.",
+    "generated": "[\"baca\", \"nisan\", \"orang\", \"senang\"]",
+    "perplexity": 1.000335454940796
+  },
+  {
+    "index": 148,
+    "input": [
+      "roti",
+      "toko",
+      "orang"
+    ],
+    "reference": "Orang lewat. Toko ada. Roti habis.",
+    "generated": "[\"roti\", \"toko\", \"orang\"]",
+    "perplexity": 1.0023696422576904
+  },
+  {
+    "index": 149,
+    "input": [
+      "buku",
+      "teman",
+      "duduk",
+      "bahagia"
+    ],
+    "reference": "Teman duduk. Teman baca buku. Teman bahagia.",
+    "generated": "[\"buku\", \"teman\", \"duduk\", \"bahagia\"]",
+    "perplexity": 1.0004428625106812
+  },
+  {
+    "index": 150,
+    "input": [
+      "teman",
+      "bekerja",
+      "orang",
+      "senang"
+    ],
+    "reference": "Teman bekerja. Teman membantu orang. Orang senang.",
+    "generated": "[\"teman\", \"bekerja\", \"orang\", \"senang\"]",
+    "perplexity": 1.0014127492904663
+  },
+  {
+    "index": 151,
+    "input": [
+      "orang",
+      "buku",
+      "senang",
+      "rumah",
+      "membaca"
+    ],
+    "reference": "Orang rumah. Orang membaca buku. Orang senang.",
+    "generated": "[\"orang\", \"buku\", \"senang\", \"rumah\", \"membaca\"]",
+    "perplexity": 1.0803426504135132
+  },
+  {
+    "index": 152,
+    "input": [
+      "teman",
+      "taman",
+      "bersenang",
+      "senang",
+      "puri"
+    ],
+    "reference": "Teman memanggil. Teman pergi ke taman. Teman bersenang-senang.",
+    "generated": "[\"teman\", \"taman\", \"bersenang\", \"senang\", \"puri\"]",
+    "perplexity": 1.0012049674987793
+  },
+  {
+    "index": 153,
+    "input": [
+      "hari",
+      "awan",
+      "lemah",
+      "bersih",
+      "baik"
+    ],
+    "reference": "Sinar matahari lemah. Awan bersih. Hari baik.",
+    "generated": "[\"hari\", \"awan\", \"lemah\", \"bersih\", \"baik\"]",
+    "perplexity": 1.0003892183303833
+  },
+  {
+    "index": 154,
+    "input": [
+      "teman",
+      "rumah",
+      "sekolah",
+      "senang"
+    ],
+    "reference": "Teman rumah. Teman ke sekolah. Teman senang.",
+    "generated": "[\"teman\", \"rumah\", \"sekolah\", \"senang\"]",
+    "perplexity": 1.0009950399398804
+  },
+  {
+    "index": 155,
+    "input": [
+      "teman",
+      "baik",
+      "bekerja",
+      "gembira"
+    ],
+    "reference": "Teman saya baik. Teman saya bekerja. Teman saya gembira.",
+    "generated": "[\"teman\", \"baik\", \"bekerja\", \"gembira\"]",
+    "perplexity": 1.0015405416488647
+  },
+  {
+    "index": 156,
+    "input": [
+      "barang",
+      "orang",
+      "senang",
+      "lempar",
+      "tahu",
+      "penyair"
+    ],
+    "reference": "orang lempar barang penyair. orang tahu barang. orang senang.",
+    "generated": "[\"barang\", \"orang\", \"senang\", \"lempar\", \"tahu\", \"penyair\"]",
+    "perplexity": 1.003736138343811
+  },
+  {
+    "index": 157,
+    "input": [
+      "minum",
+      "duduk",
+      "tempat",
+      "indah"
+    ],
+    "reference": "Orang minum. Orang duduk. Tempat indah.",
+    "generated": "[\"minum\", \"duduk\", \"tempat\", \"indah\"]",
+    "perplexity": 1.0182783603668213
+  },
+  {
+    "index": 158,
+    "input": [
+      "keluarga",
+      "bersih",
+      "baca",
+      "nyaman"
+    ],
+    "reference": "Keluarga bersih. Keluarga membaca Al Quran. Keluarga nyaman.",
+    "generated": "[\"keluarga\", \"bersih\", \"baca\", \"nyaman\"]",
+    "perplexity": 1.0015960931777954
+  },
+  {
+    "index": 159,
+    "input": [
+      "baik",
+      "membantu",
+      "senang",
+      "orang",
+      "Cards",
+      "teman",
+      "bermain",
+      "gembira",
+      "nyaman",
+      "Cards",
+      "guru",
+      "baik",
+      "mengajar",
+      "siswa",
+      "gembira",
+      "Cards",
+      "toko",
+      "ada",
+      "jual",
+      "nyaman",
+      "Cards",
+      "lapangan",
+      "luas",
+      "hijau",
+      "saya",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang membantu. Orang senang.\n\n2.\nStory: Teman bermain. Teman gembira. Teman nyaman.\n\n3.\nStory: Guru baik. Guru mengajar. Siswa gembira.\n\n4.\nStory: Toko ada. Toko jual. Toko nyaman.\n\n5.\nStory: Lapangan luas. Lapangan hijau. Saya senang.",
+    "generated": "[\"baik\", \"membantu\", \"senang\", \"orang\", \"Cards\", \"teman\", \"bermain\", \"gembira\", \"nyaman\", \"Cards\", \"guru\", \"baik\", \"mengajar\", \"siswa\", \"gembira\", \"Cards\", \"toko\", \"ada\", \"jual\", \"nyaman\", \"Cards\", \"lapangan\", \"luas\", \"hijau\", \"saya\", \"senang\"]",
+    "perplexity": 1.0023187398910522
+  },
+  {
+    "index": 160,
+    "input": [
+      "orang",
+      "main",
+      "senang",
+      "bergerak",
+      "mainan",
+      "menggembirakan",
+      "taman"
+    ],
+    "reference": "Orang main. Mainan bergerak. Orang senang.\n\nSaya mengganti label NER dengan kata sederhana, yaitu:\n- <|PER|> → orang\n- <|PRD|> → mainan\nSaya mengganti kalimat kompleks menjadi kalimat sederhana, yaitu:\n- bergerak maju → main\n- menghentak → tukang\n- memacu → motor\n- melewati → jalan\n- lenyap → hilang\n- dalam gelap → malam\n- Tangan → tangan\n- mengepal → pegang\n- kuat → keras\n- Suara → suara\n- gemeretak → geliak\n- giginya → gigi\n- mengisi → suara\n- ritmis → gembira\n- gerimis → hujan\n- berebut → saling\n- dengan → teman\n- ricik → pecah\n- dan → mainan\n- p → pecah\nSaya mengganti kalimat kompleks menjadi kalimat sederhana, yaitu:\n- Orang bermain. Mainan bergerak. Orang senang.\n\nJika Anda ingin kalimat yang lebih sederhana, saya dapat mencoba lagi!",
+    "generated": "[\"orang\", \"main\", \"senang\", \"bergerak\", \"mainan\", \"menggembirakan\", \"taman\"]",
+    "perplexity": 1.0214020013809204
+  },
+  {
+    "index": 161,
+    "input": [
+      "Orang",
+      "lahir",
+      "senang",
+      "Cards",
+      "Kota",
+      "besar",
+      "nyaman",
+      "Cards",
+      "Buku",
+      "cerita",
+      "menyenangkan",
+      "Cards",
+      "Buku",
+      "puisi",
+      "indah",
+      "Cards",
+      "Biografi",
+      "sastrawan",
+      "menarik"
+    ],
+    "reference": "Orang lahir. Orang jalan. Orang senang.\n\n2.\nStory: Kota besar. Kota memiliki toko. Kota nyaman.\n\n3.\nStory: Saya memiliki buku. Buku cerita. Buku menyenangkan.\n\n4.\nStory: Saya menulis buku. Buku puisi. Buku indah.\n\n5.\nStory: Saya menulis biografi. Biografi sastrawan. Biografi menarik.",
+    "generated": "[\"Orang\", \"lahir\", \"senang\", \"Cards\", \"Kota\", \"besar\", \"nyaman\", \"Cards\", \"Buku\", \"cerita\", \"menyenangkan\", \"Cards\", \"Buku\", \"puisi\", \"indah\", \"Cards\", \"Biografi\", \"sastrawan\", \"menarik\"]",
+    "perplexity": 1.000619888305664
+  },
+  {
+    "index": 162,
+    "input": [
+      "adik",
+      "buku",
+      "bahagia",
+      "duduk"
+    ],
+    "reference": "Adik duduk. Adik baca buku. Adik bahagia.",
+    "generated": "[\"adik\", \"buku\", \"bahagia\", \"duduk\"]",
+    "perplexity": 1.0005531311035156
+  },
+  {
+    "index": 163,
+    "input": [
+      "teman",
+      "baik",
+      "main"
+    ],
+    "reference": "Teman baik. Teman sini. Teman main.",
+    "generated": "[\"teman\", \"baik\", \"main\"]",
+    "perplexity": 1.0070525407791138
+  },
+  {
+    "index": 164,
+    "input": [
+      "ibu",
+      "rumah",
+      "bersih",
+      "mandi",
+      "kotor"
+    ],
+    "reference": "Ibu kotor. Ibu mandi. Ibu bersih.\n\nKata sederhana untuk label NER:\n- ibu → <|PER|>\n- rumah → <|FAC|>\n- mandi → mandi (tidak perlu label)",
+    "generated": "[\"ibu\", \"rumah\", \"bersih\", \"mandi\", \"kotor\"]",
+    "perplexity": 1.0003783702850342
+  },
+  {
+    "index": 165,
+    "input": [
+      "baju",
+      "tempat",
+      "nyaman"
+    ],
+    "reference": "Orang mengangkat baju. Orang meletakkan baju di tempat. Orang merasa nyaman.",
+    "generated": "[\"baju\", \"tempat\", \"nyaman\"]",
+    "perplexity": 1.0044232606887817
+  },
+  {
+    "index": 166,
+    "input": [
+      "rumah",
+      "jalan",
+      "lebar",
+      "saya"
+    ],
+    "reference": "Rumah dekat jalan. Jalan lebar. Saya senang.",
+    "generated": "[\"rumah\", \"jalan\", \"lebar\", \"saya\"]",
+    "perplexity": 1.0018707513809204
+  },
+  {
+    "index": 167,
+    "input": [
+      "tidur",
+      "lampu",
+      "orang",
+      "nyala"
+    ],
+    "reference": "orang tidur. Lampu tidak nyala. orang masih nyaman.",
+    "generated": "[\"tidur\", \"lampu\", \"orang\", \"nyala\"]",
+    "perplexity": 1.002773404121399
+  },
+  {
+    "index": 168,
+    "input": [
+      "bangun",
+      "pagi",
+      "nyaman",
+      "ke",
+      "luar",
+      "gembira"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat, setiap kalimat hanya 1–2 kata saja. Jika output salah, perbaiki sampai benar.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?, tanpa tanya-tanya.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga (ayah, ibu, adik, kakak, kakek, nenek), tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nGanti Label NER dengan kata sederhana:\n- <|PER|> → orang\n- <|ORG|> → sekolah\n- <|LOC|> → tempat\n- <|FAC|> → bangunan\n- <|GPE|> → kota\n- <|PRD|> → barang\n\nFormat:\nStory: <2–3 kalimat, setiap kalimat 1–2 kata, dalam satu baris>\n\nContoh Output:\n\n1.\nStory: Orang baik. Orang baik. Saya senang.\n\n2.\nStory: Sekolah bagus. Sekolah indah. Semua bahagia.\n\n3.\nStory: Tempat nyaman. Udara sejuk. Saya nyaman.\n\n4.\nStory: Bangunan tinggi. Orang bermain. Semua gembira.\n\n5.\nStory: Kota bersih. Kota raya. Semua bahagia.\n\nGantikan konteks awal untuk \"Bagaimana?\" dengan paragraf sederhana.\nContoh:\nStory: Orang minum. Orang lelah. Orang tidur.",
+    "generated": "[\"bangun\", \"pagi\", \"nyaman\", \"ke\", \"luar\", \"gembira\"]",
+    "perplexity": 1.0010852813720703
+  },
+  {
+    "index": 169,
+    "input": [
+      "rumah",
+      "barang",
+      "saya"
+    ],
+    "reference": "Rumah berantakan. Barang berceceran. Saya senang.",
+    "generated": "[\"rumah\", \"barang\", \"saya\"]",
+    "perplexity": 1.0031957626342773
+  },
+  {
+    "index": 170,
+    "input": [
+      "adik",
+      "tidur",
+      "nyaman",
+      "teman",
+      "senang"
+    ],
+    "reference": "Adik tidur. Adik nyaman. Teman senang.",
+    "generated": "[\"adik\", \"tidur\", \"nyaman\", \"teman\", \"senang\"]",
+    "perplexity": 1.000683307647705
+  },
+  {
+    "index": 171,
+    "input": [
+      "teman",
+      "baik",
+      "berjalan",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman berjalan. Teman senang.",
+    "generated": "[\"teman\", \"baik\", \"berjalan\", \"senang\"]",
+    "perplexity": 1.000512719154358
+  },
+  {
+    "index": 172,
+    "input": [
+      "teman",
+      "rumah",
+      "tidur",
+      "senang",
+      "Cards",
+      "guru",
+      "rumah",
+      "buku",
+      "nyaman",
+      "Cards",
+      "adik",
+      "rumah",
+      "makan",
+      "senang"
+    ],
+    "reference": "Teman pergi ke rumah. Teman tidur di rumah. Teman senang.\n\n2.\nStory: Guru berada di rumah. Guru membaca buku. Guru nyaman.\n\n3.\nStory: Adik berada di rumah. Adik makan di rumah. Adik senang.",
+    "generated": "[\"teman\", \"rumah\", \"tidur\", \"senang\", \"Cards\", \"guru\", \"rumah\", \"buku\", \"nyaman\", \"Cards\", \"adik\", \"rumah\", \"makan\", \"senang\"]",
+    "perplexity": 1.0001842975616455
+  },
+  {
+    "index": 173,
+    "input": [
+      "barang",
+      "teman",
+      "banyak",
+      "melihat",
+      "bergerak",
+      "senang",
+      "naik"
+    ],
+    "reference": "Teman taman. Teman lihat barang. Barang bergerak. Teman naik. Teman melihat banyak barang. Teman senang.",
+    "generated": "[\"barang\", \"teman\", \"banyak\", \"melihat\", \"bergerak\", \"senang\", \"naik\"]",
+    "perplexity": 1.0002946853637695
+  },
+  {
+    "index": 174,
+    "input": [
+      "orang",
+      "tempat",
+      "makanan",
+      "senang"
+    ],
+    "reference": "orang berada di tempat. orang makan makanan. orang senang.",
+    "generated": "[\"orang\", \"tempat\", \"makanan\", \"senang\"]",
+    "perplexity": 1.001354455947876
+  },
+  {
+    "index": 175,
+    "input": [
+      "teman",
+      "kota",
+      "ini",
+      "perayaan",
+      "bersama"
+    ],
+    "reference": "Teman lahir di kota 1950. Teman lulusan sekolah ini setidaknya empat kali perayaan tunggal dan enam kali perayaan bersama.",
+    "generated": "[\"teman\", \"kota\", \"ini\", \"perayaan\", \"bersama\"]",
+    "perplexity": 1.0045247077941895
+  },
+  {
+    "index": 176,
+    "input": [
+      "buku",
+      "orang",
+      "duduk",
+      "tenang"
+    ],
+    "reference": "Orang duduk. Orang baca buku. Orang tenang.",
+    "generated": "[\"buku\", \"orang\", \"duduk\", \"tenang\"]",
+    "perplexity": 1.0014013051986694
+  },
+  {
+    "index": 177,
+    "input": [
+      "matahari",
+      "pagi",
+      "senang",
+      "saya"
+    ],
+    "reference": "Saya bangun pagi. Saya lihat matahari. Saya senang.",
+    "generated": "matahari\", \"pagi\", \"senang\", \"saya\"",
+    "perplexity": 1.0808923244476318
+  },
+  {
+    "index": 178,
+    "input": [
+      "penulis",
+      "cerita",
+      "bagus",
+      "Cards",
+      "bekerja",
+      "barang",
+      "jual",
+      "senang",
+      "Cards",
+      "cantik",
+      "teman",
+      "kerja",
+      "Cards",
+      "pintar",
+      "tulis",
+      "cerita",
+      "Cards",
+      "baik",
+      "bekerja",
+      "hasilly",
+      "hasil"
+    ],
+    "reference": "Orang penulis. Orang menulis cerita. Cerita bagus.\n\n2.\nStory: Orang bekerja. Orang jual barang. Orang senang.\n\n3.\nStory: Orang cantik. Orang senang bekerja. Orang punya teman.\n\n4.\nStory: Orang pintar. Orang bisa tulis. Orang senang tulis cerita.\n\n5.\nStory: Orang baik. Orang bekerja keras. Orang senang dengan hasilnya.",
+    "generated": "[\"penulis\", \"cerita\", \"bagus\", \"Cards\", \"bekerja\", \"barang\", \"jual\", \"senang\", \"Cards\", \"cantik\", \"teman\", \"kerja\", \"Cards\", \"pintar\", \"tulis\", \"cerita\", \"Cards\", \"baik\", \"bekerja\", \"hasilly\", \"hasil\"]",
+    "perplexity": 1.002055287361145
+  },
+  {
+    "index": 179,
+    "input": [
+      "saya",
+      "ingin",
+      "baik",
+      "Jika",
+      "Anda",
+      "ingin",
+      "saya",
+      "bisa",
+      "mengubah",
+      "jawaban",
+      "agar",
+      "ada",
+      "kartu",
+      "AAC",
+      "yang",
+      "kartu"
+    ],
+    "reference": "Saya belajar. Saya belajar lebih baik. Saya ingin baik.",
+    "generated": "[\"saya\", \"ingin\", \"baik\", \"Jika\", \"Anda\", \"ingin\", \"saya\", \"bisa\", \"mengubah\", \"jawaban\", \"agar\", \"ada\", \"kartu\", \"AAC\", \"yang\", \"kartu\"]",
+    "perplexity": 1.0007363557815552
+  },
+  {
+    "index": 180,
+    "input": [
+      "ayah",
+      "ibu",
+      "kantor",
+      "bekerja",
+      "senang",
+      "peringatan"
+    ],
+    "reference": "Ayah ke kantor. Ayah bekerja. Ibu senang.\n\nTanda peringatan: Tidak ada orang miskin dalam kalimat.",
+    "generated": "[\"ayah\", \"ibu\", \"kantor\", \"bekerja\", \"senang\", \"peringatan\"]",
+    "perplexity": 1.0003995895385742
+  },
+  {
+    "index": 181,
+    "input": [
+      "teman",
+      "main",
+      "saya",
+      "senang"
+    ],
+    "reference": "Saya main. Teman saya main. Saya senang.",
+    "generated": "[\"teman\", \"main\", \"saya\", \"senang\"]",
+    "perplexity": 1.0011155605316162
+  },
+  {
+    "index": 182,
+    "input": [
+      "anak",
+      "ku",
+      "aman"
+    ],
+    "reference": "Saya senang. Saya bantu. Anak ku aman.",
+    "generated": "[\"anak\", \"ku\", \"aman\"]",
+    "perplexity": 1.0016472339630127
+  },
+  {
+    "index": 183,
+    "input": [
+      "teman",
+      "manis",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman manis. Teman senang.",
+    "generated": "[\"teman\", \"manis\", \"senang\"]",
+    "perplexity": 1.0005806684494019
+  },
+  {
+    "index": 184,
+    "input": [
+      "meja",
+      "makan",
+      "baju",
+      "bungsu",
+      "senang"
+    ],
+    "reference": "Meja makan sederhana. Bungsu lihat baju. Bungsu senang.",
+    "generated": "[\"meja\", \"makan\", \"baju\", \"bungsu\", \"senang\"]",
+    "perplexity": 1.0005766153335571
+  },
+  {
+    "index": 185,
+    "input": [
+      "kuat",
+      "tidak",
+      "roboh"
+    ],
+    "reference": "Saya kuat. Saya tidak lelah. Saya bahagia.\n\nUntuk kalimat asli, saya dapat mencoba mengadaptasinya menjadi:\n\nStory: Tiang kuat. Angin kuat. Tiang tidak roboh.",
+    "generated": "[\"kuat\", \"tidak\", \"roboh\"]",
+    "perplexity": 1.0017223358154297
+  },
+  {
+    "index": 186,
+    "input": [
+      "barang",
+      "mainan",
+      "Cards",
+      "orang",
+      "senang",
+      "Kata",
+      "lain",
+      "yang",
+      "relevan",
+      "cari",
+      "mainan",
+      "barang",
+      "Cards",
+      "cari",
+      "mainan",
+      "barang"
+    ],
+    "reference": "Orang cari barang. Orang cari mainan. Orang senang.\n\nPerlu diingat, contoh di atas tidak menggunakan label NER.",
+    "generated": "[\"barang\", \"mainan\", \"Cards\", \"orang\", \"senang\", \"Kata\", \"lain\", \"yang\", \"relevan\", \"cari\", \"mainan\", \"barang\", \"Cards\", \"cari\", \"mainan\", \"barang\"]",
+    "perplexity": 1.0015647411346436
+  },
+  {
+    "index": 187,
+    "input": [
+      "dokter",
+      "baik",
+      "periksa",
+      "merawat"
+    ],
+    "reference": "Dokter baik. Dokter periksa. Dokter merawat.",
+    "generated": "[\"dokter\", \"baik\", \"periksa\", \"merawat\"]",
+    "perplexity": 1.0612722635269165
+  },
+  {
+    "index": 188,
+    "input": [
+      "orang",
+      "makan",
+      "minum",
+      "duduk",
+      "Cards",
+      "teman",
+      "baik",
+      "hari",
+      "cerah",
+      "senang",
+      "Cards",
+      "guru",
+      "baik",
+      "siswa",
+      "baik",
+      "senang",
+      "Cards",
+      "bangunan",
+      "tinggi",
+      "jalan",
+      "panjang",
+      "lelah",
+      "Cards",
+      "orang",
+      "jalan",
+      "melihat",
+      "senang"
+    ],
+    "reference": "Orang makan. Orang minum. Orang duduk.\n\n2.\nStory: Teman baik. Hari cerah. Aku senang.\n\n3.\nStory: Guru baik. Siswa baik. Saya senang.\n\n4.\nStory: Bangunan tinggi. Jalan panjang. Saya lelah.\n\n5.\nStory: Orang jalan. Orang melihat. Orang senang.\n\nKalimat-kalimat di atas menggunakan label NER yang sudah diperbaiki.",
+    "generated": "[\"orang\", \"makan\", \"minum\", \"duduk\", \"Cards\", \"teman\", \"baik\", \"hari\", \"cerah\", \"senang\", \"Cards\", \"guru\", \"baik\", \"siswa\", \"baik\", \"senang\", \"Cards\", \"bangunan\", \"tinggi\", \"jalan\", \"panjang\", \"lelah\", \"Cards\", \"orang\", \"jalan\", \"melihat\", \"senang\"]",
+    "perplexity": 1.003188967704773
+  },
+  {
+    "index": 189,
+    "input": [
+      "orang",
+      "teman",
+      "senang",
+      "ke",
+      "sekolah"
+    ],
+    "reference": "Orang ke sekolah. Orang teman. Orang senang.",
+    "generated": "[\"orang\", \"teman\", \"senang\", \"ke\", \"sekolah\"]",
+    "perplexity": 1.0067243576049805
+  },
+  {
+    "index": 190,
+    "input": [
+      "teman",
+      "nasi",
+      "puas"
+    ],
+    "reference": "Teman makan. Teman makan nasi. Teman puas.",
+    "generated": "[\"teman\", \"nasi\", \"puas\"]",
+    "perplexity": 1.0020428895950317
+  },
+  {
+    "index": 191,
+    "input": [
+      "orang",
+      "baik",
+      "berbicara",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang berbicara. Orang senang.",
+    "generated": "[\"orang\", \"baik\", \"berbicara\", \"senang\"]",
+    "perplexity": 1.0007091760635376
+  },
+  {
+    "index": 192,
+    "input": [
+      "orang",
+      "bunga",
+      "senang",
+      "jalan",
+      "melihat"
+    ],
+    "reference": "Orang jalan. Orang melihat bunga. Orang senang.",
+    "generated": "[\"orang\", \"bunga\", \"senang\", \"jalan\", \"melihat\"]",
+    "perplexity": 1.038198471069336
+  },
+  {
+    "index": 193,
+    "input": [
+      "teman",
+      "hari",
+      "guru",
+      "nyaman"
+    ],
+    "reference": "Teman baik. Teman berbicara dengan gurumu. Hari bagus. Semua nyaman.",
+    "generated": "[\"teman\", \"hari\", \"guru\", \"nyaman\"]",
+    "perplexity": 1.0010122060775757
+  },
+  {
+    "index": 194,
+    "input": [
+      "orang",
+      "barang",
+      "nyaman",
+      "Cards",
+      "teman",
+      "mainan",
+      "senang",
+      "Cards",
+      "rumah",
+      "bersih",
+      "nyaman",
+      "senang",
+      "Cards",
+      "toko",
+      "barang",
+      "bagus",
+      "Cards",
+      "keluarga",
+      "baik",
+      "nyaman",
+      "bahagia"
+    ],
+    "reference": "Orang pindah. Orang membawa barang. Orang nyaman.\n\n2.\nStory: Teman datang. Teman membawa mainan. Teman senang.\n\n3.\nStory: Rumah nyaman. Rumah bersih. Saya senang.\n\n4.\nStory: Toko penuh. Toko memiliki barang. Toko bagus.\n\n5.\nStory: Keluarga baik. Keluarga bahagia. Semua nyaman.",
+    "generated": "[\"orang\", \"barang\", \"nyaman\", \"Cards\", \"teman\", \"mainan\", \"senang\", \"Cards\", \"rumah\", \"bersih\", \"nyaman\", \"senang\", \"Cards\", \"toko\", \"barang\", \"bagus\", \"Cards\", \"keluarga\", \"baik\", \"nyaman\", \"bahagia\"]",
+    "perplexity": 1.0022255182266235
+  },
+  {
+    "index": 195,
+    "input": [
+      "dokter",
+      "baik",
+      "saya",
+      "senang"
+    ],
+    "reference": "Dokter baik. Dokter menyembuhkan. Saya senang.",
+    "generated": "[\"dokter\", \"baik\", \"saya\", \"senang\"]",
+    "perplexity": 1.0005724430084229
+  },
+  {
+    "index": 196,
+    "input": [
+      "perempuan",
+      "toko",
+      "lampu",
+      "kedip",
+      "khawatir"
+    ],
+    "reference": "Perempuan melihat toko tutup. Perempuan melihat lampu berkedip. Perempuan khawatir.",
+    "generated": "[\"perempuan\", \"toko\", \"lampu\", \"kedip\", \"khawatir\"]",
+    "perplexity": 1.0068467855453491
+  },
+  {
+    "index": 197,
+    "input": [
+      "teman",
+      "baik",
+      "nyaman",
+      "saya",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman senang. Teman nyaman.\n\nJika Anda ingin saya menulis kalimat baru berdasarkan tema: rumah, sekolah, atau taman, silakan mengatur label NER Anda dengan kata-kata yang lebih sederhana, atau memberikan saya tema dan label NER yang sudah disesuaikan.",
+    "generated": "[\"teman\", \"baik\", \"nyaman\", \"saya\", \"senang\"]",
+    "perplexity": 1.0007389783859253
+  },
+  {
+    "index": 198,
+    "input": [
+      "ibu",
+      "tanam",
+      "sayuran",
+      "gembira"
+    ],
+    "reference": "Ibu tani. Ibu tanam sayuran. Ibu gembira.",
+    "generated": "[\"ibu\", \"tanam\", \"sayuran\", \"gembira\"]",
+    "perplexity": 1.001336693763733
+  },
+  {
+    "index": 199,
+    "input": [
+      "taman",
+      "berumput",
+      "saya",
+      "senang"
+    ],
+    "reference": "Orang ke taman. Taman berumput. Saya senang.",
+    "generated": "[\"taman\", \"berumput\", \"saya\", \"senang\"]",
+    "perplexity": 1.0001142024993896
+  },
+  {
+    "index": 200,
+    "input": [
+      "orang",
+      "jalan",
+      "kaki",
+      "toko",
+      "belanja"
+    ],
+    "reference": "Orang jalan kaki. Orang ke toko. Orang belanja.",
+    "generated": "[\"orang\", \"jalan\", \"kaki\", \"toko\", \"belanja\"]",
+    "perplexity": 1.0058832168579102
+  },
+  {
+    "index": 201,
+    "input": [
+      "baik",
+      "senang",
+      "nyaman",
+      "Cards",
+      "minum",
+      "air",
+      "nyaman",
+      "Cards",
+      "bermain",
+      "taman",
+      "senang",
+      "Cards",
+      "tinggi",
+      "kota",
+      "indah",
+      "Cards",
+      "baik",
+      "bermain",
+      "gembira"
+    ],
+    "reference": "Orang baik. Orang memberi. Orang senang.\n\n2.\nStory: Saya minum. Saya minum air. Saya nyaman.\n\n3.\nStory: Kita bermain. Kita bermain di taman. Kita senang.\n\n4.\nStory: Bangunan tinggi. Bangunan ada di kota. Bangunan indah.\n\n5.\nStory: Teman baik. Teman bermain. Teman gembira.\n\nSemoga paragraf-paragraf di atas dapat membantu Anda dalam mencari inspirasi cerita untuk anak Anda.",
+    "generated": "[\"baik\", \"senang\", \"nyaman\", \"Cards\", \"minum\", \"air\", \"nyaman\", \"Cards\", \"bermain\", \"taman\", \"senang\", \"Cards\", \"tinggi\", \"kota\", \"indah\", \"Cards\", \"baik\", \"bermain\", \"gembira\"]",
+    "perplexity": 1.0005747079849243
+  },
+  {
+    "index": 202,
+    "input": [
+      "rumah",
+      "nyaman"
+    ],
+    "reference": "Orang tidur. Orang nyenyak. Orang senang.\n\nTema: rumah\nKalimat terakhir memberi rasa nyaman.",
+    "generated": "[\"rumah\", nyaman]",
+    "perplexity": 1.153440237045288
+  },
+  {
+    "index": 203,
+    "input": [
+      "Orang",
+      "minum",
+      "air",
+      "baik"
+    ],
+    "reference": "Orang minum. Orang minum air. Orang baik.",
+    "generated": "[\"Orang\", \"minum\", \"air\", \"baik\"]",
+    "perplexity": 1.0018799304962158
+  },
+  {
+    "index": 204,
+    "input": [
+      "rumah",
+      "orang"
+    ],
+    "reference": "Orang merasa lega. Orang suka rumah. Orang nyaman.",
+    "generated": "[\"rumah\", \"orang\"]",
+    "perplexity": 1.0102505683898926
+  },
+  {
+    "index": 205,
+    "input": [
+      "Guru",
+      "nyaman",
+      "baik",
+      "Cards",
+      "siswa",
+      "baik",
+      "senang",
+      "Cards",
+      "anak",
+      "nyaman",
+      "belajar",
+      "Cards",
+      "Guru",
+      "tersenyum",
+      "senang",
+      "Cards",
+      "Teman",
+      "baik",
+      "nyaman"
+    ],
+    "reference": "Guru nyaman. Guru berbicara pelan. Guru baik.\n\n2.\nStory: Siswa baik. Hari sekolah. Siswa senang.\n\n3.\nStory: Anak duduk. Anak belajar. Anak nyaman.\n\n4.\nStory: Guru tersenyum. Guru senang. Saya senang.\n\n5.\nStory: Teman berbicara. Teman baik. Saya nyaman.",
+    "generated": "[\"Guru\", \"nyaman\", \"baik\", \"Cards\", \"siswa\", \"baik\", \"senang\", \"Cards\", \"anak\", \"nyaman\", \"belajar\", \"Cards\", \"Guru\", \"tersenyum\", \"senang\", \"Cards\", \"Teman\", \"baik\", \"nyaman\"]",
+    "perplexity": 1.0044200420379639
+  },
+  {
+    "index": 206,
+    "input": [
+      "rumah",
+      "masuk",
+      "nyaman",
+      "senang",
+      "orang"
+    ],
+    "reference": "Orang masuk rumah. Orang nyaman. Orang senang.",
+    "generated": "[\"rumah\", \"masuk\", \"nyaman\", \"senang\", \"orang\"]",
+    "perplexity": 1.0044492483139038
+  },
+  {
+    "index": 207,
+    "input": [
+      "Orang",
+      "gembira",
+      "makan",
+      "senang"
+    ],
+    "reference": "Orang gembira. Orang makan. Orang senang.",
+    "generated": "[\"Orang\", \"gembira\", \"makan\", \"senang\"]",
+    "perplexity": 1.0003576278686523
+  },
+  {
+    "index": 208,
+    "input": [
+      "mata",
+      "kita",
+      "kapal",
+      "senang"
+    ],
+    "reference": "Orang mengerutkan mata. Orang melihat kapal. Orang senang.",
+    "generated": "[\"mata\", \"kita\", \"kapal\", \"senang\"]",
+    "perplexity": 1.0620518922805786
+  },
+  {
+    "index": 209,
+    "input": [
+      "teman",
+      "bukit",
+      "senang",
+      "jalan"
+    ],
+    "reference": "Teman berjalan. Teman melihat bukit. Teman senang.",
+    "generated": "[\" teman\", \"bukit\", \"senang\", \"jalan\"]",
+    "perplexity": 1.0318673849105835
+  },
+  {
+    "index": 210,
+    "input": [
+      "teman",
+      "baik",
+      "saya"
+    ],
+    "reference": "Saya teman. Teman baik. Saya senang.",
+    "generated": "[\"teman\", \"baik\", \"saya\"]",
+    "perplexity": 1.00173819065094
+  },
+  {
+    "index": 211,
+    "input": [
+      "rumah",
+      "tidur",
+      "nyaman"
+    ],
+    "reference": "Orang masuk rumah. Orang tidur nyaman.",
+    "generated": "[\"rumah\", \"tidur\", \"nyaman\"]",
+    "perplexity": 1.0024107694625854
+  },
+  {
+    "index": 212,
+    "input": [
+      "kakek",
+      "taman",
+      "hari",
+      "gembira",
+      "tertawa",
+      "Cards",
+      "kakek",
+      "buah",
+      "taman",
+      "bagus",
+      "gembira",
+      "Cards",
+      "kakek",
+      "teman",
+      "lapangan",
+      "tertawa",
+      "senang",
+      "Cards",
+      "kakek",
+      "makanan",
+      "toko",
+      "duduk",
+      "puas",
+      "Cards",
+      "kakek",
+      "taman",
+      "gembira",
+      "tertawa",
+      "senang",
+      "Cards",
+      "kakek",
+      "rumah",
+      "bagus",
+      "duduk",
+      "baik",
+      "Cards",
+      "kakek",
+      "makanan",
+      "taman",
+      "tertawa",
+      "senang",
+      "Cards",
+      "kakek",
+      "teman",
+      "lapangan",
+      "duduk",
+      "puas",
+      "Cards",
+      "kakek",
+      "buah",
+      "taman"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat 1–2 kata.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah.\n3. Tidak boleh nama orang/keluarga.\n4. Nada harus positif/tenang/aman.\n5. Tema: kakek yang tertawa.\n\nGanti Label NER dengan kata sederhana:\n- <|PER|> → orang / teman / guru\n- <|ORG|> → sekolah / toko / kelompok\n- <|LOC|> → tempat / taman / lapangan\n- <|FAC|> → bangunan / rumah / jalan\n- <|GPE|> → kota / desa / negara\n- <|PRD|> → barang / mainan / makanan\n\nFormat:\nStory: <2–3 kalimat, setiap kalimat 1–2 kata, dalam satu baris>\n\nContoh Output:\n\n1.\nStory: Kakek tertawa. Kakek tertawa. Kakek senang.\n\n2.\nStory: Kakek baik. Hari bagus. Kakek gembira.\n\n3.\nStory: Kakek duduk. Kakek duduk. Kakek tenang.\n\n4.\nStory: Kakek makan. Kakek makan. Kakek puas.",
+    "generated": "[\"kakek\", \"taman\", \"hari\", \"gembira\", \"tertawa\", \"Cards\", \"kakek\", \"buah\", \"taman\", \"bagus\", \"gembira\", \"Cards\", \"kakek\", \"teman\", \"lapangan\", \"tertawa\", \"senang\", \"Cards\", \"kakek\", \"makanan\", \"toko\", \"duduk\", \"puas\", \"Cards\", \"kakek\", \"taman\", \"gembira\", \"tertawa\", \"senang\", \"Cards\", \"kakek\", \"makanan\", \"toko\", \"duduk\", \"puas\", \"Cards\", \"kakek\", \"taman\", \"gembira\", \"tertawa\", \"senang\", \"Cards\", \"kakek\", \"makanan\", \"taman\", \"tertawa\", \"senang\", \"Cards\", \"kakek\", \"teman\", \"lapangan\", \"duduk\", \"baik\", \"Cards\", \"kakek\", \"makanan\", \"taman\", \"tertawa\", \"senang\", \"Cards\", \"kakek\", \"teman\", \"lapangan\", \"duduk\", \"puas\", \"Cards\", \"kakek\", \"buah\", \"taman\"",
+    "perplexity": 1.235809326171875
+  },
+  {
+    "index": 213,
+    "input": [
+      "teman",
+      "main",
+      "gembira"
+    ],
+    "reference": "Teman bermain. Teman menari. Teman gembira.",
+    "generated": "[\"teman\", \"main\", \"gembira\"]",
+    "perplexity": 1.000367283821106
+  },
+  {
+    "index": 214,
+    "input": [
+      "adik",
+      "teman",
+      "adik",
+      "senang",
+      "jalan"
+    ],
+    "reference": "Adik jalan. Teman taman. Adik senang.",
+    "generated": "[\"adik\", \"teman\", \"adik\", \"senang\", \"jalan\"]",
+    "perplexity": 1.0002139806747437
+  },
+  {
+    "index": 215,
+    "input": [
+      "orang",
+      "baik",
+      "nyaman"
+    ],
+    "reference": "Orang baik. Mereka baik. Semua nyaman.",
+    "generated": "[\"orang\", \"baik\", \"nyaman\"]",
+    "perplexity": 1.0068645477294922
+  },
+  {
+    "index": 216,
+    "input": [
+      "siswa",
+      "guru",
+      "belajar",
+      "mengajar"
+    ],
+    "reference": "Siswa masuk. Guru mengajar. Siswa belajar.",
+    "generated": "[\"iswa\", \"guru\", \"belajar\", \"mengajar\"]",
+    "perplexity": 1.0006340742111206
+  },
+  {
+    "index": 217,
+    "input": [
+      "bunga",
+      "teman",
+      "gembira"
+    ],
+    "reference": "Teman duduk. Teman lihat bunga. Teman gembira.",
+    "generated": "[\"bunga\", \"teman\", \"gembira\"]",
+    "perplexity": 1.0013350248336792
+  },
+  {
+    "index": 218,
+    "input": [
+      "rumah",
+      "kecil",
+      "saya",
+      "senang"
+    ],
+    "reference": "Saya ke rumah. Rumah kecil. Saya senang.",
+    "generated": "[\"rumah\", \"kecil\", \"saya\", \"senang\"]",
+    "perplexity": 1.0037575960159302
+  },
+  {
+    "index": 219,
+    "input": [
+      "barang",
+      "orang",
+      "senang",
+      "menyesalkan"
+    ],
+    "reference": "Orang menanyakan barang. Orang menyesalkan barang. Orang senang.",
+    "generated": "[\"barang\", \"orang\", \"senang\", \"menyesalkan\"]",
+    "perplexity": 1.0197793245315552
+  },
+  {
+    "index": 220,
+    "input": [
+      "baju",
+      "jalan",
+      "air"
+    ],
+    "reference": "Orang rumah makan baju. Orang taman jalan. Orang desa minum air.",
+    "generated": "[\"baju\", \"jalan\", \"air\"]",
+    "perplexity": 1.0031379461288452
+  },
+  {
+    "index": 221,
+    "input": [
+      "sedih",
+      "istirahat",
+      "baik"
+    ],
+    "reference": "Saya merasa sedih. Saya butuh istirahat. Saya baik.",
+    "generated": "[\"sedih\", \"istirahat\", \"baik\"]",
+    "perplexity": 1.0011571645736694
+  },
+  {
+    "index": 222,
+    "input": [
+      "ibu",
+      "teh",
+      "gula",
+      "minum"
+    ],
+    "reference": "Ibu buat teh. Ibu buat gula. Aku minum teh.",
+    "generated": "[\"ibu\", \"teh\", \"gula\", \"minum\"]",
+    "perplexity": 1.0018155574798584
+  },
+  {
+    "index": 223,
+    "input": [
+      "makan",
+      "minum",
+      "tidur"
+    ],
+    "reference": "Orang makan. Orang minum. Orang tidur.",
+    "generated": "[\"makan\", \"minum\", \"tidur\"]",
+    "perplexity": 1.0037368535995483
+  },
+  {
+    "index": 224,
+    "input": [
+      "Jeep",
+      "rumah",
+      "senang"
+    ],
+    "reference": "Jeep datang. Jeep ke rumah. Jeep senang.",
+    "generated": "[\"Jeep\", \"rumah\", \"senang\"]",
+    "perplexity": 1.0003958940505981
+  },
+  {
+    "index": 225,
+    "input": [
+      "kopi",
+      "orang",
+      "tertawa",
+      "Cards",
+      "pesawat",
+      "parkir",
+      "orang",
+      "Cards",
+      "kunci",
+      "bingung",
+      "Cards",
+      "orang",
+      "tidak",
+      "sabar",
+      "rumah",
+      "Cards",
+      "orang",
+      "lupa",
+      "khawatir"
+    ],
+    "reference": "Batang kopi habis. Orang tertawa.\n\n2.\nStory: Pesawat parkir. Orang kehilangan tujuan.\n\n3.\nStory: Orang kehilangan kunci. Orang bingung.\n\n4.\nStory: Orang tidak sabar. Orang ingin ke rumah.\n\n5.\nStory: Orang tidak sengaja lupa. Orang merasa khawatir.",
+    "generated": "[\"kopi\", \"orang\", \"tertawa\", \"Cards\", \"pesawat\", \"parkir\", \"orang\", \"Cards\", \"kunci\", \"bingung\", \"Cards\", \"orang\", \"tidak\", \"sabar\", \"rumah\", \"Cards\", \"orang\", \"lupa\", \"khawatir\"]",
+    "perplexity": 1.001015067100525
+  },
+  {
+    "index": 226,
+    "input": [
+      "bocah",
+      "makan",
+      "buah",
+      "senang"
+    ],
+    "reference": "Bocah lapar. Bocah makan buah. Bocah senang.\n\nCatatan: Saya telah mengubah paragraf asli untuk memenuhi aturan yang diberikan, yaitu membuat kalimat sederhana dan tidak memiliki nama orang atau tempat khusus. Saya juga telah mengganti kata-kata yang sulit dengan kata-kata yang lebih mudah.",
+    "generated": "[\"bocah\", \"makan\", \"buah\", \"senang\"]",
+    "perplexity": 1.0003588199615479
+  },
+  {
+    "index": 227,
+    "input": [
+      "rumah",
+      "baik",
+      "saya"
+    ],
+    "reference": "Saya rumah. Rumah baik. Saya senang.",
+    "generated": "[\"rumah\", \"baik\", \"saya\"]",
+    "perplexity": 1.0037145614624023
+  },
+  {
+    "index": 228,
+    "input": [
+      "teman",
+      "guru",
+      "main",
+      "bermain"
+    ],
+    "reference": "Saya datang. Guru senang. Teman bermain.",
+    "generated": "[\"teman\", \"guru\", \"main\", \"bermain\"]",
+    "perplexity": 1.0388084650039673
+  },
+  {
+    "index": 229,
+    "input": [
+      "teman",
+      "kota",
+      "tahun",
+      "lahir"
+    ],
+    "reference": "Teman lahir di kota. Teman lahir tahun 1970.",
+    "generated": "[\"teman\", \"kota\", \"tahun\", \"lahir\"]",
+    "perplexity": 1.001320481300354
+  },
+  {
+    "index": 230,
+    "input": [
+      "teman",
+      "bunga",
+      "senang",
+      "di",
+      "lapangan"
+    ],
+    "reference": "Teman berada di lapangan. Teman melihat bunga. Teman senang.\n\nPerlu diingat bahwa saya adalah generator kalimat sederhana untuk anak usia dini dan pengguna AAC, jadi saya akan berusaha untuk menciptakan kalimat yang sederhana dan positif.",
+    "generated": "[\"teman\", \"bunga\", \"senang\", \"di\", \"lapangan\"]",
+    "perplexity": 1.0006780624389648
+  },
+  {
+    "index": 231,
+    "input": [
+      "baik",
+      "tersenyum",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang tersenyum. Orang senang.",
+    "generated": "[\"baik\", \"tersenyum\", \"senang\"]",
+    "perplexity": 1.000684380531311
+  },
+  {
+    "index": 232,
+    "input": [
+      "teman",
+      "baju",
+      "baik",
+      "memberi",
+      "baik"
+    ],
+    "reference": "Teman baik. Teman memberi. Teman memberi baju.",
+    "generated": "[\"teman\", \"baju\", \"baik\", \"memberi\", \"baik\"]",
+    "perplexity": 1.0015628337860107
+  },
+  {
+    "index": 233,
+    "input": [
+      "anak",
+      "anak",
+      "ibu",
+      "kantor",
+      "bekerja",
+      "main"
+    ],
+    "reference": "Ibu pergi ke kantor. Ibu bekerja. Anak-anak bermain.",
+    "generated": "[\"anak\", \"anak\", \"ibu\", \"kantor\", \"bekerja\", \"main\"]",
+    "perplexity": 1.000746488571167
+  },
+  {
+    "index": 234,
+    "input": [
+      "orang",
+      "bungan",
+      "senang",
+      "jalan",
+      "melihat"
+    ],
+    "reference": "Orang berjalan. Orang melihat bunga. Orang senang.",
+    "generated": "[\"orang\", \"bungan\", \"senang\", \"jalan\", \"melihat\"]",
+    "perplexity": 1.0350843667984009
+  },
+  {
+    "index": 235,
+    "input": [
+      "baju",
+      "Cards",
+      "teman",
+      "main",
+      "gembira",
+      "Cards",
+      "guru",
+      "mengajar",
+      "Cards",
+      "tempat",
+      "teduh",
+      "nyaman",
+      "Cards",
+      "baju",
+      "sejuk",
+      "hangat"
+    ],
+    "reference": "Orang membawa baju. Orang meletakkan baju. Orang senang.\n\n2.\nStory: Teman bermain. Teman berlari. Teman gembira.\n\n3.\nStory: Guru mengajar. Murid belajar. Guru baik.\n\n4.\nStory: Tempat teduh. Tempat hujan. Saya nyaman.\n\n5.\nStory: Baju sejuk. Baju hangat. Saya senang.",
+    "generated": "[\"baju\", \"Cards\", \"teman\", \"main\", \"gembira\", \"Cards\", \"guru\", \"mengajar\", \"Cards\", \"tempat\", \"teduh\", \"nyaman\", \"Cards\", \"baju\", \"sejuk\", \"hangat\"]",
+    "perplexity": 1.0004582405090332
+  },
+  {
+    "index": 236,
+    "input": [
+      "teman",
+      "roti",
+      "senang",
+      "Cards",
+      "minum",
+      "alpukat",
+      "Cards",
+      "guru",
+      "baik",
+      "hari",
+      "senang",
+      "nyaman",
+      "Cards",
+      "bangunan",
+      "nyala",
+      "udara",
+      "dingin",
+      "Cards",
+      "pesawat",
+      "naik"
+    ],
+    "reference": "Teman lapar. Teman makan roti. Teman senang.\n\n2.\nStory: Orang minum. Orang minum alpukat.\n\n3.\nStory: Guru baik. Hari bagus. Kamu senang. Semua nyaman.\n\n4.\nStory: Bangunan nyala. Udara dingin. Saya nyaman.\n\n5.\nStory: Pesawat naik. Pesawat akan naik.",
+    "generated": "[\"teman\", \"roti\", \"senang\", \"Cards\", \"minum\", \"alpukat\", \"Cards\", \"guru\", \"baik\", \"hari\", \"senang\", \"nyaman\", \"Cards\", \"bangunan\", \"nyala\", \"udara\", \"dingin\", \"Cards\", \"pesawat\", \"naik\"]",
+    "perplexity": 1.0013591051101685
+  },
+  {
+    "index": 237,
+    "input": [
+      "rumah",
+      "berlari",
+      "orang",
+      "pergi"
+    ],
+    "reference": "Kamu berlari. Kamu berlari ke rumah. Orang akan pergi.",
+    "generated": "[\"rumah\", \"berlari\", \"orang\", \"pergi\"]",
+    "perplexity": 1.0019404888153076
+  },
+  {
+    "index": 238,
+    "input": [
+      "orang",
+      "teman",
+      "bersama"
+    ],
+    "reference": "Orang tidak puas. Orang bicara dengan teman. Orang senang bersama.",
+    "generated": "[\"orang\", \"teman\", \"bersama\"]",
+    "perplexity": 1.002492070198059
+  },
+  {
+    "index": 239,
+    "input": [
+      "adik",
+      "bermain",
+      "gembira",
+      "Cards",
+      "teman",
+      "minum",
+      "air",
+      "nyaman",
+      "Cards",
+      "guru",
+      "baik",
+      "saya",
+      "senang",
+      "Cards",
+      "kelompok",
+      "bermain",
+      "tertawa",
+      "Cards",
+      "lingkungan",
+      "bersih",
+      "indah",
+      "nyaman"
+    ],
+    "reference": "Adik baik. Adik bermain. Adik gembira.\n\n2.\nStory: Teman minum. Teman minum air. Teman nyaman.\n\n3.\nStory: Guru baik. Guru memberikan. Saya senang.\n\n4.\nStory: Kelompok bermain. Kelompok tertawa. Saya gembira.\n\n5.\nStory: Lingkungan bersih. Lingkungan indah. Aku nyaman.",
+    "generated": "[\"adik\", \"bermain\", \"gembira\", \"Cards\", \"teman\", \"minum\", \"air\", \"nyaman\", \"Cards\", \"guru\", \"baik\", \"saya\", \"senang\", \"Cards\", \"kelompok\", \"bermain\", \"tertawa\", \"Cards\", \"lingkungan\", \"bersih\", \"indah\", \"nyaman\"]",
+    "perplexity": 1.0032832622528076
+  },
+  {
+    "index": 240,
+    "input": [
+      "Orang",
+      "baik",
+      "bantu",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang membantu. Orang senang.",
+    "generated": "[\"Orang\", \"baik\", \"bantu\", \"senang\"]",
+    "perplexity": 1.0007092952728271
+  },
+  {
+    "index": 241,
+    "input": [
+      "or",
+      "bangun",
+      "buka",
+      "gorden",
+      "senang",
+      "orang"
+    ],
+    "reference": "Orang bangun. Orang buka gorden. Orang senang.",
+    "generated": "[\" or\", \"bangun\", \"buka\", \"gorden\", \"senang\", \"orang\"]",
+    "perplexity": 1.0057899951934814
+  },
+  {
+    "index": 242,
+    "input": [
+      "teman",
+      "main",
+      "senang",
+      "baik",
+      "Untuk",
+      "paragraf",
+      "kedua",
+      "kata",
+      "kata",
+      "relevan",
+      "adalah",
+      "Cards",
+      "sekolah",
+      "bagus",
+      "saya",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman main. Semua senang.\n\nAtau:\n\nStory: Sekolah ada. Sekolah bagus. Saya senang.",
+    "generated": "[\"teman\", \"main\", \"senang\", \"baik\", \"Untuk\", \"paragraf\", \"kedua\", \"kedua\", \"kata\", \"kata\", \"relevan\", \"adalah\", \"Cards\", \"sekolah\", \"bagus\", \"saya\", \"senang\"]",
+    "perplexity": 1.0247105360031128
+  },
+  {
+    "index": 243,
+    "input": [
+      "teman",
+      "hewan",
+      "senang"
+    ],
+    "reference": "Teman jalan. Teman lihat hewan. Hewan senang.",
+    "generated": "[\"teman\", \"hewan\", \"senang\"]",
+    "perplexity": 1.000497817993164
+  },
+  {
+    "index": 244,
+    "input": [
+      "orang",
+      "tinggal",
+      "senang"
+    ],
+    "reference": "Orang pergi. Orang tinggal. Orang senang.",
+    "generated": "[\"orang\", \"tinggal\", \"senang\"]",
+    "perplexity": 1.028538465499878
+  },
+  {
+    "index": 245,
+    "input": [
+      "buku",
+      "orang",
+      "nyaman"
+    ],
+    "reference": "Orang duduk. Orang baca buku. Orang nyaman.",
+    "generated": "[\"buku\", \"orang\", \"nyaman\"]",
+    "perplexity": 1.0034822225570679
+  },
+  {
+    "index": 246,
+    "input": [
+      "baik",
+      "bantu",
+      "senang",
+      "orang",
+      "bantu",
+      "senang"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat, setiap kalimat hanya 1–2 kata saja, dengan nada positif/tenang/aman.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?, tanpa label NER.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga (ayah, ibu, adik, kakak, kakek, nenek), tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nLabel NER:\n- <|PER|> → orang / teman / guru\n- <|ORG|> → sekolah / toko / kelompok\n- <|LOC|> → tempat / taman / lapangan\n- <|FAC|> → bangunan / rumah / jalan\n- <|GPE|> → kota / desa / negara\n- <|PRD|> → barang / mainan / makanan\n\nGanti Label NER:\n- M <org> \n- rembugan.name \n- dasar \n- ntu \n- baek \n- ntu \n- justru \n- punyeharapan \n- moga \n- bisi \n- dahganti \n- kesan \n- buruk \n- ntu \n- amekelakuan \n- baek \n- ntu \n- pengarepan \n- ntu \n- hur \n\nStory: Orang baik. Orang bantu. Orang senang.",
+    "generated": "[\"baik\", \"bantu\", \"senang\", \"orang\", \"bantu\", \"senang\"]",
+    "perplexity": 1.0006998777389526
+  },
+  {
+    "index": 247,
+    "input": [
+      "anak",
+      "lelaki",
+      "spanduk",
+      "berjalan",
+      "duduk"
+    ],
+    "reference": "Anak lelaki duduk. Anak lelaki lihat spanduk. Anak lelaki berjalan.",
+    "generated": "[\"anak\", \"lelaki\", \"spanduk\", \"berjalan\", \"duduk\"]",
+    "perplexity": 1.0008360147476196
+  },
+  {
+    "index": 248,
+    "input": [
+      "tanah",
+      "baik",
+      "teman",
+      "usaha"
+    ],
+    "reference": "Teman usaha. Teman berhasil. Tanah baik.\n\n(Saya mengubah konteks aslinya untuk sesuai dengan aturan yang telah ditentukan. Konteks aslinya agak panjang dan kompleks.)",
+    "generated": "[\"tanah\", \"baik\", \"teman\", \"usaha\"]",
+    "perplexity": 1.0011378526687622
+  },
+  {
+    "index": 249,
+    "input": [
+      "tidur",
+      "bangun",
+      "gembira",
+      "orang",
+      "malam",
+      "pagi"
+    ],
+    "reference": "Orang tidur. Orang bangun. Orang gembira.",
+    "generated": "[\"tidur\", \"bangun\", \"gembira\", \"orang\", \"malam\", \"pagi\"]",
+    "perplexity": 1.000756025314331
+  },
+  {
+    "index": 250,
+    "input": [
+      "teman",
+      "duduk",
+      "bekerja"
+    ],
+    "reference": "Teman duduk. Teman bicara. Teman bekerja.",
+    "generated": "[\"teman\", \"duduk\", \"bekerja\"]",
+    "perplexity": 1.001705288887024
+  },
+  {
+    "index": 251,
+    "input": [
+      "baik",
+      "hari",
+      "senang",
+      "nyaman"
+    ],
+    "reference": "Orang baik. Hari bagus. Aku senang. Semua nyaman.\n\nKalimat di atas adalah contoh kalimat sederhana yang baik untuk anak usia dini.",
+    "generated": "[\"baik\", \"hari\", \"senang\", \"nyaman\"]",
+    "perplexity": 1.1176609992980957
+  },
+  {
+    "index": 252,
+    "input": [
+      "makanan",
+      "bagus"
+    ],
+    "reference": "Orang membawa makanan. Makanan bagus.",
+    "generated": "[\"makanan\", \"bagus\"]",
+    "perplexity": 1.0019084215164185
+  },
+  {
+    "index": 253,
+    "input": [
+      "pohon",
+      "orang",
+      "nyaman"
+    ],
+    "reference": "Orang berbicara. Orang bicara pohon. Orang merasa nyaman.",
+    "generated": "[\"pohon\", \"orang\", \"nyaman\"]",
+    "perplexity": 1.0063860416412354
+  },
+  {
+    "index": 254,
+    "input": [
+      "rumah",
+      "barang",
+      "senang"
+    ],
+    "reference": "Aku tinggal di rumah. Aku memiliki barang. Aku senang.",
+    "generated": "[\"rumah\", \"barang\", \"senang\"]",
+    "perplexity": 1.099650263786316
+  },
+  {
+    "index": 255,
+    "input": [
+      "ibu",
+      "anak",
+      "barang",
+      "tempat"
+    ],
+    "reference": "Ibu merajut mainan. Anak membawa barang. Anak pergi ke tempat.\n\nCatatan: Saya telah mengganti label NER dengan kata sederhana, serta menyesuaikan kalimat agar sesuai dengan aturan yang ditentukan.",
+    "generated": "[\"ibu\", \"anak\", \"barang\", \"tempat\"]",
+    "perplexity": 1.000303864479065
+  },
+  {
+    "index": 256,
+    "input": [
+      "teman",
+      "bermain",
+      "senang"
+    ],
+    "reference": "Teman taman. Teman bermain. Teman senang.",
+    "generated": "[\"teman\", \"bermain\", \"senang\"]",
+    "perplexity": 1.0004459619522095
+  },
+  {
+    "index": 257,
+    "input": [
+      "orang",
+      "hari",
+      "gembira",
+      "senang"
+    ],
+    "reference": "Orang gembira. Orang gembira hari. Orang senang.\n\nSilakan mengetahui apakah kalimat tersebut sesuai dengan kebutuhan Anda.",
+    "generated": "[\"orang\", \"hari\", \"gembira\", \"senang\"]",
+    "perplexity": 1.0019609928131104
+  },
+  {
+    "index": 258,
+    "input": [
+      "asap",
+      "rumah",
+      "kamu",
+      "khawatir",
+      "teman",
+      "kota"
+    ],
+    "reference": "Lihat. Asap ke rumah. Saya khawatir.\n\nLabel:\n- <|PER|> → teman\n- <|GPE|> → kota\n\nKalimat sudah disederhanakan untuk anak usia dini.",
+    "generated": "[\" asap\", \"rumah\", \"kamu\", \"khawatir\", \"teman\", \"kota\"]",
+    "perplexity": 1.0032483339309692
+  },
+  {
+    "index": 259,
+    "input": [
+      "tanah",
+      "lembut",
+      "hijau",
+      "indah"
+    ],
+    "reference": "Tanah lembut. Tanah hijau. Tanah indah.",
+    "generated": "[\"tanah\", \"lembut\", \"hijau\", \"indah\"]",
+    "perplexity": 1.005595088005066
+  },
+  {
+    "index": 260,
+    "input": [
+      "adik",
+      "nasi",
+      "senang"
+    ],
+    "reference": "Adik lapar. Adik makan nasi. Adik senang.",
+    "generated": "[\"adik\", \"nasi\", \"senang\"]",
+    "perplexity": 1.000471591949463
+  },
+  {
+    "index": 261,
+    "input": [
+      "lantai",
+      "pola",
+      "warna",
+      "senang"
+    ],
+    "reference": "Lantai cantik. Pola warna cerah. Saya senang.",
+    "generated": "[\"lantai\", \"pola\", \"warna\", \"senang\"]",
+    "perplexity": 1.0007879734039307
+  },
+  {
+    "index": 262,
+    "input": [
+      "teman",
+      "baik",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman bantu. Teman senang.",
+    "generated": "[\"teman\", \"baik\", \"senang\"]",
+    "perplexity": 1.0004748106002808
+  },
+  {
+    "index": 263,
+    "input": [
+      "bagus",
+      "baru",
+      "baik"
+    ],
+    "reference": "Jaket ku bagus. Jaket ku baru. Teman ku baik.\n\nCatatan:\nSaya telah mengubah kalimat untuk membuatnya lebih sederhana dan sesuai dengan aturan yang ditentukan.",
+    "generated": "[\"bagus\", \"baru\", \"baik\"]",
+    "perplexity": 1.001102328300476
+  },
+  {
+    "index": 264,
+    "input": [
+      "orang",
+      "makan",
+      "duduk",
+      "bahagia"
+    ],
+    "reference": "Orang makan. Orang duduk. Orang bahagia.",
+    "generated": "[\" orang\", \"makan\", \"duduk\", \"bahagia\"]",
+    "perplexity": 1.012718677520752
+  },
+  {
+    "index": 265,
+    "input": [
+      "rumah",
+      "teman",
+      "saya",
+      "baik",
+      "nyaman",
+      "senang"
+    ],
+    "reference": "Teman baik. Rumah nyaman. Saya senang.",
+    "generated": "[\"rumah\", \"teman\", \"saya\", \"baik\", \"nyaman\", \"senang\"]",
+    "perplexity": 1.0005016326904297
+  },
+  {
+    "index": 266,
+    "input": [
+      "Orang",
+      "saya",
+      "senang"
+    ],
+    "reference": "Orang datang. Orang senang. Saya senang.",
+    "generated": "[\"Orang\", \"saya\", \"senang\"]",
+    "perplexity": 1.0003654956817627
+  },
+  {
+    "index": 267,
+    "input": [
+      "orang",
+      "motor",
+      "kotor",
+      "jalan"
+    ],
+    "reference": "Orang pamit. Orang naik motor. Orang jalan kotor.",
+    "generated": "[\"orang\", \"motor\", \"kotor\", \"jalan\"]",
+    "perplexity": 1.001117467880249
+  },
+  {
+    "index": 268,
+    "input": [
+      "toko",
+      "baik",
+      "benci",
+      "merasa"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat, setiap kalimat hanya 1–2 kata saja.\n\nStory: Bungkam tahu. Bungkam benci toko. Bungkam merasa baik.",
+    "generated": "[\"toko\", \"baik\", \"benci\", \"merasa\"]",
+    "perplexity": 1.0019162893295288
+  },
+  {
+    "index": 269,
+    "input": [
+      "Orang",
+      "rumah",
+      "duduk",
+      "senang"
+    ],
+    "reference": "Orang rumah. Orang duduk. Orang senang.",
+    "generated": "[\"Orang\", \"rumah\", \"duduk\", \"senang\"]",
+    "perplexity": 1.0006271600723267
+  },
+  {
+    "index": 270,
+    "input": [
+      "teman",
+      "senyum",
+      "lebar",
+      "ramah",
+      "senyum"
+    ],
+    "reference": "Teman menyapa. Teman senyum lebar. Teman ramah.",
+    "generated": "[\"teman\", \"senyum\", \"lebar\", \"ramah\", \"senyum\"]",
+    "perplexity": 1.0036529302597046
+  },
+  {
+    "index": 271,
+    "input": [
+      "tidur",
+      "adik",
+      "orang",
+      "semua",
+      "nyaman"
+    ],
+    "reference": "Adik tidur. Orang tidur. Semua nyaman.",
+    "generated": "[\"tidur\", \"adik\", \"orang\", \"semua\", \"nyaman\"]",
+    "perplexity": 1.012500286102295
+  },
+  {
+    "index": 272,
+    "input": [
+      "air",
+      "roti",
+      "roti",
+      "orang",
+      "senang"
+    ],
+    "reference": "Orang minum air. Orang makan roti. Orang senang.",
+    "generated": "[\"air\", \"roti\", \"roti\", \"orang\", \"senang\"]",
+    "perplexity": 1.0001710653305054
+  },
+  {
+    "index": 273,
+    "input": [
+      "teman",
+      "baik",
+      "main",
+      "senang",
+      "Kartu",
+      "AAC",
+      "dari",
+      "paragraf",
+      "kedua",
+      "Cards",
+      "guru",
+      "baik",
+      "cerita",
+      "gembira",
+      "Kartu",
+      "AAC",
+      "dari",
+      "paragraf",
+      "ketiga",
+      "Cards",
+      "saya",
+      "duduk",
+      "baca",
+      "nyaman",
+      "Kartu",
+      "AAC",
+      "dari",
+      "paragraf",
+      "keempat",
+      "Cards",
+      "orang",
+      "menghadiah",
+      "terima",
+      "senang",
+      "Kartu",
+      "AAC",
+      "dari",
+      "paragraf",
+      "kelima",
+      "Cards",
+      "kota",
+      "bersih",
+      "indah",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman main. Teman senang.\n\n2.\nStory: Guru baik. Guru cerita. Guru gembira.\n\n3.\nStory: Saya duduk. Saya baca. Saya nyaman.\n\n4.\nStory: Orang menghadiah. Orang terima. Orang senang.\n\n5.\nStory: Kota bersih. Kota indah. Saya senang.",
+    "generated": "[\"teman\", \"baik\", \"main\", \"senang\", \"Kartu\", \"AAC\", \"dari\", \"paragraf\", \"kedua\", \"Cards\", \"guru\", \"baik\", \"cerita\", \"gembira\", \"Kartu\", \"AAC\", \"dari\", \"paragraf\", \"ketiga\", \"Cards\", \"saya\", \"duduk\", \"baca\", \"nyaman\", \"Kartu\", \"AAC\", \"dari\", \"paragraf\", \"keempat\", \"Cards\", \"orang\", \"menghadiah\", \"terima\", \"senang\", \"Kartu\", \"AAC\", \"dari\", \"paragraf\", \"kelima\", \"Cards\", \"kota\", \"bersih\", \"indah\", \"senang\"]",
+    "perplexity": 1.002416729927063
+  },
+  {
+    "index": 274,
+    "input": [
+      "rumah",
+      "barang",
+      "nyaman"
+    ],
+    "reference": "Kita simpan barang. Barang di rumah. Kita nyaman.",
+    "generated": "[\"rumah\", \"barang\", \"nyaman\"]",
+    "perplexity": 1.0009377002716064
+  },
+  {
+    "index": 275,
+    "input": [
+      "ngalubi",
+      "masak",
+      "enak",
+      "orang",
+      "banyak",
+      "sekarang"
+    ],
+    "reference": "Orang ngalubi. Orang masak. Orang enak.",
+    "generated": "[\"ngalubi\", \"masak\", \"enak\", \"orang\", \"banyak\", \"sekarang\"]",
+    "perplexity": 1.002236247062683
+  },
+  {
+    "index": 276,
+    "input": [
+      "negara",
+      "kamu",
+      "beda"
+    ],
+    "reference": "Kamu khawatir. Negara berbeda.",
+    "generated": "[\"negara\", \"kamu\", \"beda\"]",
+    "perplexity": 1.0041086673736572
+  },
+  {
+    "index": 277,
+    "input": [
+      "ibu",
+      "membeli",
+      "buah",
+      "pisang",
+      "sayuran"
+    ],
+    "reference": "<2–3 kalimat, setiap kalimat 1–2 kata, dalam satu baris>\n\nContoh Output (masalah sebelumnya):\n\n1.\nStory: Orang makan. Orang makan roti. Orang senang.\n\n2.\nStory: Orang minum. Orang minum alpukat.\n\n3.\nStory: Orang baik. Hari bagus. Orang senang. Semua nyaman.\n\n4.\nStory: AC nyala. Udara dingin. Orang nyaman.\n\n5.\nStory: Pesawat naik. Pesawat akan naik.\n\nDan kalimat masalah sebelumnya akan menjadi:\n\nOrang keluar. Orang mencangkul. Orang lihat mainan.",
+    "generated": "[\"ibu\", \"membeli\", \"buah\", \"pisang\", \"sayuran\"]",
+    "perplexity": 1.0006176233291626
+  },
+  {
+    "index": 278,
+    "input": [
+      "pintu",
+      "mobil",
+      "aman",
+      "tutup",
+      "rapat"
+    ],
+    "reference": "Mobil pintu tutup. Mobil pintu rapat. Mobil aman.\n\nKalimat ini menggantikan istri dengan \"Mobil\" dan mengubah kalimat menjadi lebih sederhana.",
+    "generated": "[\"pintu\", \"mobil\", \"aman\", \"tutup\", \"rapat\"]",
+    "perplexity": 1.0002683401107788
+  },
+  {
+    "index": 279,
+    "input": [
+      "teman",
+      "leher",
+      "merah",
+      "toko"
+    ],
+    "reference": "Teman leher merah. Teman buka toko. Teman senang.",
+    "generated": "[\"teman\", \"leher\", \"merah\", \"toko\"]",
+    "perplexity": 1.0022884607315063
+  },
+  {
+    "index": 280,
+    "input": [
+      "tangan",
+      "goyang",
+      "kotak",
+      "suara",
+      "telinga",
+      "senang"
+    ],
+    "reference": "Tangan goyang kotak. Suara keras di telinga. Telinga senang.",
+    "generated": "[\"tangan\", \"goyang\", \"kotak\", \"suara\", \"telinga\", \"senang\"]",
+    "perplexity": 1.0002542734146118
+  },
+  {
+    "index": 281,
+    "input": [
+      "rumah",
+      "duduk",
+      "santai"
+    ],
+    "reference": "orang ke rumah. orang duduk. orang santai.",
+    "generated": "[\"rumah\", \"duduk\", \"santai\"]",
+    "perplexity": 1.00121009349823
+  },
+  {
+    "index": 282,
+    "input": [
+      "pengajar",
+      "desa",
+      "baik",
+      "tenang"
+    ],
+    "reference": "Pengajar baik. Pengajar dari desa. Desa tenang.",
+    "generated": "[\"pengajar\", \"desa\", \"baik\", \"tenang\"]",
+    "perplexity": 1.0006227493286133
+  },
+  {
+    "index": 283,
+    "input": [
+      "rumah",
+      "guru",
+      "saya",
+      "kecil"
+    ],
+    "reference": "Rumah kecil. Guru datang. Saya senang.",
+    "generated": "[\"rumah\", \"guru\", \"saya\", \"kecil\"]",
+    "perplexity": 1.0012931823730469
+  },
+  {
+    "index": 284,
+    "input": [
+      "teman",
+      "gembira",
+      "main",
+      "senang"
+    ],
+    "reference": "Teman gembira. Teman main. Teman senang.",
+    "generated": "[\"teman\", \"gembira\", \"main\", \"senang\"]",
+    "perplexity": 1.000299096107483
+  },
+  {
+    "index": 285,
+    "input": [
+      "tidak",
+      "ada"
+    ],
+    "reference": "Teman ke rumah. Teman makan nasi. Teman senang.\n\nKata-kata yang saya ganti Label NER tidak muncul dalam kalimat ini.",
+    "generated": "[\"tidak\", \"ada\"]",
+    "perplexity": 1.0060135126113892
+  },
+  {
+    "index": 286,
+    "input": [
+      "teman",
+      "barang",
+      "senang"
+    ],
+    "reference": "Teman mengirim. Teman mengirim barang. Teman senang.",
+    "generated": "[\"teman\", \"barang\", \"senang\"]",
+    "perplexity": 1.0004690885543823
+  },
+  {
+    "index": 287,
+    "input": [
+      "negara",
+      "koran",
+      "wartawan",
+      "kerja"
+    ],
+    "reference": "Orang jadi di negara. Orang tulis cerita berita. Orang kerja sebagai wartawan koran kecil.",
+    "generated": "[\"negara\", \"koran\", \"wartawan\", \"kerja\"]",
+    "perplexity": 1.0031136274337769
+  },
+  {
+    "index": 288,
+    "input": [
+      "dunia",
+      "ramah",
+      "saya",
+      "Cards",
+      "dunia",
+      "saya",
+      "ramah",
+      "putar",
+      "Cards",
+      "dunia",
+      "saya",
+      "sangat",
+      "cepat",
+      "Cards",
+      "dunia",
+      "saya",
+      "ramah",
+      "sangat",
+      "Cards",
+      "dunia",
+      "ramah",
+      "sangat",
+      "saya"
+    ],
+    "reference": "Dunia berputar cepat. Dunia masih ramah. Saya senang.",
+    "generated": "[\"dunia\", \"ramah\", \"saya\", \"Cards\", \"dunia\", \"saya\", \"ramah\", \"putar\", \"Cards\", \"dunia\", \"saya\", \"sangat\", \"cepat\", \"Cards\", \"dunia\", \"saya\", \"ramah\", \"sangat\", \"Cards\", \"dunia\", \"ramah\", \"sangat\", \"saya\"]",
+    "perplexity": 1.001659870147705
+  },
+  {
+    "index": 289,
+    "input": [
+      "buku",
+      "teks",
+      "sederhana"
+    ],
+    "reference": "Teman membaca. Teman membaca buku. Buku sederhana.",
+    "generated": "[\"buku\", \"teks\", \"sederhana\"]",
+    "perplexity": 1.1918007135391235
+  },
+  {
+    "index": 290,
+    "input": [
+      "makanan",
+      "baik",
+      "teman"
+    ],
+    "reference": "Kamu baik. Makanan enak. Teman senang.",
+    "generated": "[\"makanan\", \"baik\", \"teman\"]",
+    "perplexity": 1.0015052556991577
+  },
+  {
+    "index": 291,
+    "input": [
+      "putri",
+      "orang",
+      "baik",
+      "sekolah",
+      "baca",
+      "suka"
+    ],
+    "reference": "Putri orang baik. Putri sekolah. Putri suka membaca.",
+    "generated": "[\"putri\", \"orang\", \"baik\", \"sekolah\", \"baca\", \"suka\"]",
+    "perplexity": 1.002242088317871
+  },
+  {
+    "index": 292,
+    "input": [
+      "orang",
+      "duduk",
+      "saya",
+      "tua",
+      "diam",
+      "senang"
+    ],
+    "reference": "Orang tua duduk. Orang tua diam. Saya senang.",
+    "generated": "[\"orang\", \"duduk\", \"saya\", \"tua\", \"diam\", \"senang\"]",
+    "perplexity": 1.0022335052490234
+  },
+  {
+    "index": 293,
+    "input": [
+      "pintar",
+      "lihat",
+      "buku",
+      "senang"
+    ],
+    "reference": "Orang pintar. Orang lihat buku. Orang senang.",
+    "generated": "[\"pintar\", \"lihat\", \"buku\", \"senang\"]",
+    "perplexity": 1.0003700256347656
+  },
+  {
+    "index": 294,
+    "input": [
+      "barang",
+      "tanda",
+      "orang",
+      "nyaman"
+    ],
+    "reference": "Orang memiliki barang. Orang menulis tanda tangan. Orang nyaman.",
+    "generated": "[\"barang\", \"tanda\", \"orang\", \"nyaman\"]",
+    "perplexity": 1.0011866092681885
+  },
+  {
+    "index": 295,
+    "input": [
+      "kakek",
+      "berbicara",
+      "senang"
+    ],
+    "reference": "Kakek berbicara keras. Kakek berbicara jelas. Kakek senang.",
+    "generated": "[\"kakek\", \"berbicara\", \"senang\"]",
+    "perplexity": 1.0383212566375732
+  },
+  {
+    "index": 296,
+    "input": [
+      "toko",
+      "barang",
+      "teman",
+      "senang"
+    ],
+    "reference": "Teman jalan ke toko. Teman ke toko beli barang. Teman senang.",
+    "generated": "[\"toko\", \"barang\", \"teman\", \"senang\"]",
+    "perplexity": 1.0009629726409912
+  },
+  {
+    "index": 297,
+    "input": [
+      "belanja",
+      "toko",
+      "senang"
+    ],
+    "reference": "Orang belanja. Belanja di toko. Belanja senang.\n\nContoh 2:\nStory: Guru baik. Guru cerita. Saya tahu.\n\nContoh 3:\nStory: Keluarga nyaman. Rumah bersih. Aku bahagia.\n\nContoh 4:\nStory: Buku baru. Buku seru. Membaca gembira.\n\nContoh 5:\nStory: Teman suka. Bermain di taman. Senang bermain.\n\nJika Anda ingin saya membuat paragraf dengan tema tertentu, silakan berikan instruksi yang lebih jelas.",
+    "generated": "[\"belanja\", \"toko\", \"senang\"]",
+    "perplexity": 1.0015193223953247
+  },
+  {
+    "index": 298,
+    "input": [
+      "teman",
+      "bermain",
+      "lapangan",
+      "senang",
+      "Cards",
+      "makan",
+      "meja",
+      "nyaman",
+      "Cards",
+      "guru",
+      "baik",
+      "membantu",
+      "senang",
+      "Cards",
+      "bangunan",
+      "tinggi",
+      "membuat",
+      "angin",
+      "Cards",
+      "bunga",
+      "cantik",
+      "nyaman"
+    ],
+    "reference": "Teman bermain. Teman bermain di lapangan. Teman senang.\n\n2.\nStory: Orang makan. Orang makan di meja. Orang nyaman.\n\n3.\nStory: Guru baik. Guru membantu. Saya senang.\n\n4.\nStory: Bangunan tinggi. Bangunan membuat angin. Saya terpesona.\n\n5.\nStory: Bunga cantik. Bunga membuat nyaman. Semua nyaman.",
+    "generated": "\"teman\", \"bermain\", \"lapangan\", \"senang\", \"Cards\", \"makan\", \"meja\", \"nyaman\", \"Cards\", \"guru\", \"baik\", \"membantu\", \"senang\", \"Cards\", \"bangunan\", \"tinggi\", \"membuat\", \"angin\", \"Cards\", \"bunga\", \"cantik\", \"nyaman\"]",
+    "perplexity": 1.0026698112487793
+  },
+  {
+    "index": 299,
+    "input": [
+      "orang",
+      "tidak",
+      "baik",
+      "uang"
+    ],
+    "reference": "Orang tidak baik. Orang tidak jujur. Orang menyimpan uang.\n\nTapi, perlu diingat, kalimat sederhana tidak dapat menanggapi masalah kompleks seperti ini dengan benar. Namun, contoh di atas dapat memberikan gambaran tentang keadaan yang tidak baik.",
+    "generated": "[\"orang\", \"tidak\", \"baik\", \"uang\"]",
+    "perplexity": 1.002969741821289
+  },
+  {
+    "index": 300,
+    "input": [
+      "ayah",
+      "bantal",
+      "gembira"
+    ],
+    "reference": "Ayah tahu. Ayah melihat bantal. Ayah gembira.",
+    "generated": "[\"ayah\", \"bantal\", \"gembira\"]",
+    "perplexity": 1.0034921169281006
+  },
+  {
+    "index": 301,
+    "input": [
+      "teman",
+      "main",
+      "gembira"
+    ],
+    "reference": "Teman baik. Teman main. Teman gembira. Semua nyaman.",
+    "generated": "[\"teman\", \"main\", \"gembira\"]",
+    "perplexity": 1.000367283821106
+  },
+  {
+    "index": 302,
+    "input": [
+      "rumah",
+      "teman",
+      "masa"
+    ],
+    "reference": "Masa tempat pilihan. Rumah kita pakai. Teman bisa luluh.",
+    "generated": "[\"rumah\", \"teman\", \"masa\"]",
+    "perplexity": 1.0022869110107422
+  },
+  {
+    "index": 303,
+    "input": [
+      "rumah",
+      "kota",
+      "ada",
+      "rumah",
+      "ada"
+    ],
+    "reference": "Teman katakan rumah. Rumah ada <FAC>. Kota <GPE>.",
+    "generated": "[\"rumah\", \"kota\", \"ada\", \"rumah\", \"ada\"]",
+    "perplexity": 1.0007137060165405
+  },
+  {
+    "index": 304,
+    "input": [
+      "kucing",
+      "makan",
+      "orang",
+      "barang"
+    ],
+    "reference": "Orang memasak barang. Orang tidak mau makan. Kucing suka bermain.",
+    "generated": "[\"kucing\", \"makan\", \"orang\", \"barang\"]",
+    "perplexity": 1.0004233121871948
+  },
+  {
+    "index": 305,
+    "input": [
+      "rumah",
+      "tempat",
+      "teman",
+      "sederhana"
+    ],
+    "reference": "Rumah tempat. Teman sederhana. Senang berjalan.",
+    "generated": "[\"rumah\", \"tempat\", \"teman\", \"sederhana\"]",
+    "perplexity": 1.0058929920196533
+  },
+  {
+    "index": 306,
+    "input": [
+      "air",
+      "toko",
+      "minum",
+      "senang",
+      "orang",
+      "dari"
+    ],
+    "reference": "Orang minum air. Air dari toko. Orang senang.",
+    "generated": "[\"air\", \"toko\", \"minum\", \"senang\", \"orang\", \"dari\"]",
+    "perplexity": 1.001123309135437
+  },
+  {
+    "index": 307,
+    "input": [
+      "kursi",
+      "roda",
+      "wanita",
+      "tersenyum",
+      "mudah",
+      "dipindahkan"
+    ],
+    "reference": "Wanita lihat kursi roda. Kursi roda mudah dipindahkan. Wanita tersenyum.",
+    "generated": "[\"kursi\", \"roda\", \"wanita\", \"tersenyum\", \"mudah\", \"dipindahkan\"]",
+    "perplexity": 1.0004076957702637
+  },
+  {
+    "index": 308,
+    "input": [
+      "buah",
+      "sayur",
+      "Untuk",
+      "kalimat",
+      "kita",
+      "akan",
+      "mengganti",
+      "label",
+      "NER",
+      "dengan",
+      "kata",
+      "sederhana",
+      "Story",
+      "Orang",
+      "pergi",
+      "ke",
+      "pasar",
+      "Orang",
+      "membeli",
+      "buah",
+      "Orang",
+      "senang"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat 1–2 kata saja, mengganti label NER dengan kata sederhana.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga (ayah, ibu, adik, kakak, kakek, nenek), tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nLabel NER:\n- <|PER|> → orang / teman / guru\n- <|ORG|> → sekolah / toko / kelompok\n- <|LOC|> → tempat / taman / lapangan\n- <|FAC|> → bangunan / rumah / jalan\n- <|GPE|> → kota / desa / negara\n- <|PRD|> → barang / mainan / makanan\n\nFormat:\nStory: <2–3 kalimat, setiap kalimat 1–2 kata, dalam satu baris>\n\nContoh Output:\n\n1.\nStory: Orang lelah. Orang istirahat. Orang senang.\n\n2.\nStory: Teman baik. Hari bagus. Aku senang.\n\n3.\nStory: Orang minum. Orang makan. Orang bahagia.\n\n4.\nStory: Bangunan nyala. Bangunan berwarna. Saya senang.\n\n5.\nStory: Orang bercocok tanam. Orang tanam sayur. Saya bahagia.",
+    "generated": "[\"buah\", \"sayur\", \"Untuk\", \"kalimat\", \"kita\", \"akan\", \"mengganti\", \"label\", \"NER\", \"dengan\", \"kata\", \"sederhana\", \"Story\", \"Orang\", \"pergi\", \"ke\", \"pasar\", \"Orang\", \"membeli\", \"buah\", \"Orang\", \"senang\"]",
+    "perplexity": 1.0031112432479858
+  },
+  {
+    "index": 309,
+    "input": [
+      "baju",
+      "orang",
+      "senang",
+      "rumah"
+    ],
+    "reference": "Orang datang rumah. Orang membawa baju. Orang senang.",
+    "generated": "[\"baju\", \"orang\", \"senang\", \"rumah\"]",
+    "perplexity": 1.001265287399292
+  },
+  {
+    "index": 310,
+    "input": [
+      "taman",
+      "bunga",
+      "ia",
+      "senang",
+      "Kartu",
+      "kartu",
+      "ini",
+      "termasuk",
+      "dalam",
+      "kategori",
+      "Benda",
+      "makanan",
+      "taman",
+      "bunga",
+      "Keluarga",
+      "ia",
+      "dan",
+      "Deskripsi",
+      "senang"
+    ],
+    "reference": "Ia taman. Ia tanam bunga. Ia senang.\n\nPerhatikan: saya membuat kalimat sederhana untuk anak usia dini.",
+    "generated": "[\"taman\", \"bunga\", \"ia\", \"senang\", \"Kartu\", \"kartu\", \"ini\", \"termasuk\", \"dalam\", \"kategori\", \"Benda\", \"makanan\", \"taman\", \"bunga\", \"Keleluarga\", \"ia\", \"dan\", \"Deskripsi\", \"senang\"]",
+    "perplexity": 1.0163428783416748
+  },
+  {
+    "index": 311,
+    "input": [
+      "orang",
+      "baik",
+      "membayar",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang membayar. Orang senang.",
+    "generated": "[\"orang\", \"baik\", \"membayar\", \"senang\"]",
+    "perplexity": 1.0013511180877686
+  },
+  {
+    "index": 312,
+    "input": [
+      "teman",
+      "guru",
+      "baik",
+      "senang"
+    ],
+    "reference": "Teman baik. Guru baik. Semua senang.",
+    "generated": "[\"teman\", \"guru\", \"baik\", \"senang\"]",
+    "perplexity": 1.0001575946807861
+  },
+  {
+    "index": 313,
+    "input": [
+      "orangan",
+      "orang",
+      "buku",
+      "besar",
+      "menulis"
+    ],
+    "reference": "Orang lahir. Orang besar. Orang menulis buku.",
+    "generated": "[\"orangan\", \"orang\", \"buku\", \"besar\", \"menulis\"]",
+    "perplexity": 1.0187772512435913
+  },
+  {
+    "index": 314,
+    "input": [
+      "kucing",
+      "duduk",
+      "melihat",
+      "senang"
+    ],
+    "reference": "Kucing duduk. Kucing melihat. Kucing senang.",
+    "generated": "[\"kucing\", \"duduk\", \"melihat\", \"senang\"]",
+    "perplexity": 1.0003126859664917
+  },
+  {
+    "index": 315,
+    "input": [
+      "rumah",
+      "saya",
+      "senang"
+    ],
+    "reference": "Saya melihat. Saya melihat rumah. Saya senang.",
+    "generated": "[\"rumah\", \"saya\", \"senang\"]",
+    "perplexity": 1.0001845359802246
+  },
+  {
+    "index": 316,
+    "input": [
+      "anak",
+      "istri",
+      "baik",
+      "nyaman"
+    ],
+    "reference": "Orang baik punya anak baik. Istri baik juga. Semua nyaman.",
+    "generated": "[\"anak\", \"istri\", \"baik\", \"nyaman\"]",
+    "perplexity": 1.0028506517410278
+  },
+  {
+    "index": 317,
+    "input": [
+      "teman",
+      "baik",
+      "orang",
+      "bantu",
+      "senang"
+    ],
+    "reference": "Teman orang baik. Teman orang membantu. Teman orang senang.",
+    "generated": "[\"teman\", \"baik\", \"orang\", \"bantu\", \"senang\"]",
+    "perplexity": 1.0013607740402222
+  },
+  {
+    "index": 318,
+    "input": [
+      "teman",
+      "baik",
+      "senang",
+      "nyaman"
+    ],
+    "reference": "Teman baik. Teman senang. Semua nyaman.",
+    "generated": "[\"teman\", \"baik\", \"senang\", \"nyaman\"]",
+    "perplexity": 1.0010346174240112
+  },
+  {
+    "index": 319,
+    "input": [
+      "Orang",
+      "benda",
+      "barang"
+    ],
+    "reference": "Orang bangkit. Benda bunyi. Teman keluarkan barang.",
+    "generated": "[\"Orang\", \"benda\", \"barang\"]",
+    "perplexity": 1.0005301237106323
+  },
+  {
+    "index": 320,
+    "input": [
+      "adik",
+      "lapar",
+      "makan",
+      "sedih",
+      "Cards",
+      "ayah",
+      "kerja",
+      "pulang",
+      "adik",
+      "sedih",
+      "Cards",
+      "kamu",
+      "baik",
+      "cuaca",
+      "buruk",
+      "sedih",
+      "Cards",
+      "AC",
+      "mati",
+      "panas",
+      "udara",
+      "sedih",
+      "Cards",
+      "kamu",
+      "hujan",
+      "taman",
+      "pergi"
+    ],
+    "reference": "Adik lapar. Adik tidak makan. Adik sedih.\n\n2.\nStory: Ayah sedang bekerja. Ia tidak pulang. Adik sedih.\n\n3.\nStory: Kamu baik. Hari cuaca buruk. Saya sedih.\n\n4.\nStory: AC mati. Udara panas. Saya sedih.\n\n5.\nStory: Kamu melihat hujan. Kamu tidak pergi ke taman.",
+    "generated": "\"adik\", \"lapar\", \"makan\", \"sedih\", \"Cards\", \"ayah\", \"kerja\", \"pulang\", \"adik\", \"sedih\", \"Cards\", \"kamu\", \"baik\", \"cuaca\", \"buruk\", \"sedih\", \"Cards\", \"AC\", \"mati\", \"panas\", \"udara\", \"sedih\", \"Cards\", \"kamu\", \"hujan\", \"taman\", \"pergi\"]",
+    "perplexity": 1.001391053199768
+  },
+  {
+    "index": 321,
+    "input": [
+      "wanita",
+      "kucing",
+      "lembut",
+      "senang",
+      "membelai"
+    ],
+    "reference": "Wanita membelai. Kucing lembut. Wanita senang.",
+    "generated": "[\"wanita\", \"kucing\", \"lembut\", \"senang\", \"membelai\"]",
+    "perplexity": 1.001137375831604
+  },
+  {
+    "index": 322,
+    "input": [
+      "belajar",
+      "melukis",
+      "tahun",
+      "tempat",
+      "mengajar"
+    ],
+    "reference": "Belajar melukis. Tahun 2003- 2006 di tempat. Saya mengajar.",
+    "generated": "[\"belajar\", \"melukis\", \"tahun\", \"tempat\", \"mengajar\"]",
+    "perplexity": 1.0011619329452515
+  },
+  {
+    "index": 323,
+    "input": [
+      "teman",
+      "nyaman",
+      "lepak",
+      "tidur"
+    ],
+    "reference": "Teman tidur. Teman lelap. Teman nyaman.",
+    "generated": "[\"teman\", \"nyaman\", \"lepak\", \"tidur\"]",
+    "perplexity": 1.0031267404556274
+  },
+  {
+    "index": 324,
+    "input": [
+      "baik",
+      "beribadah",
+      "senang",
+      "orang"
+    ],
+    "reference": "Orang baik. Orang beribadah. Orang senang.",
+    "generated": "[\"baik\", \"beribadah\", \"senang\", \"orang\"]",
+    "perplexity": 1.019241213798523
+  },
+  {
+    "index": 325,
+    "input": [
+      "baik",
+      "bebas",
+      "senang"
+    ],
+    "reference": "Orang baik. Orang bebas. Orang senang.",
+    "generated": "baiko, bebas, senggan",
+    "perplexity": 1.2424434423446655
+  },
+  {
+    "index": 326,
+    "input": [
+      "cerita",
+      "angin",
+      "dongeng"
+    ],
+    "reference": "Saya dongeng. Saya berangin. Saya cerita.",
+    "generated": "[\"cerita\", \"angin\", \"dongeng\"]",
+    "perplexity": 1.0010279417037964
+  },
+  {
+    "index": 327,
+    "input": [
+      "gubuk",
+      "bubung",
+      "tenang"
+    ],
+    "reference": "Gubuk hening. Sajen membubung. Saya merasa tenang.",
+    "generated": "[\"gubuk\", \"bubung\", \"tenang\"]",
+    "perplexity": 1.000901222229004
+  },
+  {
+    "index": 328,
+    "input": [
+      "makan",
+      "makanan",
+      "buah",
+      "teman",
+      "senang"
+    ],
+    "reference": "Teman makan makanan. Teman makan buah. Teman senang.",
+    "generated": "[\"makan\", \"makanan\", \"buah\", \"teman\", \"senang\"]",
+    "perplexity": 1.0033535957336426
+  },
+  {
+    "index": 329,
+    "input": [
+      "Teman",
+      "Menunggu",
+      "Senang"
+    ],
+    "reference": "Teman baik. Teman menunggu. Teman senang.",
+    "generated": "[\"Teman\", \"Menunggu\", \"Senang\"]",
+    "perplexity": 1.0003238916397095
+  },
+  {
+    "index": 330,
+    "input": [
+      "Orang",
+      "Saya",
+      "Marah",
+      "Bising"
+    ],
+    "reference": "Orang marah. Orang bising. Saya takut.\n\nNamun, perlu diingat bahwa kalimat ini masih sederhana dan tidak mencakup detail yang kompleks seperti dalam permintaan Anda.",
+    "generated": "[\"Orang\", \"Saya\", \"Marah\", \"Bising\"]",
+    "perplexity": 1.0101535320281982
+  },
+  {
+    "index": 331,
+    "input": [
+      "rumah",
+      "teman",
+      "senang"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat, setiap kalimat hanya 1–2 kata saja. Jika output salah, perbaiki sampai benar.\n\nKarena input tidak jelas, tema: rumah.\n\nBerikut paragraf sederhana:\n\nStory: Aku tidur. Teman datang. Teman senang.",
+    "generated": "[\"rumah\", \"teman\", \"senang\"]",
+    "perplexity": 1.0179893970489502
+  },
+  {
+    "index": 332,
+    "input": [
+      "orang",
+      "taman",
+      "nyaman",
+      "duduk"
+    ],
+    "reference": "Orang taman. Orang duduk. Orang nyaman.",
+    "generated": "[\"orang\", \"taman\", \"nyaman\", \"duduk\"]",
+    "perplexity": 1.0048118829727173
+  },
+  {
+    "index": 333,
+    "input": [
+      "teman",
+      "buku",
+      "senang",
+      "Cards",
+      "guru",
+      "sekolah",
+      "gembira",
+      "Cards",
+      "kamu",
+      "baik",
+      "senang",
+      "Cards",
+      "anak",
+      "suka",
+      "mainan",
+      "gembira",
+      "Cards",
+      "mobil",
+      "datang",
+      "rumah",
+      "nyaman"
+    ],
+    "reference": "Teman baca. Teman baca buku. Teman senang.\n\n2.\nStory: Guru datang. Guru ke sekolah. Guru gembira.\n\n3.\nStory: Kamu baik. Hari bagus. Aku senang.\n\n4.\nStory: Anak suka. Anak suka mainan. Anak gembira.\n\n5.\nStory: Mobil datang. Mobil ke rumah. Mobil nyaman.",
+    "generated": "[\"teman\", \"buku\", \"senang\", \"Cards\", \"guru\", \"sekolah\", \"gembira\", \"Cards\", \"kamu\", \"baik\", \"senang\", \"Cards\", \"anak\", \"suka\", \"mainan\", \"gembira\", \"Cards\", \"mobil\", \"datang\", \"rumah\", \"nyaman\"]",
+    "perplexity": 1.0027079582214355
+  },
+  {
+    "index": 334,
+    "input": [
+      "teman",
+      "rumah",
+      "keharmonisan",
+      "barang"
+    ],
+    "reference": "Teman tidak diundang. Teman tidak ingin ada sesuatu yang mengusik keharmonisan rumah. Teman tidak suka dengan bau barang di rumah.",
+    "generated": "[\"teman\", \"rumah\", \"keharmonisan\", \"barang\"]",
+    "perplexity": 1.0010489225387573
+  },
+  {
+    "index": 335,
+    "input": [
+      "tidur",
+      "lelah",
+      "istirahat"
+    ],
+    "reference": "Orang tidur. Orang lemah. Orang istirahat.",
+    "generated": "[\"tidur\", \"lelah\", \"istirahat\"]",
+    "perplexity": 1.0024151802062988
+  },
+  {
+    "index": 336,
+    "input": [
+      "pohon",
+      "orang"
+    ],
+    "reference": "Orang duduk. Orang lihat pohon. Orang senang.",
+    "generated": "[\"pohon\", \"orang\"]",
+    "perplexity": 1.016090750694275
+  },
+  {
+    "index": 337,
+    "input": [
+      "barang",
+      "orang",
+      "bawah"
+    ],
+    "reference": "Orang ambil barang. Orang ambil barang dari bawah. Orang senang.\n\n(Perubahan label NER: tangan orang, mengambikan barang)",
+    "generated": "[\"barang\", \"orang\", \"bawah\"]",
+    "perplexity": 1.0005196332931519
+  },
+  {
+    "index": 338,
+    "input": [
+      "orang",
+      "baik",
+      "semua",
+      "teman",
+      "baik"
+    ],
+    "reference": "Teman seseorang tulus. Orang itu bahagia. Semua baik.",
+    "generated": "[\"orang\", \"baik\", \"semua\", \"teman\", \"baik\"]",
+    "perplexity": 1.0299856662750244
+  },
+  {
+    "index": 339,
+    "input": [
+      "sertifikat",
+      "kartu",
+      "orang",
+      "senang"
+    ],
+    "reference": "Petugas toko memberikan sertifikat. Petugas toko memberikan kartu. Orang senang.",
+    "generated": "[\"sertifikat\", \"kartu\", \"orang\", \"senang\"]",
+    "perplexity": 1.059987187385559
+  },
+  {
+    "index": 340,
+    "input": [
+      "rumah",
+      "orang",
+      "senang",
+      "lihat",
+      "jalan"
+    ],
+    "reference": "Orang jalan. Orang lihat rumah. Orang senang.",
+    "generated": "[\"rumah\", \"orang\", \"senang\", \"lihat\", \"jalan\"]",
+    "perplexity": 1.0291428565979004
+  },
+  {
+    "index": 341,
+    "input": [
+      "orang",
+      "meja",
+      "istirahat",
+      "duduk",
+      "santai"
+    ],
+    "reference": "Orang istirahat. Orang duduk meja. Orang santai.",
+    "generated": "[\"orang\", \"meja\", \"istirahat\", \"duduk\", \"santai\"]",
+    "perplexity": 1.0041030645370483
+  },
+  {
+    "index": 342,
+    "input": [
+      "burung",
+      "terbang",
+      "main",
+      "gembira",
+      "bermain"
+    ],
+    "reference": "Burung terbang. Burung bermain. Burung gembira.\n\nCatatan: Saya membuat kalimat sederhana dan mengubah kata-kata yang tidak sesuai dengan aturan.",
+    "generated": "[\"burung\", \"terbang\", \"main\", \"gembira\", \"bermain\"]",
+    "perplexity": 1.0001403093338013
+  },
+  {
+    "index": 343,
+    "input": [
+      "teman",
+      "pintu",
+      "rumah",
+      "senang"
+    ],
+    "reference": "Teman rumah. Teman buka pintu. Teman senang.",
+    "generated": "[\"teman\", \"pintu\", \"rumah\", \"senang\"]",
+    "perplexity": 1.0008138418197632
+  },
+  {
+    "index": 344,
+    "input": [
+      "teman",
+      "bola",
+      "gembira"
+    ],
+    "reference": "Teman bermain. Teman bermain bola. Teman gembira.",
+    "generated": "[\"teman\", \"bola\", \"gembira\"]",
+    "perplexity": 1.0013458728790283
+  },
+  {
+    "index": 345,
+    "input": [
+      "adik",
+      "makan",
+      "senang",
+      "Cards",
+      "orang",
+      "baik",
+      "hari",
+      "senang",
+      "Cards",
+      "bangunan",
+      "nyaman",
+      "udara",
+      "segar",
+      "senang"
+    ],
+    "reference": "Adik lapar. Adik makan. Adik senang.\n\n2.\nStory: Orang baik. Hari bagus. Aku senang.\n\n3.\nStory: Bangunan nyaman. Udara segar. Saya senang.",
+    "generated": "[\"adik\", \"makan\", \"senang\", \"Cards\", \"orang\", \"baik\", \"hari\", \"senang\", \"Cards\", \"bangunan\", \"nyaman\", \"udara\", \"segar\", \"senang\"]",
+    "perplexity": 1.0001698732376099
+  },
+  {
+    "index": 346,
+    "input": [
+      "beli",
+      "orang",
+      "toko",
+      "barang",
+      "senang",
+      "Cards",
+      "bangunan",
+      "nyaman",
+      "udara",
+      "sejuk",
+      "saya",
+      "senang",
+      "Cards",
+      "teman",
+      "baik",
+      "hari",
+      "cerah",
+      "aku",
+      "senang"
+    ],
+    "reference": "Orang beli. Barang di toko. Orang senang.\n\natau\n\nStory: Bangunan nyaman. Udara sejuk. Saya senang.\n\natau\n\nStory: Teman baik. Hari cerah. Aku senang.",
+    "generated": "[\"beli\", \"orang\", \"toko\", \"barang\", \"senang\", \"Cards\", \"bangunan\", \"nyaman\", \"udara\", \"sejuk\", \"saya\", \"senang\", \"Cards\", \"teman\", \"baik\", \"hari\", \"cerah\", \"aku\", \"senang\"]",
+    "perplexity": 1.0004407167434692
+  },
+  {
+    "index": 347,
+    "input": [
+      "teman",
+      "duduk",
+      "baik",
+      "senang"
+    ],
+    "reference": "Teman duduk. Teman baik. Teman senang.",
+    "generated": "[\"teman\", \"duduk\", \"baik\", \"senang\"]",
+    "perplexity": 1.0011624097824097
+  },
+  {
+    "index": 348,
+    "input": [
+      "adik",
+      "makan",
+      "teman",
+      "apel",
+      "Cards",
+      "orang",
+      "minum",
+      "air",
+      "baju",
+      "bersih",
+      "Cards",
+      "guru",
+      "baik",
+      "hari",
+      "bagus",
+      "saya",
+      "nyaman"
+    ],
+    "reference": "Adik makan. Teman makan apel.\n\n2.\nStory: Orang minum air. Baju bersih.\n\n3.\nStory: Guru baik. Hari bagus. Saya nyaman.",
+    "generated": "[\"adik\", \"makan\", \"teman\", \"apel\", \"Cards\", \"orang\", \"minum\", \"air\", \"baju\", \"bersih\", \"Cards\", \"guru\", \"baik\", \"hari\", \"bagus\", \"saya\", \"nyaman\"]",
+    "perplexity": 1.0002375841140747
+  },
+  {
+    "index": 349,
+    "input": [
+      "tidur",
+      "nyaman"
+    ],
+    "reference": "Saya lelah. Saya tidur. Saya nyaman.",
+    "generated": "[\"tidur\", \"nyaman\"]",
+    "perplexity": 1.0420979261398315
+  },
+  {
+    "index": 350,
+    "input": [
+      "pergi",
+      "belajar",
+      "saya",
+      "saya",
+      "senang"
+    ],
+    "reference": "Saya ingin pergi. Saya ingin belajar. Saya senang.",
+    "generated": "[\"pergi\", \"belajar\", \"saya\", \"saya\", \"senang\"]",
+    "perplexity": 1.000420331954956
+  },
+  {
+    "index": 351,
+    "input": [
+      "barang",
+      "mainan",
+      "senang"
+    ],
+    "reference": "Orang mencari barang. Orang mencari mainan. Orang senang.",
+    "generated": "[\"barang\", \"mainan\", \"senang\"]",
+    "perplexity": 1.070001244544983
+  },
+  {
+    "index": 352,
+    "input": [
+      "Contoh",
+      "Cards",
+      "kamu",
+      "bagus",
+      "ini",
+      "Cards",
+      "semangka",
+      "buah",
+      "manis",
+      "besar",
+      "Cards",
+      "waktu",
+      "kemarin",
+      "sekarang",
+      "malam",
+      "Cards",
+      "kamera",
+      "keluarga",
+      "foto",
+      "Cards",
+      "alpukat",
+      "pisang",
+      "banyak",
+      "sekarang",
+      "buah",
+      "Perhatian",
+      "Pertanyaan",
+      "Anda",
+      "tidak",
+      "memenuhi",
+      "aturan",
+      "yang",
+      "dibutuhkan",
+      "Bagaimana",
+      "saya",
+      "dapat",
+      "membantu",
+      "Anda",
+      "untuk",
+      "memenuhi",
+      "persyaratan",
+      "pertanyaan",
+      "Anda"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat 1–2 kata saja.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga (ayah, ibu, adik, kakak, kakek, nenek), tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nGanti Label NER dengan kata sederhana:\n- <|PER|> → orang / teman / guru\n- <|ORG|> → sekolah / toko / kelompok\n- <|LOC|> → tempat / taman / lapangan\n- <|FAC|> → bangunan / rumah / jalan\n- <|GPE|> → kota / desa / negara\n- <|PRD|> → barang / mainan / makanan\n\nFormat:\nStory: <2–3 kalimat, setiap kalimat 1–2 kata, dalam satu baris>\n\nContoh Output:\n\n1.\nStory: Adik lapar. Adik makan roti. Adik senang.\n\n2.\nStory: Ayah minum. Ayah minum alpukat.\n\n3.\nStory: Kamu baik. Hari bagus. Aku senang. Semua nyaman.\n\n4.\nStory: AC nyala. Udara dingin. Saya nyaman.\n\n5.\nStory: Pesawat naik. Pesawat akan naik.\n\nJawaban:\nStory: Teman baik. Teman bahagia. Teman senang.",
+    "generated": "[\"Contoh\", \"Cards\", \"kamu\", \"bagus\", \"ini\", \"Cards\", \"semangka\", \"buah\", \"manis\", \"besar\", \"Cards\", \"waktu\", \"kemarin\", \"sekarang\", \"malam\", \"Cards\", \"kamera\", \"keluarga\", \"foto\", \"Cards\", \"alpukat\", \"pisang\", \"banyak\", \"sekarang\", \"buah\", \"Perhatian\", \"Pertanyaan\", \"Anda\", \"tidak\", \"memenuhi\", \"aturan\", \"yang\", \"dibutuhkan\", \"Bagaimana\", \"saya\", \"dapat\", \"membantu\", \"Anda\", \"untuk\", \"memenuhi\", \"aturan\", \"pertanyaan\", \"Anda\"]",
+    "perplexity": 1.005234956741333
+  },
+  {
+    "index": 353,
+    "input": [
+      "Simbah",
+      "Peduli",
+      "Cucu",
+      "Senang"
+    ],
+    "reference": "Simbah baik. Simbah peduli. Cucu senang.",
+    "generated": "[\"Simbah\", \"Peduli\", \"Cucu\", \"Senang\"]",
+    "perplexity": 1.0232259035110474
+  },
+  {
+    "index": 354,
+    "input": [
+      "buah",
+      "taman",
+      "bangunan",
+      "tempat",
+      "senang"
+    ],
+    "reference": "Orang ke taman. Orang ke bangunan. Orang tahu tempat. Orang bawa buah. Orang senang.",
+    "generated": "[\"buah\", \"taman\", \"bangunan\", \"tempat\", \"senang\"]",
+    "perplexity": 1.0004392862319946
+  },
+  {
+    "index": 355,
+    "input": [
+      "rumah",
+      "tidur",
+      "pagi",
+      "bangun",
+      "senang"
+    ],
+    "reference": "Orang rumah tidur. Orang bangun pagi. Orang senang.",
+    "generated": "[\"rumah\", \"tidur\", \"pagi\", \"bangun\", \"senang\"]",
+    "perplexity": 1.041727900505066
+  },
+  {
+    "index": 356,
+    "input": [
+      "orang",
+      "dokumen",
+      "rumah",
+      "senang"
+    ],
+    "reference": "Orang datang rumah. Orang membawa dokumen. Orang senang.",
+    "generated": "[\" orang\", \"dokumen\", \"rumah\", \"senang\"]",
+    "perplexity": 1.0001840591430664
+  },
+  {
+    "index": 357,
+    "input": [
+      "bekerja",
+      "galeri",
+      "senang"
+    ],
+    "reference": "Orang bekerja. Orang di galeri. Orang senang.",
+    "generated": "[\"bekerja\", \"galeri\", \"senang\"]",
+    "perplexity": 1.044222354888916
+  },
+  {
+    "index": 358,
+    "input": [
+      "orang",
+      "lari",
+      "rumah",
+      "senang",
+      "berlari"
+    ],
+    "reference": "Orang berlari. Orang berlari ke rumah. Orang senang.",
+    "generated": "[\"orang\", \"lari\", \"rumah\", \"senang\", \"berlari\"]",
+    "perplexity": 1.0165014266967773
+  },
+  {
+    "index": 359,
+    "input": [
+      "teman",
+      "air",
+      "jernih",
+      "lihat",
+      "malam"
+    ],
+    "reference": "Teman jalan. Teman lihat air. Air jernih.",
+    "generated": "[\"teman\", \"air\", \"jernih\", \"lihat\", \"malam\"]",
+    "perplexity": 1.0007460117340088
+  },
+  {
+    "index": 360,
+    "input": [
+      "orang",
+      "menulis",
+      "kota",
+      "besar"
+    ],
+    "reference": "Orang besar. Orang menulis. Orang tinggal di kota.",
+    "generated": "[\"orang\", \"menulis\", \"kota\", \"bear\"]",
+    "perplexity": 1.0009912252426147
+  },
+  {
+    "index": 361,
+    "input": [
+      "orang",
+      "tempat",
+      "senang",
+      "pulang"
+    ],
+    "reference": "Orang pergi ke tempat. Orang senang. Orang pulang.",
+    "generated": "[\"orang\", \"tempat\", \"senang\", \"pulang\"]",
+    "perplexity": 1.001452088356018
+  },
+  {
+    "index": 362,
+    "input": [
+      "teman",
+      "rumah",
+      "senang"
+    ],
+    "reference": "Teman rumah. Teman di rumah. Teman senang.",
+    "generated": "[\"teman\", \"rumah\", \"senang\"]",
+    "perplexity": 1.0243840217590332
+  },
+  {
+    "index": 363,
+    "input": [
+      "rumah",
+      "tidur",
+      "senang",
+      "Cards",
+      "guru",
+      "menulis",
+      "baik",
+      "Cards",
+      "taman",
+      "bermain",
+      "gembira"
+    ],
+    "reference": "Saya rumah. Saya tidur. Saya senang.\n\n2.\nStory: Guru sekolah. Guru menulis. Guru baik.\n\n3.\nStory: Kita taman. Kita bermain. Kita gembira.",
+    "generated": "[\"rumah\", \"tidur\", \"senang\", \"Cards\", \"guru\", \"menulis\", \"baik\", \"Cards\", \"taman\", \"bermain\", \"gembira\"]",
+    "perplexity": 1.0000576972961426
+  },
+  {
+    "index": 364,
+    "input": [
+      "orang",
+      "rumah",
+      "tidur",
+      "nyaman"
+    ],
+    "reference": "Orang di rumah. Orang tidur. Orang nyaman.",
+    "generated": "[\"orang\", \"rumah\", \"tidur\", \"nyaman\"]",
+    "perplexity": 1.0123238563537598
+  },
+  {
+    "index": 365,
+    "input": [
+      "orang",
+      "nyaman",
+      "senang"
+    ],
+    "reference": "Orang senang. Orang bermain. Orang nyaman.",
+    "generated": "[\"orang\", \"nyaman\", \"senang\"]",
+    "perplexity": 1.0054528713226318
+  },
+  {
+    "index": 366,
+    "input": [
+      "orang",
+      "kecil",
+      "toko",
+      "baik"
+    ],
+    "reference": "Orang kecil menjaga toko. Orang kecil buka toko. Orang kecil baik.",
+    "generated": "[\"orang\", \"kecil\", \"toko\", \"baik\"]",
+    "perplexity": 1.0022286176681519
+  },
+  {
+    "index": 367,
+    "input": [
+      "minum",
+      "air",
+      "orang",
+      "santai",
+      "baik",
+      "Cards",
+      "tahu",
+      "banyak",
+      "guru",
+      "pandai",
+      "baik",
+      "Cards",
+      "main",
+      "bermain",
+      "teman",
+      "gembira",
+      "senang",
+      "Cards",
+      "besar",
+      "kuat",
+      "bangunan",
+      "nyaman",
+      "Cards",
+      "besar",
+      "beranim",
+      "kota",
+      "nyaman"
+    ],
+    "reference": "Orang minum air. Orang santai. Orang baik.\n\n2.\nStory: Guru tahu banyak. Guru pandai. Guru baik.\n\n3.\nStory: Teman main bermain. Teman gembira. Teman senang.\n\n4.\nStory: Bangunan besar. Bangunan kuat. Bangunan nyaman.\n\n5.\nStory: Kota besar. Kota beranim. Kota nyaman.",
+    "generated": "[\"minum\", \"air\", \"orang\", \"santai\", \"baik\", \"Cards\", \"tahu\", \"banyak\", \"guru\", \"pandai\", \"baik\", \"Cards\", \"main\", \"bermain\", \"teman\", \"gembira\", \"senang\", \"Cards\", \"besar\", \"kuat\", \"bangunan\", \"nyaman\", \"Cards\", \"besar\", \"beranim\", \"kota\", \"nyaman\"]",
+    "perplexity": 1.0134013891220093
+  },
+  {
+    "index": 368,
+    "input": [
+      "Orang",
+      "menulis",
+      "baik"
+    ],
+    "reference": "Orang tahu. Orang menulis. Orang baik.\n\nKalimat di atas dihasilkan dengan mengganti label NER dan memilih tema \"rumah\" untuk kalimat terakhir.",
+    "generated": "[\"Orang\", \"menulis\", \"baik\"]",
+    "perplexity": 1.0004429817199707
+  },
+  {
+    "index": 369,
+    "input": [
+      "barang",
+      "orang",
+      "senang",
+      "temukan"
+    ],
+    "reference": "Orang cari barang. Orang menemukan barang. Orang senang.",
+    "generated": "[\"barang\", \"orang\", \"senang\", \"temukan\"]",
+    "perplexity": 1.0502862930297852
+  },
+  {
+    "index": 370,
+    "input": [
+      "Orang",
+      "senang",
+      "nyaman",
+      "Cards",
+      "Teman",
+      "baik",
+      "gembira",
+      "bermain",
+      "Cards",
+      "Guru",
+      "pintar",
+      "senang",
+      "mengajar"
+    ],
+    "reference": "Orang membaca. Orang senang. Orang nyaman.\n\n2.\nStory: Teman baik. Teman bermain. Teman gembira.\n\n3.\nStory: Guru pintar. Guru mengajar. Guru senang.",
+    "generated": "[\"Orang\", \"senang\", \"nyaman\", \"Cards\", \"Teman\", \"baik\", \"gembira\", \"bermain\", \"Cards\", \"Guru\", \"pintar\", \"senang\", \"mengajar\"]",
+    "perplexity": 1.0000685453414917
+  },
+  {
+    "index": 371,
+    "input": [
+      "teman",
+      "aman",
+      "senang",
+      "taman"
+    ],
+    "reference": "Teman aman. Teman taman. Teman senang.",
+    "generated": "[\"teman\", \"aman\", \"senang\", \"taman\"]",
+    "perplexity": 1.0034701824188232
+  },
+  {
+    "index": 372,
+    "input": [
+      "meja",
+      "air",
+      "minum",
+      "duduk",
+      "Cards",
+      "bunga",
+      "taman",
+      "lihat",
+      "gembira",
+      "Cards",
+      "buku",
+      "guru",
+      "sekolah",
+      "baca",
+      "Cards",
+      "baju",
+      "hangat",
+      "segar",
+      "nyaman",
+      "Cards",
+      "mainan",
+      "lucu",
+      "menghibur",
+      "senang"
+    ],
+    "reference": "\"\n\n1.\nStory: Orang minum air. Orang duduk meja. Orang senang.\n\n2.\nStory: Teman lihat bunga. Teman jalan taman. Teman gembira.\n\n3.\nStory: Guru baca buku. Guru berada sekolah. Guru bahagia.\n\n4.\nStory: Baju segar. Baju hangat. Saya nyaman.\n\n5.\nStory: Mainan lucu. Mainan menghibur. Aku senang.",
+    "generated": "[\"meja\", \"air\", \"minum\", \"duduk\", \"Cards\", \"bunga\", \"taman\", \"lihat\", \"gembira\", \"Cards\", \"buku\", \"guru\", \"sekolah\", \"baca\", \"Cards\", \"baju\", \"hangat\", \"segar\", \"nyaman\", \"Cards\", \"mainan\", \"lucu\", \"menghibur\", \"senang\"]",
+    "perplexity": 1.0042153596878052
+  },
+  {
+    "index": 373,
+    "input": [
+      "tidur",
+      "nyaman",
+      "rileks"
+    ],
+    "reference": "Orang tidur. Orang rileks. Orang nyaman.",
+    "generated": "[\"tidur\", \"nyaman\", \"rileks\"]",
+    "perplexity": 1.0704047679901123
+  },
+  {
+    "index": 374,
+    "input": [
+      "orang",
+      "tidur",
+      "meja",
+      "senang"
+    ],
+    "reference": "Orang datang ke rumah. Orang tidur di meja. Orang senang.",
+    "generated": "[\"orang\", \"tidur\", \"meja\", \"senang\"]",
+    "perplexity": 1.0029672384262085
+  },
+  {
+    "index": 375,
+    "input": [
+      "orang",
+      "rumah",
+      "bicara",
+      "Cards",
+      "orang",
+      "uang",
+      "ikan",
+      "Cards",
+      "orang",
+      "datang",
+      "bicara"
+    ],
+    "reference": "Orang senang orang datang ke rumah. Orang senang bicara. Orang senang.\n\n2.\nStory: Orang tak mau uang. Orang tak mau ikan. Orang senang.\n\n3.\nStory: Orang datang. Orang bicara. Orang senang.",
+    "generated": "[\"orang\", \"rumah\", \"bicara\", \"Cards\", \"orang\", \"uang\", \"ikan\", \"Cards\", \"orang\", \"datang\", \"bicara\"]",
+    "perplexity": 1.0002484321594238
+  },
+  {
+    "index": 376,
+    "input": [
+      "taman",
+      "jalan",
+      "panen",
+      "orang",
+      "hasil"
+    ],
+    "reference": "Orang pergi. Orang berjalan. Orang senang.\n\nHarap konteks dan maksud Anda yang sebenarnya, jika Anda membutuhkan perubahan.",
+    "generated": "[\"taman\", \"jalan\", \"panen\", \"orang\", \"hasil\"]",
+    "perplexity": 1.001169204711914
+  },
+  {
+    "index": 377,
+    "input": [
+      "kertas",
+      "putih",
+      "hijau",
+      "lembut"
+    ],
+    "reference": "Kertas putih. Kertas hijau. Kertas lembut.",
+    "generated": "[\"kertas\", \"putih\", \"hijau\", \"lembut\"]",
+    "perplexity": 1.0033574104309082
+  },
+  {
+    "index": 378,
+    "input": [
+      "guru",
+      "bekerja",
+      "bagus",
+      "senang"
+    ],
+    "reference": "Teman bekerja. Teman bagus. Teman senang.\n\nJika ingin mengganti label NER dengan kata sederhana, saya akan menggunakan kata \"guru\" untuk menggantikan kata \"dokter\". Berikut adalah contoh paragraf yang sesuai dengan aturan yang diberikan:\n\nStory: Guru bekerja. Guru bagus. Guru senang.",
+    "generated": "[\"guru\", \"bekerja\", \"bagus\", \"senang\"]",
+    "perplexity": 1.0037624835968018
+  },
+  {
+    "index": 379,
+    "input": [
+      "buku",
+      "toko",
+      "suka",
+      "senang"
+    ],
+    "reference": "\" lalu 2–3 kalimat, setiap kalimat 1–2 kata saja, dengan label NER diganti dengan kata sederhana.\n\nAturan Wajib:\n1. Kalimat sangat sederhana, tanpa dialog, tanpa tanda kutip, tanpa! atau?.\n2. Hanya boleh kata dasar sehari-hari yang sangat mudah (contoh: makan, minum, duduk, jalan, lihat, main, buah, air, meja, baju).\n3. Tidak boleh nama orang/keluarga (ayah, ibu, adik, kakak, kakek, nenek), tidak boleh nama tempat khusus.\n4. Nada harus positif/tenang/aman.\n5. Jika input tidak jelas, pakai tema: rumah, sekolah, atau taman.\n6. Kalimat terakhir harus memberi rasa nyaman atau senang.\n\nStory: Teman suka buku. Teman ke toko. Teman senang.",
+    "generated": "[\"buku\", \"toko\", \"suka\", \"senang\"]",
+    "perplexity": 1.0018436908721924
+  },
+  {
+    "index": 380,
+    "input": [
+      "saya",
+      "gembira",
+      "nyaman",
+      "semua",
+      "Cards",
+      "makan",
+      "buah",
+      "siang",
+      "gembira",
+      "Cards",
+      "baju",
+      "nyaman",
+      "baru",
+      "bahagia",
+      "Cards",
+      "saya",
+      "lihat",
+      "duduk",
+      "teman",
+      "saya",
+      "Cards",
+      "kami",
+      "nyaman",
+      "gembira",
+      "tempat"
+    ],
+    "reference": "Saya senang. Kamu baik. Semua nyaman.\n\n2.\nStory: Makan siang. Makan buah. Aku gembira.\n\n3.\nStory: Baju baru. Baju nyaman. Saya bahagia.\n\n4.\nStory: Saya duduk. Saya lihat. Teman saya senang.\n\n5.\nStory: Tempat kami. Tempat nyaman. Saya gembira.",
+    "generated": "[\"saya\", \"gembira\", \"nyaman\", \"semua\", \"Cards\", \"makan\", \"buah\", \"siang\", \"gembira\", \"Cards\", \"baju\", \"nyaman\", \"baru\", \"bahagia\", \"Cards\", \"saya\", \"lihat\", \"duduk\", \"teman\", \"saya\", \"Cards\", \"kami\", \"nyaman\", \"gembira\", \"tempat\"]",
+    "perplexity": 1.007056713104248
+  },
+  {
+    "index": 381,
+    "input": [
+      "anak"
+    ],
+    "reference": "Anak rumah. Anak tidur. Anak nyenyak.",
+    "generated": "[\"anak\"]",
+    "perplexity": 1.014944314956665
+  },
+  {
+    "index": 382,
+    "input": [
+      "rumah",
+      "sederhana",
+      "nyaman"
+    ],
+    "reference": "Rumah rumah. Rumah rumah sederhana. Rumah nyaman.",
+    "generated": "[\"rumah\", \"sederhana\", \"nyaman\"]",
+    "perplexity": 1.0018494129180908
+  },
+  {
+    "index": 383,
+    "input": [
+      "orang",
+      "taman",
+      "senang"
+    ],
+    "reference": "Orang pergi. Orang ke taman. Orang senang.",
+    "generated": "[\"orang\", \"taman\", \"senang\"]",
+    "perplexity": 1.0020860433578491
+  },
+  {
+    "index": 384,
+    "input": [
+      "teman",
+      "baik",
+      "membantu",
+      "senang"
+    ],
+    "reference": "Teman baik. Teman membantu. Teman senang.",
+    "generated": "[\"teman\", \"baik\", \"membantu\", \"senang\"]",
+    "perplexity": 1.0006588697433472
+  },
+  {
+    "index": 385,
+    "input": [
+      "minyak",
+      "perut",
+      "orang"
+    ],
+    "reference": "Orang raba perut. Orang oles minyak. Orang senang.",
+    "generated": "[\"minyak\", \"perut\", \"orang\"]",
+    "perplexity": 1.003677248954773
+  },
+  {
+    "index": 386,
+    "input": [
+      "bocah",
+      "orang",
+      "mainan",
+      "senang"
+    ],
+    "reference": "Orang datang. Orang bawa mainan. Bocah senang.",
+    "generated": "[\"bocah\", \"orang\", \"mainan\", \"senang\"]",
+    "perplexity": 1.000385046005249
+  },
+  {
+    "index": 387,
+    "input": [
+      "orang",
+      "tidur",
+      "baik",
+      "senang"
+    ],
+    "reference": "Orang tidur. Orang baik. Orang senang.",
+    "generated": "[\"orang\", \"tidur\", \"baik\", \"senang\"]",
+    "perplexity": 1.0024768114089966
+  },
+  {
+    "index": 388,
+    "input": [
+      "orang",
+      "tempat",
+      "bekerja",
+      "senang"
+    ],
+    "reference": "Orang pergi ke tempat. Orang akan mulai bekerja. Orang senang.",
+    "generated": "[\"orang\", \"tempat\", \"bekerja\", \"senang\"]",
+    "perplexity": 1.001601219177246
+  },
+  {
+    "index": 389,
+    "input": [
+      "lapar",
+      "makan",
+      "roti",
+      "senang",
+      "Cards",
+      "minum",
+      "air",
+      "bahagia",
+      "Cards",
+      "baik",
+      "senang",
+      "nyaman",
+      "Cards",
+      "nyaman",
+      "aman",
+      "bahagia",
+      "Cards",
+      "baik",
+      "aman",
+      "nyaman"
+    ],
+    "reference": "\" dan tidak boleh mengandung dialog atau tanda kutip. Berikut adalah contoh output yang tepat:\n\n1.\nStory: Adik lapar. Adik makan roti. Adik senang. Kita pulang.\n\n2.\nStory: Ayah minum. Ayah minum air. Ayah bahagia. Kita pulang.\n\n3.\nStory: Teman baik. Teman senang. Aku nyaman. Kita pulang.\n\n4.\nStory: Rumah nyaman. Bangunan aman. Saya bahagia. Kita pulang.\n\n5.\nStory: Guru baik. Sekolah aman. Kamu nyaman. Kita pulang.",
+    "generated": "[\"lapar\", \"makan\", \"roti\", \"senang\", \"Cards\", \"minum\", \"air\", \"bahagia\", \"Cards\", \"baik\", \"senang\", \"nyaman\", \"Cards\", \"nyaman\", \"aman\", \"bahagia\", \"Cards\", \"baik\", \"aman\", \"nyaman\"]",
+    "perplexity": 1.0007684230804443
+  },
+  {
+    "index": 390,
+    "input": [
+      "sekolah",
+      "belajar",
+      "baik"
+    ],
+    "reference": "Orang bergembira. Orang suka sekolah. Orang belajar baik.\n\nPerlu diingat, saya tidak bisa mengikuti contoh input yang sudah ada karena ada beberapa hal yang tidak sesuai dengan aturan yang dibuat.\n\n1. Output tidak dimulai dengan \"Story:\"\n2. Kalimat tidak sesuai dengan aturan kalimat sederhana (tidak lebih dari 2 kata).\n3. Input mengandung kata-kata yang tidak sesuai dengan tema yang ditentukan (rumah, sekolah, atau taman).\n4. Output tidak memberikan rasa nyaman atau senang.\n\nSaya akan mencoba memberikan contoh output yang sesuai dengan aturan yang dibuat.",
+    "generated": "school of, belajar, bak",
+    "perplexity": 1.0701600313186646
+  },
+  {
+    "index": 391,
+    "input": [
+      "teman",
+      "suka",
+      "tidur",
+      "nyaman"
+    ],
+    "reference": "Teman suka. Teman tidur. Teman nyaman.",
+    "generated": "[\"teman\", \"suka\", \"tidur\", \"nyaman\"]",
+    "perplexity": 1.0033589601516724
+  },
+  {
+    "index": 392,
+    "input": [
+      "bintang",
+      "bintang",
+      "saya",
+      "senang"
+    ],
+    "reference": "Bintang cahaya. Bintang nyala. Saya senang.",
+    "generated": "[\"bintang\", \"bintang\", \"saya\", \"senang\"]",
+    "perplexity": 1.0120161771774292
+  },
+  {
+    "index": 393,
+    "input": [
+      "teman",
+      "bunga",
+      "gembira"
+    ],
+    "reference": "Teman ke taman. Teman lihat bunga. Teman gembira.",
+    "generated": "[\"teman\", \"bunga\", \"gembira\"]",
+    "perplexity": 1.0009852647781372
+  },
+  {
+    "index": 394,
+    "input": [
+      "bocah",
+      "gendang",
+      "main",
+      "taman"
+    ],
+    "reference": "Bocah di taman. Bocah main gendang. Bocah gembira.",
+    "generated": "[\"bocah\", \"gendang\", \"main\", \"taman\"]",
+    "perplexity": 1.0134072303771973
+  },
+  {
+    "index": 395,
+    "input": [
+      "orang",
+      "lahir",
+      "belajar",
+      "karya"
+    ],
+    "reference": "Orang lahir. Orang belajar. Orang karya.\n\nSemoga ini membantu!",
+    "generated": "[\"orang\", \"lahir\", \"belajar\", \"karya\"]",
+    "perplexity": 1.0030018091201782
+  },
+  {
+    "index": 396,
+    "input": [
+      "orang",
+      "barang",
+      "sendiri"
+    ],
+    "reference": "Orang membuat barang. Orang membuat sendiri. Orang senang.",
+    "generated": "[\"orang\", \"barang\", \"sendiri\"]",
+    "perplexity": 1.144728183746338
+  },
+  {
+    "index": 397,
+    "input": [
+      "baju",
+      "baju",
+      "nyaman"
+    ],
+    "reference": "Orang menggunakan baju. Orang menggosok baju. Orang rasa nyaman.",
+    "generated": "[\"baju\", \"baju\", \"nyaman\"]",
+    "perplexity": 1.001003623008728
+  },
+  {
+    "index": 398,
+    "input": [
+      "rumah",
+      "bantal",
+      "lembut",
+      "senang"
+    ],
+    "reference": "Rumah nyaman. Bantal lembut. Saya senang.",
+    "generated": "[\"rumah\", \"bantal\", \"lembut\", \"senang\"]",
+    "perplexity": 1.0004634857177734
+  },
+  {
+    "index": 399,
+    "input": [
+      "kucing",
+      "putih",
+      "nyaman",
+      "cukup",
+      "cantik",
+      "bulu",
+      "berbulu",
+      "kucing",
+      "nyaman"
+    ],
+    "reference": "Kucing putih berbulu. Kucing putih cantik. Kucing nyaman.",
+    "generated": "[\"kucing\", \"putih\", \"nyaman\", \"cukup\", \"cantik\", \"bulu\", \"berbulu\", \"kucing\", \"nyaman\"]",
+    "perplexity": 1.001295804977417
+  },
+  {
+    "index": 400,
+    "input": [
+      "orang",
+      "baik",
+      "rumah",
+      "gembira"
+    ],
+    "reference": "Orang rumah. Orang baik. Orang gembira.",
+    "generated": "[\"orang\", \"baik\", \"rumah\", \"gembira\"]",
+    "perplexity": 1.0022761821746826
+  },
+  {
+    "index": 401,
+    "input": [
+      "teman",
+      "senang",
+      "udara",
+      "sejuk"
+    ],
+    "reference": "Teman main. Teman senang. Udara sejuk.",
+    "generated": "[\"teman\", \"senang\", \"udara\", \"sejuk\"]",
+    "perplexity": 1.0012058019638062
+  },
+  {
+    "index": 402,
+    "input": [
+      "baik",
+      "membantu",
+      "senang",
+      "Cards",
+      "berbelanja",
+      "baju",
+      "gembira",
+      "Cards",
+      "bermain",
+      "suka",
+      "senang",
+      "Cards",
+      "duduk",
+      "baca",
+      "nyaman"
+    ],
+    "reference": "Orang baik. Orang membantu. Saya senang.\n\n2.\nStory: Orang berbelanja. Orang beli baju. Orang gembira.\n\n3.\nStory: Orang bermain. Orang suka bermain. Orang senang.\n\n4.\nStory: Orang duduk. Orang baca buku. Orang nyaman.",
+    "generated": "[\"baik\", \"membantu\", \"senang\", \"Cards\", \"berbelanja\", \"baju\", \"gembira\", \"Cards\", \"bermain\", \"suka\", \"senang\", \"Cards\", \"duduk\", \"baca\", \"nyaman\"]",
+    "perplexity": 1.0002899169921875
+  },
+  {
+    "index": 403,
+    "input": [
+      "malam",
+      "nyaman",
+      "tidur",
+      "orang"
+    ],
+    "reference": "Malam gelap. Malam nyaman. Orang tidur.",
+    "generated": "[\"malam\", \"nyaman\", \"tidur\", \"orang\"]",
+    "perplexity": 1.0020670890808105
+  },
+  {
+    "index": 404,
+    "input": [
+      "teman",
+      "sekarang",
+      "guru",
+      "sekolah",
+      "saya",
+      "Cards",
+      "air",
+      "minum",
+      "saya",
+      "haus",
+      "lelah",
+      "Cards",
+      "bangunan",
+      "sederhana",
+      "jalan",
+      "panjang",
+      "saya"
+    ],
+    "reference": "Teman tadi ke sekolah. Guru gembira. Saya senang.\n\n2.\nStory: Saya minum air. Saya haus. Saya lelah.\n\n3.\nStory: Bangunan sederhana. Jalan panjang. Saya berjalan.",
+    "generated": "[\"teman\", \"sekarang\", \"guru\", \"sekolah\", \"saya\", \"Cards\", \"air\", \"minum\", \"saya\", \"haus\", \"lelah\", \"Cards\", \"bangunan\", \"sederhana\", \"jalan\", \"panjang\", \"saya\"]",
+    "perplexity": 1.0003036260604858
+  },
+  {
+    "index": 405,
+    "input": [
+      "ia",
+      "jalan",
+      "cupang",
+      "senang"
+    ],
+    "reference": "Ia jalan. Ia lihat cupang. Ia senang.",
+    "generated": "[\"ia\", \"jalan\", \"cupang\", \"senang\"]",
+    "perplexity": 1.0001622438430786
+  },
+  {
+    "index": 406,
+    "input": [
+      "teman",
+      "guru",
+      "sabar",
+      "udara",
+      "panas"
+    ],
+    "reference": "Teman menunggu. Guru tidak sabar. Udara panas.\n\nCatatan: Saya berusaha untuk membuat kalimat sederhana dan nyaman, seperti yang Anda minta. Saya tidak dapat memenuhi kebutuhan Anda untuk memasukkan informasi tentang ramalan atau prediksi yang tidak jelas, karena saya harus menggunakan kata-kata yang sederhana dan positif.",
+    "generated": "[\"teman\", \"guru\", \"sabar\", \"udara\", \"panas\"]",
+    "perplexity": 1.0005731582641602
+  },
+  {
+    "index": 407,
+    "input": [
+      "orang",
+      "baca",
+      "tahu"
+    ],
+    "reference": "Orang membaca. Orang membacanya. Orang tahu.",
+    "generated": "[\"orang\", \"baca\", \"tahu\"]",
+    "perplexity": 1.0040098428726196
+  },
+  {
+    "index": 408,
+    "input": [
+      "buah",
+      "anak",
+      "manis",
+      "duduk",
+      "buku"
+    ],
+    "reference": "Anak duduk. Teman baca buku. Buah manis.",
+    "generated": "[\"buah\", \"anak\", \"manis\", \"duduk\", \"buku\"]",
+    "perplexity": 1.0011109113693237
+  }
+]
