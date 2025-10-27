@@ -7,7 +7,7 @@ corpus = [
     'Teknologi baru bisa mengubah hidup menjadi lebih mudah, dan teknologi baru itu sangat membantu',
 ]
 
-# Step 1: Initialize candidate subwords (all substrings)
+#  Initialize
 candidates = set()
 for sentence in corpus:
     for word in sentence.split():
@@ -16,11 +16,11 @@ for sentence in corpus:
                 candidates.add(word[i:j])
 candidates = list(candidates)
 
-# Step 2: Assign initial probabilities (uniform)
+# Assign
 prob = {token: 1 / len(candidates) for token in candidates}
 
 
-# Step 3: Tokenize word using current candidates
+# Tokenize word
 def tokenize_word(word, candidates_prob):
     tokens = []
     i = 0
@@ -37,7 +37,7 @@ def tokenize_word(word, candidates_prob):
     return tokens
 
 
-# Step 4: Iteratively prune low probability subwords
+# Step 4:  prune
 num_iterations = 5
 for _ in range(num_iterations):
     counts = defaultdict(int)

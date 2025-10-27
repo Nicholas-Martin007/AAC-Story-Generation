@@ -42,13 +42,12 @@ def get_message(
     use_story_prompt: bool = False,
     use_card_prompt: bool = False,
 ):
-    system_prompt = (
-        build_prompt_story(n)
-        if use_story_prompt
-        else build_prompt_card()
-        if use_card_prompt
-        else None
-    )
+    if use_story_prompt:
+        system_prompt = build_prompt_story(n)
+    elif use_card_prompt:
+        system_prompt = build_prompt_card()
+    else:
+        system_prompt = None
 
     return [
         {

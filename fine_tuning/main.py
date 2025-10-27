@@ -48,8 +48,11 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
         )
 
     tokenized_dataset = dataset.map(
-        tokenize_function, batched=True
+        tokenize_function,
+        batched=True,
     )
+
+    # SEQ2SEQ / CAUSAL
     if model_type == 'seq2seq':
         tokenized_dataset = tokenized_dataset.map(
             lambda x: {
@@ -81,12 +84,10 @@ def run_single_training(args):
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-    # Determine model type
-    model_type = (
-        'seq2seq'
-        if 'flan' in model_name or 't5' in model_name
-        else 'causal'
-    )
+    if 'flan' in model_name or 't5' in model_name:
+        model_type = 'seq2seq'
+    else:
+        model_type = 'causal'
 
     # INIT MODEL
     tokenizer = FinetuneTokenizer(
@@ -139,12 +140,9 @@ def run_single_training(args):
     trainer.save_model(save_path)
     tokenizer.save_pretrained(save_path)
 
-    if model_type == 'seq2seq':
-        eval_results = trainer.evaluate()
-    else:
-        eval_results = trainer.evaluate()
+    eval_results = trainer.evaluate()
 
-    print('\nFinal Evaluation Results:')
+    print('\n\n Eval Result:')
     print(f'Perplexity: {eval_results.get("eval_loss", 0):.4f}')
     print(f'Eval Loss: {eval_results.get("eval_loss", 0):.4f}')
 
@@ -176,7 +174,7 @@ def train_model(
 
     context = torch.multiprocessing.get_context(
         'spawn'
-    )  # multiprocessing, for gpu cleaning
+    )  # multiprocessing, for cleaning gpu
     pool = context.Pool(processes=1)
 
     with pool:
@@ -243,14 +241,13 @@ def training(model_name, dataset):
 
 
 if __name__ == '__main__':
-    # Prepare HF Dataset
     dataset = prepare_hf_dataset(
         card_path=AAC_CARD_PATH,
         story_path=AAC_STORY_PATH,
     )
 
     model_names = [
-        # 'llama3.2-3b',
+        'llama3.2-3b',
         'mistral7b',
         'flan-large',
     ]

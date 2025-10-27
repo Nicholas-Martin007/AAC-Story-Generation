@@ -32,7 +32,6 @@ def generate_story(
     for data in dataset:
         start = time.time()
 
-        # for n in N_PERSON:
         messages = get_message(
             data,
             N_PERSON[0],
@@ -122,32 +121,4 @@ if __name__ == '__main__':
     story_dataset = generate_story(dataset)
     card_dataset = generate_card(story_dataset)
 
-    # card_files = [
-    #     'dataset/aac_card_dataset.json',
-    #     'dataset/aac_card_dataset_2.json',
-    # ]
-    # story_files = [
-    #     'dataset/aac_story_dataset.json',
-    #     'dataset/aac_story_dataset_2.json',
-    # ]
-
-    # def merge_json(file_list):
-    #     merged = []
-    #     for f in file_list:
-    #         with open(f, 'r', encoding='utf-8') as infile:
-    #             data = json.load(infile)
-    #             if isinstance(data, list):
-    #                 merged.extend(data)
-    #             else:
-    #                 merged.append(data)
-    #     return merged
-
-    # cards = merge_json(card_files)
-    # stories = merge_json(story_files)
-
-    # with open('cards.json', 'w', encoding='utf-8') as f:
-    #     json.dump(cards, f, ensure_ascii=False, indent=2)
-
-    # with open('stories.json', 'w', encoding='utf-8') as f:
-    #     json.dump(stories, f, ensure_ascii=False, indent=2)
     print('DONE')

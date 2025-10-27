@@ -91,6 +91,7 @@ class FinetuneTrainer:
                 pad_to_multiple_of=8,
             )
 
+        # Trainer
         if model_type == 'seq2seq':
             self.trainer = Seq2SeqTrainer(
                 model=model,

@@ -11,7 +11,13 @@ class FinetuneLora:
     ):
         if model_type == 'seq2seq':
             task_type = TaskType.SEQ_2_SEQ_LM
-            target_modules = ['q', 'v', 'wi', 'wo', 'shared']
+            target_modules = [
+                'q',
+                'v',
+                'wi',
+                'wo',
+                'shared',
+            ]
         else:
             task_type = TaskType.CAUSAL_LM
             target_modules = [

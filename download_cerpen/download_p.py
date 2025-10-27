@@ -26,6 +26,7 @@ for url in urls:
     )
     soup = BeautifulSoup(response.text, 'html.parser')
 
+    # buat ambil judul
     cerpen_name = urlparse(url).path.split('/')[-1].split('?')[0]
 
     p = []
@@ -35,11 +36,12 @@ for url in urls:
     if not p:
         continue
 
-    # save
+    # insert
     result[cerpen_name] = {
         'text': [p.get_text(strip=True) for p in p]
     }
 
+# save
 with open(
     'raw-text-cerpen.json',
     'w',

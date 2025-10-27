@@ -1,24 +1,23 @@
-import sys
 import os
+import sys
 
 sys.path.append(os.path.abspath('./'))
-from config import *
-
 import re
+
 from setup import (
-    model,
-    terminators,
-    tokenizer,
     generation_config,
+    model,
+    tokenizer,
 )
-from typing import Optional
+
+from config import *
 
 
 def format_output(
     response: str,
     use_story_format: bool = False,
     use_card_format: bool = False,
-) -> Optional[str]:
+):
     if not isinstance(response, str):
         return None
 

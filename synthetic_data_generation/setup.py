@@ -65,7 +65,6 @@ generation_config = GenerationConfig(
     do_sample=True,
     temperature=0.9,
     top_p=0.9,
-    # bos_token_id=tokenizer.convert_tokens_to_ids("Story:"),
     eos_token_id=terminators,
     pad_token_id=tokenizer.eos_token_id,
 )
