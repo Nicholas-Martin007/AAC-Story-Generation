@@ -52,12 +52,12 @@ for _ in range(num_iterations):
     threshold = 0.02
     prob = {t: p for t, p in prob.items() if p >= threshold}
 
-# Step 5: Build vocabulary mapping subword -> ID
+# Build vocabulary 
 vocab = {
     token: idx for idx, token in enumerate(sorted(prob.keys()))
 }
 
-# Step 6: Tokenize corpus using final unigram probabilities
+# Tokenize corpus 
 tokenized_corpus = []
 for sentence in corpus:
     tokenized_sentence = []
@@ -65,19 +65,18 @@ for sentence in corpus:
         tokenized_sentence.extend(tokenize_word(word, prob))
     tokenized_corpus.append(tokenized_sentence)
 
-# Step 7: Convert tokenized corpus to IDs
+# tokenized corpus to IDs
 numerical_corpus = []
 for sentence_tokens in tokenized_corpus:
     numerical_corpus.append([vocab[t] for t in sentence_tokens])
 
-# Step 8: Tokenize your input sentence
+# Tokenize input
 input_text = 'Saya mau menciptakan sebuah kisah sosial yang baru'
 tokenized_input = []
 for word in input_text.split():
     tokenized_input.extend(
         tokenize_word(word, prob)
-    )  # lowercase to match corpus
-
+    )
 input_ids = [vocab[t] for t in tokenized_input if t in vocab]
 
 # Print results
