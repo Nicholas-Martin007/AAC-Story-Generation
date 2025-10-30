@@ -37,7 +37,12 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
 
     # dataset = dataset.select(range(100))
     dataset = dataset.train_test_split(test_size=0.1, seed=SEED)
-    dataset = dataset.map(lambda x: apply_template(x, tokenizer))
+    dataset = dataset.map(
+        lambda x: apply_template(
+            x,
+            tokenizer,
+        ),
+    )
 
     def tokenize_function(examples):
         return tokenizer(

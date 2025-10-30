@@ -10,44 +10,37 @@ from transformers import (
 )
 
 from config import *
-from fine_tuning.f_model import FinetuneModel
 from fine_tuning.f_tokenizer import FinetuneTokenizer
 
-tokenizer = FinetuneTokenizer(
-    model_path=MODEL_PATH['llama3.2-3b']
-).get_tokenizer()
 
-model_class = FinetuneModel(
-    tokenizer=tokenizer,
-    model_path=MODEL_PATH['llama3.2-3b'],
-    device=DEVICE,
-    model_type='causal',
-)
-
-
-def inference():
+def inference(
+    model_path: str,
+    qlora_model_path: str,
+):
+    ####### INIT #######
     tokenizer = FinetuneTokenizer(
-        MODEL_PATH['llama3.2-3b']
+        model_path,
     ).get_tokenizer()
-
     model = AutoModelForCausalLM.from_pretrained(
-        f'{MODEL_PATH["llama3.2-3b"]}',
+        model_path,
     )
+
     model.resize_token_embeddings(len(tokenizer))
 
-    # for name, param in model.named_parameters():
-    #     print(name, param.norm().item())
+    for name, param in model.named_parameters():
+        print(name, param.norm().item())
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         model,
-        '/Users/Nicmar/Documents/coding/LLM QLORA/llama_downloads/llama3_2-3b_lr1_4421754150410843e-05_wd0_02_r48_a96_ep1_bs1',
-        # '/Users/Nicmar/Documents/coding/LLM QLORA/llama_downloads/llama3_2-3b_lr0_0001135780665671859_wd0_06_r16_a32_ep1_bs2',
+        qlora_model_path,
         device_map=DEVICE,
         inference_mode=False,
     )  # jangan dimerge and unload terlebih dahulu untuk mengecek lora
 
     merged_model = qlora_model.merge_and_unload()
     merged_model = merged_model.to(DEVICE)
+
+    ###################
 
     list_input = [
         [
@@ -85,11 +78,12 @@ def inference():
             output_scores=True,
         )
 
+        ##### Untuk membuktikan skor probabilitas dari top p dan lainnya #####
+        import torch.nn.functional as F
+
         input_len = input_ids.shape[1]
 
         generated_tokens = output.sequences[:, input_len:]
-
-        import torch.nn.functional as F
 
         for i, tok in enumerate(generated_tokens[0]):
             logits = output.scores[i][0]
@@ -98,13 +92,21 @@ def inference():
                 f"Token {i + 1}: id={tok.item()}, text='{tokenizer.decode(tok)}', prob={probs[tok].item():.4f}"
             )
 
+        ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+
+        with torch.no_grad():
+            loss = model(input_ids, labels=input_ids).loss
+            perplexity = torch.exp(loss).item()
+
         print('PROMPT')
         print(prompt)
+
         print('======')
+
         print('input Id')
         print(f'{input_ids[0]}')
-        print('DECODED')
 
+        print('DECODED')
         print(f'{tokenizer.convert_ids_to_tokens(input_ids[0])}')
 
         story = tokenizer.decode(output[0].detach()[0])
@@ -113,11 +115,12 @@ def inference():
         )
         print(story)
 
+        print(perplexity)
         print()
 
 
 if __name__ == '__main__':
-    inference()
-
-
-#  ROUGE, evaluasi lainnya, masuk
+    inference(
+        model_path=MODEL_PATH['llama3.2-3b'],
+        qlora_model_path='/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr3_533756450157008e-05_wd0_0_r48_a96_ep1_bs2',
+    )

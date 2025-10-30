@@ -9,7 +9,9 @@ class FinetuneTokenizer:
 
         if self.tokenizer.pad_token is None:
             self.tokenizer.add_special_tokens(
-                {'pad_token': '<|PAD|>'}
+                {
+                    'pad_token': '<|PAD|>',
+                }
             )
             self.tokenizer.pad_token_id = (
                 self.tokenizer.convert_tokens_to_ids('<|PAD|>')

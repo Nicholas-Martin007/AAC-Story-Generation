@@ -16,7 +16,6 @@ class FinetuneModel:
         tokenizer,
         model_path,
         device,
-        lora_config=None,
         model_type='seq2seq',
     ):
         # DQ + NF4
