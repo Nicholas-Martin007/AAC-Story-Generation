@@ -9,17 +9,10 @@ N_PERSON = [
     # 'five_person',
 ]
 
-DATA_PATH = 'dataset/text-cerpen.json'
-PRE_PROCESSED_DATA_PATH = 'dataset/pre-processed-dataset.json'
-APPLIED_NER_DATA_PATH = 'dataset/applied-ner-dataset.json'
-CLEANED_APPLIED_NER_DATA_PATH = (
-    'dataset/cleaned-applied-ner-dataset.json'
-)
 AAC_CARD_PATH = 'dataset/Oktober_24_2025/aac_card_dataset.json'
 AAC_STORY_PATH = 'dataset/Oktober_24_2025/aac_story_dataset.json'
 
 NER_MODEL_PATH = 'cahya/NusaBert-ner-v1.3'
-N_SHOTS = 5
 DEVICE = torch.device(
     'cuda:0' if torch.cuda.is_available() else 'cpu'
 )

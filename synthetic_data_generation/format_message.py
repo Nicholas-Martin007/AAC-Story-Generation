@@ -2,50 +2,41 @@ import os
 import sys
 
 sys.path.append(os.path.abspath('./'))
-from cards_prompt import (
-    CARD_PROMPT,
-    LIST_CARDS_PROMPT,
-)
-from stories_prompt import (
-    LIST_STORIES_PROMPT,
-    STORY_PROMPT,
-)
+
+from prompts import *
 
 from config import *
 
 
-def build_prompt_story(n):
-    samples = LIST_STORIES_PROMPT[n][:N_SHOTS]
+def build_prompt(type='Story'):
+    samples = (
+        LIST_STORIES_PROMPT[:5]
+        if type == 'Story'
+        else LIST_CARDS_PROMPT[:5]
+    )
+    samples = LIST_STORIES_PROMPT[:5]
 
     examples_text = ''
     for i, shot in enumerate(samples):
         content = shot['content']
-        examples_text += f'{i + 1}.\nStory: {content}\n\n'
+        examples_text += f'{i + 1}.\n{type}: {content}\n\n'
 
-    return STORY_PROMPT[n] + '\n' + examples_text
-
-
-def build_prompt_card():
-    samples = LIST_CARDS_PROMPT[:N_SHOTS]
-
-    examples_text = ''
-    for i, shot in enumerate(samples):
-        content = shot['content']
-        examples_text += f'{i + 1}.\nCards: {content}\n\n'
-
-    return CARD_PROMPT + '\n' + examples_text
+    return (
+        STORY_PROMPT + '\n' + examples_text
+        if type == 'Story'
+        else CARD_PROMPT + '\n' + examples_text
+    )
 
 
 def get_message(
     user_prompt: str,
-    n: str = None,
     use_story_prompt: bool = False,
     use_card_prompt: bool = False,
 ):
     if use_story_prompt:
-        system_prompt = build_prompt_story(n)
+        system_prompt = build_prompt(type='Story')
     elif use_card_prompt:
-        system_prompt = build_prompt_card()
+        system_prompt = build_prompt(type='Card')
     else:
         system_prompt = None
 

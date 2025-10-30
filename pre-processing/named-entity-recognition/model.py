@@ -131,7 +131,10 @@ def concat_entity(outputs):
     return storage
 
 
-def insert_entity_tags(storage: list[str], sentence: str) -> str:
+def insert_entity_tags(
+    storage: list[str],
+    sentence: str,
+) -> str:
     """
     insert entities into sentences, (PER tag only)
     """
@@ -170,10 +173,11 @@ def insert_entity_tags(storage: list[str], sentence: str) -> str:
 
 
 def find_ner_tags(
-    pipe: pipeline, dataset: list[str]
+    pipe: pipeline,
+    dataset: list[str],
 ) -> list[str]:
     """
-    Apply NER tags into the sentences
+    Apply NER tags into the sentences, using model
     """
     result = []
 
@@ -201,7 +205,9 @@ def find_ner_tags(
     return result
 
 
-def apply_ner_tags(dataset: list[str]):
+def apply_ner_tags(
+    dataset: list[str],
+):
     result = []
 
     for data in dataset:

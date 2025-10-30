@@ -24,18 +24,6 @@ if tokenizer.pad_token is None:
 
 tokenizer.padding_side = 'left'
 
-# tokenizer.add_special_tokens(
-#     {
-#         'additional_special_tokens': [
-#             '<|PER|>',
-#             '<|PER_1|>',
-#             '<|PER_2|>',
-#             '<|PER_3|>',
-#             '<|PER_4|>',
-#         ]
-#     }
-# )
-
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.bfloat16,

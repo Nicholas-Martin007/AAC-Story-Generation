@@ -1,8 +1,9 @@
+# SYNTHETIC DATA GENERATIONS (STEP 4)
+
 import os
 import sys
 
 sys.path.append(os.path.abspath('./'))
-import json
 import time
 
 from format_message import get_message
@@ -10,31 +11,26 @@ from model import generate_text
 from setup import tokenizer
 
 from config import *
+from utils.file_utils import *
 
 torch.manual_seed(SEED)
 if torch.cuda.is_available():
     torch.cuda.manual_seed_all(SEED)
 
 
-def read_file(
-    filepath=CLEANED_APPLIED_NER_DATA_PATH,
-) -> list[str]:
-    with open(filepath, 'r', encoding='utf-8') as f:
-        dataset = json.load(f)
-
-    return dataset
-
-
 def generate_story(
     dataset: list[str],
 ) -> list[str]:
+    """
+    Generate Story menggunakan model Llama 3.1 8B
+    """
+
     results = []
     for data in dataset:
         start = time.time()
 
         messages = get_message(
             data,
-            N_PERSON[0],
             use_story_prompt=True,
         )
 
@@ -57,19 +53,13 @@ def generate_story(
         print(f'Generated in {end - start:.2f} seconds')
         print('\n\n')
 
-    # results = [normalize_per_entities(r) for r in results]
     print('SAVING STORY...')
-    with open(
-        'aac_story_dataset_SDG_versi_2.json',
-        'w',
-        encoding='utf-8',
-    ) as f:
-        json.dump(
-            results,
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
+
+    save_file(
+        data=results,
+        save_filename='aac_story_dataset.json',
+        ensure_ascii=False,
+    )
 
     return results
 
@@ -101,23 +91,20 @@ def generate_card(
         print('\n\n')
 
     print('SAVING CARD...')
-    with open(
-        'aac_card_dataset_SDG_versi_2.json',
-        'w',
-        encoding='utf-8',
-    ) as f:
-        json.dump(
-            results,
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
+
+    save_file(
+        data=results,
+        save_filename='aac_card_dataset.json',
+        ensure_ascii=False,
+    )
 
     return results
 
 
 if __name__ == '__main__':
-    dataset = read_file()
+    dataset = read_file(
+        filename='dataset/cleaned-applied-ner-dataset.json'
+    )
     story_dataset = generate_story(dataset)
     card_dataset = generate_card(story_dataset)
 
