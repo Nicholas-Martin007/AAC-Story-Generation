@@ -5,11 +5,7 @@ sys.path.append(os.path.abspath('./'))
 import json
 
 from peft import PeftModelForCausalLM
-from transformers import (
-    AutoModelForCausalLM,
-    AutoModelForSeq2SeqLM,
-)
-
+from fine_tuning.f_model import FinetuneModel
 from config import *
 from fine_tuning.f_tokenizer import FinetuneTokenizer
 
@@ -23,22 +19,27 @@ def inference(
         model_path,
     ).get_tokenizer()
 
-    if 'flan' in model_path:
-        model = AutoModelForSeq2SeqLM.from_pretrained(
-            model_path,
-        )
+    if 'flan' in model_path or 't5' in model_path:
+        model_type = 'seq2seq'
     else:
-        model = AutoModelForCausalLM.from_pretrained(
-            model_path,
-        )
+        model_type = 'causal'
 
-    model.resize_token_embeddings(len(tokenizer))
+    f_model = FinetuneModel(
+        tokenizer=tokenizer,
+        model_path=model_path,
+        device=DEVICE,
+        model_type=model_type,
+    )
 
-    for name, param in model.named_parameters():
-        print(name, param.norm().item())
+    # model.resize_token_embeddings(len(tokenizer))
+    for name, param in f_model.model.named_parameters():
+        if param.dtype.is_floating_point:
+            print(name, param.norm().item())
+        else:
+            print(name, f'Skipped (dtype={param.dtype})')
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
-        model,
+        f_model.model,
         qlora_model_path,
         device_map=DEVICE,
         inference_mode=False,
@@ -105,7 +106,9 @@ def inference(
         ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
         with torch.no_grad():
-            loss = model(input_ids, labels=input_ids).loss
+            loss = f_model.model(
+                input_ids, labels=input_ids
+            ).loss
             perplexity = torch.exp(loss).item()
 
         print('PROMPT')
@@ -154,7 +157,7 @@ def get_model_path(model_name, experiment):
     return model_path, qlora_model_path
 
 
-# tidak bisa run mistral karena belum diquantized, tetapi hasil bakal jadi tidak bagus
+# quantized model, limited
 
 if __name__ == '__main__':
     model_path, qlora_model_path = get_model_path(
@@ -167,6 +170,3 @@ if __name__ == '__main__':
         model_path=model_path,
         qlora_model_path=qlora_model_path,
     )
-
-
-# while ($true) { clear; nvidia-smi; Start-Sleep 2 }
