@@ -85,11 +85,11 @@ def inference(
 
         generated_tokens = output.sequences[:, input_len:]
 
-        for i, tok in enumerate(generated_tokens[0]):
+        for i, token in enumerate(generated_tokens[0]):
             logits = output.scores[i][0]
             probs = F.softmax(logits, dim=-1)
             print(
-                f"Token {i + 1}: id={tok.item()}, text='{tokenizer.decode(tok)}', prob={probs[tok].item():.4f}"
+                f"Token {i + 1}: id={token.item()}, text='{tokenizer.decode(token)}', prob={probs[token].item():.4f}"
             )
 
         ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
@@ -119,8 +119,39 @@ def inference(
         print()
 
 
+def get_model_path(model_name, experiment):
+    if model_name == 'llama':
+        model_path = MODEL_PATH['llama3.2-3b']
+        if experiment == 1:
+            qlora_model_path = '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/Llama/llama3_2-3b_lr0_00025461989761985766_wd0_01_r48_a24_ep2_bs4'
+        else:
+            qlora_model_path = '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr0_00034608371233975127_wd0_0_r32_a16_ep2_bs2'
+
+    elif model_name == 'mistral':
+        model_path = MODEL_PATH['mistral7b']
+        if experiment == 1:
+            qlora_model_path = '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/Mistral/mistral7b_lr0_00015079044135156433_wd0_1_r64_a128_ep1_bs2'
+        else:
+            qlora_model_path = '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/mistral7b_lr0_00031777491797078413_wd0_04_r16_a8_ep2_bs4'
+
+    else:
+        model_path = MODEL_PATH['flan-large']
+        if experiment == 1:
+            qlora_model_path = '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/Flan-T5/flan-large_lr0_0001482178201997769_wd0_09_r32_a16_ep1_bs4'
+        else:
+            qlora_model_path = '/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/flan-large_lr7_789020928835203e-05_wd0_07_r16_a32_ep2_bs4'
+
+    return model_path, qlora_model_path
+
+
 if __name__ == '__main__':
+    model_path, qlora_model_path = get_model_path(
+        model_name='flan-t5',
+        experiment=1,
+    )
+
+    print()
     inference(
-        model_path=MODEL_PATH['llama3.2-3b'],
-        qlora_model_path='/home/dev/chatbot_beta/nic-learn/skripsi_nic/training_output/llama3_2-3b_lr3_533756450157008e-05_wd0_0_r48_a96_ep1_bs2',
+        model_path=model_path,
+        qlora_model_path=qlora_model_path,
     )

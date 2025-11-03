@@ -67,7 +67,9 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
         )
     else:
         tokenized_dataset = tokenized_dataset.map(
-            lambda x: {'labels': x['input_ids'].copy()},
+            lambda x: {
+                'labels': x['input_ids'].copy(),
+            },
             batched=True,
         )
 
@@ -258,4 +260,7 @@ if __name__ == '__main__':
     ]
 
     for model_name in model_names:
-        training(model_name=model_name, dataset=dataset)
+        training(
+            model_name=model_name,
+            dataset=dataset,
+        )
