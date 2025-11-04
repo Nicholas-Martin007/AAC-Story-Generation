@@ -113,7 +113,7 @@ class Evaluate:
                 add_generation_prompt=True,
             )
         else:
-            prompt = json.dumps(input)
+            prompt = ', '.join(input)
 
         input_ids = self.tokenizer(
             prompt,
@@ -297,7 +297,7 @@ if __name__ == '__main__':
     )
 
     test_data = dataset_split['test']
-    test_data = test_data.select(range(5))
+    test_data = test_data.select(range(100))
 
     for name, data in FINE_TUNED_MODELS.items():
         print(f'\nModel: {name}')
