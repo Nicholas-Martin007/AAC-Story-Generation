@@ -5,8 +5,9 @@ sys.path.append(os.path.abspath('./'))
 import json
 
 from peft import PeftModelForCausalLM
-from fine_tuning.f_model import FinetuneModel
+
 from config import *
+from fine_tuning.f_model import FinetuneModel
 from fine_tuning.f_tokenizer import FinetuneTokenizer
 
 
@@ -36,17 +37,38 @@ def inference(
         if param.dtype.is_floating_point:
             print(name, param.norm().item())
         else:
-            print(name, f'Skipped (dtype={param.dtype})')
+            print(name, param.to(torch.float32).norm().item())
+
+    print('##### BASE MODEL ######')
+    for name, param in f_model.model.named_parameters():
+        if param.dtype.is_floating_point:
+            print(name, param.norm().item())
+        else:
+            print(name, param.to(torch.float32).norm().item())
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         f_model.model,
         qlora_model_path,
         device_map=DEVICE,
-        inference_mode=False,
+        inference_mode=True,
     )  # jangan dimerge and unload terlebih dahulu untuk mengecek lora
+
+    print('##### QLORA MODEL ######')
+    for name, param in qlora_model.named_parameters():
+        if param.dtype.is_floating_point:
+            print(name, param.norm().item())
+        else:
+            print(name, param.to(torch.float32).norm().item())
 
     merged_model = qlora_model.merge_and_unload()
     merged_model = merged_model.to(DEVICE)
+
+    print('##### MERGED MODEL #####')
+    for name, param in merged_model.named_parameters():
+        if param.dtype.is_floating_point:
+            print(name, param.norm().item())
+        else:
+            print(name, param.to(torch.float32).norm().item())
 
     ###################
 
@@ -164,7 +186,6 @@ if __name__ == '__main__':
         model_name='flan',
         experiment=2,
     )
-
     print()
     inference(
         model_path=model_path,

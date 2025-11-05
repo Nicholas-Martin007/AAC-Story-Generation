@@ -26,26 +26,38 @@ def inference(
     if 'flan' in model_path:
         model = AutoModelForSeq2SeqLM.from_pretrained(
             model_path,
+            device_map=DEVICE,
         )
     else:
         model = AutoModelForCausalLM.from_pretrained(
             model_path,
+            device_map=DEVICE,
         )
 
     model.resize_token_embeddings(len(tokenizer))
 
+    # print('##### BASE MODEL ######')
     for name, param in model.named_parameters():
+        print(name, param.dtype)
         print(name, param.norm().item())
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         model,
         qlora_model_path,
         device_map=DEVICE,
-        inference_mode=False,
+        inference_mode=True,
     )  # jangan dimerge and unload terlebih dahulu untuk mengecek lora
+
+    # print('##### QLORA MODEL ######')
+    # for name, param in qlora_model.named_parameters():
+    #     print(name, param.norm().item())
 
     merged_model = qlora_model.merge_and_unload()
     merged_model = merged_model.to(DEVICE)
+
+    # print('##### MERGED MODEL #####')
+    # for name, param in merged_model.named_parameters():
+    #     print(name, param.norm().item())
 
     ###################
 
@@ -72,7 +84,9 @@ def inference(
             )
 
         input_ids = tokenizer(
-            prompt, return_tensors='pt', padding=True
+            prompt,
+            return_tensors='pt',
+            padding=True,
         ).input_ids.to(DEVICE)
 
         output = merged_model.generate(
