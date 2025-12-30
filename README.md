@@ -94,3 +94,12 @@ Seluruh dependency Python yang dibutuhkan untuk proses fine-tuning, preprocessin
 ```text
 requirements.txt
 ```
+
+
+
+## 📘 Manual Book
+
+Panduan penggunaan sistem secara lengkap dapat dilihat pada file berikut:
+
+- **Manual Book**: `535220027_Manual Book.pdf`
+
