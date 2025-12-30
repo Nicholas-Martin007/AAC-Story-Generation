@@ -17,9 +17,7 @@ DEVICE = torch.device(
     'cuda:0' if torch.cuda.is_available() else 'cpu'
 )
 
-SDG_MODEL_PATH = (
-    '/home/dev/Downloads/Meta-Llama-3.1-8B-Instruct/'
-)
+SDG_MODEL_PATH = 'meta-llama/Llama-3.2-1B-Instruct'
 
 
 MODEL_PATH = {

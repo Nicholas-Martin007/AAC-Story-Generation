@@ -40,7 +40,7 @@ class FinetuneTrainer:
                 num_train_epochs=n_epochs,
                 weight_decay=weight_decay,
                 optim='paged_adamw_32bit',  #
-                logging_steps=100,
+                logging_steps=100,  # printer
                 warmup_ratio=0.01,  #
                 eval_strategy='no',
                 save_strategy='epoch',

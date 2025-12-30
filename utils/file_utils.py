@@ -5,10 +5,7 @@ from typing import List
 def read_file(
     filename: str,
 ) -> List[str]:
-    with open(
-        filename,
-        'r',
-    ) as f:
+    with open(filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     return data

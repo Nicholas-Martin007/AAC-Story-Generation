@@ -33,18 +33,18 @@ def inference(
     )
 
     # model.resize_token_embeddings(len(tokenizer))
-    for name, param in f_model.model.named_parameters():
-        if param.dtype.is_floating_point:
-            print(name, param.norm().item())
-        else:
-            print(name, param.to(torch.float32).norm().item())
+    # for name, param in f_model.model.named_parameters():
+    #     if param.dtype.is_floating_point:
+    #         print(name, param.norm().item())
+    #     else:
+    #         print(name, param.to(torch.float32).norm().item())
 
-    print('##### BASE MODEL ######')
-    for name, param in f_model.model.named_parameters():
-        if param.dtype.is_floating_point:
-            print(name, param.norm().item())
-        else:
-            print(name, param.to(torch.float32).norm().item())
+    # print('##### BASE MODEL ######')
+    # for name, param in f_model.model.named_parameters():
+    #     if param.dtype.is_floating_point:
+    #         print(name, param.norm().item())
+    #     else:
+    #         print(name, param.to(torch.float32).norm().item())
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         f_model.model,
@@ -53,31 +53,46 @@ def inference(
         inference_mode=True,
     )  # jangan dimerge and unload terlebih dahulu untuk mengecek lora
 
-    print('##### QLORA MODEL ######')
-    for name, param in qlora_model.named_parameters():
-        if param.dtype.is_floating_point:
-            print(name, param.norm().item())
-        else:
-            print(name, param.to(torch.float32).norm().item())
+    # print('##### QLORA MODEL ######')
+    # for name, param in qlora_model.named_parameters():
+    #     if param.dtype.is_floating_point:
+    #         print(name, param.norm().item())
+    #     else:
+    #         print(name, param.to(torch.float32).norm().item())
 
     merged_model = qlora_model.merge_and_unload()
     merged_model = merged_model.to(DEVICE)
 
-    print('##### MERGED MODEL #####')
-    for name, param in merged_model.named_parameters():
-        if param.dtype.is_floating_point:
-            print(name, param.norm().item())
-        else:
-            print(name, param.to(torch.float32).norm().item())
+    # print('##### MERGED MODEL #####')
+    # for name, param in merged_model.named_parameters():
+    #     if param.dtype.is_floating_point:
+    #         print(name, param.norm().item())
+    #     else:
+    #         print(name, param.to(torch.float32).norm().item())
 
-    ###################
+    # ###################
 
     list_input = [
+        ['kelas', 'teman', 'bicara', 'sibuk', 'kursi'],
         [
-            'pensil',
-            'kertas',
-            'belajar',
-        ]
+            'rumah',
+            'air',
+            'orang',
+            'tidak',
+            'banyak',
+            'makan',
+            'minum',
+        ],
+        [
+            'saya',
+            'tenang',
+            'ruang',
+            'kelas',
+            'guru',
+            'mendengarkan',
+        ],
+        ['pasar', 'beli', 'barang', 'rumah'],
+        ['toko', 'makanan', 'Ibu', 'beli', 'masa', 'saya'],
     ]
     for input in list_input:
         if 'flan' in model_path:
@@ -111,47 +126,47 @@ def inference(
             output_scores=True,
         )
 
-        ##### Untuk membuktikan skor probabilitas dari top p dan lainnya #####
-        import torch.nn.functional as F
+        # ##### Untuk membuktikan skor probabilitas dari top p dan lainnya #####
+        # import torch.nn.functional as F
 
-        input_len = input_ids.shape[1]
+        # input_len = input_ids.shape[1]
 
-        generated_tokens = output.sequences[:, input_len:]
+        # generated_tokens = output.sequences[:, input_len:]
 
-        for i, token in enumerate(generated_tokens[0]):
-            logits = output.scores[i][0]
-            probs = F.softmax(logits, dim=-1)
-            print(
-                f"Token {i + 1}: id={token.item()}, text='{tokenizer.decode(token)}', prob={probs[token].item():.4f}"
-            )
+        # for i, token in enumerate(generated_tokens[0]):
+        #     logits = output.scores[i][0]
+        #     probs = F.softmax(logits, dim=-1)
+        #     print(
+        #         f"Token {i + 1}: id={token.item()}, text='{tokenizer.decode(token)}', prob={probs[token].item():.4f}"
+        #     )
 
-        ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+        # ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-        with torch.no_grad():
-            loss = f_model.model(
-                input_ids, labels=input_ids
-            ).loss
-            perplexity = torch.exp(loss).item()
+        # with torch.no_grad():
+        #     loss = f_model.model(
+        #         input_ids, labels=input_ids
+        #     ).loss
+        #     perplexity = torch.exp(loss).item()
 
         print('PROMPT')
         print(prompt)
 
-        print('======')
+        # print('======')
 
-        print('input Id')
-        print(f'{input_ids[0]}')
+        # print('input Id')
+        # print(f'{input_ids[0]}')
 
-        print('DECODED')
-        print(f'{tokenizer.convert_ids_to_tokens(input_ids[0])}')
+        # print('DECODED')
+        # print(f'{tokenizer.convert_ids_to_tokens(input_ids[0])}')
 
         story = tokenizer.decode(output[0].detach()[0])
-        print(
-            f'{tokenizer.convert_ids_to_tokens(output[0].detach()[0])}'
-        )
+        # print(
+        #     f'{tokenizer.convert_ids_to_tokens(output[0].detach()[0])}'
+        # )
         print(story)
 
-        print(perplexity)
-        print()
+        # print(perplexity)
+        # print()
 
 
 def get_model_path(model_name, experiment):
@@ -183,7 +198,7 @@ def get_model_path(model_name, experiment):
 
 if __name__ == '__main__':
     model_path, qlora_model_path = get_model_path(
-        model_name='flan',
+        model_name='llama',
         experiment=2,
     )
     print()

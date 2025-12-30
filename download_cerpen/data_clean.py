@@ -5,14 +5,11 @@ import re
 from typing import Iterator, List
 
 
-def read_file(filename: str) -> List[str]:
-    with open(
-        filename,
-        'r',
-    ) as f:
-        data = json.load(f)
+import os
+import sys
 
-    return data
+sys.path.append(os.path.abspath('./'))
+from utils.file_utils import *
 
 
 def save_file(

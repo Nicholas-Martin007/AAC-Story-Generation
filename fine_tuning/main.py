@@ -5,7 +5,7 @@ import optuna
 
 os.environ['NETWORKX_BACKEND'] = 'basic'
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
-
+from datasets import load_from_disk
 
 sys.path.append(os.path.abspath('./'))
 
@@ -45,6 +45,9 @@ def prepare_data(tokenizer, dataset, model_type='seq2seq'):
     )
 
     def tokenize_function(examples):
+        """
+        untuk mendapatkan input_ids, attention_mask
+        """
         return tokenizer(
             examples['text'],
             truncation=True,
@@ -150,8 +153,11 @@ def run_single_training(args):
     eval_results = trainer.evaluate()
 
     print('\n\n Eval Result:')
-    print(f'Perplexity: {eval_results.get("eval_loss", 0):.4f}')
-    print(f'Eval Loss: {eval_results.get("eval_loss", 0):.4f}')
+    loss = eval_results.get('eval_loss', 0)
+    ppl = torch.exp(torch.tensor(loss)).item()
+
+    print(f'Eval Loss: {loss:.4f}')
+    print(f'Perplexity: {ppl:.4f}')
 
     return -eval_results.get('eval_loss', float('inf'))
 
@@ -248,10 +254,12 @@ def training(model_name, dataset):
 
 
 if __name__ == '__main__':
-    dataset = prepare_hf_dataset(
-        card_path=AAC_CARD_PATH,
-        story_path=AAC_STORY_PATH,
-    )
+    # dataset = prepare_hf_dataset(
+    #     card_path=AAC_CARD_PATH,
+    #     story_path=AAC_STORY_PATH,
+    # )
+
+    dataset = load_from_disk('./hf_aac_dataset')
 
     model_names = [
         'llama3.2-3b',
@@ -264,3 +272,6 @@ if __name__ == '__main__':
             model_name=model_name,
             dataset=dataset,
         )
+
+
+# optuna-dashboard sqlite:///optuna_qlora_llama3.2-3b.db

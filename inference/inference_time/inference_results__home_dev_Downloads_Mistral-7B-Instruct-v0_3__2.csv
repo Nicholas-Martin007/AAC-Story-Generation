@@ -1,0 +1,877 @@
+experiment,model_path,time_sec,output
+0,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.353367567062378,"[""pensil"", ""kertas"", ""belajar""] ""Saya menggunakan pensil. Saya tulis kertas. Saya belajar.""
+
+Catatan:
+- ""Pensil"" adalah kata sederhana yang digunakan untuk menggantikan ""pensil"" yang lebih panjang.
+- ""Tulis kertas"" digunakan sebagai konteks karena membantu anak usia dini memahami bahwa pensil digunakan untuk menulis.
+- ""Belajar"" digunakan sebagai tujuan dari aktivitas tulis kertas, yaitu untuk mengambil pengetahuan baru.
+
+Catatan 2:
+- Kata ""belajar"" juga bisa diganti dengan kata ""pembelajaran"" atau ""pengajaran"", seperti: ""Saya menggunakan pensil. Saya tulis kertas. Saya menerima pengajaran.""
+- Namun, karena tujuan adalah membantu anak usia dini, kita lebih menggunakan kata ""belajar"".
+
+Catatan 3:
+- Jika Anda ingin menggambarkan aktivitas tulis kertas lebih spesifik, seperti menulis kalimat atau contoh soal, maka Anda bisa menambahkan konteks seperti: ""Saya menggunakan pensil. Saya tulis kertas. Saya menulis kalimat tentang..."" atau ""Saya menggunakan pensil. Saya tulis kertas. Saya menjawab soal tentang...""
+
+Catatan 4:
+- Jika Anda ingin menggambarkan aktivitas tulis kertas yang lebih umum, seperti mengambil catatan atau mengikuti langkah-langkah, maka Anda bisa menambahkan konteks seperti: ""Saya menggunakan pensil."
+1,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.282262563705444,"[""pensil"", ""kertas"", ""belajar""] Menggunakan tema sekolah, saya akan membuat paragraf yang sederhana dan positif.
+
+Story: Saya membawa pensil dan kertas ke sekolah. Saya belajar dengan senang hati.
+
+Saya mencoba membuat paragraf yang sederhana dan positif seperti yang Anda minta. Namun, saya tidak memiliki informasi yang lebih spesifik tentang tema atau topik yang Anda inginkan. Jika Anda bisa memberikan lebih banyak informasi tentang tema atau topik yang Anda inginkan, saya akan mencoba membuat paragraf yang lebih sesuai.
+
+Tema: Sekolah
+
+Topik: Belajar
+
+Kalimat: Saya membawa pensil dan kertas ke sekolah. Saya belajar dengan senang hati.
+
+Kata-kata yang mengandung nilai positif: pensil, kertas, belajar, senang.
+
+Kata-kata yang mengandung nilai negatif: tidak ada.
+
+Kalimat terakhir memberikan rasa nyaman: Saya belajar dengan senang hati.
+
+Kalimat terakhir memberikan rasa nyaman dengan menggunakan kata ""senang"". Namun, jika Anda ingin paragraf yang lebih spesifik dan kompleks, saya akan mencoba membuat paragraf yang lebih sesuai dengan kebutuhan Anda.
+
+Tidak ada kata-kata yang mengandung nilai negatif.
+
+Saya menggunakan kata-kata yang sederhana dan positif seperti ""pensil"", ""kertas"", ""belajar"", dan ""senang"".
+
+Saya tidak menggunakan kata-kata yang mengandung nilai negatif, seperti ""tidak"","
+2,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,9.201728343963623,"[""pensil"", ""kertas"", ""belajar""] Kamu memiliki beberapa barang: pensil, kertas, dan belajar. Tentu saja, saya akan membantu Anda menggunakan barang-barang tersebut.
+
+Pensil adalah alat yang sering digunakan untuk menulis. Kertas adalah media yang lebih mudah untuk menulis dan mengamalkan kemampuan membuat seni. Belajar adalah tahapan yang sangat penting.
+
+Kamu dapat menggunakan pensil dan kertas untuk belajar. Silakan tulis sesuatu yang Anda inginkan. Misalnya, Anda dapat membuat seni, atau menulis cerita, atau menulis-menulis kalimat sederhana untuk mengamalkan kemampuan Anda.
+
+Jika Anda ingin belajar lebih lanjut, saya dapat menawarkan bantuan lebih lanjut. Misalnya, saya dapat membantu Anda membuat seni yang lebih baik, atau membantu Anda membuat cerita yang lebih menarik.
+
+Saya juga dapat membantu Anda memahami konsep-konsep yang lebih kompleks, seperti teori-teori seni, teori kreatifitas, atau teori-teori tentang belajar.
+
+Jika Anda ingin belajar lebih lanjut, silakan beritahu saya. Saya akan senang membantu Anda."
+3,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,9.80281376838684,"[""pensil"", ""kertas"", ""belajar""] Orang memiliki pensil. Orang memiliki kertas. Orang belajar.
+
+Saya akan membuat paragraf yang lebih lengkap:
+
+Orang memiliki pensil. Orang memiliki kertas. Orang belajar.
+
+Pensil dan kertas adalah alat yang sangat mudah digunakan. Pensil berfungsi sebagai alat yang digunakan untuk menulis, sementara kertas berfungsi sebagai alat yang digunakan untuk menulis atau menulis.
+
+Pensil dan kertas adalah alat yang sangat penting untuk belajar. Pensil dan kertas dapat digunakan untuk membuat anotasi, membuat sketsa, dan lain-lain.
+
+Saya senang memiliki pensil dan kertas. Saya senang memiliki alat-alat yang mudah digunakan dan berguna. Saya senang membelajar dengan pensil dan kertas.
+
+Saya harap paragraf ini membantu Anda memahami lebih baik tentang pensil dan kertas, dan juga tentang peranannya dalam belajar.
+
+Jika Anda memiliki pertanyaan atau ingin menanyakan tentang pensil dan kertas, silakan beritahu saya. Saya akan senang bantu Anda.
+
+Terima kasih.
+
+(Terjemahan: Saya memiliki pensil dan kertas. Saya memiliki alat-alat yang mudah digunakan dan berguna. Saya memiliki alat-alat yang penting untuk belajar.)"
+4,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,9.004256010055542,"[""pensil"", ""kertas"", ""belajar""] ""Belajar menggunakan pensil dan kertas.""
+
+Jika Anda ingin membuat konteks yang lebih lengkap, Anda dapat menambahkan kalimat lain yang sesuai dengan tema yang Anda pilih. Contoh:
+
+""Saya belajar menggunakan pensil dan kertas. Saya menggunakan pensil untuk menulis. Saya menggunakan kertas untuk membuat rupa-rupanya.""
+
+Jika Anda ingin membuat konteks yang lebih spesifik, Anda dapat menambahkan detail tentang apa yang Anda belajar. Contoh:
+
+""Saya belajar menulis. Saya menggunakan pensil untuk menulis. Saya menggunakan kertas untuk membuat rupa-rupanya.""
+
+Jika Anda ingin membuat konteks yang lebih personal, Anda dapat menambahkan detail tentang siapa yang belajar. Contoh:
+
+""Orang belajar menggunakan pensil dan kertas. Orang menggunakan pensil untuk menulis. Orang menggunakan kertas untuk membuat rupa-rupanya.""
+
+Kalimat ini sangat sederhana, namun Anda dapat membuatnya lebih lengkap dengan menambahkan detail yang lebih spesifik. Silakan menyesuaikan kalimat ini sesuai dengan kebutuhan Anda."
+5,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,5.936248540878296,"[""pensil"", ""kertas"", ""belajar""] Kamu menggunakan pensil. Kamu menulis di kertas. Kamu belajar.
+
+Kalimat ini sederhana dan menggunakan kata-kata yang mudah, sehingga mudah dipahami oleh anak usia dini. Namun, jika Anda ingin membuatnya lebih spesifik, Anda dapat menggunakan kalimat seperti:
+
+Story: Anak menggunakan pensil. Anak menulis kata-kata di kertas. Anak belajar bahasa.
+
+Atau:
+
+Story: Guru memberi kertas. Guru memberi pensil. Guru mengajar.
+
+Saya akan membantu Anda menulis cerita yang lebih spesifik dan menggunakan kata-kata yang lebih sesuai dengan tema yang Anda inginkan. Silakan berikan informasi lebih lanjut tentang tema atau konteks yang Anda inginkan."
+6,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,10.057058811187744,"[""pensil"", ""kertas"", ""belajar""] Orang memakai pensil. Orang membaca kertas. Orang belajar.
+
+Saya mencoba menggantikan label NER dengan kata sederhana.
+
+1. <|PER|> → orang
+2. <|ORG|> → sekolah
+3. <|LOC|> → tempat
+4. <|FAC|> → bangunan
+5. <|GPE|> → kota
+6. <|PRD|> → mainan
+7. <|EVT|> → acara
+8. <|QTY|> → jumlah
+9. <|TIME|> → waktu
+10. <|DAT|> → tanggal
+
+Contoh penggantian:
+
+Story: Sekolah memiliki bangunan yang besar. Sekolah berada di tempat yang sangat tepat. Sekolah memiliki acara yang menarik.
+
+Kalimat di atas menggunakan label NER yang telah diubah.
+
+1. Sekolah → orang
+2. Bangunan → bangunan
+3. Tempat → tempat
+4. Acara → acara
+
+Jika Anda ingin membuat kalimat yang lebih sederhana, Anda dapat menggantikan label NER dengan kata-kata sederhana seperti yang telah saya lakukan.
+
+Contoh penggantian:
+
+Story: Orang memakai pensil. Orang membaca kertas. Orang belajar.
+
+Kalimat di atas menggunakan label NER yang telah diubah.
+
+1. Pensil → pensil
+2. Kertas → kertas
+3. Belajar → belajar"
+7,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,4.466128826141357,"[""pensil"", ""kertas"", ""belajar""] Saya akan membantu Anda memahami kalimat tersebut.
+
+Pensil adalah alat tulis. Kertas adalah bahan tulis. Belajar adalah proses mengambil ilmu.
+
+Jika Anda ingin memahami lebih lanjut tentang kalimat tersebut, saya dapat membantu Anda memahami struktur kalimat, nada, dan tema yang dipesan.
+
+Contoh lain:
+- Saya belajar di sekolah.
+- Saya belajar bahasa Inggris.
+- Saya belajar agar bahagia.
+
+Mohon beritahu saya jika Anda memerlukan bantuan lain. Saya senang bantu."
+8,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,7.041555404663086,"[""pensil"", ""kertas"", ""belajar""] Pensil adalah alat tulis. Kertas adalah bahan yang digunakan untuk belajar. Saya akan menggunakan pensil dan kertas untuk belajar.
+
+Perhatikan bahwa kalimat di atas menggunakan kata-kata yang sederhana dan mudah dipahami oleh anak usia dini. Jika Anda ingin membuat kalimat yang lebih panjang, Anda dapat membuat kalimat yang lebih kompleks, misalnya:
+
+Story: Orang menggunakan pensil dan kertas untuk belajar. Orang membaca dan menulis dengan baik. Orang senang belajar.
+
+Saya rasa kalimat di atas lebih cocok untuk anak usia dini, karena kalimat tersebut memiliki tema yang sederhana dan menggunakan kata-kata yang mudah dipahami. Jika Anda ingin membuat kalimat yang lebih panjang dan kompleks, Anda dapat membuat kalimat yang lebih banyak membahas tentang tema yang lebih spesifik."
+9,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.353805303573608,"[""pensil"", ""kertas"", ""belajar""] Tema: Sekolah
+
+Kata-kata yang digunakan: pensil, kertas, belajar
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang menggunakan pensil dan kertas untuk belajar.
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang belajar dengan memanfaatkan alat tulis.
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang belajar dengan pensil dan kertas.
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang belajar dengan alat tulis.
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang belajar dengan alat tulis seperti pensil dan kertas.
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang belajar dengan alat tulis seperti pensil dan kertas, serta memanfaatkan tempat yang nyaman.
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang belajar dengan alat tulis seperti pensil dan kertas, memanfaatkan tempat yang nyaman, serta meningkatkan kemampuan.
+
+Tentang: menggunakan alat tulis untuk belajar
+
+Kalimat yang dihasilkan: Orang belajar dengan alat tulis seperti pensil dan kertas, memanfaatkan tempat yang nyaman, serta meningkatkan kemamp"
+10,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,3.6854496002197266,"[""pensil"", ""kertas"", ""belajar""] Kata-kata yang Anda berikan: pensil, kertas, belajar.
+
+Tentang penulis: Penulis adalah orang yang menggunakan pensil dan kertas untuk menulis.
+
+Kalimat terakhir: Penulis menggunakan pensil dan kertas untuk belajar.
+
+Kalimat ini sederhana dan menggunakan kata-kata dasar seperti yang Anda minta. Saya harap ini membantu. Jika Anda memiliki pertanyaan lain, silakan beritahu saya. Semoga hari Anda indah."
+11,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,2.1982483863830566,"[""pensil"", ""kertas"", ""belajar""] Orang menggunakan pensil. Orang membuat kertas. Orang belajar.
+
+Saya telah mengubah kalimat Anda menjadi kalimat yang lebih sederhana dan sesuai dengan aturan. Jika Anda ingin menambahkan informasi lain, silakan memberikan petunjuk lebih lanjut."
+12,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,7.228363990783691,"[""pensil"", ""kertas"", ""belajar""] Pensil dan kertas diperlukan untuk belajar.
+
+Kalimat tersebut memberikan rasa nyaman dan senang, seperti apa yang diinginkan.
+
+Perubahan:
+
+- Mengganti ""tulisan"" menjadi ""belajar"", seperti yang diinginkan.
+- Menambahkan ""dan"" diantara kata-kata untuk membuat kalimat lebih mudah untuk dibaca.
+- Menambahkan ""kertas"" sebagai barang yang diperlukan.
+
+Kalimat terakhir: Pensil dan kertas diperlukan untuk belajar.
+
+Perhatikan bahwa saya tidak menggunakan ""tulisan"" dan mengganti ""tulisan"" menjadi ""belajar"" karena tidak ada kata ""tulisan"" yang berarti sama dengan ""belajar"".
+
+Perhatikan juga bahwa saya menggunakan kata ""diperlukan"" untuk memberikan rasa nyaman dan senang, seperti yang diinginkan.
+
+Terima kasih. Jika Anda memiliki pertanyaan atau memerlukan bantuan, silakan beritahu saya."
+13,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.285491704940796,"[""pensil"", ""kertas"", ""belajar""] 1. Pensil adalah alat yang digunakan untuk menulis.
+
+2. Kertas adalah bahan yang digunakan untuk menulis atau menerima kata.
+
+3. Belajar adalah proses penyusunan ilmu.
+
+Saya akan membantu Anda dengan membuat kalimat yang lebih sederhana dan sesuai dengan konteks yang Anda berikan.
+
+Contoh kalimat: Pensil dan kertas digunakan untuk belajar.
+
+Kalimat di atas sederhana dan sesuai dengan konteks yang Anda berikan. Jika Anda memiliki pertanyaan lain, silakan beritahu saya. Saya akan membantu Anda dengan senang hati.
+
+Tidak ada informasi yang mengandung kata ""pensil"", ""kertas"", atau ""belajar"" yang berhubungan dengan peristiwa atau kejadian.
+
+Jika Anda ingin meminta informasi tentang peristiwa atau kejadian, silakan beritahu saya dengan lebih jelas. Saya akan membantu Anda dengan senang hati.
+
+Tidak ada informasi yang mengandung kata ""pensil"", ""kertas"", atau ""belajar"" yang berhubungan dengan peristiwa atau kejadian.
+
+Jika Anda ingin meminta informasi tentang peristiwa atau kejadian, silakan beritahu saya dengan lebih jelas. Saya akan membantu Anda dengan senang hati.
+
+Tidak ada informasi yang mengandung kata ""pensil"", ""kertas"", atau ""belajar"" yang berhubungan dengan peristiwa atau kejadian.
+
+Jika Anda ingin meminta informasi tentang peristiwa atau"
+14,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,7.594851493835449,"[""pensil"", ""kertas"", ""belajar""] Saya mengganti label NER dengan kata sederhana:
+
+- <|PER|> → orang / teman / guru
+- <|ORG|> → sekolah / toko / kelompok
+- <|LOC|> → tempat / taman / lapangan
+- <|FAC|> → bangunan / rumah / jalan
+- <|GPE|> → kota / desa / negara
+- <|PRD|> → barang / mainan / makanan
+
+Kalimat:
+Story: Orang belajar. Orang memakai kertas. Orang menggunakan pensil.
+
+Kalimat terbaru:
+Story: Orang belajar. Orang memakai kertas. Orang menggunakan pensil. Orang senang.
+
+Label NER:
+- Orang → <|PER|>
+- Kertas → <|PRD|>
+- Pensil → <|PRD|>
+- Belajar → <|VER|>
+- Senang → <|VER|>
+
+Kalimat akhir:
+Story: Orang belajar. Orang memakai kertas. Orang menggunakan pensil. Orang senang.
+
+Silakan ubah label NER sesuai dengan aturan yang telah disebutkan sebelumnya."
+15,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,5.105896234512329,"[""pensil"", ""kertas"", ""belajar""] Pensil dan kertas adalah alat yang dibutuhkan untuk belajar. Saya akan membeli pensil dan kertas untuk belajar. Saya harap dengan alat tersebut, saya dapat belajar dengan lebih baik.
+
+Apakah Anda membutuhkan informasi lebih lanjut atau memiliki pertanyaan? Jika ya, saya akan membantu Anda seperti yang telah saya lakukan. Jika tidak, saya akan menunggu perintah berikutnya.
+
+Contoh lain:
+Story: Orang membeli makanan. Orang makan makanan. Orang senang.
+
+Saya akan membeli makanan. Saya akan makan makanan. Saya akan senang.
+
+Terima kasih."
+16,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,3.4597644805908203,"[""pensil"", ""kertas"", ""belajar""] Saya akan membantu Anda membuat kalimat yang lebih sederhana dan sesuai dengan permintaan Anda.
+
+Story: Orang memakai pensil. Orang menggunakan kertas. Orang belajar.
+
+Saya akan mencoba mengekstrak kalimat yang lebih sederhana dan sesuai dengan permintaan Anda.
+
+Story: Orang memakai pensil. Orang belajar. Orang senang.
+
+Jika Anda memiliki perintah lain, silakan beritahu saya!"
+17,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.307177305221558,"[""pensil"", ""kertas"", ""belajar""] Pensil adalah alat tulis. Kertas adalah bahan tulis. Belajar adalah proses pembelajaran.
+
+Contoh penggunaan:
+
+1. Orang menggunakan pensil dan kertas untuk mengambil catatan.
+2. Orang menggunakan pensil dan kertas untuk mengajarkan.
+3. Orang menggunakan pensil dan kertas untuk mengulis seni.
+
+Kalimat terakhir:
+Story: Orang belajar. Orang belajar dengan pensil dan kertas. Orang belajar seni.
+
+Saya telah mengubah kalimat Anda menjadi kalimat sederhana dan sesuai dengan aturan. Jika Anda ingin menggunakan kalimat Anda asli, saya dapat membantu Anda dengan menambahkan kata-kata yang lebih banyak.
+
+Contoh:
+Story: Orang belajar dengan pensil, kertas, dan kalimat yang sederhana. Orang belajar seni dengan pensil dan kertas. Orang belajar seni dengan pandangan yang baik.
+
+Saya akan menambahkan kata-kata yang lebih banyak untuk menjelaskan apa yang sedang dilakukan oleh orang. Jika Anda ingin menggunakan kalimat asli Anda, saya dapat membantu Anda dengan menambahkan kata-kata yang lebih banyak.
+
+Contoh:
+Story: Orang belajar dengan pensil, kertas, dan kalimat yang sederhana. Orang belajar seni dengan pensil dan kertas. Orang belajar seni dengan pandangan yang baik, dengan ketukan yang tepat, dan dengan senyum y"
+18,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,5.737604141235352,"[""pensil"", ""kertas"", ""belajar""] Menggunakan kalimat tersebut, saya dapat membuat paragraf sederhana berikut:
+
+Story: Orang memakai pensil. Orang menggambar kertas. Orang belajar.
+
+Atau jika Anda ingin menambahkan konteks lain, saya dapat membantu Anda membuat paragraf yang lebih lengkap. Misalnya:
+
+Story: Orang memakai pensil. Orang menggambar kertas. Orang belajar, terutama untuk meningkatkan kemampuan gambar.
+
+Atau:
+
+Story: Orang memakai pensil. Orang menggambar kertas. Orang belajar, terutama untuk meningkatkan kemampuan gambar. Orang merasa senang dan nyaman.
+
+Terima kasih atas pertanyaan Anda. Jika Anda memiliki pertanyaan lain, silakan beritahu saya!"
+19,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,9.463226079940796,"[""pensil"", ""kertas"", ""belajar""] Kata-kata tersebut berhubungan dengan sekolah. Pensil dan kertas adalah alat-alat yang umum digunakan untuk belajar. Saya akan menulis artikel tentang tema ini.
+
+Pensil adalah alat yang digunakan untuk menulis. Pensil terbuat dari kayu atau plastik, dan memiliki tiga bagian: tulang, kelopak, dan titik. Pensil dapat berwarna hitam, kuning, merah, atau biru.
+
+Kertas adalah bahan yang digunakan untuk membantu belajar. Kertas terbuat dari cellulose, yang diambil dari tanaman tanpa kulit. Kertas digunakan untuk membuat buku, surat, dan lembar kertas.
+
+Belajar adalah proses pembelajaran. Belajar berbeda dengan membaca, karena membaca hanya membaca teks tanpa memahami. Belajar adalah memahami materi dengan cara membaca, mengulis, dan mengobrol.
+
+Penggunaan pensil dan kertas membantu siswa untuk belajar dengan cara yang mudah dan efektif. Siswa dapat menulis dan mengulis kata-kata dengan pensil, dan membaca dan menjelaskan materi dengan kertas.
+
+Saya akan mencoba membuat artikel yang lebih lengkap tentang tema ini. Terima kasih telah membaca."
+20,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.335833311080933,"[""pensil"", ""kertas"", ""belajar""] Pensil di dalam kantong. Pensil ada di atas meja. Pensil digunakan untuk belajar.
+
+Contoh lain:
+
+[""air"", ""minum"", ""santai"", ""nyaman""]
+- Air di dalam kantong.
+- Air digunakan untuk minum.
+- Minuman memberikan santai.
+- Saya nyaman.
+
+Contoh lain:
+
+[""makanan"", ""enak"", ""lezat"", ""senang""]
+- Makanan di dalam wadah.
+- Makanan lezat.
+- Makanan memberikan senang.
+- Saya senang.
+
+Contoh lain:
+
+[""buku"", ""duduk"", ""baca"", ""nyaman""]
+- Buku di dalam tas.
+- Buku digunakan untuk baca.
+- Bacaan memberikan nyaman.
+- Saya nyaman.
+
+Contoh lain:
+
+[""orang"", ""baik"", ""berbicara"", ""senang""]
+- Orang baik.
+- Orang berbicara.
+- Bicara memberikan senang.
+- Saya senang.
+
+Contoh lain:
+
+[""barang"", ""berat"", ""dibawa"", ""senang""]
+- Barang berat.
+- Barang digunakan untuk dibawa.
+- Barang memberikan senang.
+- Saya senang.
+
+Contoh lain:
+
+[""baju"", ""panjang"", ""jahit"", ""senang""]
+- Baju panjang.
+- Baju digunakan untuk jahit.
+- Jahitan memberikan senang.
+- Saya senang.
+
+Contoh lain:
+
+[""kota"", ""besar"", ""berdepan"", ""senang""]
+- Kota besar.
+- Kota berdepan.
+- Berdepan memberikan senang.
+- Saya senang.
+
+Contoh lain:
+
+[""rumah"", ""kecil"", ""nyaman"", ""senang"
+21,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,6.95948052406311,"[""pensil"", ""kertas"", ""belajar""] 1. Pensil keras.
+
+2. Kertas bersih.
+
+3. Belajar bahasa.
+
+4. Pensil membuat garis.
+
+5. Kertas menulis.
+
+6. Belajar dengan baik.
+
+Saya akan menggunakan tema ""belajar"" dan membuat kalimat sederhana seperti yang Anda minta. Namun, saya akan mengganti kata-kata yang Anda berikan dengan kata-kata yang lebih sederhana dan mudah dipahami oleh anak usia dini.
+
+1. Pensil keras.
+2. Kertas bersih.
+3. Belajar bahasa.
+4. Pensil membuat garis.
+5. Kertas menulis.
+6. Belajar dengan baik.
+
+Kata-kata di atas berfungsi sebagai label untuk kalimat yang Anda minta, yang akan membuatnya mudah dipahami dan lebih sederhana. Jika Anda ingin kalimat yang lebih spesifik, saya dapat membantu Anda membuatnya."
+22,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.335931777954102,"[""pensil"", ""kertas"", ""belajar""] Saya menggunakan pensil dan kertas untuk belajar.
+
+Saya menulis teks dengan pensil.
+
+Saya mencoba memahami materi yang saya belajar.
+
+Kertas adalah media yang saya gunakan untuk menulis teks.
+
+Pensil adalah alat yang saya gunakan untuk menulis teks.
+
+Saya merasa nyaman karena saya bisa memahami materi lebih mudah ketika saya menulis teks dengan pensil dan kertas.
+
+Saya tidak suka menggunakan komputer karena saya tidak suka mengetik teks.
+
+Saya lebih menyukai menggunakan pensil dan kertas karena saya dapat memahami materi lebih mudah.
+
+Saya berharap saya dapat belajar dengan baik dan memahami materi yang saya belajar.
+
+Saya berharap saya dapat menjadi lebih baik dalam memahami materi dan memahami konsep yang saya belajar.
+
+Saya berharap saya dapat menjadi lebih baik dalam menulis teks dan memahami materi lebih mudah.
+
+Saya berharap saya dapat memahami materi yang saya belajar lebih mudah dengan menggunakan pensil dan kertas.
+
+Saya berharap saya dapat menjadi lebih baik dalam memahami materi dan memahami konsep yang saya belajar.
+
+Saya berharap saya dapat menjadi lebih baik dalam menulis teks dan memahami materi lebih mudah.
+
+Saya berharap saya dapat memahami materi yang saya belajar lebih mudah dengan menggunakan pensil dan kertas.
+
+Saya berharap saya d"
+23,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,5.298314332962036,"[""pensil"", ""kertas"", ""belajar""] Kamu sedang belajar. Kamu menggunakan pensil dan kertas. Kamu senang.
+
+Jika Anda ingin menambahkan lagi, silakan. Misalnya:
+
+[""pensil"", ""kertas"", ""belajar"", ""senang""]
+
+Atau:
+
+[""pensil"", ""kertas"", ""belajar"", ""senang"", ""mengajar""]
+
+Atau:
+
+[""pensil"", ""kertas"", ""belajar"", ""senang"", ""mengajar"", ""guru""]
+
+Atau:
+
+[""pensil"", ""kertas"", ""belajar"", ""senang"", ""mengajar"", ""guru"", ""siswa""]
+
+Saya akan membuat kalimat dengan tema ""belajar"" yang sesuai dengan kata-kata yang Anda berikan. Semoga Anda senang dan sukses dalam belajar!"
+24,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.28637433052063,"[""pensil"", ""kertas"", ""belajar""] Pensil adalah alat yang sering digunakan untuk menulis. Kertas adalah bahan yang digunakan untuk mengikuti. Belajar adalah proses pengetahuan yang dilakukan.
+
+Kata-kata tersebut dapat dihubungkan dengan kalimat: ""Saya memakai pensil dan kertas. Saya belajar. Saya senang.""
+
+Mungkin ada beberapa kata-kata lain yang bisa Anda tambahkan untuk membuat kalimat tersebut lebih baik. Jika Anda memiliki rasa tidak nyaman atau tidak memahami, silakan bertanya.
+
+Kata-kata lain yang bisa Anda tambahkan:
+- ""duduk"" (untuk membuat kalimat lebih spesifik)
+- ""belajar"" (untuk membuat kalimat lebih jelas tentang kegiatan yang sedang Anda lakukan)
+- ""senang"" (untuk memberikan rasa nyaman)
+
+Jadi, kalimat yang Anda buat bisa menjadi: ""Saya duduk. Saya memakai pensil dan kertas. Saya belajar. Saya senang.""
+
+Saya akan membantu Anda mencari informasi yang lebih lengkap tentang kata-kata tersebut. Jika Anda memiliki pertanyaan, silakan bertanya!
+
+Saya harap ini dapat membantu Anda. Jika Anda memiliki pertanyaan lain, silakan bertanya!
+
+Sebelum Anda memulai, silakan memberi rasa nyaman dan senang. Jika Anda memiliki rasa tidak nyaman atau tidak memahami, silakan bertanya.
+
+Terima kasih telah membaca. Saya akan membantu Anda mencari informasi yang lebih lengkap tentang kata"
+25,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,6.576977729797363,"[""pensil"", ""kertas"", ""belajar""] Tapi, kalimat tersebut tidak benar. Kamu tidak bisa menggunakan kata ""pensil"" untuk menulis atau belajar karena pensil tidak ada dalam kalimat tersebut. Saya akan membuat kalimat yang lebih benar:
+
+Story: Teman membeli kertas. Teman belajar. Teman senang.
+
+Jika kamu ingin menggunakan kata ""pensil"", bisa kamu gunakan kalimat ini:
+
+Story: Teman membeli pensil. Teman belajar. Teman senang.
+
+Jika kamu ingin menggunakan kata ""pensil"" dan ""kertas"" dalam satu kalimat, bisa kamu gunakan kalimat ini:
+
+Story: Teman membeli pensil. Teman membeli kertas. Teman belajar.
+
+Saya tidak bisa mengubah isi teks Anda, tapi saya bisa membuat kalimat baru yang lebih benar dan sesuai dengan aturan. Semoga ini membantu Anda!"
+26,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,4.570988178253174,"[""pensil"", ""kertas"", ""belajar""] Saya menggunakan kalimat sederhana untuk menjelaskan bahwa orang belajar dengan memanfaatkan pensil dan kertas. Saya tidak menambahkan detail lebih lanjut karena Anda tidak memberikan informasi lebih lanjut tentang apa yang akan dibelajar. Jika Anda ingin saya menambahkan informasi lebih lanjut, silakan memberikan lebih banyak detil tentang topik yang Anda inginkan.
+
+Kalimat sederhana: Orang belajar. Orang memakai pensil. Orang menggunakan kertas.
+
+Semoga kalimat ini membantu! Jika Anda memiliki pertanyaan lain, silakan saya tahu."
+27,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.309719800949097,"[""pensil"", ""kertas"", ""belajar""] Pensil dan kertas adalah alat yang sering digunakan untuk belajar. Pensil digunakan untuk menulis atau menekan, sedangkan kertas digunakan untuk menulis atau membuat kesimpulannya. Saya tidak mengerti apa yang Anda ingin tanya. Jika Anda ingin menanyakan tentang apa yang dapat dilakukan dengan alat tersebut, saya dapat memberikan jawaban.
+
+Jika Anda ingin menanyakan tentang apa yang dapat dilakukan dengan pensil dan kertas, saya dapat memberikan jawaban seperti:
+
+- Menulis kalimat
+- Menulis sketsa
+- Menulis kesimpulannya
+- Menulis lagu
+- Menulis poesie
+- Menulis kumpulan kalimat
+- Menulis kutipan
+- Menulis kalimat yang berdasarkan tema atau topik tertentu
+
+Jika Anda ingin menanyakan tentang apa yang dapat dilakukan dengan pensil dan kertas, saya dapat memberikan jawaban lainnya. Jika Anda ingin menanyakan tentang apa yang dapat dilakukan dengan pensil dan kertas, saya dapat memberikan jawaban yang lebih spesifik dan detail.
+
+Jika Anda ingin menanyakan tentang apa yang dapat dilakukan dengan pensil dan kertas, saya dapat memberikan jawaban seperti:
+
+- Menulis kalimat yang mengandung kata-kata dasar
+- Menulis kalimat yang mengandung kata-kata yang kompleks
+- Menulis kalimat yang mengandung kata-kata yang memiliki makna khusus
+- Menulis kalimat yang mengandung kata-"
+28,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,6.042407989501953,"[""pensil"", ""kertas"", ""belajar""] Orang menggunakan pensil. Orang memotong kertas. Orang belajar.
+
+Perhatikan bahwa kalimat terakhir memberikan rasa nyaman dan senang. Jika Anda ingin memberikan rasa nyaman dan senang pada akhir kalimat, Anda dapat memilih kata-kata yang lebih positif atau memiliki arti yang lebih positif.
+
+Contoh:
+
+- Orang menggunakan pensil. Orang memotong kertas. Orang belajar. Orang senang belajar.
+- Orang menggunakan pensil. Orang memotong kertas. Orang belajar. Orang tahu bahagia.
+- Orang menggunakan pensil. Orang memotong kertas. Orang belajar. Orang menikmati belajar.
+
+Terima kasih atas pertanyaan Anda. Jika Anda memiliki pertanyaan lain, silakan beritahu saya. Semoga Anda bersemangat! 😄"
+29,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,5.6592724323272705,"[""pensil"", ""kertas"", ""belajar""] Teman menggunakan pensil. Teman mengenakan kertas. Teman belajar.
+
+Jika Anda ingin membuat kalimat yang lebih panjang, Anda dapat menambahkan kalimat lainnya. Contoh:
+
+Story: Teman menggunakan pensil. Teman mengenakan kertas. Teman belajar. Teman membaca buku. Teman tidak mau tidur. Teman ingin jalan.
+
+Atau:
+
+Story: Teman menggunakan pensil. Teman mengenakan kertas. Teman belajar. Teman membaca komik. Teman tidak mau makan. Teman ingin main.
+
+Saya telah menggunakan tema ""belajar"" dan menambahkan kalimat yang lebih panjang, serta membuat kalimat-kalimat yang lebih mudah dipahami oleh anak usia dini."
+30,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.302177667617798,"[""pensil"", ""kertas"", ""belajar""] Pensil dan kertas adalah alat yang digunakan untuk belajar. Pensil digunakan untuk menulis atau menggambar, kertas adalah bahan yang digunakan untuk menulis atau menggambar.
+
+Jika Anda ingin membuat paragraf yang lebih panjang, Anda dapat menambahkan kalimat yang lain, seperti:
+
+Story: Saya memiliki pensil dan kertas. Saya akan belajar. Saya akan menulis.
+
+Jika Anda ingin membuat paragraf yang lebih panjang, Anda dapat menambahkan kalimat yang lain, seperti:
+
+Story: Saya memiliki pensil dan kertas. Saya akan belajar. Saya akan menulis. Saya akan menulis kalimat yang benar. Saya akan menulis kalimat yang memiliki rincian yang jelas. Saya akan menulis kalimat yang memiliki kalimat yang mudah untuk dipahami.
+
+Jika Anda ingin membuat paragraf yang lebih panjang, Anda dapat menambahkan kalimat yang lain, seperti:
+
+Story: Saya memiliki pensil dan kertas. Saya akan belajar. Saya akan menulis. Saya akan menulis kalimat yang benar. Saya akan menulis kalimat yang memiliki rincian yang jelas. Saya akan menulis kalimat yang mudah untuk dipahami. Saya akan menulis kalimat yang memiliki kalimat yang sangat mudah untuk dipahami. Saya akan menulis kalimat yang memiliki kalimat yang memiliki rincian yang mudah untuk dipahami. Saya akan menulis kalimat yang memiliki kalimat yang"
+31,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,10.00736141204834,"[""pensil"", ""kertas"", ""belajar""] Saya akan mengubah kalimat Anda menjadi kalimat yang lebih sederhana dan sesuai dengan aturan yang telah ditentukan:
+
+Story: Orang memakai pensil. Orang menggunakan kertas. Orang belajar.
+
+Kalimat ini menggunakan kata dasar yang lebih mudah dan tidak mengandung kata yang tidak sesuai dengan aturan. Saya juga mengganti kata-kata yang tidak sesuai dengan tema yang telah ditentukan (tema: sekolah).
+
+Tema: Sekolah
+
+Kata-kata dasar:
+- Orang
+- Pensil
+- Kertas
+- Belajar
+
+Kalimat: Orang memakai pensil. Orang menggunakan kertas. Orang belajar.
+
+Contoh lain:
+
+Story: Guru mengajar. Siswa mendengarkan. Siswa belajar.
+
+Kalimat: Guru mengajar. Siswa mendengarkan. Siswa belajar.
+
+Tema: Sekolah
+
+Kata-kata dasar:
+- Guru
+- Mengajar
+- Siswa
+- Mendengarkan
+- Belajar
+
+Kalimat: Guru mengajar. Siswa mendengarkan. Siswa belajar.
+
+Saya ratusan kali berharap bahwa kalimat ini dapat membantu Anda! Jika Anda memiliki pertanyaan lain atau ingin mengerti lebih banyak tentang topik ini, silakan beritahu saya. Saya senang bantu!"
+32,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,4.249058246612549,"[""pensil"", ""kertas"", ""belajar""] Tentu saja, saya akan membantu Anda! Anda sedang belajar menggunakan pensil dan kertas. Kertas dihiasi dengan teks yang terdiri dari kalimat-kalimat sederhana.
+
+Berikut adalah contoh kalimat sederhana yang bisa Anda gunakan:
+
+- Pensil berwarna hitam.
+- Pensil tajam.
+- Pensil berbentuk silinder.
+- Kertas putih.
+- Kertas lembut.
+- Kertas bisa digunakan sebagai atasan.
+
+Jika Anda ingin menambahkan kalimat lain, saya akan senang membantu!"
+33,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,4.515666961669922,"[""pensil"", ""kertas"", ""belajar""] ""Saya memiliki pensil. Saya memiliki kertas. Saya akan belajar.""
+
+Catatan:
+- Kalimat di atas berfungsi sebagai contoh sederhana menggunakan kata-kata dasar yang mudah.
+- Kata-kata yang digunakan tidak memiliki tingkatan atau kesuburan, sehingga tidak memiliki arti yang lebih lanjut.
+- Kata-kata di atas hanya bertindakan sebagai objek atau kondisi yang mudah dipahami oleh anak usia dini.
+
+Kalimat ini dapat dijadikan contoh untuk anak usia dini yang belajar memahami kata-kata dasar."
+34,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,4.365347623825073,"[""pensil"", ""kertas"", ""belajar""] 1. Pensil: A pen used for writing, drawing, or sketching.
+
+2. Kertas: A paper used for writing, printing, drawing, or sketching.
+
+3. Belajar: To learn or study.
+
+Using these words, you can form a sentence like this: ""Orang memakai pensil. Orang menggunakan kertas. Orang belajar."" (Translation: Person uses a pen. Person uses paper. Person learns.)
+
+You can also add more details to make the sentence more descriptive: ""Orang memakai pensil untuk menulis. Orang menggunakan kertas untuk membuat sketches. Orang belajar dengan tenang."" (Translation: Person uses a pen to write. Person uses paper to make sketches. Person learns calmly.)"
+35,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.324330806732178,"[""pensil"", ""kertas"", ""belajar""] Saya menggunakan pensil dan kertas. Saya belajar.
+
+Pensil: <|PER|> kertas: <|DOC|> belajar: <|ACT|>
+
+Namun, kalimat tersebut masih tidak jelas dan mungkin tidak memiliki hubungan dengan tema yang Anda inginkan. Jika Anda ingin membuat kalimat yang lebih jelas dan memiliki hubungan dengan tema ""teman"", Anda bisa menggunakan contoh berikut:
+
+Story: Teman baik. Teman belajar. Teman senang.
+
+Pensil: <|PER|> kertas: <|DOC|> belajar: <|ACT|> senang: <|FEEL|>
+
+Jika Anda ingin membuat kalimat yang lebih spesifik dan memiliki hubungan dengan tema ""taman"", Anda bisa menggunakan contoh berikut:
+
+Story: Taman indah. Taman berwarna. Taman nyaman.
+
+Pensil: <|PER|> kertas: <|DOC|> taman: <|LOC|> indah: <|DES|> berwarna: <|PRD|> nyaman: <|FEEL|>
+
+Jika Anda ingin membuat kalimat yang lebih spesifik dan memiliki hubungan dengan tema ""rumah"", Anda bisa menggunakan contoh berikut:
+
+Story: Rumah nyaman. Rumah bersih. Rumah senang.
+
+Pensil: <|PER|> kertas: <|DOC|> rumah: <|LOC|> nyaman: <|FEEL|> bersih: <|DES|> senang: <|FEEL|>
+
+Saya rasa bahwa kalimat-kalimat tersebut dapat membantu Anda memahami lebih baik cara membuat kalimat y"
+36,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.35265064239502,"[""pensil"", ""kertas"", ""belajar""] Pensil dan kertas adalah alat yang sering digunakan untuk belajar. Saya akan menjelaskan cara menggunakannya dengan baik.
+
+1. Pilih Pensil: Pilih pensil dengan tipnya yang sesuai dengan kebutuhan Anda. Jika Anda ingin menggambar, pilih pensil tipis. Jika Anda ingin menulis, pilih pensil yang lebih tebal.
+
+2. Pilih Kertas: Pilih kertas yang kuat dan tidak mudah retak. Kertas ini akan membantu Anda menulis dengan baik.
+
+3. Siapkan Laporan: Jika Anda ingin menulis laporan, pastikan Anda memiliki format yang sesuai dengan permintaan. Anda juga bisa membuatnya sendiri dengan menggunakan kertas dan pensil.
+
+4. Tulis: Mulai tulis dengan menulis kalimat atau paragraf. Anda bisa menulis sederhana atau kompleks, tergantung kebutuhan Anda.
+
+5. Catat: Jika Anda ingin menulis catatan, Anda bisa membuatnya di kertas atau dalam aplikasi yang Anda gunakan. Anda juga bisa membuat catatan tentang hal-hal yang Anda belajar.
+
+6. Jadikan Pensil dan Kertas Sebagai Alat Belajar: Pensil dan kertas dapat dijadikan sebagai alat belajar yang efektif. Anda bisa menulis kalimat atau paragraf tentang tema yang Anda belajar.
+
+7. Simpan Pensil dan Kertas: Jika Anda ingin memulai belajar lagi, Anda bisa memulainya dengan menggunakan pensil dan kertas. And"
+37,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,2.8060755729675293,"[""pensil"", ""kertas"", ""belajar""] Menggantungan pada kalimat yang Anda berikan, saya akan membuat kalimat sederhana seperti berikut:
+
+Story: Orang menggunakan pensil dan kertas. Orang belajar.
+
+Jika Anda ingin saya membuat kalimat lainnya, silakan memberikan contoh lainnya. Saya akan mencoba membuat kalimat yang sesuai dengan konteks Anda."
+38,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.294281959533691,"[""pensil"", ""kertas"", ""belajar""] Anda menggunakan penulisan yang lebih informal, seperti ""pensil"" dan ""kertas"" yang tidak harus dijadikan dalam kata sederhana. Tapi jika ingin menjadikannya lebih sederhana, bisa diubah menjadi ""pensil dan kertas"" atau ""pensil, kertas, dan belajar"".
+
+Jika ingin menjadikannya lebih sederhana lagi, bisa diubah menjadi ""Pensil dan kertas, saya belajar"" atau ""Pensil, kertas, dan aku belajar"" dengan penulisan yang lebih sederhana.
+
+Tapi karena tidak ada konteks yang jelas, tidak ada tahu apa yang Anda ingin maksudkan dengan kalimat tersebut. Jika Anda ingin menggunakan kata ""belajar"" dalam konteks yang lain, bisa Anda sesuaikan dengan kalimat lain.
+
+Tapi jika Anda ingin menggunakan kalimat tersebut dalam konteks sekolah, bisa diubah menjadi ""Pensil dan kertas, saya belajar di sekolah"" atau ""Pensil, kertas, dan aku belajar di sekolah"" dengan penulisan yang lebih sederhana.
+
+Jika Anda ingin menggunakan kalimat tersebut dalam konteks rumah, bisa diubah menjadi ""Pensil dan kertas, saya belajar di rumah"" atau ""Pensil, kertas, dan aku belajar di rumah"" dengan penulisan yang lebih sederhana.
+
+Jika Anda ingin menggunakan kalimat tersebut dalam konteks tempat lain, bisa Anda sesuaikan dengan kalimat lain. Tapi karena tidak ad"
+39,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,7.898284673690796,"[""pensil"", ""kertas"", ""belajar""] Saya menggunakan pensil dan kertas. Saya belajar.
+
+Kalimat ini sederhana dan menggunakan kata-kata yang mudah dipahami. Jika Anda ingin membuat kalimat yang lebih panjang, Anda dapat menambahkan detail tentang apa yang Anda belajar (contoh: belajar bahasa, belajar matematika, dll.).
+
+Jika Anda ingin membuat kalimat yang lebih personal, Anda dapat menggunakan kata-kata yang lebih sesuai dengan situasi Anda (contoh: belajar dengan guru, belajar di sekolah, dll.).
+
+Jika Anda ingin membuat kalimat yang lebih inspiratif, Anda dapat menggunakan kata-kata yang lebih positif dan inspiratif (contoh: belajar dengan semangat, belajar dengan tertib, dll.).
+
+Saya akan mencoba membuat kalimat yang lebih sesuai dengan kebutuhan Anda. Jika Anda memiliki pertanyaan atau harapannya, silakan beritahu saya. Saya akan menghubungi Anda dengan kesempatan berikutnya. Terima kasih."
+40,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.290194749832153,"[""pensil"", ""kertas"", ""belajar""] Pensil adalah alat yang digunakan untuk menulis. Kertas adalah bahan yang digunakan untuk mengikuti atau menulis. Belajar adalah proses pembelajaran atau pemahaman.
+
+Saya akan mengganti label NER dengan kata sederhana seperti yang Anda minta.
+
+- <|PER|> → orang / teman / guru
+- <|ORG|> → sekolah / toko / kelompok
+- <|LOC|> → tempat / taman / lapangan
+- <|FAC|> → bangunan / rumah / jalan
+- <|GPE|> → kota / desa / negara
+- <|PRD|> → barang / mainan / makanan
+
+Saya akan mengganti kata-kata NER dengan kata-kata sederhana seperti yang Anda minta.
+
+- Pensil → alat menulis
+- Kertas → bahan tulis
+- Belajar → pembelajaran
+
+Saya akan mengubah kalimat untuk sesuai dengan aturan:
+
+Story: Orang menggunakan alat menulis. Orang menulis di bahan tulis. Orang belajar.
+
+Saya akan mengganti label NER dengan kata sederhana:
+
+Story: Orang menggunakan alat. Orang menulis. Orang belajar.
+
+Saya akan mengubah kalimat untuk sesuai dengan aturan:
+
+Story: Orang menggunakan alat. Orang menulis. Orang belajar.
+
+Saya akan mengubah kalimat untuk sesuai dengan aturan:
+
+Story: Orang menggunakan alat menulis. Orang menulis. Orang belajar.
+
+Kalimat di atas sudah sesuai"
+41,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.305546522140503,"[""pensil"", ""kertas"", ""belajar""] Pensil dan kertas adalah alat yang sering digunakan untuk belajar. Pensil berfungsi sebagai alat untuk mengerti, menulis, dan menggambar. Kertas berfungsi sebagai media untuk menerima output dari pensil.
+
+Tetapi, jika Anda ingin menggunakan kata-kata yang lebih sederhana, Anda dapat menggunakan kata-kata seperti:
+
+- Pensil: Pensil (atau paket pensil)
+- Kertas: Kertas (atau buku)
+- Belajar: Belajar (atau membaca)
+
+Misalnya:
+
+- Pensil dan kertas adalah alat yang sering digunakan untuk belajar. Pensil berfungsi sebagai alat untuk mengerti, menulis, dan menggambar. Kertas berfungsi sebagai media untuk menerima output dari pensil.
+
+atau
+
+- Pensil dan buku adalah alat yang sering digunakan untuk belajar. Pensil berfungsi sebagai alat untuk mengerti, menulis, dan menggambar. Buku berfungsi sebagai media untuk menerima output dari pensil.
+
+Tetapi jika Anda ingin menambahkan kata-kata lainnya, Anda dapat menggunakan kata-kata seperti:
+
+- Tulisan: Tulisan (atau kalimat)
+- Guru: Guru (atau orang yang mengajar)
+- Siswa: Siswa (atau orang yang belajar)
+
+Misalnya:
+
+- Pensil dan kertas adalah alat yang sering digunakan untuk belajar. Pensil berfungsi sebagai alat untuk mengerti, menulis,"
+42,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.291165590286255,"[""pensil"", ""kertas"", ""belajar""] Anda tidak memasukkan kata-kata yang tepat. Tentu saja, Anda harus memasukkan kata-kata yang sesuai dengan tema yang diberikan, yaitu sekolah. Berikut adalah contoh kalimat yang lebih sesuai:
+
+Story: Orang memakai pensil. Orang memakai kertas. Orang belajar.
+
+Saya akan membantu Anda dengan membuat kalimat yang lebih lengkap dan jelas. Jika Anda memiliki pertanyaan atau perlu informasi tentang tema yang Anda pilih, silakan beritahu saya.
+
+Tema: sekolah
+
+Story: Orang memakai pensil. Orang memakai kertas. Orang belajar. Orang tidak tahu apa yang akan diajarkan. Orang tertantang. Orang tidak tahu apa yang akan diajarkan. Orang tertantang. Orang mengingat bahwa dia harus belajar. Orang tertantang. Orang berusaha mengerti apa yang akan diajarkan. Orang berusaha tahu. Orang tertantang. Orang tidak tahu apa yang akan diajarkan. Orang tertantang. Orang berusaha mengerti apa yang akan diajarkan. Orang berusaha tahu. Orang tertantang. Orang tidak tahu apa yang akan diajarkan. Orang tertantang. Orang berusaha mengerti apa yang akan diajarkan. Orang berusaha tahu. Orang tertantang. Orang tidak tahu apa yang akan diajarkan. Orang tertantang. Orang berusaha mengerti apa yang akan diajarkan. Orang berusaha tahu. Orang tertantang. Orang tidak tahu apa yang akan dia"
+43,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,3.0070273876190186,"[""pensil"", ""kertas"", ""belajar""] Anda menulis dengan pensil. Anda menggunakan kertas. Anda belajar.
+
+Saya akan membuat paragraf baru:
+
+Kamu menggunakan pensil. Kamu menggunakan kertas. Kamu belajar.
+
+Jika Anda ingin membuat paragraf yang berbeda, silakan beritahu saya. Saya akan membantu Anda membuat paragraf baru yang sesuai dengan permintaan Anda."
+44,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.293012380599976,"[""pensil"", ""kertas"", ""belajar""] Saya membuat paragraf sederhana.
+
+Story: Orang membawa pensil. Orang membawa kertas. Orang belajar.
+
+Contoh Output:
+
+Story: Orang membawa pensil. Orang membawa kertas. Orang belajar.
+
+Kata kunci: pensil, kertas, belajar
+
+Kata-kata yang digunakan: membawa, belajar, pensil, kertas
+
+Kalimat sederhana: Orang membawa pensil. Orang membawa kertas. Orang belajar.
+
+Kalimat ini lebih sederhana dan mudah dipahami oleh anak usia dini dan pemula. Saya mencoba menghilangkan kata-kata yang rumit dan fokus pada kata-kata yang sangat mudah. Jika Anda ingin mencoba mengubah kalimat Anda menjadi lebih sederhana, silakan mengikuti contoh yang saya berikan.
+
+Saya tidak menemukan informasi yang berhubungan dengan panduan pemula dalam membuat paragraf sederhana. Namun, saya akan memberikan rincian mengenai panduan pemula yang dapat membantu Anda membuat paragraf sederhana.
+
+Panduan pemula:
+
+1. Memilih tema yang mudah dan sesuai dengan gagasan Anda.
+2. Menggunakan kata-kata yang sederhana dan mudah dipahami.
+3. Membuat kalimat yang sangat sederhana dan tidak memiliki kata-kata rumit.
+4. Membuat paragraf yang tidak lebih dari 5 kalimat dan tidak lebih dari 2 kalimat per kalimat.
+5. Mengikuti aturan yang telah disebutkan sebelumnya.
+"
+45,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,2.7813475131988525,"[""pensil"", ""kertas"", ""belajar""] Terdapat kesalahan dalam input Anda. Silakan perbaiki agar dapat menggunakan kata-kata yang lebih sesuai. Saya akan menggunakan tema ""belajar"" dan kata-kata yang lebih sederhana.
+
+Story: Teman belajar. Teman memakai pensil. Teman membaca kertas.
+
+Silakan perbaiki input Anda agar lebih sesuai."
+46,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.274603128433228,"[""pensil"", ""kertas"", ""belajar""] Anda memiliki penyimpanan yang lebih lengkap dari saya. Saya tidak tahu arti dari kata ""pensil"", ""kertas"", dan ""belajar"". Silakan beritahu saya lagi.
+
+Jika Anda menginginkan saya membantu Anda dengan menulis, saya dapat membantu Anda memahami konsep dasar tentang tulisan, penggunaan pensil, dan penggunaan kertas.
+
+Contoh lain:
+
+- ""Saya makan nasi. Saya makan nasi dengan kacang.""
+- ""Saya minum air. Saya minum air dengan lemon.""
+- ""Saya bermain mainan. Saya bermain mainan dengan teman.""
+
+Kalimat-kalimat ini memiliki struktur yang sederhana dan mudah dipahami, seperti yang Anda cari. Saya dapat membantu Anda memahami konsep dasar tentang tulisan dan mencoba membantu Anda menulis dengan cara yang lebih mudah.
+
+Tetapi, saya tidak tahu arti dari ""pensil"", ""kertas"", dan ""belajar"" yang Anda masukkan. Silakan beritahu saya lagi.
+
+Jika Anda ingin saya membantu Anda mengerti tentang belajar, saya dapat membantu Anda memahami konsep dasar tentang belajar, seperti:
+
+- Membaca
+- Menulis
+- Menghitung
+- Menggambar
+- Memahami konsep-konsep sederhana
+
+Saya dapat membantu Anda dengan membuat contoh kalimat yang lebih sederhana dan mudah dipahami.
+
+Contoh:
+
+- ""Saya belajar baca. Saya belajar baca dengan buku.""
+- ""S"
+47,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,8.903056859970093,"[""pensil"", ""kertas"", ""belajar""] Anda membutuhkan kertas dan pensil untuk belajar.
+
+1. Pensil: Pensil adalah alat yang digunakan untuk menulis atau menggambar. Pensil biasanya memiliki nib yang tipis dan mudah digunakan untuk menulis dengan tulisan yang lebih halus.
+
+2. Kertas: Kertas adalah bahan yang digunakan untuk membuat kagetan atau buku. Kertas biasanya memiliki beberapa kualitas, seperti kertas berkualitas tinggi (bisa digunakan untuk membuat kagetan atau buku), kertas karton (kertas yang keras dan digunakan untuk kemasan), dan kertas biru (kertas yang digunakan untuk menulis atau menggambar).
+
+3. Belajar: Belajar adalah aktivitas yang dilakukan untuk mendapatkan pengetahuan atau kemampuan. Belajar dapat dilakukan dengan membaca buku, menonton video, mengikuti kelas, atau mencoba hal-hal baru.
+
+Anda dapat memilih pensil dan kertas sesuai dengan kebutuhan Anda, lalu mulai belajar. Jika Anda ingin belajar dengan lebih baik, Anda dapat mencoba memilih pensil dan kertas yang memiliki kualitas tinggi."
+48,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,10.01645803451538,"[""pensil"", ""kertas"", ""belajar""] Anda memiliki 3 kata yang lebih mudah untuk mengerti: pensil, kertas, belajar.
+
+1. Pensil: alat tulis yang digunakan untuk menulis.
+2. Kertas: bahan yang digunakan untuk menulis.
+3. Belajar: memperbaiki atau menambah pengetahuan.
+
+Saya akan mencoba membuat kalimat yang lebih mudah untuk dengarkan: ""Pensil dan kertas membantu belajar.""
+
+Jika Anda ingin membuat kalimat yang lebih panjang, saya dapat membantu Anda dengan:
+
+Story: Teman belajar. Teman memakai pensil. Kertas tidak lembek.
+
+Jika Anda ingin membuat kalimat yang lebih panjang, saya dapat membantu Anda dengan:
+
+Story: Teman belajar. Teman memakai pensil. Kertas tidak lembek. Teman membaca. Teman mengerti. Teman senang.
+
+Jika Anda ingin membuat kalimat yang lebih panjang, saya dapat membantu Anda dengan:
+
+Story: Teman belajar. Teman memakai pensil. Kertas tidak lembek. Teman membaca. Teman mengerti. Teman senang. Teman berjalan. Teman melihat. Teman senang.
+
+Saya dapat membantu Anda dengan lebih banyak contoh kalimat jika Anda memberikan informasi lebih lanjut tentang apa yang Anda inginkan."
+49,/home/dev/Downloads/Mistral-7B-Instruct-v0.3/,11.30918574333191,"[""pensil"", ""kertas"", ""belajar""] Saya menggunakan pensil dan kertas. Saya belajar dengan semangat.
+
+Saya akan menulis sesuatu yang membuat Anda senang. Jika Anda memiliki ide atau pertanyaan, silakan beritahu saya.
+
+Terima kasih.
+
+Saya akan membuat paragraf yang sederhana tentang sekolah dan belajar.
+
+Story: Saya belajar di sekolah. Saya menggunakan kertas dan pensil. Saya belajar dengan semangat.
+
+Jika Anda memiliki ide atau pertanyaan, silakan beritahu saya.
+
+Terima kasih.
+
+Kalimat ini sangat sederhana dan menggunakan kata-kata yang mudah dipahami oleh anak usia dini. Kalimat ini juga menggunakan kata-kata yang sesuai dengan tema sekolah dan belajar.
+
+Jika Anda memiliki ide atau pertanyaan, silakan beritahu saya.
+
+Terima kasih.
+
+Kalimat ini memiliki struktur yang sederhana dan menggunakan kata-kata yang mudah dipahami oleh anak usia dini. Kalimat ini juga memiliki kalimat yang memiliki nada positif dan mencorakan semangat belajar.
+
+Jika Anda memiliki ide atau pertanyaan, silakan beritahu saya.
+
+Terima kasih.
+
+Kalimat ini juga memiliki kalimat yang memiliki nada positif dan mencorakan semangat belajar. Kalimat ini juga menggunakan kata-kata yang sesuai dengan tema sekolah dan belajar.
+
+Jika Anda memiliki ide atau pertanyaan, silakan beritahu saya.
+
+Terima kasih.
+"

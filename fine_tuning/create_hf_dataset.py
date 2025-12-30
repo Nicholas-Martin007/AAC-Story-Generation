@@ -9,11 +9,7 @@ from datasets import Dataset
 
 sys.path.append(os.path.abspath('./'))
 from config import *
-
-
-def read_file(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return json.load(f)
+from utils.file_utils import *
 
 
 def clean_data(
@@ -86,15 +82,20 @@ def save_hf_dataset(
     hf_dataset = Dataset.from_list(
         data,
     )
-    hf_dataset.save_to_disk('./hf_dataset_oktober_13')
+    hf_dataset.save_to_disk('./hf_dataset_oktober_24')
 
     return hf_dataset
 
 
 def prepare_hf_dataset(card_path, story_path):
-    card = read_file(filepath=card_path)
-    story = read_file(filepath=story_path)
-    df = pd.DataFrame({'card': card, 'story': story})
+    card = read_file(filename=card_path)  # 8648
+    story = read_file(filename=story_path)  # 8648
+    df = pd.DataFrame(
+        {
+            'card': card,
+            'story': story,
+        }
+    )
     df = clean_data(df)
     messages = format_message(df)
     result = save_hf_dataset(messages)

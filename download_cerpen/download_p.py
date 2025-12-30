@@ -6,7 +6,10 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+import os
+import sys
 
+sys.path.append(os.path.abspath('./'))
 from utils.file_utils import *
 
 

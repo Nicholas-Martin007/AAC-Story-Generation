@@ -37,9 +37,9 @@ def inference(
     model.resize_token_embeddings(len(tokenizer))
 
     # print('##### BASE MODEL ######')
-    for name, param in model.named_parameters():
-        print(name, param.dtype)
-        print(name, param.norm().item())
+    # for name, param in model.named_parameters():
+    #     print(name, param.dtype)
+    #     print(name, param.norm().item())
 
     qlora_model = PeftModelForCausalLM.from_pretrained(
         model,
@@ -62,11 +62,26 @@ def inference(
     ###################
 
     list_input = [
+        ['kelas', 'teman', 'bicara', 'sibuk', 'kursi'],
         [
-            'pensil',
-            'kertas',
-            'belajar',
-        ]
+            'rumah',
+            'air',
+            'orang',
+            'tidak',
+            'banyak',
+            'makan',
+            'minum',
+        ],
+        [
+            'saya',
+            'tenang',
+            'ruang',
+            'kelas',
+            'guru',
+            'mendengarkan',
+        ],
+        ['pasar', 'beli', 'barang', 'rumah'],
+        ['toko', 'makanan', 'Ibu', 'beli', 'masa', 'saya'],
     ]
     for input in list_input:
         if 'flan' in model_path:
@@ -102,21 +117,21 @@ def inference(
             output_scores=True,
         )
 
-        ##### Untuk membuktikan skor probabilitas dari top p dan lainnya #####
-        import torch.nn.functional as F
+        # ##### Untuk membuktikan skor probabilitas dari top p dan lainnya #####
+        # import torch.nn.functional as F
 
-        input_len = input_ids.shape[1]
+        # input_len = input_ids.shape[1]
 
-        generated_tokens = output.sequences[:, input_len:]
+        # generated_tokens = output.sequences[:, input_len:]
 
-        for i, token in enumerate(generated_tokens[0]):
-            logits = output.scores[i][0]
-            probs = F.softmax(logits, dim=-1)
-            print(
-                f"Token {i + 1}: id={token.item()}, text='{tokenizer.decode(token)}', prob={probs[token].item():.4f}"
-            )
+        # for i, token in enumerate(generated_tokens[0]):
+        #     logits = output.scores[i][0]
+        #     probs = F.softmax(logits, dim=-1)
+        #     print(
+        #         f"Token {i + 1}: id={token.item()}, text='{tokenizer.decode(token)}', prob={probs[token].item():.4f}"
+        #     )
 
-        ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+        # ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
         with torch.no_grad():
             loss = model(input_ids, labels=input_ids).loss
@@ -125,21 +140,21 @@ def inference(
         print('PROMPT')
         print(prompt)
 
-        print('======')
+        # print('======')
 
-        print('input Id')
-        print(f'{input_ids[0]}')
+        # print('input Id')
+        # print(f'{input_ids[0]}')
 
-        print('DECODED')
-        print(f'{tokenizer.convert_ids_to_tokens(input_ids[0])}')
+        # print('DECODED')
+        # print(f'{tokenizer.convert_ids_to_tokens(input_ids[0])}')
 
         story = tokenizer.decode(output[0].detach()[0])
-        print(
-            f'{tokenizer.convert_ids_to_tokens(output[0].detach()[0])}'
-        )
+        # print(
+        #     f'{tokenizer.convert_ids_to_tokens(output[0].detach()[0])}'
+        # )
         print(story)
 
-        print(perplexity)
+        # print(perplexity)
         print()
 
 
@@ -172,7 +187,7 @@ def get_model_path(model_name, experiment):
 
 if __name__ == '__main__':
     model_path, qlora_model_path = get_model_path(
-        model_name='flan',
+        model_name='llama',
         experiment=2,
     )
 

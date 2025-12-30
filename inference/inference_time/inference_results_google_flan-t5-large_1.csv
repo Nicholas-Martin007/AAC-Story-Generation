@@ -1,0 +1,51 @@
+experiment,model_path,time_sec,output
+0,google/flan-t5-large,0.42563891410827637,"[""pensil"", ""kertas"", ""belajar"")"
+1,google/flan-t5-large,0.1611464023590088,kertas
+2,google/flan-t5-large,0.11527585983276367,belajar
+3,google/flan-t5-large,0.1142873764038086,pensil
+4,google/flan-t5-large,0.11384010314941406,brazai
+5,google/flan-t5-large,0.11540508270263672,pensil
+6,google/flan-t5-large,0.11419963836669922,pensil
+7,google/flan-t5-large,0.1161954402923584,belajar
+8,google/flan-t5-large,0.11549758911132812,sergeant
+9,google/flan-t5-large,0.07109951972961426,pencil
+10,google/flan-t5-large,0.1170961856842041,pensil
+11,google/flan-t5-large,0.11339354515075684,belajar
+12,google/flan-t5-large,0.11377096176147461,belajar
+13,google/flan-t5-large,0.11340689659118652,brazaline
+14,google/flan-t5-large,0.42477846145629883,"[""pensil"", ""kertas"", ""belajar""]"
+15,google/flan-t5-large,0.11598777770996094,pensil
+16,google/flan-t5-large,0.11649060249328613,pensil
+17,google/flan-t5-large,0.4255790710449219,"[""pensil"", ""kertas"", ""belajar""]"
+18,google/flan-t5-large,0.11522579193115234,pensil
+19,google/flan-t5-large,0.4253249168395996,"[""pensil"", ""kertas"", ""belajar""]"
+20,google/flan-t5-large,0.11616063117980957,belajar
+21,google/flan-t5-large,0.11460447311401367,belajar
+22,google/flan-t5-large,0.1137697696685791,pensil
+23,google/flan-t5-large,0.11366581916809082,pensil
+24,google/flan-t5-large,0.15996313095092773,kertas
+25,google/flan-t5-large,0.09391546249389648,penis
+26,google/flan-t5-large,0.1152961254119873,pensil
+27,google/flan-t5-large,0.11596441268920898,belajar
+28,google/flan-t5-large,0.11557435989379883,pensil
+29,google/flan-t5-large,0.15942955017089844,kertas
+30,google/flan-t5-large,0.1145634651184082,belajar
+31,google/flan-t5-large,0.42664504051208496,"[""pensil"", ""kertas"", ""belajar""]"
+32,google/flan-t5-large,0.11942338943481445,pensil
+33,google/flan-t5-large,0.11472058296203613,belajar
+34,google/flan-t5-large,0.427901029586792,"[""pensil"", ""kertas"", ""belajar""]"
+35,google/flan-t5-large,0.11612343788146973,brazail
+36,google/flan-t5-large,0.11675167083740234,belajar
+37,google/flan-t5-large,0.11490488052368164,pensil
+38,google/flan-t5-large,0.11546635627746582,pegs
+39,google/flan-t5-large,0.42908501625061035,"[""pensil"", ""kertas"", ""belajar""]"
+40,google/flan-t5-large,0.40323472023010254,"[""pensil"", ""kertas"", ""belajar"")"
+41,google/flan-t5-large,0.15786457061767578,kertas
+42,google/flan-t5-large,0.11374211311340332,belajar
+43,google/flan-t5-large,0.11368131637573242,pensil
+44,google/flan-t5-large,0.4003105163574219,"[""pensil"", ""kertas"", ""belajar"")"
+45,google/flan-t5-large,0.11378788948059082,pensil
+46,google/flan-t5-large,0.11584043502807617,pensil
+47,google/flan-t5-large,0.09403038024902344,braza
+48,google/flan-t5-large,0.11461925506591797,belajar
+49,google/flan-t5-large,0.4292902946472168,"[""pensil"", ""kertas"", ""belajar""]"
