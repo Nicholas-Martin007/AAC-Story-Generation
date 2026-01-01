@@ -10,6 +10,18 @@ Frontend (React): https://github.com/Nicholas-Martin007/AAC-React
 
 Struktur proyek dirancang modular agar mudah dipahami, dikembangkan, dan direproduksi.
 
+## 🤖 Setup Model
+
+1. Unduh model dasar secara manual melalui Hugging Face:
+
+   * **LLaMA 3.2 3B Instruct**
+     [https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
+
+2. Untuk model yang telah dilakukan *fine-tuning*, silakan unduh file model melalui tautan berikut:
+
+   * **LLaMA 3.2 3B (Fine-Tuned)**
+     `https://drive.google.com/drive/folders/1x5uzL9SEvdquhbx9rctEY9DxijIjtnwA`
+
 ---
 
 ## 📊 Dataset
